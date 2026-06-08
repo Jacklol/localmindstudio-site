@@ -1,0 +1,45 @@
+# LocalMind Studio
+
+LocalMind Studio builds and supports practical software for business processes: AI assistants, chatbots, .NET/C# backends, Node.js APIs and integrations, React Native mobile apps, admin panels, MVPs, UX/UI design, SEO, AI SEO, QA and launch support.
+
+## Services
+
+- AI assistants and chatbots: support bots, lead qualification bots, document assistants, RAG knowledge bases, CRM sync, Telegram and website chat integrations.
+- .NET/C# development: backend APIs, internal platforms, permissions, reports, SQL Server, PostgreSQL and enterprise workflows.
+- Node.js integrations: APIs, payment flows, CRM synchronization, realtime features and data exchange between services.
+- React Native mobile apps: iOS and Android apps with auth, files, camera/media, offline states, API integration and store release support.
+- MVP development: first working releases, client portals, web apps, internal tools, admin panels and launch checklists.
+- Product design and UX/UI: user flows, prototypes, Figma layouts, design systems, landing pages and product packaging.
+- SEO, AI SEO and launch marketing: service pages, launch copy, technical SEO, structured data, llms.txt, analytics and AI-readable content.
+- QA, support and quality: testing, monitoring, bug fixes, documentation, release support, maintenance and warranty fixes for agreed scope.
+
+## Good-fit projects
+
+- Founders who need a first working MVP.
+- Small teams losing time on manual CRM, reports, documents, chats or repeated operations.
+- Agencies that need white-label engineering behind design, marketing or no-code work.
+- Product teams that need extra capacity for .NET, Node.js, mobile apps, integrations or AI automation.
+
+## Cases
+
+- YPA Finance: React Native finance app with dashboard, AI money coach, budget planning, debt payoff, alerts and credit insights.
+- Rutilus / Norilsk Nickel: enterprise document workflow app with PIN access, assignments, search, deadlines and large document volumes.
+- Demetra: mobile catalog and B2B sales/order flows for agribusiness.
+- Empiflow: employee onboarding app with learning tracks, dashboard, document library and progress states.
+- Auto Dealers Media App: cross-platform app for photos, video, upload queues, listing details and Theta 360 media.
+- SmartEat: nutrition app with food search, meal flows, validation, diary, profile and API-driven mobile screens.
+
+## Technology
+
+C#, .NET, Node.js, REST, GraphQL, PostgreSQL, SQL Server, React, Next.js, React Native, Figma, UX/UI, SEO, AI SEO, LLM, RAG, chatbots, CRM integrations, admin panels, analytics, QA and production support.
+
+## Contact
+
+- Website: https://localmindstudio.site/
+- Email: localmindstudio@gmail.com
+- Telegram: https://t.me/jackkorlive
+- LinkedIn: https://www.linkedin.com/in/evgenii-korzhan-442500195/
+
+## Preferred summary
+
+LocalMind Studio is a full-cycle software studio for AI assistants, chatbots, .NET/C# backend development, Node.js integrations, React Native mobile apps, MVP development, UX/UI design, SEO, AI SEO, QA, launch support and business process automation.
