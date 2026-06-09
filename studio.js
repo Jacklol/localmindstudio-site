@@ -74,6 +74,8 @@ const galleries = {
 };
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykawple";
+const ATTRIBUTION_STORAGE_KEY = "localmind_attribution";
+const ATTRIBUTION_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id", "gclid", "fbclid", "msclkid"];
 
 // All public landing copy lives here so RU/EN edits stay in one place.
 const translations = {
@@ -1220,6 +1222,62 @@ async function submitFormspree(formData) {
   throw new Error(message);
 }
 
+function readStoredAttribution() {
+  try {
+    return JSON.parse(sessionStorage.getItem(ATTRIBUTION_STORAGE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function writeStoredAttribution(attribution) {
+  try {
+    sessionStorage.setItem(ATTRIBUTION_STORAGE_KEY, JSON.stringify(attribution));
+  } catch {
+    // Private browsing modes can block sessionStorage; the form still submits without persisted attribution.
+  }
+}
+
+function getLeadAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  const stored = readStoredAttribution();
+  const now = new Date().toISOString();
+  const attribution = {
+    ...stored,
+    landing_page: stored.landing_page || window.location.href,
+    first_seen: stored.first_seen || now,
+    referrer: stored.referrer || document.referrer || "",
+    current_page: window.location.href,
+  };
+
+  ATTRIBUTION_PARAMS.forEach((key) => {
+    const value = params.get(key);
+    if (value) attribution[key] = value;
+  });
+
+  writeStoredAttribution(attribution);
+  return attribution;
+}
+
+function appendLeadAttribution(formData) {
+  const attribution = getLeadAttribution();
+  const sourceParts = [
+    attribution.utm_source,
+    attribution.utm_medium,
+    attribution.utm_campaign,
+  ].filter(Boolean);
+
+  formData.set("source", sourceParts.length ? `LocalMind Studio contact form - ${sourceParts.join(" / ")}` : "LocalMind Studio contact form");
+  formData.set("page_url", attribution.current_page || window.location.href);
+  formData.set("landing_page", attribution.landing_page || window.location.href);
+  formData.set("referrer", attribution.referrer || "-");
+  formData.set("first_seen", attribution.first_seen || "-");
+
+  ATTRIBUTION_PARAMS.forEach((key) => {
+    formData.set(key, attribution[key] || "-");
+  });
+}
+
 function setupBriefBuilder() {
   const groups = [...document.querySelectorAll("[data-brief-group]")];
   const output = document.querySelector("[data-brief-output]");
@@ -1305,7 +1363,7 @@ function setupCallForm() {
     formData.set("files", files);
     formData.set("message", details);
     formData.set("subject", t.subject);
-    formData.set("source", "LocalMind Studio contact form");
+    appendLeadAttribution(formData);
     formData.set("language", currentLanguage);
     if (isEmail) {
       formData.set("email", contact);
