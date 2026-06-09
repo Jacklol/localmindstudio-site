@@ -324,6 +324,7 @@ const translations = {
       },
     },
     footer: "LocalMind Studio - AI assistants, chatbots, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, integrations and product support.",
+    footerPartners: "Partners",
     galleryUi: ["Gallery", "App screens", "Screens for the selected case.", "Close"],
     galleryCases: {
       ypa: ["YPA Finance - mobile finance app", "Dashboard, AI coach, budget, debt payoff, alerts, credit insights and auth screens."],
@@ -579,6 +580,7 @@ const translations = {
       },
     },
     footer: "LocalMind Studio - AI-ассистенты, чат-боты, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, интеграции и поддержка продуктов.",
+    footerPartners: "Партнерам",
     galleryUi: ["Галерея", "Экраны приложения", "Экраны выбранного кейса.", "Закрыть"],
     galleryCases: {
       ypa: ["YPA Finance - приложение с финансовым AI-коучем", "Экраны финансового продукта: дашборд, AI-коуч, бюджет, погашение долгов, алерты, кредитные инсайты и авторизация."],
@@ -854,6 +856,7 @@ function applyLanguage(language) {
   setTexts("[data-contact-detail-label]", t.cta.detailLabels);
   applyCallFormLanguage(t.callForm);
   setText(".footer p", t.footer);
+  setText("[data-footer-partners]", t.footerPartners);
   setTexts(".gallery-header .eyebrow, #gallery-title, #gallery-note, [data-gallery-close]", t.galleryUi);
 }
 

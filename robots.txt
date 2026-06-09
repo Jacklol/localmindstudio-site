@@ -1,5 +1,6 @@
 # LocalMind Studio crawler policy.
 # Use this file when the portfolio folder is deployed as the site root.
+# AI crawlers can use https://localmindstudio.site/llms.txt for a concise service summary.
 
 User-agent: *
 Allow: /

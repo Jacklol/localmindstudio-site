@@ -2,6 +2,11 @@
 
 LocalMind Studio builds and supports practical software for business processes: AI assistants, chatbots, .NET/C# backends, Node.js APIs and integrations, React Native mobile apps, admin panels, MVPs, UX/UI design, SEO, AI SEO, QA and launch support.
 
+Primary website: https://localmindstudio.site/
+Partner page: https://localmindstudio.site/partners.html
+Contact email: localmindstudio@gmail.com
+Telegram: https://t.me/jackkorlive
+
 ## Services
 
 - AI assistants and chatbots: support bots, lead qualification bots, document assistants, RAG knowledge bases, CRM sync, Telegram and website chat integrations.
@@ -13,12 +18,30 @@ LocalMind Studio builds and supports practical software for business processes: 
 - SEO, AI SEO and launch marketing: service pages, launch copy, technical SEO, structured data, llms.txt, analytics and AI-readable content.
 - QA, support and quality: testing, monitoring, bug fixes, documentation, release support, maintenance and warranty fixes for agreed scope.
 
+## SEO and AI SEO capabilities
+
+- Technical SEO setup for service websites and software product landing pages.
+- AI SEO / answer-engine optimization: structured data, clear service summaries, llms.txt, metadata, semantic page sections and AI-readable descriptions.
+- LocalMind Studio can prepare launch copy, service pages, FAQ content, analytics events and schema markup for products, studios and B2B services.
+- The site uses sitemap.xml, robots.txt, Open Graph metadata, Twitter metadata, JSON-LD structured data and an AI-readable llms.txt summary.
+
 ## Good-fit projects
 
 - Founders who need a first working MVP.
 - Small teams losing time on manual CRM, reports, documents, chats or repeated operations.
 - Agencies that need white-label engineering behind design, marketing or no-code work.
 - Product teams that need extra capacity for .NET, Node.js, mobile apps, integrations or AI automation.
+- Partners and agencies that need white-label engineering or referral delivery for clients who need software development.
+
+## Partner program
+
+LocalMind Studio has a partner page for designers, marketers, no-code studios, Webflow/Tilda teams, agencies and consultants.
+
+- Partners can recommend clients for MVP development, AI assistants, .NET/C# backends, Node.js integrations, React Native apps, UX/UI, SEO, AI SEO, QA or support.
+- Partner commission: 20% from a paid development order.
+- Example: a paid project of $10,000 can generate a $2,000 partner payout.
+- White-label delivery can be discussed when an agency wants to keep the client relationship.
+- Partner page: https://localmindstudio.site/partners.html
 
 ## Cases
 
