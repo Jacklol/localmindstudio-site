@@ -140,6 +140,21 @@ const translations = {
       ai: ["For automation", "Use AI where it removes routine work.", "Support chat, knowledge assistant, document parser, lead qualification and CRM sync with clear human handoff.", ["RAG over company documents", "Web, Telegram or internal chat", "Logs, handoff and privacy rules"]],
       mobile: ["For mobile products", "Build iOS and Android apps with React Native.", "API integration, auth, files, camera/media, offline mode, store release and support.", ["New apps and existing app support", "Store release help", "Experience in finance, HR, auto, enterprise and nutrition"]],
     },
+    serviceMap: {
+      eyebrow: "Service map",
+      title: "A connected delivery stack.",
+      body: "Strategy, design, engineering, AI, launch and support are planned as one product system.",
+      nodes: [
+        ["Strategy", "Scope and product path", "Goals, users, risks and a first release plan before development starts."],
+        ["UX/UI", "Design that can ship", "Flows, prototypes, screens and landing pages prepared for real implementation."],
+        [".NET", "Reliable backend", "C# APIs, roles, reports, SQL data and business workflows for serious products."],
+        ["Node.js", "APIs and integrations", "Payments, CRM sync, realtime features and data exchange between services."],
+        ["Mobile", "React Native apps", "iOS and Android apps with auth, files, camera, offline states and store release."],
+        ["AI", "Assistants and bots", "Support chat, RAG, document helpers and lead bots connected to your workflow."],
+        ["SEO", "Search and launch", "Service pages, launch copy, analytics and AI-readable content for modern search."],
+        ["QA", "Quality and support", "Testing, monitoring, release support and a clear warranty period for agreed fixes."],
+      ],
+    },
     fitIntro: {
       eyebrow: "Best fit",
       title: "Useful when the task is clear, but the product path is not.",
@@ -379,6 +394,21 @@ const translations = {
       dotnet: ["Для задач с сильным бэкендом", "Строим и улучшаем .NET-системы.", "C# API, роли, отчеты, SQL-базы, админ-инструменты, интеграции и аккуратная работа с существующим кодом.", ["Архитектура бэкенда на .NET / C#", "Поддержка старого кода и рефакторинг", "Документы, согласования и отчетность"]],
       ai: ["Для автоматизации", "Добавляем AI там, где он убирает рутину.", "Чат поддержки, ассистент по документам, парсер, квалификация лидов и связь с CRM с понятной передачей человеку.", ["RAG по документам компании", "Чат на сайте, в Telegram или внутри системы", "Логи, передача оператору и правила privacy"]],
       mobile: ["Для мобильных продуктов", "Делаем iOS- и Android-приложения на React Native.", "API, авторизация, файлы, камера/медиа, офлайн-режим, релиз в сторах и поддержка.", ["Новые приложения и поддержка существующих", "Помощь с релизом в сторах", "Опыт в финансах, HR, авто, enterprise и питании"]],
+    },
+    serviceMap: {
+      eyebrow: "Карта услуг",
+      title: "Связанная система разработки.",
+      body: "Стратегия, дизайн, разработка, AI, запуск и поддержка собираются в один понятный продуктовый маршрут.",
+      nodes: [
+        ["Стратегия", "Объем и путь продукта", "Цели, пользователи, риски и план первого релиза до начала разработки."],
+        ["UX/UI", "Дизайн, который можно собрать", "Сценарии, прототипы, экраны и лендинги, подготовленные к реальной разработке."],
+        [".NET", "Надежный бэкенд", "C# API, роли, отчеты, SQL-данные и бизнес-процессы для серьезных продуктов."],
+        ["Node.js", "API и интеграции", "Платежи, CRM, realtime-функции и обмен данными между сервисами."],
+        ["Mobile", "React Native приложения", "iOS и Android с авторизацией, файлами, камерой, офлайном и релизом в сторах."],
+        ["AI", "Ассистенты и боты", "Чат поддержки, RAG, помощники по документам и лид-боты внутри процесса."],
+        ["SEO", "Поиск и запуск", "Сервисные страницы, тексты запуска, аналитика и AI-readable контент."],
+        ["QA", "Качество и поддержка", "Тестирование, мониторинг, поддержка релиза и гарантия на согласованные исправления."],
+      ],
     },
     fitIntro: {
       eyebrow: "Кому подходит",
@@ -722,6 +752,10 @@ function applyLanguage(language) {
     setText("p", content[2], panel);
     setListItems(panel, content[3]);
   });
+  setText("[data-constellation-eyebrow]", t.serviceMap?.eyebrow);
+  setText("[data-constellation-title]", t.serviceMap?.title);
+  setText("[data-constellation-body]", t.serviceMap?.body);
+  window.refreshServiceConstellation?.();
 
   applyHeading("#fit", t.fitIntro);
   document.querySelectorAll(".fit-grid article").forEach((card, index) => {
@@ -1110,6 +1144,7 @@ function setupRevealAnimations() {
     ".section-heading",
     "blockquote",
     ".service-card",
+    ".service-constellation",
     ".service-lab",
     ".fit-grid article",
     ".case-story",
@@ -1170,6 +1205,456 @@ function setupServiceTabs() {
         panel.classList.toggle("is-active", active);
       });
     });
+  });
+}
+
+function setupServiceConstellation() {
+  const root = document.querySelector("[data-service-constellation]");
+  const stage = root?.querySelector(".service-constellation-stage");
+  const canvas = root?.querySelector("[data-constellation-canvas]");
+  const tooltip = root?.querySelector("[data-constellation-tooltip]");
+  const tooltipKicker = root?.querySelector("[data-constellation-tooltip-kicker]");
+  const tooltipTitle = root?.querySelector("[data-constellation-tooltip-title]");
+  const tooltipBody = root?.querySelector("[data-constellation-tooltip-body]");
+  if (!root || !stage || !canvas) return;
+
+  const context = canvas.getContext("2d");
+  if (!context) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const palette = ["155, 208, 183", "96, 177, 205", "231, 214, 170", "219, 132, 107"];
+  const particlePalette = ["155, 208, 183", "96, 177, 205", "231, 214, 170", "255, 255, 255"];
+  const layout = [
+    [0.2, 0.3, -0.18],
+    [0.34, 0.62, 0.18],
+    [0.48, 0.3, 0.3],
+    [0.62, 0.5, -0.12],
+    [0.8, 0.34, 0.22],
+    [0.72, 0.72, -0.28],
+    [0.44, 0.78, 0.08],
+    [0.22, 0.74, 0.26],
+  ];
+  const serviceEdges = [
+    [0, 1],
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [3, 5],
+    [5, 6],
+    [6, 7],
+    [7, 1],
+    [2, 5],
+    [0, 7],
+  ];
+  const state = {
+    width: 0,
+    height: 0,
+    dpr: 1,
+    nodes: [],
+    particles: [],
+    pointer: {
+      x: 0,
+      y: 0,
+      active: false,
+      holding: false,
+      force: 0,
+      lastX: 0,
+      lastY: 0,
+    },
+    rotationX: 0.22,
+    rotationY: -0.18,
+    spinX: 0,
+    spinY: 0,
+    dragX: 0,
+    dragY: 0,
+    activeIndex: 0,
+    frame: 0,
+  };
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function randomFor(seed) {
+    return Math.sin(seed * 4128.73) * 0.5 + 0.5;
+  }
+
+  function getServiceMap() {
+    return translations[currentLanguage]?.serviceMap || translations.en.serviceMap;
+  }
+
+  function buildNodes() {
+    const items = getServiceMap().nodes || [];
+    state.nodes = items.map(([kicker, title, body], index) => {
+      const position = layout[index % layout.length];
+      const depth = Math.min(state.width, state.height) * position[2];
+      return {
+        index,
+        kind: "service",
+        kicker,
+        title,
+        body,
+        x: position[0] * state.width,
+        y: position[1] * state.height,
+        baseX: position[0] * state.width,
+        baseY: position[1] * state.height,
+        baseZ: depth,
+        depthAlpha: 1,
+        depthScale: 1,
+        size: 7.1 + randomFor(index + 1) * 3.8,
+        color: palette[index % palette.length],
+        phase: randomFor(index * 2.1 + 3) * Math.PI * 2,
+      };
+    });
+  }
+
+  function buildParticles() {
+    const previousParticles = state.particles;
+    const area = state.width * state.height;
+    const count = reduceMotion ? 96 : Math.min(260, Math.max(150, Math.floor(area / 1150)));
+    const centerX = state.width / 2;
+    const centerY = state.height / 2;
+    const padding = state.width < 430 ? 16 : 22;
+
+    state.particles = Array.from({ length: count }, (_, index) => {
+      const ratio = index / Math.max(1, count - 1);
+      const seed = index + 1;
+      const angle = index * 2.3999632297 + (randomFor(seed * 1.7) - 0.5) * 0.95;
+      const radius = Math.sqrt(ratio) * (0.86 + randomFor(seed * 2.3) * 0.24);
+      const fieldX = state.width * (0.45 + randomFor(seed * 3.1) * 0.12);
+      const fieldY = state.height * (0.36 + randomFor(seed * 4.7) * 0.16);
+      const jitterX = (randomFor(seed * 6.3) - 0.5) * state.width * 0.22;
+      const jitterY = (randomFor(seed * 8.9) - 0.5) * state.height * 0.2;
+      const baseX = clamp(centerX + Math.cos(angle) * radius * fieldX + jitterX, padding, state.width - padding);
+      const baseY = clamp(centerY + Math.sin(angle) * radius * fieldY + jitterY, padding, state.height - padding);
+      const baseZ = (randomFor(seed * 10.7) - 0.5) * Math.min(state.width, state.height) * 0.86;
+      const previous = previousParticles[index];
+
+      return {
+        index,
+        kind: "particle",
+        x: previous ? previous.x : baseX,
+        y: previous ? previous.y : baseY,
+        baseX,
+        baseY,
+        baseZ,
+        depthAlpha: previous ? previous.depthAlpha : 1,
+        depthScale: previous ? previous.depthScale : 1,
+        size: 1.05 + randomFor(seed * 4.3) * 2.9,
+        alpha: 0.26 + randomFor(seed * 4.9 + 8) * 0.42,
+        color: particlePalette[index % particlePalette.length],
+        phase: randomFor(seed * 8.1) * Math.PI * 2,
+        speed: 0.34 + randomFor(seed * 5.9) * 0.72,
+      };
+    });
+  }
+
+  function resizeConstellation() {
+    const rect = stage.getBoundingClientRect();
+    state.width = Math.max(1, rect.width);
+    state.height = Math.max(1, rect.height);
+    state.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(state.width * state.dpr);
+    canvas.height = Math.round(state.height * state.dpr);
+    canvas.style.width = `${state.width}px`;
+    canvas.style.height = `${state.height}px`;
+    context.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+    buildNodes();
+    buildParticles();
+  }
+
+  function setPointer(event) {
+    const rect = canvas.getBoundingClientRect();
+    state.pointer.x = event.clientX - rect.left;
+    state.pointer.y = event.clientY - rect.top;
+  }
+
+  function updateTooltip(node) {
+    if (!tooltip || !node) return;
+
+    const width = tooltip.offsetWidth || 250;
+    const height = tooltip.offsetHeight || 94;
+    const margin = 14;
+    const preferredX = node.x + width + 24 < state.width ? node.x + 18 : node.x - width - 18;
+    const preferredY = node.y - height / 2;
+    tooltip.style.setProperty("--constellation-tooltip-x", `${Math.round(clamp(preferredX, margin, state.width - width - margin))}px`);
+    tooltip.style.setProperty("--constellation-tooltip-y", `${Math.round(clamp(preferredY, margin, state.height - height - margin))}px`);
+
+    if (tooltipKicker) tooltipKicker.textContent = node.kicker;
+    if (tooltipTitle) tooltipTitle.textContent = node.title;
+    if (tooltipBody) tooltipBody.textContent = node.body;
+    tooltip.classList.add("is-visible");
+    tooltip.setAttribute("aria-hidden", "false");
+  }
+
+  function hideTooltip() {
+    tooltip?.classList.remove("is-visible");
+    tooltip?.setAttribute("aria-hidden", "true");
+  }
+
+  function selectNearest(force = false) {
+    let nearest = null;
+    let nearestDistance = Infinity;
+
+    state.nodes.forEach((node) => {
+      const distance = Math.hypot(state.pointer.x - node.x, state.pointer.y - node.y);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearest = node;
+      }
+    });
+
+    const threshold = force ? 72 : 46;
+    if (nearest && nearestDistance <= threshold) {
+      state.activeIndex = nearest.index;
+      updateTooltip(nearest);
+      return;
+    }
+
+    if (!force) hideTooltip();
+  }
+
+  function draw(time = 0) {
+    const seconds = time * 0.001;
+    const centerX = state.width / 2;
+    const centerY = state.height / 2;
+    const minDimension = Math.min(state.width, state.height);
+    const targetForce = state.pointer.active ? 1 : 0;
+    state.pointer.force += (targetForce - state.pointer.force) * (reduceMotion ? 1 : 0.08);
+
+    if (!reduceMotion) {
+      const targetSpinY = state.pointer.holding ? 0.014 : 0.0014;
+      const targetSpinX = state.pointer.holding ? 0.0048 : 0.00035;
+      state.spinY += (targetSpinY - state.spinY) * 0.045;
+      state.spinX += (targetSpinX - state.spinX) * 0.045;
+      state.rotationY += state.spinY + state.dragY;
+      state.rotationX += state.spinX + state.dragX;
+      state.dragY *= 0.91;
+      state.dragX *= 0.9;
+      state.rotationX = clamp(state.rotationX, -0.92, 0.92);
+    }
+
+    context.clearRect(0, 0, state.width, state.height);
+
+    function projectItem(item, driftScale = 1) {
+      const expansion = 1 + state.pointer.force * 0.18;
+      const baseDx = (item.baseX - centerX) * expansion;
+      const baseDy = (item.baseY - centerY) * expansion;
+      const baseDz = item.baseZ * (0.88 + state.pointer.force * 0.44);
+      const tiltXCos = Math.cos(state.rotationX);
+      const tiltXSin = Math.sin(state.rotationX);
+      const tiltYCos = Math.cos(state.rotationY);
+      const tiltYSin = Math.sin(state.rotationY);
+      const tiltedY = baseDy * tiltXCos - baseDz * tiltXSin;
+      const tiltedZ = baseDy * tiltXSin + baseDz * tiltXCos;
+      const rotatedX = baseDx * tiltYCos + tiltedZ * tiltYSin;
+      const rotatedZ = -baseDx * tiltYSin + tiltedZ * tiltYCos;
+      const perspectiveDistance = minDimension * 1.55;
+      const perspective = clamp(perspectiveDistance / (perspectiveDistance + rotatedZ), 0.66, 1.36);
+      const projectionScale = 1 + (perspective - 1) * 0.84;
+      const driftX = reduceMotion ? 0 : Math.cos(seconds * (item.speed || 0.48) + item.phase) * 7 * driftScale;
+      const driftY = reduceMotion ? 0 : Math.sin(seconds * ((item.speed || 0.48) + 0.16) + item.phase) * 6 * driftScale;
+      const targetX = centerX + rotatedX * projectionScale + driftX;
+      const targetY = centerY + tiltedY * projectionScale + driftY;
+      const ease = reduceMotion ? 1 : item.kind === "service" ? 0.07 : 0.055;
+
+      item.x += (targetX - item.x) * ease;
+      item.y += (targetY - item.y) * ease;
+      item.depthScale = projectionScale;
+      item.depthAlpha = clamp(0.46 + (projectionScale - 0.66) * 1.02, 0.36, 1);
+    }
+
+    state.particles.forEach((particle) => projectItem(particle, 1));
+    state.nodes.forEach((node) => projectItem(node, 0.45));
+
+    const connectionItems = [...state.particles, ...state.nodes];
+    const particleMaxDistance = Math.min(165, Math.max(108, minDimension * (state.pointer.force > 0.1 ? 0.45 : 0.37)));
+    for (let i = 0; i < connectionItems.length; i += 1) {
+      for (let j = i + 1; j < connectionItems.length; j += 1) {
+        const first = connectionItems[i];
+        const second = connectionItems[j];
+        const distance = Math.hypot(first.x - second.x, first.y - second.y);
+        if (distance > particleMaxDistance) continue;
+
+        const serviceBoost = first.kind === "service" || second.kind === "service" ? 1.28 : 1;
+        const alpha = (1 - distance / particleMaxDistance) * 0.105 * serviceBoost * Math.min(first.depthAlpha, second.depthAlpha);
+        context.strokeStyle = `rgba(190, 233, 211, ${alpha})`;
+        context.lineWidth = first.kind === "service" || second.kind === "service" ? 1 : 0.7;
+        context.beginPath();
+        context.moveTo(first.x, first.y);
+        context.lineTo(second.x, second.y);
+        context.stroke();
+      }
+    }
+
+    const sortedParticles = [...state.particles].sort((first, second) => (first.depthScale || 1) - (second.depthScale || 1));
+    sortedParticles.forEach((particle) => {
+      const twinkle = reduceMotion ? 1 : 0.74 + Math.sin(seconds * 1.2 + particle.phase) * 0.26;
+      const radius = particle.size * twinkle * (particle.depthScale || 1);
+      context.fillStyle = `rgba(${particle.color}, ${particle.alpha * twinkle * particle.depthAlpha})`;
+      context.beginPath();
+      context.arc(particle.x, particle.y, radius, 0, Math.PI * 2);
+      context.fill();
+    });
+
+    serviceEdges.forEach(([from, to], index) => {
+      const first = state.nodes[from];
+      const second = state.nodes[to];
+      if (!first || !second) return;
+
+      const active = first.index === state.activeIndex || second.index === state.activeIndex;
+      const depthAlpha = Math.min(first.depthAlpha, second.depthAlpha);
+      context.save();
+      context.shadowBlur = active ? 16 : 8;
+      context.shadowColor = active ? "rgba(231, 214, 170, 0.48)" : "rgba(155, 208, 183, 0.24)";
+      context.strokeStyle = active ? `rgba(231, 214, 170, ${0.54 * depthAlpha})` : `rgba(155, 208, 183, ${0.22 * depthAlpha})`;
+      context.lineWidth = active ? 1.9 : 1.1;
+      context.beginPath();
+      context.moveTo(first.x, first.y);
+      const bow = Math.sin(seconds * 0.65 + index) * 8 * ((first.depthScale + second.depthScale) * 0.5);
+      context.quadraticCurveTo((first.x + second.x) / 2, (first.y + second.y) / 2 + bow, second.x, second.y);
+      context.stroke();
+      context.restore();
+    });
+
+    function drawStarNode(node) {
+      const isActive = node.index === state.activeIndex;
+      const pulse = reduceMotion ? 1 : 1 + Math.sin(seconds * 2.4 + node.phase) * 0.12;
+      const depthScale = node.depthScale || 1;
+      const depthAlpha = node.depthAlpha || 1;
+      const radius = node.size * pulse * depthScale * (isActive ? 1.2 : 1);
+      const haloRadius = radius + (isActive ? 18 : 12) * depthScale;
+      const rayCount = 8;
+
+      context.save();
+      context.globalCompositeOperation = "lighter";
+      const halo = context.createRadialGradient(node.x, node.y, 0, node.x, node.y, haloRadius);
+      halo.addColorStop(0, `rgba(${node.color}, ${isActive ? 0.3 : 0.18})`);
+      halo.addColorStop(0.42, `rgba(${node.color}, ${isActive ? 0.13 : 0.08})`);
+      halo.addColorStop(1, `rgba(${node.color}, 0)`);
+      context.fillStyle = halo;
+      context.beginPath();
+      context.arc(node.x, node.y, haloRadius, 0, Math.PI * 2);
+      context.fill();
+
+      context.lineCap = "round";
+      context.lineWidth = isActive ? 1.7 : 1.05;
+      context.shadowBlur = isActive ? 13 : 7;
+      context.shadowColor = `rgba(${node.color}, ${isActive ? 0.62 : 0.36})`;
+      for (let ray = 0; ray < rayCount; ray += 1) {
+        const angle = (Math.PI * 2 * ray) / rayCount + seconds * (isActive ? 0.08 : 0.035);
+        const longRay = ray % 2 === 0;
+        const start = radius * (longRay ? 0.28 : 0.5);
+        const end = radius + (longRay ? 12 : 7) * depthScale;
+        context.strokeStyle = longRay ? `rgba(255, 255, 255, ${0.48 * depthAlpha})` : `rgba(${node.color}, ${0.52 * depthAlpha})`;
+        context.beginPath();
+        context.moveTo(node.x + Math.cos(angle) * start, node.y + Math.sin(angle) * start);
+        context.lineTo(node.x + Math.cos(angle) * end, node.y + Math.sin(angle) * end);
+        context.stroke();
+      }
+
+      context.shadowBlur = isActive ? 17 : 9;
+      context.fillStyle = `rgba(${node.color}, ${isActive ? 0.9 : 0.74})`;
+      context.beginPath();
+      context.arc(node.x, node.y, radius, 0, Math.PI * 2);
+      context.fill();
+
+      context.globalCompositeOperation = "source-over";
+      context.fillStyle = `rgba(255, 255, 255, ${isActive ? 0.78 : 0.54})`;
+      context.beginPath();
+      context.arc(node.x, node.y, Math.max(2.4, radius * 0.32), 0, Math.PI * 2);
+      context.fill();
+
+      context.lineWidth = isActive ? 2 : 1.3;
+      context.strokeStyle = isActive ? `rgba(255, 255, 255, ${0.68 * depthAlpha})` : `rgba(231, 214, 170, ${0.36 * depthAlpha})`;
+      context.beginPath();
+      context.arc(node.x, node.y, radius + (isActive ? 9 : 6) * depthScale, 0, Math.PI * 2);
+      context.stroke();
+      context.restore();
+    }
+
+    [...state.nodes].sort((first, second) => (first.depthScale || 1) - (second.depthScale || 1)).forEach(drawStarNode);
+
+    const activeNode = state.nodes[state.activeIndex];
+    if (tooltip?.classList.contains("is-visible") && activeNode) updateTooltip(activeNode);
+
+    if (!reduceMotion) state.frame = requestAnimationFrame(draw);
+  }
+
+  window.refreshServiceConstellation = () => {
+    buildNodes();
+    const activeNode = state.nodes[state.activeIndex] || state.nodes[0];
+    if (tooltip?.classList.contains("is-visible") && activeNode) updateTooltip(activeNode);
+    if (reduceMotion) draw();
+  };
+
+  function activate(event) {
+    if (event && typeof event.clientX === "number") {
+      setPointer(event);
+      state.pointer.lastX = event.clientX;
+      state.pointer.lastY = event.clientY;
+    }
+    state.pointer.active = true;
+  }
+
+  function release(event) {
+    state.pointer.holding = false;
+    state.pointer.active = false;
+    stage.classList.remove("is-dragging");
+    if (event?.pointerId && stage.releasePointerCapture) {
+      try {
+        stage.releasePointerCapture(event.pointerId);
+      } catch (error) {
+        // Pointer capture can already be released by the browser.
+      }
+    }
+  }
+
+  stage.addEventListener("pointermove", (event) => {
+    setPointer(event);
+    if (state.pointer.holding && !reduceMotion) {
+      const dx = event.clientX - state.pointer.lastX;
+      const dy = event.clientY - state.pointer.lastY;
+      state.dragY += dx * 0.00048;
+      state.dragX -= dy * 0.00036;
+      state.pointer.lastX = event.clientX;
+      state.pointer.lastY = event.clientY;
+    }
+    selectNearest(false);
+    if (reduceMotion) draw();
+  });
+  stage.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    setPointer(event);
+    activate(event);
+    state.pointer.holding = true;
+    stage.classList.add("is-dragging");
+    if (stage.setPointerCapture) {
+      try {
+        stage.setPointerCapture(event.pointerId);
+      } catch (error) {
+        // Pointer capture is optional for this interaction.
+      }
+    }
+    selectNearest(true);
+    if (reduceMotion) draw();
+  });
+  stage.addEventListener("pointerenter", activate);
+  stage.addEventListener("pointerup", release);
+  stage.addEventListener("pointercancel", release);
+  stage.addEventListener("pointerleave", (event) => {
+    if (!state.pointer.holding) {
+      release(event);
+      hideTooltip();
+    }
+  });
+
+  resizeConstellation();
+  draw();
+  window.addEventListener("resize", () => {
+    window.cancelAnimationFrame(state.frame);
+    resizeConstellation();
+    draw();
   });
 }
 
@@ -1491,6 +1976,7 @@ setupRotatingWord();
 setupHeroBubbles();
 setupRevealAnimations();
 setupServiceTabs();
+setupServiceConstellation();
 setupAiConsole();
 setupBriefBuilder();
 setupCallForm();

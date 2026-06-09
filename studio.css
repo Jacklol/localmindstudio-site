@@ -540,6 +540,14 @@ h1 {
   background: var(--white);
 }
 
+.service-map-band {
+  padding: 70px 0 34px;
+}
+
+.service-map-band .service-constellation {
+  margin-top: 0;
+}
+
 .section-heading {
   max-width: 780px;
   margin-bottom: 34px;
@@ -709,6 +717,137 @@ h3 {
   border-color: var(--line);
   background: var(--panel);
   color: var(--ink);
+}
+
+.service-constellation {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.44fr) minmax(0, 1fr);
+  gap: 24px;
+  min-height: 360px;
+  margin-top: 18px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(231, 214, 170, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(155, 208, 183, 0.18), transparent 38%),
+    linear-gradient(315deg, rgba(185, 148, 87, 0.16), transparent 36%),
+    linear-gradient(180deg, #111a17 0%, #0c1310 100%);
+  box-shadow: 0 26px 80px rgba(17, 27, 24, 0.2);
+  color: var(--white);
+  isolation: isolate;
+}
+
+.service-constellation::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.68) 0 1px, transparent 1.5px) 0 0 / 54px 54px,
+    radial-gradient(circle, rgba(231, 214, 170, 0.42) 0 1px, transparent 1.5px) 18px 24px / 76px 76px,
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 54px 54px, 76px 76px, 48px 48px, 48px 48px;
+  content: "";
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), #000 18%, #000 82%, rgba(0, 0, 0, 0.28));
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), #000 18%, #000 82%, rgba(0, 0, 0, 0.28));
+}
+
+.service-constellation-copy,
+.service-constellation-stage {
+  position: relative;
+  z-index: 1;
+}
+
+.service-constellation-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 420px;
+}
+
+.service-constellation-copy .eyebrow {
+  color: #bde7d1;
+}
+
+.service-constellation-copy h3 {
+  margin-bottom: 14px;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.02;
+}
+
+.service-constellation-copy p:last-child {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+}
+
+.service-constellation-stage {
+  min-height: 310px;
+  overflow: hidden;
+  border: 1px solid rgba(231, 214, 170, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.025);
+  cursor: grab;
+  touch-action: none;
+}
+
+.service-constellation-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.service-constellation-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.service-constellation-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  gap: 4px;
+  width: min(250px, calc(100% - 28px));
+  padding: 12px 14px;
+  border: 1px solid rgba(231, 214, 170, 0.24);
+  border-radius: 8px;
+  background: rgba(9, 14, 12, 0.84);
+  color: var(--white);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(var(--constellation-tooltip-x, 0), var(--constellation-tooltip-y, 0), 0) scale(0.96);
+  transform-origin: 18px 18px;
+  transition: opacity 160ms ease, transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.service-constellation-tooltip.is-visible {
+  opacity: 1;
+  transform: translate3d(var(--constellation-tooltip-x, 0), var(--constellation-tooltip-y, 0), 0) scale(1);
+}
+
+.service-constellation-tooltip span:first-child {
+  color: #bde7d1;
+  font-size: 11px;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.service-constellation-tooltip strong {
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.service-constellation-tooltip span:last-child {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .case-list {
@@ -1666,9 +1805,14 @@ h3 {
   }
 
   .service-lab,
+  .service-constellation,
   .brief-builder,
   .contact-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .service-constellation-stage {
+    min-height: 340px;
   }
 
   .contact-copy {
@@ -1727,6 +1871,7 @@ h3 {
   .proof-strip,
   .split,
   .service-grid,
+  .service-constellation,
   .ai-grid,
   .expertise-grid,
   .process-grid,
@@ -1754,6 +1899,15 @@ h3 {
 
   .band {
     padding: 62px 0;
+  }
+
+  .service-constellation {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .service-constellation-stage {
+    min-height: 300px;
   }
 
   .case-story {
