@@ -76,6 +76,9 @@ const galleries = {
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykawple";
 const ATTRIBUTION_STORAGE_KEY = "localmind_attribution";
 const ATTRIBUTION_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id", "gclid", "fbclid", "msclkid"];
+const SWIPER_CSS_HREF = "./vendor/swiper/swiper-bundle.min.css";
+const SWIPER_JS_SRC = "./vendor/swiper/swiper-bundle.min.js";
+let swiperAssetsPromise = null;
 
 // All public landing copy lives here so RU/EN edits stay in one place.
 const translations = {
@@ -929,10 +932,17 @@ function setupHeroBubbles() {
   let dpr = 1;
   let frameId = 0;
   let lastTime = performance.now();
+  let lastFrameTime = 0;
+  let isVisible = false;
+  let isRunning = false;
   let orbReady = false;
 
   function randomBetween(min, max) {
     return min + Math.random() * (max - min);
+  }
+
+  function getFrameInterval() {
+    return window.innerWidth < 820 ? 1000 / 24 : 1000 / 30;
   }
 
   function makeBubble() {
@@ -962,15 +972,17 @@ function setupHeroBubbles() {
     const rect = hero.getBoundingClientRect();
     width = Math.max(1, rect.width);
     height = Math.max(1, rect.height);
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dpr = Math.min(window.devicePixelRatio || 1, window.innerWidth < 820 ? 1.25 : 1.5);
     canvas.width = Math.round(width * dpr);
     canvas.height = Math.round(height * dpr);
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const densityCount = Math.round((width * height) / 132000);
-    const targetCount = reduceMotionQuery.matches ? Math.min(7, densityCount) : Math.min(16, Math.max(8, densityCount));
+    const densityCount = Math.round((width * height) / 170000);
+    const targetCount = reduceMotionQuery.matches
+      ? Math.min(5, densityCount)
+      : Math.min(window.innerWidth < 820 ? 8 : 11, Math.max(window.innerWidth < 820 ? 5 : 7, densityCount));
     bubbles = Array.from({ length: targetCount }, (_, index) => bubbles[index] || makeBubble());
     bubbles.forEach((bubble) => {
       const margin = bubble.size * 0.34;
@@ -1010,7 +1022,6 @@ function setupHeroBubbles() {
         context.translate(x, y);
         context.rotate(bubble.rotation + Math.sin(timestamp * 0.00032 + bubble.phase) * 0.08);
         context.globalAlpha = bubble.opacity;
-        context.filter = "saturate(1.02) contrast(1.18)";
         context.drawImage(orbImage, -drawSize / 2, -(drawSize * ratio) / 2, drawSize, drawSize * ratio);
       } else {
         const fallback = context.createRadialGradient(x - drawSize * 0.18, y - drawSize * 0.22, 0, x, y, drawSize * 0.52);
@@ -1028,6 +1039,11 @@ function setupHeroBubbles() {
   }
 
   function moveBubbles(timestamp) {
+    if (!isRunning) return;
+    frameId = window.requestAnimationFrame(moveBubbles);
+    if (timestamp - lastFrameTime < getFrameInterval()) return;
+    lastFrameTime = timestamp;
+
     const delta = Math.min(32, timestamp - lastTime) / 16.67;
     lastTime = timestamp;
 
@@ -1096,7 +1112,6 @@ function setupHeroBubbles() {
     pointer.moveX *= 0.88;
     pointer.moveY *= 0.88;
     drawBubbles(timestamp);
-    frameId = window.requestAnimationFrame(moveBubbles);
   }
 
   function updatePointer(event) {
@@ -1109,6 +1124,21 @@ function setupHeroBubbles() {
     pointer.y = nextY;
     pointer.active = true;
     pointer.lastSeen = performance.now();
+  }
+
+  function startAnimation() {
+    if (reduceMotionQuery.matches || isRunning || document.hidden || !isVisible) return;
+    isRunning = true;
+    lastTime = performance.now();
+    lastFrameTime = 0;
+    frameId = window.requestAnimationFrame(moveBubbles);
+  }
+
+  function stopAnimation() {
+    if (!isRunning && !frameId) return;
+    isRunning = false;
+    window.cancelAnimationFrame(frameId);
+    frameId = 0;
   }
 
   orbImage.onload = () => {
@@ -1127,16 +1157,35 @@ function setupHeroBubbles() {
 
   window.addEventListener("resize", resizeCanvas, { passive: true });
   reduceMotionQuery.addEventListener?.("change", () => {
-    window.cancelAnimationFrame(frameId);
+    stopAnimation();
     resizeCanvas();
-    if (!reduceMotionQuery.matches) {
-      lastTime = performance.now();
-      frameId = window.requestAnimationFrame(moveBubbles);
+    startAnimation();
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAnimation();
+    } else {
+      startAnimation();
     }
   });
 
-  if (!reduceMotionQuery.matches) {
-    frameId = window.requestAnimationFrame(moveBubbles);
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = Boolean(entry?.isIntersecting);
+        if (isVisible) {
+          startAnimation();
+        } else {
+          stopAnimation();
+        }
+      },
+      { rootMargin: "96px 0px", threshold: 0 },
+    );
+    observer.observe(hero);
+  } else {
+    isVisible = true;
+    startAnimation();
   }
 }
 
@@ -1272,6 +1321,9 @@ function setupServiceConstellation() {
     dragY: 0,
     activeIndex: 0,
     frame: 0,
+    lastFrameTime: 0,
+    running: false,
+    visible: false,
   };
 
   function clamp(value, min, max) {
@@ -1280,6 +1332,10 @@ function setupServiceConstellation() {
 
   function randomFor(seed) {
     return Math.sin(seed * 4128.73) * 0.5 + 0.5;
+  }
+
+  function getFrameInterval() {
+    return window.innerWidth < 820 ? 1000 / 24 : 1000 / 30;
   }
 
   function getServiceMap() {
@@ -1314,7 +1370,7 @@ function setupServiceConstellation() {
   function buildParticles() {
     const previousParticles = state.particles;
     const area = state.width * state.height;
-    const count = reduceMotion ? 96 : Math.min(260, Math.max(150, Math.floor(area / 1150)));
+    const count = reduceMotion ? 48 : Math.min(120, Math.max(68, Math.floor(area / 2600)));
     const centerX = state.width / 2;
     const centerY = state.height / 2;
     const padding = state.width < 430 ? 16 : 22;
@@ -1418,6 +1474,12 @@ function setupServiceConstellation() {
   }
 
   function draw(time = 0) {
+    if (!reduceMotion && state.running) {
+      state.frame = requestAnimationFrame(draw);
+      if (time - state.lastFrameTime < getFrameInterval()) return;
+      state.lastFrameTime = time;
+    }
+
     const seconds = time * 0.001;
     const centerX = state.width / 2;
     const centerY = state.height / 2;
@@ -1470,7 +1532,7 @@ function setupServiceConstellation() {
     state.particles.forEach((particle) => projectItem(particle, 1));
     state.nodes.forEach((node) => projectItem(node, 0.45));
 
-    const connectionItems = [...state.particles, ...state.nodes];
+    const connectionItems = [...state.particles.filter((_, index) => index % 2 === 0), ...state.nodes];
     const particleMaxDistance = Math.min(165, Math.max(108, minDimension * (state.pointer.force > 0.1 ? 0.45 : 0.37)));
     for (let i = 0; i < connectionItems.length; i += 1) {
       for (let j = i + 1; j < connectionItems.length; j += 1) {
@@ -1581,7 +1643,20 @@ function setupServiceConstellation() {
     const activeNode = state.nodes[state.activeIndex];
     if (tooltip?.classList.contains("is-visible") && activeNode) updateTooltip(activeNode);
 
-    if (!reduceMotion) state.frame = requestAnimationFrame(draw);
+  }
+
+  function startConstellation() {
+    if (reduceMotion || state.running || document.hidden || !state.visible) return;
+    state.running = true;
+    state.lastFrameTime = 0;
+    state.frame = requestAnimationFrame(draw);
+  }
+
+  function stopConstellation() {
+    if (!state.running && !state.frame) return;
+    state.running = false;
+    cancelAnimationFrame(state.frame);
+    state.frame = 0;
   }
 
   window.refreshServiceConstellation = () => {
@@ -1654,10 +1729,37 @@ function setupServiceConstellation() {
 
   resizeConstellation();
   draw();
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        state.visible = Boolean(entry?.isIntersecting);
+        if (state.visible) {
+          startConstellation();
+        } else {
+          stopConstellation();
+        }
+      },
+      { rootMargin: "140px 0px", threshold: 0 },
+    );
+    observer.observe(root);
+  } else {
+    state.visible = true;
+    startConstellation();
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopConstellation();
+    } else {
+      startConstellation();
+    }
+  });
+
   window.addEventListener("resize", () => {
-    window.cancelAnimationFrame(state.frame);
+    stopConstellation();
     resizeConstellation();
     draw();
+    startConstellation();
   });
 }
 
@@ -1887,6 +1989,47 @@ function setupFaq() {
   });
 }
 
+function loadSwiperAssets() {
+  if (window.Swiper) return Promise.resolve(window.Swiper);
+  if (swiperAssetsPromise) return swiperAssetsPromise;
+
+  const cssPromise = new Promise((resolve) => {
+    const existing = document.querySelector("[data-swiper-css]");
+    if (existing) {
+      resolve();
+      return;
+    }
+
+    const stylesheet = document.createElement("link");
+    stylesheet.rel = "stylesheet";
+    stylesheet.href = SWIPER_CSS_HREF;
+    stylesheet.dataset.swiperCss = "true";
+    stylesheet.onload = resolve;
+    stylesheet.onerror = resolve;
+    document.head.appendChild(stylesheet);
+  });
+
+  const scriptPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector("[data-swiper-script]");
+    if (existing) {
+      existing.addEventListener("load", () => resolve(window.Swiper), { once: true });
+      existing.addEventListener("error", reject, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = SWIPER_JS_SRC;
+    script.async = true;
+    script.dataset.swiperScript = "true";
+    script.onload = () => resolve(window.Swiper);
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
+
+  swiperAssetsPromise = Promise.all([cssPromise, scriptPromise]).then(([, SwiperClass]) => SwiperClass);
+  return swiperAssetsPromise;
+}
+
 function setupGallery() {
   const modal = document.querySelector("#screen-gallery");
   const modalTitle = document.querySelector("#gallery-title");
@@ -1897,10 +2040,11 @@ function setupGallery() {
 
   if (!modal || !modalTitle || !modalNote || !wrapper || !closeButton) return;
 
-  function openGallery(key) {
+  async function openGallery(key) {
     const gallery = galleries[key];
     if (!gallery) return;
     const translatedGallery = translations[currentLanguage].galleryCases[key];
+    const SwiperClass = await loadSwiperAssets().catch(() => null);
 
     modalTitle.textContent = translatedGallery?.[0] || gallery.title;
     modalNote.textContent = translatedGallery?.[1] || gallery.note;
@@ -1912,7 +2056,7 @@ function setupGallery() {
         return `
           <div class="swiper-slide${isWide ? " wide-slide" : ""}">
             <figure class="screen-shot${isWide ? " screen-shot-wide" : ""}">
-              <img src="${src}" alt="${screenLabel}" loading="eager" />
+              <img src="${src}" alt="${screenLabel}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" />
               <figcaption>${screenLabel}</figcaption>
             </figure>
           </div>
@@ -1931,8 +2075,8 @@ function setupGallery() {
     }
     document.body.classList.add("no-scroll");
 
-    if (window.Swiper) {
-      activeSwiper = new Swiper(".gallery-swiper", {
+    if (SwiperClass) {
+      activeSwiper = new SwiperClass(".gallery-swiper", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
