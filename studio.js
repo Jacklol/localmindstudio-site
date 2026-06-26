@@ -71,6 +71,57 @@ const galleries = {
       ["./assets/auto-real/auto-05.svg", "Listing details"],
     ],
   },
+  altay: {
+    title: "Altai Restart - resort website",
+    note: "Hotel and resort website with room booking, special offers, spa complex and premium visuals.",
+    screens: [
+      ["./assets/altay-real/altay-01.png", "Resort homepage hero", "wide"],
+      ["./assets/altay-real/altay-02.png", "Room categories and booking bar", "wide"],
+      ["./assets/altay-real/altay-03.png", "Special offers and promotions", "wide"],
+      ["./assets/altay-real/altay-04.png", "Aqua-thermal complex page", "wide"],
+    ],
+  },
+  asgard: {
+    title: "ASGARD - mining equipment store",
+    note: "E-commerce website for ASIC miners with catalog, product specs, leasing, cart and service blocks.",
+    screens: [
+      ["./assets/asgard-real/asgard-01.png", "Homepage hero and catalog CTA", "wide"],
+      ["./assets/asgard-real/asgard-02.png", "Manufacturers catalog with filters", "wide"],
+      ["./assets/asgard-real/asgard-03.png", "Product page with specs", "wide"],
+      ["./assets/asgard-real/asgard-04.png", "Media and blog section", "wide"],
+    ],
+  },
+  ekbdoma: {
+    title: "Invest Stroy - house construction website",
+    note: "Construction company website with project catalog, house detail pages, specs, pricing and calculator CTA.",
+    screens: [
+      ["./assets/ekbdoma-real/ekbdoma-01.png", "Homepage hero and project grid", "wide"],
+      ["./assets/ekbdoma-real/ekbdoma-02.png", "House project detail page", "wide"],
+      ["./assets/ekbdoma-real/ekbdoma-03.png", "Construction calculator", "wide"],
+      ["./assets/ekbdoma-real/ekbdoma-04.png", "Houses with plots catalog", "wide"],
+      ["./assets/ekbdoma-real/ekbdoma-05.png", "News and built houses", "wide"],
+    ],
+  },
+  ultra: {
+    title: "Ultra Drivers - premium car rental",
+    note: "Business and premium car rental website with homepage, fleet catalog, forums and car detail pages.",
+    screens: [
+      ["./assets/ultra-real/ultra-01.png", "Homepage hero", "wide"],
+      ["./assets/ultra-real/ultra-02.png", "Fleet catalog with filters", "wide"],
+      ["./assets/ultra-real/ultra-03.png", "Forums and events", "wide"],
+      ["./assets/ultra-real/ultra-04.png", "Mercedes S-Class listing", "wide"],
+    ],
+  },
+  vmetal: {
+    title: "V-METAL - metal products store",
+    note: "Industrial e-commerce website with homepage, catalog, product configurator and shopping cart.",
+    screens: [
+      ["./assets/vmetal-real/vmetal-01.png", "Homepage hero", "wide"],
+      ["./assets/vmetal-real/vmetal-02.png", "Metal roof tiles catalog", "wide"],
+      ["./assets/vmetal-real/vmetal-03.png", "Product page with configurator", "wide"],
+      ["./assets/vmetal-real/vmetal-04.png", "Shopping cart and checkout", "wide"],
+    ],
+  },
 };
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykawple";
@@ -171,8 +222,8 @@ const translations = {
     ],
     casesIntro: {
       eyebrow: "Cases",
-      title: "Cases from mobile apps, enterprise tools and operations.",
-      body: "These projects show mobile delivery, document-heavy enterprise work, admin flows, integrations and product UX.",
+      title: "Cases from mobile apps, websites, enterprise tools and operations.",
+      body: "These projects show mobile delivery, e-commerce and service websites, document-heavy enterprise work, admin flows, integrations and product UX.",
     },
     cases: [
       ["Finance mobile app", "YPA Finance", "Dashboard, AI money coach, budget, debt payoff, alerts and credit insights.", ["React Native", "AI coach", "Fintech"]],
@@ -181,6 +232,11 @@ const translations = {
       ["Employee onboarding", "Empiflow", "Onboarding tracks, learning states, dashboard, document library and progress screens.", ["Workflow", "HR", "Files"]],
       ["Camera and 360 media", "Auto Dealers Media App", "Cross-platform app for photos, video, upload queues, listing details and Theta 360 media.", ["Camera", "Media", "Device"]],
       ["Nutrition tracking", "SmartEat", "Food search, meal flows, validation, diary, profile and API-driven mobile screens.", ["Forms", "API", "Mobile"]],
+      ["Resort and hotel website", "Altai Restart", "Premium resort website with room booking, category cards, gallery and booking CTA.", ["UX/UI", "Hospitality", "Web"]],
+      ["Mining equipment store", "ASGARD", "E-commerce for ASIC miners with catalog, product specs, leasing blocks and service pages.", ["E-commerce", "Catalog", "Web"]],
+      ["House construction website", "Invest Stroy", "Construction company site with project catalog, house details, specs, pricing and calculator.", ["Real estate", "Catalog", "Web"]],
+      ["Premium car rental", "Ultra Drivers", "Business and premium class car rental with a driver.", ["E-commerce", "Fleet", "Web"]],
+      ["Metal products store", "V-METAL", "Industrial e-commerce with catalog, product configurator, cart and order process pages.", ["E-commerce", "B2B", "Web"]],
     ],
     aiIntro: {
       eyebrow: "AI assistants and chatbots",
@@ -336,6 +392,11 @@ const translations = {
       empiflow: ["Empiflow - onboarding app", "Employee tracks, activities, learning content and document library screens."],
       rutilus: ["Rutilus / Norilsk Nickel - enterprise app", "Login, PIN access, document details, assignments, deadlines and workflow screens."],
       auto: ["Auto dealers media app", "Camera capture, photo/video gallery, Theta 360 preview, upload queue and listing details."],
+      altay: ["Altai Restart - resort website", "Homepage, room booking, special offers and aqua-thermal complex."],
+      asgard: ["ASGARD - mining equipment store", "E-commerce pages for ASIC miners with catalog, specs, leasing and service blocks."],
+      ekbdoma: ["Invest Stroy - house construction website", "Homepage, project detail, construction calculator, houses with plots and news."],
+      ultra: ["Ultra Drivers - premium car rental", "Homepage, fleet catalog, forums and car detail pages."],
+      vmetal: ["V-METAL - metal products store", "Homepage, catalog, product configurator and shopping cart."],
     },
   },
   ru: {
@@ -427,8 +488,8 @@ const translations = {
     ],
     casesIntro: {
       eyebrow: "Кейсы",
-      title: "Кейсы в мобильной разработке, enterprise и операционных продуктах.",
-      body: "Здесь видно мобильную поставку, документооборот, админ-сценарии, интеграции и продуктовый UX.",
+      title: "Кейсы в мобильной разработке, веб-сайтах, enterprise и операционных продуктах.",
+      body: "Здесь видно мобильную поставку, e-commerce и сервисные сайты, документооборот, админ-сценарии, интеграции и продуктовый UX.",
     },
     cases: [
       ["Финансовое мобильное приложение", "YPA Finance", "Дашборд, AI-коуч, бюджет, план погашения долгов, оповещения и кредитные инсайты.", ["React Native", "AI-коуч", "Финтех"]],
@@ -437,6 +498,11 @@ const translations = {
       ["Адаптация сотрудников", "Empiflow", "Треки онбординга, учебные состояния, дашборд, библиотека документов и экраны прогресса.", ["Процессы", "HR", "Файлы"]],
       ["Камера и 360-медиа", "Auto Dealers Media App", "Кросс-платформенное приложение для фото, видео, очереди загрузки, деталей объявления и Theta 360.", ["Камера", "Медиа", "Устройства"]],
       ["Питание и дневник еды", "SmartEat", "Поиск продуктов, сценарии питания, формы, валидация, дневник, профиль и мобильные экраны через API.", ["Формы", "API", "Мобильное"]],
+      ["Сайт отеля и курорта", "Алтай Рестарт", "Премиальный сайт курорта с бронированием номеров, карточками категорий и галереей.", ["UX/UI", "Отели", "Веб"]],
+      ["Магазин майнинг-оборудования", "ASGARD", "E-commerce для ASIC-майнеров: каталог, характеристики, лизинг и сервисные блоки.", ["E-commerce", "Каталог", "Веб"]],
+      ["Сайт строительной компании", "Инвест Строй", "Сайт застройщика: каталог проектов, карточки домов, характеристики, цены и калькулятор.", ["Недвижимость", "Каталог", "Веб"]],
+      ["Аренда авто премиум-класса", "Ultra Drivers", "Аренда автомобиля бизнес и премиум класса с водителем.", ["E-commerce", "Автопарк", "Веб"]],
+      ["Магазин металлопродукции", "V-METAL", "Промышленный e-commerce: каталог, конфигуратор товара, корзина и сценарий заказа.", ["E-commerce", "B2B", "Веб"]],
     ],
     aiIntro: {
       eyebrow: "AI-ассистенты и чат-боты",
@@ -592,6 +658,11 @@ const translations = {
       empiflow: ["Empiflow - приложение для онбординга", "Экраны онбординга: треки сотрудников, активности, учебный контент и библиотека документов."],
       rutilus: ["Rutilus / Norilsk Nickel - корпоративное приложение", "Корпоративные экраны: вход, PIN-доступ, документы, поручения, дедлайны и рабочие процессы."],
       auto: ["Auto Dealers Media App", "Медиа-сценарии для автодилеров: съемка, галерея, превью Theta 360, очередь загрузки и детали объявления."],
+      altay: ["Алтай Рестарт - сайт курорта", "Главная, бронирование номеров, спецпредложения и аква-термальный комплекс."],
+      asgard: ["ASGARD - магазин майнинг-оборудования", "E-commerce для ASIC-майнеров: каталог, характеристики, лизинг и сервисные блоки."],
+      ekbdoma: ["Инвест Строй - сайт строительной компании", "Главная, карточка дома, калькулятор строительства, дома с участками и новости."],
+      ultra: ["Ultra Drivers - аренда авто премиум-класса", "Главная, каталог автопарка, форумы и карточка автомобиля."],
+      vmetal: ["V-METAL - магазин металлопродукции", "Главная, каталог, карточка товара и корзина."],
     },
     galleryScreens: {
       ypa: ["Финансовый дашборд", "AI-коуч по деньгам", "Планировщик бюджета", "План погашения долга", "Оповещения о тратах", "Кредитные инсайты", "Валидация регистрации", "Регистрация"],
@@ -600,6 +671,11 @@ const translations = {
       empiflow: ["Дашборд и треки", "Завершенный трек адаптации", "Детали учебной активности", "Библиотека и документы"],
       rutilus: ["Вход", "PIN-код", "Детали документа и исполнители", "Форма поручения", "Календарь дедлайнов", "PIN в темной теме"],
       auto: ["Съемка автомобиля", "Медиагалерея", "Превью Theta 360", "Очередь загрузки", "Детали объявления"],
+      altay: ["Главная курорта", "Категории номеров и бронирование", "Спецпредложения", "Аква-термальный комплекс"],
+      asgard: ["Главная и каталог", "Каталог производителей", "Карточка товара", "Медиа и блог"],
+      ekbdoma: ["Главная и проекты", "Карточка дома", "Калькулятор строительства", "Дома с участками", "Новости"],
+      ultra: ["Главная", "Автопарк", "Форумы", "Mercedes S-Class"],
+      vmetal: ["Главная", "Каталог металлочерепицы", "Карточка товара", "Корзина"],
     },
   },
 };
@@ -2043,12 +2119,21 @@ function setupGallery() {
   async function openGallery(key) {
     const gallery = galleries[key];
     if (!gallery) return;
+
     const translatedGallery = translations[currentLanguage].galleryCases[key];
-    const SwiperClass = await loadSwiperAssets().catch(() => null);
+    const translatedScreens = translations[currentLanguage].galleryScreens?.[key] || [];
+
+    if (activeSwiper) {
+      try {
+        activeSwiper.destroy(true, true);
+      } catch (error) {
+        // Swiper can throw if slides were already removed from the DOM.
+      }
+      activeSwiper = null;
+    }
 
     modalTitle.textContent = translatedGallery?.[0] || gallery.title;
     modalNote.textContent = translatedGallery?.[1] || gallery.note;
-    const translatedScreens = translations[currentLanguage].galleryScreens?.[key] || [];
     wrapper.innerHTML = gallery.screens
       .map(([src, label, variant], index) => {
         const isWide = variant === "wide";
@@ -2064,10 +2149,6 @@ function setupGallery() {
       })
       .join("");
 
-    if (activeSwiper) {
-      activeSwiper.destroy(true, true);
-    }
-
     if (typeof modal.showModal === "function") {
       modal.showModal();
     } else {
@@ -2075,6 +2156,7 @@ function setupGallery() {
     }
     document.body.classList.add("no-scroll");
 
+    const SwiperClass = await loadSwiperAssets().catch(() => null);
     if (SwiperClass) {
       activeSwiper = new SwiperClass(".gallery-swiper", {
         effect: "coverflow",
@@ -2100,13 +2182,23 @@ function setupGallery() {
   }
 
   function closeGallery() {
+    if (activeSwiper) {
+      try {
+        activeSwiper.destroy(true, true);
+      } catch (error) {
+        // Ignore stale Swiper instances when the dialog closes.
+      }
+      activeSwiper = null;
+    }
     modal.close?.();
     modal.removeAttribute("open");
     document.body.classList.remove("no-scroll");
   }
 
-  document.querySelectorAll("[data-gallery]").forEach((trigger) => {
-    trigger.addEventListener("click", () => openGallery(trigger.dataset.gallery));
+  document.querySelector(".case-list")?.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-gallery]");
+    if (!trigger) return;
+    openGallery(trigger.dataset.gallery);
   });
 
   closeButton.addEventListener("click", closeGallery);

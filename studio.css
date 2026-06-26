@@ -1938,11 +1938,12 @@ h3 {
 
 .screen-shot-wide img {
   width: 100%;
-  height: auto;
+  height: min(62vh, 520px);
   max-height: min(62vh, 520px);
   aspect-ratio: auto;
   border-radius: 14px;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
 }
 
 .screen-shot figcaption {

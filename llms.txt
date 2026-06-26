@@ -51,6 +51,11 @@ LocalMind Studio has a partner page for designers, marketers, no-code studios, W
 - Empiflow: employee onboarding app with learning tracks, dashboard, document library and progress states.
 - Auto Dealers Media App: cross-platform app for photos, video, upload queues, listing details and Theta 360 media.
 - SmartEat: nutrition app with food search, meal flows, validation, diary, profile and API-driven mobile screens.
+- Altai Restart: premium resort and hotel website with room booking, category cards and gallery.
+- ASGARD: e-commerce website for ASIC mining equipment with catalog, product specs and leasing.
+- Invest Stroy: construction company website with house project catalog, specs, pricing and calculator.
+- Ultra Drivers: premium and business car rental website with fleet catalog, filters and booking flow.
+- V-METAL: industrial e-commerce for metal products with catalog, product configurator and order flow.
 
 ## Technology
 
