@@ -408,7 +408,7 @@ h1 {
 .delivery-panel {
   position: absolute;
   right: max(40px, calc((100vw - 1180px) / 2));
-  bottom: 42px;
+  bottom: 64px;
   z-index: 2;
   width: min(430px, calc(100% - 40px));
   padding: 18px;
@@ -847,17 +847,13 @@ h3 {
   grid-template-columns: 168px minmax(0, 1fr) 280px;
   gap: 28px;
   align-items: center;
-  padding: 28px 0;
+  padding: 28px 14px;
   border-bottom: 1px solid rgba(17, 27, 24, 0.1);
-  transition:
-    background 180ms ease,
-    padding 180ms ease;
+  transition: background 180ms ease;
 }
 
 .case-story:hover {
-  padding-right: 18px;
-  padding-left: 18px;
-  background: rgba(255, 255, 255, 0.56);
+  background: var(--soft-green);
 }
 
 .case-visual {
@@ -1910,7 +1906,7 @@ h3 {
 
 .gallery-swiper {
   width: 100%;
-  padding: 20px 0 46px;
+  padding: 20px 0 4px;
 }
 
 .gallery-swiper .swiper-slide {
@@ -1948,10 +1944,21 @@ h3 {
 
 .screen-shot figcaption {
   margin-top: 12px;
+  margin-bottom: 0;
   color: var(--muted);
   font-size: 14px;
   font-weight: 680;
   text-align: center;
+}
+
+.gallery-swiper .swiper-slide:not(.swiper-slide-active) figcaption {
+  opacity: 0;
+}
+
+.gallery-swiper .swiper-pagination {
+  position: static;
+  width: 100%;
+  margin-top: 22px;
 }
 
 .swiper-button-next,
@@ -2058,7 +2065,7 @@ h3 {
     right: auto;
     bottom: auto;
     width: min(1180px, calc(100% - 40px));
-    margin: -120px auto 40px;
+    margin: -120px auto 75px;
   }
 
   .hero-copy {
