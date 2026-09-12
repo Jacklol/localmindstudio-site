@@ -868,6 +868,7 @@ const translations = {
     navCall: "Request a call",
     navTelegram: "@jackkorlive",
     navEmail: "localmindstudio@gmail.com",
+    talkButton: "let's talk?",
     heroEyebrow: "Product studio",
     heroTitle: "We build products for\u00A0business.",
     heroLead: "Development, design, SEO and AI — from idea to launch and support.",
@@ -994,6 +995,7 @@ const translations = {
     navCall: "Заказать звонок",
     navTelegram: "@jackkorlive",
     navEmail: "localmindstudio@gmail.com",
+    talkButton: "обсудим?",
     heroEyebrow: "Продуктовая студия",
     heroTitle: "Делаем продукты для\u00A0бизнеса.",
     heroLead: "Разработка, дизайн, SEO и AI — от идеи до запуска и поддержки.",
@@ -1276,6 +1278,10 @@ function applyLanguage(language) {
   setText(".hero-copy .lead", t.heroLead);
   setText("[data-hero-action-primary]", t.heroActions[0]);
   setText("[data-hero-action-secondary]", t.heroActions[1]);
+  document.querySelectorAll("[data-talk-label]").forEach((node) => {
+    node.textContent = t.talkButton;
+  });
+  document.querySelector("[data-talk-button]")?.setAttribute("aria-label", t.talkButton);
   applyPaletteCopy();
 
   document.querySelectorAll("[data-marquee-phrase]").forEach((item) => {
@@ -1824,6 +1830,96 @@ function ensureContactModal() {
   document.body.appendChild(dialog);
 }
 
+function talkButtonMarkup() {
+  return `
+    <span class="talk-orb__track">
+      <span class="talk-orb__line" data-talk-label>обсудим?</span>
+      <span class="talk-orb__line" data-talk-label aria-hidden="true">обсудим?</span>
+    </span>
+  `;
+}
+
+function ensureTalkButton() {
+  if (document.querySelector("[data-talk-button]")) return;
+  const button = document.createElement("a");
+  button.className = "talk-orb";
+  button.href = "#contact";
+  button.dataset.openContact = "";
+  button.dataset.talkButton = "";
+  button.setAttribute("aria-label", "обсудим?");
+  button.innerHTML = talkButtonMarkup();
+  document.body.appendChild(button);
+}
+
+function setupTalkButton() {
+  const button = document.querySelector("[data-talk-button]");
+  if (!button || button.dataset.ready === "true") return;
+  button.dataset.ready = "true";
+  setupTalkButtonVisibility(button);
+  setupTalkButtonMagnet(button);
+}
+
+function setupTalkButtonVisibility(button) {
+  const hero = document.querySelector(".site-hero") || document.querySelector(".case-hero-card");
+
+  function setVisible(visible) {
+    button.classList.toggle("is-visible", visible);
+    button.toggleAttribute("inert", !visible);
+    if (visible) button.removeAttribute("aria-hidden");
+    else button.setAttribute("aria-hidden", "true");
+  }
+
+  if (!hero) {
+    setVisible(true);
+    return;
+  }
+
+  function heroIsFullyGone() {
+    return hero.getBoundingClientRect().bottom <= 0;
+  }
+
+  setVisible(heroIsFullyGone());
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(() => {
+      setVisible(heroIsFullyGone());
+    }, { threshold: [0, 0.01] });
+    observer.observe(hero);
+    return;
+  }
+
+  window.addEventListener("scroll", () => setVisible(heroIsFullyGone()), { passive: true });
+}
+
+function setupTalkButtonMagnet(button) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const coarse = window.matchMedia("(pointer: coarse)").matches;
+  if (reduceMotion || coarse) return;
+
+  const pull = 0.32;
+  const maxShift = 22;
+
+  function reset() {
+    button.style.transition = "transform 420ms cubic-bezier(0.22, 1, 0.36, 1)";
+    button.style.transform = "translate3d(0, 0, 0)";
+  }
+
+  button.addEventListener("pointerenter", () => {
+    button.style.transition = "transform 80ms linear";
+  });
+
+  button.addEventListener("pointermove", (event) => {
+    if (event.pointerType === "touch") return;
+    const rect = button.getBoundingClientRect();
+    const x = (event.clientX - (rect.left + rect.width / 2)) * pull;
+    const y = (event.clientY - (rect.top + rect.height / 2)) * pull;
+    button.style.transform = `translate3d(${Math.max(-maxShift, Math.min(maxShift, x))}px, ${Math.max(-maxShift, Math.min(maxShift, y))}px, 0)`;
+  });
+
+  button.addEventListener("pointerleave", reset);
+  button.addEventListener("blur", reset);
+}
+
 function setupContactModal() {
   const modal = document.querySelector("#contact-modal");
   if (!modal) return;
@@ -2096,16 +2192,20 @@ function setupGallery() {
 setupLanguageSwitch();
 setupPalette();
 if (document.querySelector(".site-hero")) {
+  ensureTalkButton();
   applyLanguage(currentLanguage);
   setupStudioMarquee();
   setupStickyNavigation();
   setupContactForm();
   setupContactModal();
+  setupTalkButton();
 }
 if (document.body.classList.contains("case-page")) {
   ensureContactModal();
+  ensureTalkButton();
   applyLanguage(currentLanguage);
   setupCasePage();
   setupContactForm();
   setupContactModal();
+  setupTalkButton();
 }

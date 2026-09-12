@@ -1655,6 +1655,73 @@ h3 {
   text-align: center;
 }
 
+.talk-orb {
+  position: fixed;
+  right: max(20px, var(--layout-gutter));
+  bottom: max(20px, var(--layout-gutter));
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition:
+    opacity 320ms ease,
+    visibility 320ms ease;
+}
+
+.talk-orb.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.talk-orb__track {
+  display: grid;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+.talk-orb__line {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.talk-orb__line:last-child {
+  transform: translateY(130%);
+}
+
+.talk-orb:hover .talk-orb__line:first-child,
+.talk-orb:focus-visible .talk-orb__line:first-child {
+  transform: translateY(-130%);
+}
+
+.talk-orb:hover .talk-orb__line:last-child,
+.talk-orb:focus-visible .talk-orb__line:last-child {
+  transform: translateY(0);
+}
+
+html.scroll-locked .talk-orb {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .partner-page {
   background: var(--paper);
 }
@@ -2050,6 +2117,10 @@ h3 {
     animation-duration: var(--marquee-duration, 24s) !important;
     animation-iteration-count: infinite !important;
   }
+
+  .talk-orb__line:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 1040px) {
@@ -2207,6 +2278,14 @@ h3 {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 14px var(--nav-pad-right) 14px var(--nav-pad-left);
+  }
+
+  .talk-orb {
+    right: 16px;
+    bottom: 16px;
+    width: 112px;
+    height: 112px;
+    font-size: 14px;
   }
 
   .brand {
