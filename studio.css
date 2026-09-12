@@ -1515,7 +1515,6 @@ h3 {
   position: relative;
   width: min(760px, 100%);
   padding: clamp(36px, 5vw, 56px) clamp(24px, 4vw, 48px) clamp(32px, 4vw, 48px);
-  border-radius: 28px;
   background: var(--hero-olive);
   color: var(--hero-olive-text);
   box-shadow: 0 28px 80px rgba(var(--ink-rgb), 0.22);
@@ -2282,10 +2281,11 @@ html.scroll-locked .talk-orb {
 
   .talk-orb {
     right: 16px;
-    bottom: 16px;
-    width: 112px;
-    height: 112px;
+    bottom: 0px;
+    width: 95px;
+    height: 32px;
     font-size: 14px;
+    border-radius: 0;
   }
 
   .brand {
