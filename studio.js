@@ -866,6 +866,7 @@ const translations = {
       "We build AI assistants, chatbots, .NET/C# backends, Node.js integrations, React Native apps, MVPs, UX/UI, SEO and launch support.",
     nav: ["Cases", "Competencies", "Contact"],
     navCall: "Request a call",
+    menu: "Menu",
     navTelegram: "@jackkorlive",
     navEmail: "localmindstudio@gmail.com",
     talkButton: "let's talk?",
@@ -993,6 +994,7 @@ const translations = {
       "Делаем AI-ассистентов, чат-ботов, .NET/C# бэкенды, Node.js интеграции, React Native приложения, MVP, UX/UI, SEO и поддержку запуска.",
     nav: ["Кейсы", "Компетенции", "Контакт"],
     navCall: "Заказать звонок",
+    menu: "Меню",
     navTelegram: "@jackkorlive",
     navEmail: "localmindstudio@gmail.com",
     talkButton: "обсудим?",
@@ -1259,6 +1261,12 @@ function applyLanguage(language) {
     setTexts(".nav-links a", t.nav);
   }
   setText("[data-nav-call]", t.navCall);
+  document.querySelectorAll(".nav-call").forEach((node) => {
+    node.setAttribute("aria-label", t.navCall);
+  });
+  document.querySelectorAll("[data-nav-menu-toggle]").forEach((node) => {
+    node.setAttribute("aria-label", t.menu);
+  });
   setText("[data-nav-telegram]", t.navTelegram);
   setText("[data-nav-email]", t.navEmail);
   if (document.body.classList.contains("case-page")) {
@@ -1271,7 +1279,6 @@ function applyLanguage(language) {
     const caseNavLinks = document.querySelectorAll(".case-nav .nav-links a:not([data-case-home]):not([data-case-list])");
     if (caseNavLinks[0]) caseNavLinks[0].textContent = t.nav[1];
     if (caseNavLinks[1]) caseNavLinks[1].textContent = t.nav[2];
-    setText(".case-nav .nav-call", t.navCall);
   }
   setText(".hero-copy .eyebrow", t.heroEyebrow);
   setText("[data-hero-title]", t.heroTitle);
@@ -1547,11 +1554,56 @@ function applyPalette(id, persist = true) {
 }
 
 function setPaletteOpen(open) {
+  const root = document.documentElement;
   if (open) lockScroll();
-  document.documentElement.classList.toggle("palette-open", open);
+  root.classList.toggle("palette-open", open);
   document.querySelector("[data-palette-toggle-button]")?.setAttribute("aria-expanded", String(open));
   applyPaletteCopy();
-  if (!open) unlockScroll();
+  if (!open && !root.classList.contains("menu-open") && !document.querySelector("dialog[open]")) {
+    unlockScroll();
+  }
+}
+
+function setMenuOpen(open, keepScrollLock = false) {
+  const root = document.documentElement;
+  if (open) lockScroll();
+  root.classList.toggle("menu-open", open);
+  document.querySelectorAll("[data-nav-menu-toggle]").forEach((button) => {
+    button.setAttribute("aria-expanded", String(open));
+  });
+  if (!open && !keepScrollLock && !root.classList.contains("palette-open") && !document.querySelector("dialog[open]")) {
+    unlockScroll();
+  }
+}
+
+function setupMobileNav() {
+  const toggle = document.querySelector("[data-nav-menu-toggle]");
+  if (!toggle) return;
+
+  toggle.addEventListener("click", () => {
+    setMenuOpen(!document.documentElement.classList.contains("menu-open"));
+  });
+
+  document.querySelectorAll("[data-nav-menu-close]").forEach((node) => {
+    node.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.querySelectorAll(".nav-menu__panel a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(max-width: 820px)").matches) return;
+    if (document.documentElement.classList.contains("menu-open")) setMenuOpen(false);
+  });
+
+  if (new URLSearchParams(location.search).get("menu") === "open") {
+    setMenuOpen(true);
+  }
 }
 
 function setupPalette() {
@@ -1926,6 +1978,7 @@ function setupContactModal() {
 
   function openModal(event) {
     event.preventDefault();
+    setMenuOpen(false, true);
     lockScroll();
     if (typeof modal.showModal === "function") {
       if (!modal.open) modal.showModal();
@@ -2209,6 +2262,7 @@ function setupGallery() {
       })
       .join("");
 
+    setMenuOpen(false, true);
     lockScroll();
     if (typeof modal.showModal === "function") {
       modal.showModal();
@@ -2278,6 +2332,7 @@ function setupGallery() {
 
 setupLanguageSwitch();
 setupPalette();
+setupMobileNav();
 if (document.querySelector(".site-hero")) {
   ensureTalkButton();
   applyLanguage(currentLanguage);
