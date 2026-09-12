@@ -18,7 +18,7 @@
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="LocalMind Studio" />
-    <meta name="theme-color" content="#111815" />
+    <meta name="theme-color" content="#0d1512" />
     <link rel="canonical" href="https://localmindstudio.site/partners.html" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://localmindstudio.site/partners.html" />
@@ -37,10 +37,20 @@
       content="Приводите клиентов на MVP, AI, .NET, mobile, UX/UI и SEO. Получайте 20% с оплаченного заказа."
     />
     <meta name="twitter:image" content="https://localmindstudio.site/assets/mobile-portfolio-hero.png" />
-    <link rel="icon" href="./assets/studio-favicon.svg?v=20260609-studio" type="image/svg+xml" />
+    <link rel="icon" href="./assets/studio-favicon.svg?v=20260910-unify" type="image/svg+xml" />
     <link rel="alternate" type="text/plain" href="./llms.txt" title="LocalMind Studio AI-readable summary" />
     <link rel="sitemap" type="application/xml" href="./sitemap.xml" />
-    <link rel="stylesheet" href="./studio.css?v=20260615-perf-pass" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var allowed = ["pebble", "sage", "harbor", "clay", "tide", "pulse"];
+        var value = localStorage.getItem("studioPalette") || "sage";
+        document.documentElement.dataset.palette = allowed.indexOf(value) >= 0 ? value : "sage";
+      })();
+    </script>
+    <link rel="stylesheet" href="./studio.css?v=20260911-competencies" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -156,12 +166,12 @@
   <body class="partner-page">
     <nav class="nav is-scrolled partner-nav" aria-label="Partner navigation">
       <a class="brand" href="./index.html" aria-label="LocalMind Studio">
-        <span class="brand-mark" aria-hidden="true">LM</span>
-        <span class="brand-name">LocalMind Studio</span>
+        <img class="brand-logo" src="./assets/logo.png" alt="" width="217" height="73" />
       </a>
       <div class="nav-links partner-nav-links">
         <a href="./index.html">Главная</a>
         <a href="./index.html#cases">Кейсы</a>
+        <a href="./index.html#competencies">Компетенции</a>
         <a href="./index.html#contact">Контакт</a>
       </div>
       <a class="nav-call" href="https://t.me/jackkorlive" target="_blank" rel="noreferrer">Написать в Telegram</a>
@@ -294,5 +304,6 @@
         <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer">@jackkorlive</a>
       </div>
     </footer>
+    <script src="./studio.js?v=20260911-competencies"></script>
   </body>
 </html>

@@ -1,41 +1,37 @@
 const galleries = {
   ypa: {
     title: "YPA Finance - money coach app",
-    note: "Finance screens: dashboard, AI coach, budget, debt payoff, alerts, credit insights, and auth.",
+    note: "Finance screens: AI assistants, profile, credit score, debt calculator, feedback and budget.",
     screens: [
-      ["./assets/ypa-product/ypa-dashboard.svg", "Finance dashboard"],
-      ["./assets/ypa-product/ypa-coach.svg", "AI money coach"],
-      ["./assets/ypa-product/ypa-budget.svg", "Budget planner"],
-      ["./assets/ypa-product/ypa-debt.svg", "Debt payoff plan"],
-      ["./assets/ypa-product/ypa-alerts.svg", "Spending alerts"],
-      ["./assets/ypa-product/ypa-credit.svg", "Credit insights"],
-      ["./assets/ypa-real/ypa-01.png", "Registration validation"],
-      ["./assets/ypa-real/ypa-02.png", "Sign up flow"],
+      ["./assets/ypa-real/ypa_slide_1.jpg?v=20260912-gen", "AI assistants", "full"],
+      ["./assets/ypa-real/ypa_slide_2.jpg?v=20260912-gen", "Profile", "full"],
+      ["./assets/ypa-real/ypa_slide_3.jpg?v=20260912-gen", "Credit score", "full"],
+      ["./assets/ypa-real/ypa_slide_4.jpg?v=20260912-gen", "Credit calculator", "full"],
+      ["./assets/ypa-real/ypa_slide_5.jpg?v=20260912-gen", "Feedback", "full"],
+      ["./assets/ypa-real/ypa_slide_6.jpg?v=20260912-gen", "Budget", "full"],
     ],
   },
   smarteat: {
     title: "SmartEat - nutrition app",
-    note: "Nutrition app screens for food search, meal tracking, profile, diary, and user health data.",
+    note: "Nutrition app: home, food search, meal tracking, custom dishes, diary, profile and allergens.",
     screens: [
-      ["./assets/smarteat-real/smarteat-01.png", "Authorization"],
-      ["./assets/smarteat-real/smarteat-02.png", "Home dashboard"],
-      ["./assets/smarteat-real/smarteat-03.png", "Ingredient search"],
-      ["./assets/smarteat-real/smarteat-04.png", "Meal tracking"],
-      ["./assets/smarteat-real/smarteat-05.png", "Cart meal selection"],
-      ["./assets/smarteat-real/smarteat-06.png", "Menu screen"],
-      ["./assets/smarteat-real/smarteat-07.png", "Add custom dish"],
-      ["./assets/smarteat-real/smarteat-08.png", "Health diary"],
-      ["./assets/smarteat-real/smarteat-09.png", "Profile"],
-      ["./assets/smarteat-real/smarteat-10.png", "Allergens questionnaire"],
+      ["./assets/smarteat-real/smarteat_slide_1.jpg?v=20260912-smarteat", "Home, login and menu", "full"],
+      ["./assets/smarteat-real/smarteat_slide_2.jpg?v=20260912-smarteat", "Ingredient search", "full"],
+      ["./assets/smarteat-real/smarteat_slide_3.jpg?v=20260912-smarteat", "Meal tracking", "full"],
+      ["./assets/smarteat-real/smarteat_slide_4.jpg?v=20260912-smarteat", "Cart and custom dish", "full"],
+      ["./assets/smarteat-real/smarteat_slide_5.jpg?v=20260912-smarteat", "Health diary", "full"],
+      ["./assets/smarteat-real/smarteat_slide_6.jpg?v=20260912-smarteat", "Profile and allergens", "full"],
     ],
   },
   demetra: {
     title: "Demetra - mobile app screens",
     note: "Mobile catalog and sales screens for an agribusiness product.",
     screens: [
-      ["./assets/demetra-real/demetra-01.png", "Splash screen"],
-      ["./assets/demetra-real/demetra-02.png", "Product catalog"],
-      ["./assets/demetra-real/demetra-03.png", "Category product list"],
+      ["./assets/demetra-real/demetra_slide_1.webp", "Home and catalog", "full"],
+      ["./assets/demetra-real/demetra_slide_2.webp", "Order history", "full"],
+      ["./assets/demetra-real/demetra_slide_3.webp", "Sales calendar", "full"],
+      ["./assets/demetra-real/demetra_slide_4.webp", "Order flow", "full"],
+      ["./assets/demetra-real/demetra_slide_5.webp", "Admin panel", "full"],
     ],
   },
   empiflow: {
@@ -50,14 +46,14 @@ const galleries = {
   },
   rutilus: {
     title: "Rutilus / Norilsk Nickel - enterprise app",
-    note: "Enterprise screens for login, PIN access, document details, assignments, deadlines, and document workflows.",
+    note: "Enterprise mobile screens: login, PIN, documents, assignments, deadlines and dark theme.",
     screens: [
-      ["./assets/rutilus-real/rutilus-05.jpg", "Login"],
-      ["./assets/rutilus-real/rutilus-04.jpg", "PIN code"],
-      ["./assets/rutilus-real/rutilus-02.jpg", "Document details and assignees"],
-      ["./assets/rutilus-real/rutilus-03.jpg", "Assignment form"],
-      ["./assets/rutilus-real/rutilus-01.jpg", "Deadline calendar"],
-      ["./assets/rutilus-real/rutilus-07.jpg", "Dark theme PIN"],
+      ["./assets/rutilus-real/rutilus_slide_1.jpg?v=20260912-rutilus", "Login and key screens", "full"],
+      ["./assets/rutilus-real/rutilus_slide_2.jpg?v=20260912-rutilus", "PIN code", "full"],
+      ["./assets/rutilus-real/rutilus_slide_3.jpg?v=20260912-rutilus", "Document details and assignees", "full"],
+      ["./assets/rutilus-real/rutilus_slide_4.jpg?v=20260912-rutilus", "Assignment form", "full"],
+      ["./assets/rutilus-real/rutilus_slide_5.jpg?v=20260912-rutilus", "Deadline calendar", "full"],
+      ["./assets/rutilus-real/rutilus_slide_6.jpg?v=20260912-rutilus", "Dark theme PIN", "full"],
     ],
   },
   auto: {
@@ -83,44 +79,774 @@ const galleries = {
   },
   asgard: {
     title: "ASGARD - mining equipment store",
-    note: "E-commerce website for ASIC miners with catalog, product specs, leasing, cart and service blocks.",
+    note: "E-commerce for ASIC miners: homepage, manufacturer catalog, product page, cart checkout and media.",
     screens: [
-      ["./assets/asgard-real/asgard-01.png", "Homepage hero and catalog CTA", "wide"],
-      ["./assets/asgard-real/asgard-02.png", "Manufacturers catalog with filters", "wide"],
-      ["./assets/asgard-real/asgard-03.png", "Product page with specs", "wide"],
-      ["./assets/asgard-real/asgard-04.png", "Media and blog section", "wide"],
+      ["./assets/asgard-real/asgard_slide_1.jpg?v=20260912-asgard", "Homepage and catalog CTA", "full"],
+      ["./assets/asgard-real/asgard_slide_2.jpg?v=20260912-asgard", "Manufacturers catalog with filters", "full"],
+      ["./assets/asgard-real/asgard_slide_3.jpg?v=20260912-asgard", "Product page with specs", "full"],
+      ["./assets/asgard-real/asgard_slide_4.jpg?v=20260912-asgard", "Cart and order form", "full"],
+      ["./assets/asgard-real/asgard_slide_5.jpg?v=20260912-asgard", "Media and blog", "full"],
     ],
   },
   ekbdoma: {
     title: "Invest Stroy - house construction website",
-    note: "Construction company website with project catalog, house detail pages, specs, pricing and calculator CTA.",
+    note: "Construction company website: homepage, house details, calculator, plots catalog and news.",
     screens: [
-      ["./assets/ekbdoma-real/ekbdoma-01.png", "Homepage hero and project grid", "wide"],
-      ["./assets/ekbdoma-real/ekbdoma-02.png", "House project detail page", "wide"],
-      ["./assets/ekbdoma-real/ekbdoma-03.png", "Construction calculator", "wide"],
-      ["./assets/ekbdoma-real/ekbdoma-04.png", "Houses with plots catalog", "wide"],
-      ["./assets/ekbdoma-real/ekbdoma-05.png", "News and built houses", "wide"],
+      ["./assets/ekbdoma-real/ekbdoma_slide_1.jpg?v=20260912-ekbdoma", "Homepage hero and project grid", "full"],
+      ["./assets/ekbdoma-real/ekbdoma_slide_2.jpg?v=20260912-ekbdoma", "House project detail page", "full"],
+      ["./assets/ekbdoma-real/ekbdoma_slide_3.jpg?v=20260912-ekbdoma", "Construction calculator", "full"],
+      ["./assets/ekbdoma-real/ekbdoma_slide_4.jpg?v=20260912-ekbdoma", "Houses with plots catalog", "full"],
+      ["./assets/ekbdoma-real/ekbdoma_slide_5.jpg?v=20260912-ekbdoma", "News and built houses", "full"],
     ],
   },
   ultra: {
-    title: "Ultra Drivers - premium car rental",
-    note: "Business and premium car rental website with homepage, fleet catalog, forums and car detail pages.",
+    title: "Ultra Drivers - chauffeur marketplace",
+    note: "Premium chauffeur platform: public fleet, driver signup, document moderation and car listings.",
     screens: [
-      ["./assets/ultra-real/ultra-01.png", "Homepage hero", "wide"],
-      ["./assets/ultra-real/ultra-02.png", "Fleet catalog with filters", "wide"],
-      ["./assets/ultra-real/ultra-03.png", "Forums and events", "wide"],
-      ["./assets/ultra-real/ultra-04.png", "Mercedes S-Class listing", "wide"],
+      ["./assets/ultra-real/ultra_slide_1.jpg", "Homepage and featured cars", "full"],
+      ["./assets/ultra-real/ultra_slide_2.jpg", "Fleet catalog with filters", "full"],
+      ["./assets/ultra-real/ultra_slide_3.jpg", "Mercedes S-Class listing", "full"],
+      ["./assets/ultra-real/ultra_slide_4.jpg", "Driver signup and login", "full"],
+      ["./assets/ultra-real/ultra_slide_5.jpg", "Driver cabinet and car form", "full"],
     ],
   },
   vmetal: {
     title: "V-METAL - metal products store",
-    note: "Industrial e-commerce website with homepage, catalog, product configurator and shopping cart.",
+    note: "Industrial e-commerce: homepage, metal roof catalog, product configurator and cart.",
     screens: [
-      ["./assets/vmetal-real/vmetal-01.png", "Homepage hero", "wide"],
-      ["./assets/vmetal-real/vmetal-02.png", "Metal roof tiles catalog", "wide"],
-      ["./assets/vmetal-real/vmetal-03.png", "Product page with configurator", "wide"],
-      ["./assets/vmetal-real/vmetal-04.png", "Shopping cart and checkout", "wide"],
+      ["./assets/vmetal-real/vmetal_slide_1.jpg?v=20260912-vmetal", "Homepage hero", "full"],
+      ["./assets/vmetal-real/vmetal_slide_2.jpg?v=20260912-vmetal", "Metal roof tiles catalog", "full"],
+      ["./assets/vmetal-real/vmetal_slide_3.jpg?v=20260912-vmetal", "Product page with configurator", "full"],
+      ["./assets/vmetal-real/vmetal_slide_4.jpg?v=20260912-vmetal", "Shopping cart and checkout", "full"],
     ],
+  },
+  vows: {
+    title: "VOWS - wedding invitation constructor",
+    note: "Guest journey and bride constructor for a digital wedding invitation.",
+    screens: [
+      ["./assets/vows-real/vows_slide_1.jpg", "Welcome, guest login and RSVP", "full"],
+      ["./assets/vows-real/vows_slide_2.jpg", "Dress code, location and timeline", "full"],
+      ["./assets/vows-real/vows_slide_3.jpg", "Thank-you and reminder", "full"],
+      ["./assets/vows-real/vows_slide_4.jpg", "Bride constructor and guest list", "full"],
+      ["./assets/vows-real/vows_slide_5.jpg", "RSVP dashboard and guest invite", "full"],
+    ],
+  },
+  iqbattle: {
+    title: "IQ Battle - quiz nights in Moscow bars",
+    note: "Quiz website: bar games schedule, corporate events, birthday quiz, rules and team rating.",
+    screens: [
+      ["./assets/iqbattle-real/iqbattle_slide_1.jpg", "Homepage and upcoming games", "full"],
+      ["./assets/iqbattle-real/iqbattle_slide_2.jpg", "Corporate quiz", "full"],
+      ["./assets/iqbattle-real/iqbattle_slide_3.jpg", "Birthday quiz", "full"],
+      ["./assets/iqbattle-real/iqbattle_slide_4.jpg", "Games schedule", "full"],
+      ["./assets/iqbattle-real/iqbattle_slide_5.jpg", "Quiz rules", "full"],
+      ["./assets/iqbattle-real/iqbattle_slide_6.jpg", "Team rating", "full"],
+    ],
+  },
+  genlix: {
+    title: "Genlix - premium HoReCa supply website",
+    note: "B2B website for premium meat, poultry, beer and water supplies to Belarus.",
+    screens: [
+      ["./assets/genlix-real/genlix_slide_1.jpg", "Homepage and assortment", "full"],
+      ["./assets/genlix-real/genlix_slide_2.jpg", "Primebeef catalog and cut map", "full"],
+      ["./assets/genlix-real/genlix_slide_3.jpg", "Product page and related items", "full"],
+      ["./assets/genlix-real/genlix_slide_4.jpg", "Restaurants and stores on the map", "full"],
+      ["./assets/genlix-real/genlix_slide_5.jpg", "Industry blog for professionals", "full"],
+    ],
+  },
+  ossnova: {
+    title: "OSSNOVA - medical technologies for Belarus",
+    note: "Corporate medical site: homepage, coverage map, about, cardiology, knowledge base and contact.",
+    screens: [
+      ["./assets/ossnova-real/ossnova_slide_1.jpg?v=20260912-ossnova", "Homepage and medical hero", "full"],
+      ["./assets/ossnova-real/ossnova_slide_2.jpg?v=20260912-ossnova", "Belarus coverage map", "full"],
+      ["./assets/ossnova-real/ossnova_slide_3.jpg?v=20260912-ossnova", "About the company", "full"],
+      ["./assets/ossnova-real/ossnova_slide_4.jpg?v=20260912-ossnova", "Cardiology solutions", "full"],
+      ["./assets/ossnova-real/ossnova_slide_5.jpg?v=20260912-ossnova", "Articles and FAQ", "full"],
+      ["./assets/ossnova-real/ossnova_slide_6.jpg?v=20260912-ossnova", "Contact form", "full"],
+    ],
+  },
+};
+
+const caseStudySlugs = ["genlix", "ossnova", "vows", "ypa", "iqbattle", "demetra", "auto", "smarteat", "asgard", "ultra", "rutilus", "empiflow", "altay", "ekbdoma", "vmetal"];
+
+const caseStudies = {
+  ypa: {
+    slug: "ypa",
+    year: "2025",
+    studioTags: ["UX/UI", "MOBILE APP", "FINTECH"],
+    preview: "assets/ypa-real/ypa_hero.jpg?v=20260912-gen",
+    galleryKey: "ypa",
+    en: {
+      pageTitle: "YPA Finance — mobile finance app",
+      lead: "YPA Finance is a personal finance product with an AI money coach, budget planning, debt payoff tools and credit insights — built as a cross-platform mobile app.",
+      task: "Design and build a mobile finance app with an AI coach, budget tools, debt payoff planning, alerts and credit insights — from onboarding to daily use.",
+      solution: "We shipped a React Native app with a modular screen system, AI coach flows, budget and debt modules, alerts, credit insights and a validated registration journey.",
+      niche: "Personal finance and AI coaching",
+      duration: "5 months",
+      decisions: [
+        ["Dashboard as the daily hub", "The home screen combines balances, upcoming payments and coach prompts so users see the next best action immediately."],
+        ["AI coach with clear guardrails", "Coach flows explain recommendations in plain language and stay inside safe, actionable financial guidance."],
+        ["Modular finance modules", "Budget, debt, alerts and credit insights reuse one design system and can evolve independently after launch."],
+        ["Validated onboarding", "Registration screens include inline validation and progressive disclosure so users reach the dashboard without friction."],
+      ],
+      showcase: { tag: "Design", title: "Consistent UI for finance flows, AI coach and account setup" },
+      result: {
+        title: "A complete finance app in one product",
+        body: "Users get budgeting, debt planning, alerts, credit insights and an AI coach in a single mobile experience ready for store release.",
+      },
+    },
+    ru: {
+      pageTitle: "YPA Finance — финансовое мобильное приложение",
+      lead: "YPA Finance — продукт для личных финансов с AI-коучем, планированием бюджета, инструментами погашения долгов и кредитными инсайтами в одном мобильном приложении.",
+      task: "Спроектировать и собрать мобильное финансовое приложение с AI-коучем, бюджетом, планом погашения долгов, оповещениями и кредитными инсайтами — от онбординга до ежедневного использования.",
+      solution: "Сделали React Native приложение с модульной системой экранов, сценариями AI-коуча, блоками бюджета и долгов, алертами, кредитными инсайтами и валидируемой регистрацией.",
+      niche: "Личные финансы и AI-коучинг",
+      duration: "5 месяцев",
+      decisions: [
+        ["Дашборд как ежедневная точка входа", "Главный экран собирает балансы, ближайшие платежи и подсказки коуча, чтобы пользователь сразу видел следующий шаг."],
+        ["AI-коуч с понятными рамками", "Сценарии коуча объясняют рекомендации простым языком и остаются в зоне безопасных, прикладных советов."],
+        ["Модульная финансовая архитектура", "Бюджет, долги, алерты и кредитные инсайты используют одну дизайн-систему и развиваются независимо после запуска."],
+        ["Валидируемый онбординг", "Экраны регистрации с inline-валидацией и постепенным раскрытием полей помогают быстро дойти до дашборда."],
+      ],
+      showcase: { tag: "Дизайн", title: "Единый UI для финансовых сценариев, AI-коуча и регистрации" },
+      result: {
+        title: "Полноценное финансовое приложение в одном продукте",
+        body: "Пользователь получает бюджет, план погашения долгов, алерты, кредитные инсайты и AI-коуча в одном мобильном опыте, готовом к релизу в сторах.",
+      },
+    },
+  },
+  rutilus: {
+    slug: "rutilus",
+    year: "2023",
+    studioTags: ["UX/UI", "ENTERPRISE", "MOBILE APP"],
+    preview: "assets/rutilus-real/rutilus_hero.jpg?v=20260912-rutilus",
+    galleryKey: "rutilus",
+    en: {
+      pageTitle: "Rutilus — enterprise document workflows",
+      lead: "Rutilus is an enterprise mobile product for Norilsk Nickel teams working with assignments, documents, deadlines and secure access in high-load conditions.",
+      task: "Build a secure enterprise app for document workflows: PIN access, assignments, search, deadlines and handling large document volumes on mobile.",
+      solution: "We designed role-based flows for login and PIN, document details, assignment forms, deadline calendar and dark-theme access patterns for field use.",
+      niche: "Enterprise document management",
+      duration: "6 months",
+      decisions: [
+        ["PIN-first secure access", "Quick re-entry with PIN keeps the app usable in the field without sacrificing security between sessions."],
+        ["Document-first navigation", "Assignments, details and deadlines are reachable in a few taps from a predictable home structure."],
+        ["Forms tuned for large volumes", "Assignment and document screens prioritize scanability, status and responsible users over decorative UI."],
+        ["Dark theme for field work", "A dark PIN and document mode reduces glare and supports use in industrial environments."],
+      ],
+      showcase: { tag: "Design", title: "Enterprise screens for access, documents and deadlines" },
+      result: {
+        title: "Critical workflows on mobile",
+        body: "Teams can access documents, manage assignments and track deadlines from one secure mobile product built for enterprise load.",
+      },
+    },
+    ru: {
+      pageTitle: "Rutilus — корпоративный документооборот",
+      lead: "Rutilus — корпоративный мобильный продукт для команд Norilsk Nickel: поручения, документы, дедлайны и защищённый доступ в условиях высокой нагрузки.",
+      task: "Собрать защищённое enterprise-приложение для документооборота: PIN-доступ, поручения, поиск, дедлайны и работа с большими объёмами документов.",
+      solution: "Спроектировали ролевые сценарии входа и PIN, детали документов, формы поручений, календарь дедлайнов и тёмную тему для полевой работы.",
+      niche: "Корпоративный документооборот",
+      duration: "6 месяцев",
+      decisions: [
+        ["PIN-доступ без лишних шагов", "Быстрый повторный вход по PIN сохраняет безопасность между сессиями и удобство в поле."],
+        ["Навигация вокруг документа", "Поручения, детали и дедлайны доступны за несколько касаний из предсказуемой структуры."],
+        ["Формы под большие объёмы", "Экраны поручений и документов делают акцент на статусе, ответственных и быстром сканировании."],
+        ["Тёмная тема для полевых условий", "Тёмный PIN и документы снижают блики и поддерживают работу в производственной среде."],
+      ],
+      showcase: { tag: "Дизайн", title: "Корпоративные экраны доступа, документов и дедлайнов" },
+      result: {
+        title: "Критичные процессы в мобильном формате",
+        body: "Команды получают доступ к документам, поручениям и дедлайнам из одного защищённого мобильного продукта под enterprise-нагрузку.",
+      },
+    },
+  },
+  demetra: {
+    slug: "demetra",
+    year: "2024",
+    studioTags: ["UX/UI", "MOBILE APP & ADMIN PANEL"],
+    preview: "assets/demetra-real/demetra_hero.webp",
+    galleryKey: "demetra",
+    en: {
+      pageTitle: "Mobile app for an agribusiness company",
+      lead: "Demetra is an agribusiness company focused on stable quality and reliable supply. The project required a mobile sales tool for field teams and an admin panel to control catalog data and sales performance.",
+      task: "Automate agribusiness sales: build a mobile app for sales reps with an up-to-date catalog, stock and prices from 1C, plus an admin panel to manage sales processes.",
+      solution: "We delivered an ecosystem with role-based mobile access, catalog and orders, an admin panel for updates and analytics, 1C sync for stock and prices, and offline-friendly behavior on weak networks.",
+      niche: "Agribusiness sales automation",
+      duration: "4 months",
+      decisions: [
+        ["Live catalog synced with 1C", "Prices and stock come from 1C so reps always sell against actual availability, not outdated spreadsheets."],
+        ["Shared design system", "Mobile app and admin panel share components and visual language so the product feels like one system."],
+        ["Resilience on weak internet", "Caching and graceful sync keep catalog and order flows usable where connectivity is unstable."],
+        ["Orders and sales plan control", "Managers track orders, plan progress and team performance from the admin panel without manual reports."],
+      ],
+      showcase: { tag: "Design", title: "Unified visual language and component system for app and admin panel" },
+      result: {
+        title: "All key processes in one system",
+        body: "Sales reps work from a live catalog and order flow in the field, while managers update data and monitor the plan from the admin panel — connected through 1C sync.",
+      },
+    },
+    ru: {
+      pageTitle: "Мобильное приложение для агрокомпании",
+      lead: "«Деметра» — агро компания, которая обеспечивает доступ к самому необходимому — к здоровой еде. Компания выращивает натуральные и стабильные по качеству продукты и выполняет поставки без перебоев.",
+      task: "Автоматизировать продажи агрокомпании: создать мобильное приложение для торговых представителей с актуальным каталогом, остатками и ценами из 1С и админ-панель для контроля процессов продаж.",
+      solution: "Разработали экосистему: мобильное приложение с ролевым доступом, каталогом и заказами; админ-панель для обновления данных и аналитики; интеграцию с 1С для синхронизации остатков и цен; работу приложения при слабом интернете.",
+      niche: "Автоматизация продаж агрокомпании",
+      duration: "4 месяца",
+      decisions: [
+        ["Актуальный каталог с данными из 1С", "Цены и остатки подтягиваются из 1С, чтобы представители продавали по реальным данным, а не устаревшим таблицам."],
+        ["Единая дизайн-система", "Мобильное приложение и админ-панель используют общие компоненты и визуальный язык — продукт воспринимается как одна система."],
+        ["Работа при нестабильном интернете", "Кэширование и аккуратная синхронизация сохраняют каталог и заказы доступными там, где связь нестабильна."],
+        ["Контроль заказов и плана продаж", "Руководители видят заказы, прогресс плана и работу команды в админ-панели без ручных отчётов."],
+      ],
+      showcase: { tag: "Дизайн", title: "Единый визуальный язык и компонентная система для приложения и админ-панели" },
+      result: {
+        title: "Все ключевые процессы — в одной системе",
+        body: "Торговые представители работают с актуальным каталогом и заказами в поле, а руководители обновляют данные и контролируют план продаж в админ-панели — через синхронизацию с 1С.",
+      },
+    },
+  },
+  empiflow: {
+    slug: "empiflow",
+    year: "2023",
+    studioTags: ["UX/UI", "HR", "MOBILE APP"],
+    preview: "assets/empiflow-real/empiflow-preview.png",
+    galleryKey: "empiflow",
+    en: {
+      pageTitle: "Empiflow — employee onboarding platform",
+      lead: "Empiflow helps companies onboard new employees through structured tracks, learning activities, progress dashboards and a document library.",
+      task: "Design a mobile onboarding product with employee tracks, learning states, dashboard, document library and progress visibility for HR and employees.",
+      solution: "We built track-based onboarding flows, activity detail screens, completion states, a document library and a dashboard that shows progress at a glance.",
+      niche: "Employee onboarding and HR workflows",
+      duration: "4 months",
+      decisions: [
+        ["Track-based onboarding", "Each employee follows a clear track with milestones instead of a flat checklist."],
+        ["Learning activity detail", "Activities expose status, materials and next steps without leaving the flow."],
+        ["Document library inside the app", "Policies and materials stay searchable and attached to the onboarding journey."],
+        ["Progress dashboard", "HR and employees see completed tracks and pending steps from one screen."],
+      ],
+      showcase: { tag: "Design", title: "Onboarding tracks, activities and library in one interface" },
+      result: {
+        title: "Onboarding that scales with the company",
+        body: "New hires move through structured tracks while HR monitors progress and keeps documents in one mobile product.",
+      },
+    },
+    ru: {
+      pageTitle: "Empiflow — платформа адаптации сотрудников",
+      lead: "Empiflow помогает компаниям адаптировать новых сотрудников через структурированные треки, учебные активности, дашборд прогресса и библиотеку документов.",
+      task: "Спроектировать мобильный продукт адаптации с треками сотрудников, учебными состояниями, дашбордом, библиотекой документов и видимостью прогресса для HR и сотрудников.",
+      solution: "Собрали трековый онбординг, экраны деталей активностей, состояния завершения, библиотеку документов и дашборд с прогрессом на одном экране.",
+      niche: "Адаптация сотрудников и HR-процессы",
+      duration: "4 месяца",
+      decisions: [
+        ["Трековая адаптация", "Каждый сотрудник идёт по понятному треку с этапами вместо плоского чек-листа."],
+        ["Детали учебной активности", "Активности показывают статус, материалы и следующий шаг без выхода из сценария."],
+        ["Библиотека документов в приложении", "Политики и материалы остаются доступными и привязаны к пути адаптации."],
+        ["Дашборд прогресса", "HR и сотрудник видят завершённые треки и оставшиеся шаги на одном экране."],
+      ],
+      showcase: { tag: "Дизайн", title: "Треки адаптации, активности и библиотека в одном интерфейсе" },
+      result: {
+        title: "Адаптация, которая масштабируется вместе с компанией",
+        body: "Новые сотрудники проходят структурированные треки, а HR контролирует прогресс и документы в одном мобильном продукте.",
+      },
+    },
+  },
+  auto: {
+    slug: "auto",
+    year: "2024",
+    studioTags: ["UX/UI", "MOBILE APP", "MEDIA"],
+    preview: "assets/auto-real/auto-01.svg",
+    galleryKey: "auto",
+    en: {
+      pageTitle: "Auto Dealers Media App",
+      lead: "A cross-platform app for auto dealers to capture vehicle media, manage upload queues, preview 360 content and attach assets to listings.",
+      task: "Build a mobile product for photo and video capture, upload queues, listing details and Theta 360 media workflows for dealer teams.",
+      solution: "We designed capture, gallery, 360 preview, upload queue and listing detail screens as one connected media pipeline for field staff.",
+      niche: "Automotive media and listing workflows",
+      duration: "3 months",
+      decisions: [
+        ["Capture-first workflow", "Camera and gallery flows are optimized for fast shooting on the lot."],
+        ["Upload queue visibility", "Staff see pending uploads, errors and retry states without losing track of listings."],
+        ["Theta 360 preview", "360 media gets a dedicated preview step before it is attached to a vehicle card."],
+        ["Listing-centric details", "Every media asset ties back to listing metadata dealers already use."],
+      ],
+      showcase: { tag: "Design", title: "Media capture, gallery and upload flows for dealer teams" },
+      result: {
+        title: "Listing media handled in one app",
+        body: "Dealers capture, review and upload photos, video and 360 content from one mobile tool connected to listing details.",
+      },
+    },
+    ru: {
+      pageTitle: "Auto Dealers Media App",
+      lead: "Кросс-платформенное приложение для автодилеров: съёмка медиа, очередь загрузки, превью 360-контента и привязка материалов к объявлениям.",
+      task: "Собрать мобильный продукт для фото- и видеосъёмки, очереди загрузки, деталей объявления и сценариев Theta 360 для команд дилеров.",
+      solution: "Спроектировали съёмку, галерею, превью 360, очередь загрузки и детали объявления как единый медиа-конвейер для полевой работы.",
+      niche: "Медиа и объявления автодилеров",
+      duration: "3 месяца",
+      decisions: [
+        ["Сценарий от съёмки", "Камера и галерея оптимизированы для быстрой съёмки на площадке."],
+        ["Прозрачная очередь загрузки", "Сотрудники видят ожидающие загрузки, ошибки и повторные попытки без потери контекста объявления."],
+        ["Превью Theta 360", "360-контент проходит отдельный шаг превью перед привязкой к карточке авто."],
+        ["Детали вокруг объявления", "Каждый медиафайл связан с метаданными объявления, которые дилеры уже используют."],
+      ],
+      showcase: { tag: "Дизайн", title: "Съёмка, галерея и загрузка медиа для команд дилеров" },
+      result: {
+        title: "Медиа объявлений в одном приложении",
+        body: "Дилеры снимают, проверяют и загружают фото, видео и 360-контент из одного мобильного инструмента, связанного с карточкой объявления.",
+      },
+    },
+  },
+  smarteat: {
+    slug: "smarteat",
+    year: "2024",
+    studioTags: ["UX/UI", "MOBILE APP", "HEALTH"],
+    preview: "assets/smarteat-real/smarteat_hero.jpg?v=20260912-smarteat",
+    galleryKey: "smarteat",
+    en: {
+      pageTitle: "SmartEat — nutrition and meal tracking app",
+      lead: "SmartEat helps users search food, track meals, manage profiles and keep a health diary through API-driven mobile screens.",
+      task: "Design and build nutrition flows: food search, meal tracking, forms, validation, diary, profile and allergen onboarding.",
+      solution: "We shipped auth, home, ingredient search, meal tracking, menu, custom dishes, health diary, profile and allergen questionnaire screens.",
+      niche: "Nutrition tracking and healthy eating",
+      duration: "5 months",
+      decisions: [
+        ["Search-first meal logging", "Ingredient search and meal selection reduce friction when logging food during the day."],
+        ["Structured forms with validation", "Custom dishes and profile data use inline validation to keep data clean for the API."],
+        ["Diary as a daily habit", "The health diary connects meals, notes and progress in one repeatable daily view."],
+        ["Allergen onboarding", "Early questionnaire screens personalize recommendations and restrictions."],
+      ],
+      showcase: { tag: "Design", title: "Nutrition flows from search and meals to diary and profile" },
+      result: {
+        title: "Daily nutrition tracking in one app",
+        body: "Users search food, log meals, manage profile data and review their diary without switching between disconnected tools.",
+      },
+    },
+    ru: {
+      pageTitle: "SmartEat — приложение для питания и дневника еды",
+      lead: "SmartEat помогает искать продукты, учитывать приёмы пищи, вести профиль и дневник здоровья через мобильные экраны, связанные с API.",
+      task: "Спроектировать и собрать сценарии питания: поиск продуктов, учёт приёмов пищи, формы, валидацию, дневник, профиль и анкету аллергенов.",
+      solution: "Сделали экраны авторизации, главную, поиск ингредиентов, учёт питания, меню, свои блюда, дневник здоровья, профиль и анкету аллергенов.",
+      niche: "Учёт питания и здоровое питание",
+      duration: "5 месяцев",
+      decisions: [
+        ["Учёт через поиск", "Поиск ингредиентов и выбор блюд снижают трение при ежедневной записи питания."],
+        ["Формы с валидацией", "Свои блюда и данные профиля проходят inline-валидацию, чтобы API получал чистые данные."],
+        ["Дневник как ежедневная привычка", "Дневник здоровья связывает приёмы пищи, заметки и прогресс в одном повторяемом экране."],
+        ["Онбординг по аллергенам", "Ранняя анкета персонализирует рекомендации и ограничения."],
+      ],
+      showcase: { tag: "Дизайн", title: "Сценарии питания от поиска и приёмов пищи до дневника и профиля" },
+      result: {
+        title: "Ежедневный учёт питания в одном приложении",
+        body: "Пользователь ищет продукты, фиксирует приёмы пищи, управляет профилем и просматривает дневник без разрозненных инструментов.",
+      },
+    },
+  },
+  altay: {
+    slug: "altay",
+    year: "2023",
+    studioTags: ["UX/UI", "WEB", "HOSPITALITY"],
+    preview: "assets/altay-real/altay-preview.png",
+    galleryKey: "altay",
+    en: {
+      pageTitle: "Altai Restart — resort and hotel website",
+      lead: "Altai Restart is a premium resort website with room booking, category cards, special offers and spa complex pages.",
+      task: "Design a hospitality website that sells the resort experience: homepage, room categories, booking bar, offers and aqua-thermal complex.",
+      solution: "We created a premium visual system with hero-led pages, booking-focused room cards, promotions and dedicated spa content blocks.",
+      niche: "Resort and hotel digital presence",
+      duration: "3 months",
+      decisions: [
+        ["Booking-first room cards", "Room categories expose availability cues and a clear booking CTA above the fold."],
+        ["Premium hospitality visuals", "Photography-led layouts communicate resort quality without clutter."],
+        ["Offers as conversion paths", "Promotions get dedicated blocks that link back to booking flows."],
+        ["Spa as its own story", "The aqua-thermal complex page explains services in a separate narrative arc."],
+      ],
+      showcase: { tag: "Design", title: "Resort homepage, booking flows and spa pages" },
+      result: {
+        title: "A website that sells the stay",
+        body: "Guests explore rooms, offers and spa services through a cohesive premium site with booking paths on every key page.",
+      },
+    },
+    ru: {
+      pageTitle: "Алтай Рестарт — сайт курорта и отеля",
+      lead: "Алтай Рестарт — премиальный сайт курорта с бронированием номеров, карточками категорий, спецпредложениями и страницей аква-термального комплекса.",
+      task: "Спроектировать hospitality-сайт, который продаёт опыт курорта: главная, категории номеров, booking bar, акции и аква-термальный комплекс.",
+      solution: "Сделали премиальную визуальную систему с hero-страницами, карточками номеров с фокусом на бронирование, промо-блоками и отдельным SPA-контентом.",
+      niche: "Цифровое присутствие курорта и отеля",
+      duration: "3 месяца",
+      decisions: [
+        ["Карточки номеров с фокусом на бронирование", "Категории номеров показывают доступность и понятный CTA бронирования выше сгиба."],
+        ["Премиальная hospitality-эстетика", "Фото-ориентированные макеты передают уровень курорта без перегруза."],
+        ["Акции как путь к конверсии", "Спецпредложения получают отдельные блоки с возвратом в сценарий бронирования."],
+        ["SPA как отдельная история", "Страница аква-термального комплекса раскрывает услуги отдельным сюжетом."],
+      ],
+      showcase: { tag: "Дизайн", title: "Главная курорта, сценарии бронирования и SPA-страницы" },
+      result: {
+        title: "Сайт, который продаёт отдых",
+        body: "Гости изучают номера, акции и SPA через цельный премиальный сайт с путями бронирования на каждой ключевой странице.",
+      },
+    },
+  },
+  asgard: {
+    slug: "asgard",
+    year: "2024",
+    studioTags: ["UX/UI", "WEB", "E-COMMERCE"],
+    preview: "assets/asgard-real/asgard_hero.jpg?v=20260912-asgard",
+    galleryKey: "asgard",
+    en: {
+      pageTitle: "ASGARD — mining equipment store",
+      lead: "ASGARD is an e-commerce website for ASIC miners with catalog, product specs, leasing, a fast cart checkout and service pages.",
+      task: "Design an industrial e-commerce site for mining hardware: homepage, manufacturer catalog, product specs, leasing, cart and service content.",
+      solution: "We built catalog-first pages with filters, detailed product specs, leasing blocks, a compact order modal and service sections tuned for B2B buyers.",
+      niche: "Mining equipment e-commerce",
+      duration: "4 months",
+      decisions: [
+        ["Spec-heavy product pages", "ASIC buyers need dense specs, pricing cues and trust blocks on one page."],
+        ["Manufacturer catalog filters", "Catalog pages support manufacturer-first browsing for repeat buyers."],
+        ["Fast cart checkout", "The order modal keeps quantity, total and contacts on one overlay without leaving the catalog."],
+        ["Leasing as a parallel path", "Leasing blocks sit beside purchase flows for commercial clients."],
+        ["Service and media sections", "Service and blog blocks support post-purchase trust and SEO."],
+      ],
+      showcase: { tag: "Design", title: "Catalog, product page, cart and leasing for ASGARD" },
+      result: {
+        title: "Industrial e-commerce ready for B2B buyers",
+        body: "Buyers browse manufacturers, compare specs, place an order from the cart and reach service content from one structured store.",
+      },
+    },
+    ru: {
+      pageTitle: "ASGARD — магазин майнинг-оборудования",
+      lead: "ASGARD — e-commerce сайт для ASIC-майнеров с каталогом, характеристиками, лизингом, быстрым оформлением заказа и сервисными страницами.",
+      task: "Спроектировать industrial e-commerce для майнинг-оборудования: главная, каталог производителей, характеристики, лизинг, корзина и сервисный контент.",
+      solution: "Сделали catalog-first страницы с фильтрами, детальными характеристиками, блоками лизинга, компактной корзиной и сервисными секциями под B2B-покупателей.",
+      niche: "E-commerce майнинг-оборудования",
+      duration: "4 месяца",
+      decisions: [
+        ["Карточки с акцентом на характеристики", "Покупателям ASIC нужны плотные спеки, ценовые сигналы и блоки доверия на одной странице."],
+        ["Каталог с фильтрами по производителям", "Каталог поддерживает навигацию от производителя для повторных покупок."],
+        ["Быстрое оформление заказа", "Модалка корзины держит количество, сумму и контакты на одном экране, не уходя из каталога."],
+        ["Лизинг как параллельный путь", "Блоки лизинга стоят рядом с покупкой для коммерческих клиентов."],
+        ["Сервис и медиа-секции", "Сервисные и блоговые блоки поддерживают доверие после покупки и SEO."],
+      ],
+      showcase: { tag: "Design", title: "Каталог, карточка товара, корзина и лизинг для ASGARD" },
+      result: {
+        title: "Industrial e-commerce для B2B-покупателей",
+        body: "Покупатели изучают производителей, сравнивают характеристики, оформляют заказ из корзины и доходят до сервисного контента в одном магазине.",
+      },
+    },
+  },
+  ekbdoma: {
+    slug: "ekbdoma",
+    year: "2023",
+    studioTags: ["UX/UI", "WEB", "REAL ESTATE"],
+    preview: "assets/ekbdoma-real/ekbdoma_hero.jpg?v=20260912-ekbdoma",
+    galleryKey: "ekbdoma",
+    en: {
+      pageTitle: "Invest Stroy — house construction website",
+      lead: "Invest Stroy is a construction company website with a project catalog, house detail pages, specs, pricing and a construction calculator.",
+      task: "Design a real-estate construction site with project catalog, house cards, specs, pricing tables and an interactive calculator.",
+      solution: "We created homepage project grids, detailed house pages, calculator flows, plots catalog and news blocks for ongoing sales.",
+      niche: "House construction and developer marketing",
+      duration: "4 months",
+      decisions: [
+        ["Project grid on the homepage", "Visitors scan available house projects immediately from the hero section."],
+        ["Detail pages with specs and price", "Each house exposes plans, specs and pricing without hiding key numbers."],
+        ["Construction calculator", "Calculator flows help qualify leads before contact."],
+        ["Plots and news for long-tail SEO", "Plots catalog and news support ongoing demand generation."],
+      ],
+      showcase: { tag: "Design", title: "Project catalog, house details and calculator flows" },
+      result: {
+        title: "Construction sales supported by the site",
+        body: "Buyers explore projects, open detailed house pages, use the calculator and reach contact paths from one coherent website.",
+      },
+    },
+    ru: {
+      pageTitle: "Инвест Строй — сайт строительной компании",
+      lead: "Инвест Строй — сайт застройщика с каталогом проектов, карточками домов, характеристиками, ценами и калькулятором строительства.",
+      task: "Спроектировать сайт строительной компании с каталогом проектов, карточками домов, характеристиками, ценами и интерактивным калькулятором.",
+      solution: "Сделали сетку проектов на главной, детальные страницы домов, сценарии калькулятора, каталог домов с участками и новости для продаж.",
+      niche: "Строительство домов и маркетинг застройщика",
+      duration: "4 месяца",
+      decisions: [
+        ["Сетка проектов на главной", "Посетитель сразу видит доступные проекты домов из hero-блока."],
+        ["Детальные страницы со спеками и ценой", "Каждый дом показывает планировки, характеристики и цены без скрытых цифр."],
+        ["Калькулятор строительства", "Калькулятор помогает квалифицировать лиды до обращения."],
+        ["Участки и новости для SEO", "Каталог участков и новости поддерживают постоянный приток спроса."],
+      ],
+      showcase: { tag: "Design", title: "Каталог проектов, карточки домов и сценарии калькулятора" },
+      result: {
+        title: "Продажи строительства через сайт",
+        body: "Покупатели изучают проекты, открывают детальные страницы домов, используют калькулятор и доходят до контакта в одном сайте.",
+      },
+    },
+  },
+  ultra: {
+    slug: "ultra",
+    year: "2024",
+    studioTags: ["UX/UI", "WEB", "MARKETPLACE"],
+    preview: "assets/ultra-real/ultra_hero.jpg?v=20260912-photo",
+    galleryKey: "ultra",
+    en: {
+      pageTitle: "Ultra Drivers — chauffeur marketplace",
+      lead: "Ultra Drivers is more than business-class taxi: a platform where clients rent a premium car with a chauffeur, and drivers register, upload documents and publish their own cars.",
+      task: "A brochure site was not enough. The fleet is not a static catalog — professional drivers join the service, upload a licence and vehicle papers, wait for moderation and only then appear in the public fleet. We needed one product for clients in Ekaterinburg and for drivers who list cars.",
+      solution: "We built a dark premium marketplace: homepage and city fleet with filters, car pages with hourly rates, a driver cabinet with statuses Active / On moderation / Rejected, and a listing form with photo rules and document upload.",
+      niche: "Premium chauffeur marketplace",
+      duration: "4 months",
+      decisions: [
+        ["Two roles in one brand", "Clients order a car with a driver. Drivers join as partners, pass moderation and publish listings without a separate admin product."],
+        ["Documents before the listing goes live", "Licence and vehicle papers are required. Rejected cards stay in the cabinet with a reason, so the fleet stays premium."],
+        ["Fleet as a live catalog", "Filters by brand, color and city, plus hourly prices, turn driver listings into a working marketplace, not a photo gallery."],
+        ["Request instead of a cart", "Booking is a call or a request. The site sells trust and availability, then hands the trip to a manager or the driver."],
+      ],
+      showcase: { tag: "Design", title: "Client fleet, driver signup, moderation and car listings" },
+      result: {
+        title: "A live premium fleet, not a static catalog",
+        body: "Clients browse S-Class and BMW listings in Ekaterinburg. Drivers register, upload documents and publish cars — the public site shows only moderated, active vehicles.",
+      },
+    },
+    ru: {
+      pageTitle: "Ultra Drivers — площадка водителей премиум-класса",
+      lead: "Ultra Drivers — больше, чем бизнес-такси: клиенты арендуют автомобиль бизнес и премиум класса с водителем, а водители регистрируются, загружают документы и публикуют свои машины.",
+      task: "Лендинга было мало. Автопарк живой: профессиональные водители входят в сервис, загружают права и документы на авто, проходят модерацию и только потом появляются в публичном каталоге. Нужен был один продукт для клиентов в Екатеринбурге и для водителей, которые размещают машины.",
+      solution: "Собрали тёмную премиальную площадку: главная и автопарк с фильтрами по городу и марке, карточки с ценой за час, кабинет водителя со статусами Активна / На модерации / Отклонена и форма размещения с правилами фото и загрузкой документов.",
+      niche: "Маркетплейс аренды авто с водителем",
+      duration: "4 месяца",
+      decisions: [
+        ["Две роли в одном бренде", "Клиент заказывает авто с водителем. Водитель становится партнёром, проходит модерацию и публикует объявления без отдельной админки."],
+        ["Документы до публикации", "Права и документы на машину обязательны. Отклонённые карточки остаются в кабинете с причиной — в автопарке только проверенный премиум."],
+        ["Автопарк как живой каталог", "Фильтры по марке, цвету и городу плюс цена за час превращают объявления водителей в рабочий маркетплейс, а не в фотогалерею."],
+        ["Заявка вместо корзины", "Заказ идёт звонком или заявкой. Сайт продаёт доверие и наличие, поездку закрывает менеджер или водитель."],
+      ],
+      showcase: { tag: "Дизайн", title: "Автопарк клиента, регистрация водителя, модерация и объявления" },
+      result: {
+        title: "Живой премиальный автопарк, а не статичный каталог",
+        body: "Клиенты смотрят S-Class и BMW в Екатеринбурге. Водители регистрируются, загружают документы и публикуют авто — на сайте только промодерированные активные машины.",
+      },
+    },
+  },
+  vmetal: {
+    slug: "vmetal",
+    year: "2023",
+    studioTags: ["UX/UI", "WEB", "E-COMMERCE"],
+    preview: "assets/vmetal-real/vmetal_hero.jpg?v=20260912-vmetal",
+    galleryKey: "vmetal",
+    en: {
+      pageTitle: "V-METAL — metal products store",
+      lead: "V-METAL is an industrial e-commerce website with catalog, product configurator, cart and order process pages.",
+      task: "Design a B2B metal products store with catalog navigation, configurator flows, cart and checkout-oriented pages.",
+      solution: "We built homepage funnels into catalog, configurator-driven product pages and a cart flow tuned for industrial orders.",
+      niche: "Industrial metal products e-commerce",
+      duration: "4 months",
+      decisions: [
+        ["Configurator on product pages", "Buyers adjust dimensions and options before adding to cart."],
+        ["Catalog tuned for B2B search", "Category pages expose filters and specs industrial buyers expect."],
+        ["Cart for complex orders", "Cart and checkout screens support multi-line industrial purchases."],
+        ["Trust blocks on homepage", "Homepage sections explain delivery, quality and order support."],
+      ],
+      showcase: { tag: "Design", title: "Catalog, configurator and cart for industrial buyers" },
+      result: {
+        title: "Industrial orders through one store",
+        body: "Buyers configure products, manage cart lines and move toward order submission without leaving the V-METAL experience.",
+      },
+    },
+    ru: {
+      pageTitle: "V-METAL — магазин металлопродукции",
+      lead: "V-METAL — промышленный e-commerce сайт с каталогом, конфигуратором товара, корзиной и страницами оформления заказа.",
+      task: "Спроектировать B2B-магазин металлопродукции с навигацией по каталогу, конфигуратором, корзиной и checkout-страницами.",
+      solution: "Сделали воронку с главной в каталог, карточки с конфигуратором и сценарий корзины под industrial-заказы.",
+      niche: "E-commerce промышленной металлопродукции",
+      duration: "4 месяца",
+      decisions: [
+        ["Конфигуратор на карточке товара", "Покупатель настраивает параметры и опции до добавления в корзину."],
+        ["Каталог под B2B-поиск", "Категории показывают фильтры и характеристики, которые ждут industrial-покупатели."],
+        ["Корзина для сложных заказов", "Корзина и checkout поддерживают многострочные industrial-покупки."],
+        ["Блоки доверия на главной", "Секции главной объясняют доставку, качество и сопровождение заказа."],
+      ],
+      showcase: { tag: "Design", title: "Каталог, конфигуратор и корзина для industrial-покупателей" },
+      result: {
+        title: "Industrial-заказы через один магазин",
+        body: "Покупатели настраивают товар, управляют строками корзины и двигаются к оформлению заказа внутри опыта V-METAL.",
+      },
+    },
+  },
+  vows: {
+    slug: "vows",
+    year: "2026",
+    studioTags: ["UX/UI", "MOBILE APP"],
+    preview: "assets/vows-real/vows_hero.jpg",
+    galleryKey: "vows",
+    en: {
+      pageTitle: "VOWS — wedding invitation constructor",
+      lead: "VOWS is a mobile constructor for digital wedding invitations. The bride assembles the guest journey from blocks; guests open a personal invite, confirm attendance and get the dress code, venue and timeline.",
+      task: "Build a two-role mobile product: a constructor for the bride (blocks, texts, colors, guest list, RSVP notifications) and a guest flow from welcome to questionnaire, dress code, location, timeline and a reminder.",
+      solution: "We designed a modular invitation. The bride chooses blocks and their order, fills the guest list and sets where RSVP answers arrive. Guests pick themselves from the list, fill the questionnaire, see dress code and venue, and can request a reminder.",
+      niche: "Digital wedding invitations",
+      duration: "3 months",
+      decisions: [
+        ["Blocks instead of a fixed landing", "The bride turns sections on and off and reorders welcome, RSVP, dress code, location, timeline and thank-you."],
+        ["Guest list as entry", "Guests identify themselves from the couple’s list — no extra login, and RSVP is tied to a real name."],
+        ["RSVP with preferences", "Attendance and drink choices go to the bride in Telegram, email or WhatsApp."],
+        ["Reminder before the day", "After thank-you, the guest can ask for a reminder one day, three days or a week ahead."],
+      ],
+      showcase: { tag: "Design", title: "Guest journey and bride constructor in one visual system" },
+      result: {
+        title: "Invitation, RSVP and reminders in one app",
+        body: "The couple publishes a living invitation; guests confirm attendance and receive dress code, venue and timing, while the bride sees who is coming and where answers arrive.",
+      },
+    },
+    ru: {
+      pageTitle: "VOWS — конструктор свадебных приглашений",
+      lead: "VOWS — мобильный конструктор цифровых свадебных приглашений. Невеста собирает сценарий для гостя из блоков; гости открывают личное приглашение, подтверждают присутствие и видят дресс-код, локацию и тайминг.",
+      task: "Собрать мобильный продукт с двумя ролями: конструктор для невесты (блоки, тексты, цвета, список гостей, уведомления о RSVP) и сценарий гостя от приветствия до анкеты, дресс-кода, локации, программы и напоминания.",
+      solution: "Спроектировали модульное приглашение. Невеста выбирает блоки и их порядок, заполняет список гостей и указывает, куда приходят ответы RSVP. Гость выбирает себя из списка, заполняет анкету, видит дресс-код и площадку и может запросить напоминание.",
+      niche: "Цифровые свадебные приглашения",
+      duration: "3 месяца",
+      decisions: [
+        ["Блоки вместо фиксированного лендинга", "Невеста включает и выключает секции и меняет порядок: приветствие, RSVP, дресс-код, локация, тайминг и «спасибо»."],
+        ["Список гостей как вход", "Гость выбирает себя из списка пары — без отдельной регистрации, RSVP привязан к реальному имени."],
+        ["RSVP с предпочтениями", "Присутствие и выбор напитков уходят невесте в Telegram, email или WhatsApp."],
+        ["Напоминание до дня свадьбы", "После экрана «спасибо» гость может запросить напоминание за день, три дня или неделю."],
+      ],
+      showcase: { tag: "Дизайн", title: "Сценарий гостя и конструктор невесты в одной визуальной системе" },
+      result: {
+        title: "Приглашение, RSVP и напоминания в одном приложении",
+        body: "Пара публикует живое приглашение; гости подтверждают присутствие и получают дресс-код, площадку и тайминг, а невеста видит, кто придёт и куда приходят ответы.",
+      },
+    },
+  },
+  iqbattle: {
+    slug: "iqbattle",
+    year: "2024",
+    studioTags: ["UX/UI", "WEB", "EVENTS"],
+    preview: "assets/iqbattle-real/iqbattle_hero.jpg",
+    galleryKey: "iqbattle",
+    en: {
+      pageTitle: "IQ Battle — quiz nights in Moscow bars",
+      lead: "IQ Battle is a quiz show in Moscow bars since 2017: weekly games with friends, a team rating, corporate quizzes and birthday events in the city centre.",
+      task: "Players found games through chats and a messy schedule. Corporate clients had no clear offer. The site had to sell the next quiz night and the corporate or birthday format from one place.",
+      solution: "We built a loud quiz-brand website: upcoming games on the homepage, a filterable schedule with sign-up, team rating, quiz rules, and separate funnels for corporates and birthdays.",
+      niche: "Entertainment and quiz events",
+      duration: "2 months",
+      decisions: [
+        ["Schedule as the main CTA", "The homepage and schedule show the next bar games with time, price and a sign-up button — not a long story first."],
+        ["Corporate and birthday as separate offers", "Team building and a birthday in a bar are different jobs. Each gets its own page, photos and request."],
+        ["Team rating to bring regulars back", "Search by team name, season vs all-time, games and points — a reason to return after the night."],
+        ["Rules in 30 seconds", "2.5 hours, 2 rounds, 50 questions, points and bans — so a new team understands the format before they book."],
+      ],
+      showcase: { tag: "Design", title: "Bar schedule, corporates, birthday quiz, rules and team rating" },
+      result: {
+        title: "From a chat invite to a working quiz site",
+        body: "A team picks a night, signs up and sees the rating. A company books a branded quiz with a scenario, prizes and a location — without writing to a manager first.",
+      },
+    },
+    ru: {
+      pageTitle: "IQ Battle — квизы в барах Москвы",
+      lead: "IQ Battle — квиз-шоу в барах Москвы с 2017 года: еженедельные игры с друзьями, рейтинг команд, корпоративы и дни рождения в центре города.",
+      task: "Игроки находили игры через чаты и рваное расписание. Для корпоратива не было понятного оффера. Сайт должен продавать ближайший квиз в баре и отдельные форматы для компаний и дней рождения.",
+      solution: "Собрали яркий сайт квиз-шоу: ближайшие игры на главной, расписание с фильтрами и записью, рейтинг команд, правила квиза и отдельные воронки для корпоратива и дня рождения.",
+      niche: "Развлечения и квиз-события",
+      duration: "2 месяца",
+      decisions: [
+        ["Расписание как главный CTA", "Главная и афиша показывают ближайшие игры в баре: время, цена и кнопка «Записаться» — без длинной истории в начале."],
+        ["Корпоратив и ДР как отдельные офферы", "Тимбилдинг и день рождения в баре — разные задачи. У каждой свой экран, фото и заявка."],
+        ["Рейтинг, чтобы возвращать команды", "Поиск по названию, сезон и всё время, игры и баллы — повод прийти снова после вечера."],
+        ["Правила за 30 секунд", "2,5 часа, 2 раунда, 50 вопросов, баллы и запреты — новая команда понимает формат до записи."],
+      ],
+      showcase: { tag: "Дизайн", title: "Афиша бара, корпоратив, квиз на ДР, правила и рейтинг команд" },
+      result: {
+        title: "От приглашения в чате к рабочему сайту квиза",
+        body: "Команда выбирает вечер, записывается и видит рейтинг. Компания заказывает брендированный квиз со сценарием, призами и площадкой — без переписки с менеджером в мессенджере.",
+      },
+    },
+  },
+  genlix: {
+    slug: "genlix",
+    year: "2026",
+    studioTags: ["UX/UI", "WEB", "B2B"],
+    preview: "assets/genlix-real/genlix_hero.jpg",
+    galleryKey: "genlix",
+    en: {
+      pageTitle: "Genlix — premium supplies for HoReCa and retail",
+      lead: "Genlix is a B2B supplier of premium meat, poultry, beer and water from verified producers — delivered directly to Belarus for restaurants, hotels and retail.",
+      task: "Premium HoReCa and retail buyers in Belarus sourced products through chats, PDFs and a manager. There was no self-serve catalog, no way to choose a cut, and no public proof of who already works with the supplier. We needed a website that sells trust and shortens the path to a partnership request.",
+      solution: "We built a B2B showcase of direct import: certified assortment, an interactive Primebeef cut map, product cards, a map of partner restaurants in Belarus, a professional blog and a partnership request form instead of a retail cart.",
+      niche: "B2B food supplies for HoReCa and retail",
+      duration: "3 months",
+      decisions: [
+        ["Catalog as a working tool for chefs", "The interactive cut map lets a buyer pick an offcut by the dish, not by a SKU name in a spreadsheet."],
+        ["Trust through the partner map", "Restaurants and stores already on the map in Belarus show that the supply chain is live, not a landing-page promise."],
+        ["Request instead of a cart", "HoReCa buys by volume and terms. The site captures a partnership brief for a category manager, not a one-click retail checkout."],
+        ["Blog for professionals", "Industry pieces on cuts, menus and stable supply keep chefs returning and warm the request form."],
+      ],
+      showcase: { tag: "Design", title: "B2B catalog, cut map, partner geography and request flow" },
+      result: {
+        title: "From PDF and chat to a working B2B storefront",
+        body: "Buyers see certified import assortment, choose a cut, check who already works with Genlix and send a partnership request — without waiting for a price list in a messenger.",
+      },
+    },
+    ru: {
+      pageTitle: "Genlix — премиальные поставки для HoReCa и ритейла",
+      lead: "Genlix — B2B-поставщик премиального мяса, птицы, пива и воды от проверенных производителей. Продукты идут напрямую в Беларусь для ресторанов, отелей и розницы.",
+      task: "Шефы и закупщики в Беларуси брали премиальное сырьё через чаты, PDF и менеджера. Не было витрины с отрубами, не было доказательства, кто уже работает с поставщиком. Нужен был сайт, который продаёт доверие и сокращает путь до заявки на партнёрство.",
+      solution: "Собрали B2B-витрину прямого импорта: сертифицированный ассортимент, интерактивная карта отрубов Primebeef, карточки товара, карта ресторанов-партнёров в Беларуси, блог для профессионалов и форма заявки вместо розничной корзины.",
+      niche: "B2B-поставки для HoReCa и ритейла",
+      duration: "3 месяца",
+      decisions: [
+        ["Каталог как рабочий инструмент шефа", "Интерактивная карта отрубов помогает выбрать позицию под блюдо, а не по артикулу из таблицы."],
+        ["Доверие через карту партнёров", "Рестораны и магазины на карте Беларуси показывают живую сеть поставок, а не обещание лендинга."],
+        ["Заявка вместо корзины", "HoReCa покупает объёмами и условиями. Сайт собирает бриф для категорийного менеджера, а не розничный checkout."],
+        ["Блог для профессионалов", "Материалы про отруба, меню и стабильные поставки возвращают шефов на сайт и прогревают форму заявки."],
+      ],
+      showcase: { tag: "Дизайн", title: "B2B-каталог, карта отрубов, география партнёров и заявка" },
+      result: {
+        title: "От PDF и чата к рабочей B2B-витрине",
+        body: "Закупщик видит сертифицированный импорт, выбирает отруб, проверяет, кто уже работает с Genlix, и отправляет заявку на партнёрство — без ожидания прайса в мессенджере.",
+      },
+    },
+  },
+  ossnova: {
+    slug: "ossnova",
+    year: "2026",
+    studioTags: ["UX/UI", "WEB", "HEALTHCARE"],
+    preview: "assets/ossnova-real/ossnova_hero.jpg?v=20260912-ossnova",
+    galleryKey: "ossnova",
+    en: {
+      pageTitle: "OSSNOVA — medical technologies for Belarus",
+      lead: "OSSNOVA brings international medical equipment and devices to Belarus: ophthalmology and cardiology, with full support from registration and market analysis to promotion and post-registration reporting.",
+      task: "A medical importer needed a corporate site that sells trust to clinics and partners — two clinical directions, coverage across Belarus, proof of expertise and a clear request path — not a generic brochure.",
+      solution: "We designed a clinical corporate website: a medical-tech homepage, interactive geography of Belarus, about-the-company proof, cardiology and ophthalmology stories, a knowledge base with FAQ, and a contact form over an operating-room visual.",
+      niche: "Medical equipment import and market access",
+      duration: "3 months",
+      decisions: [
+        ["Two clinical directions, one brand", "Ophthalmology (IOLs) and cardiology (RFA, navigation) share one visual system so the company reads as a full-cycle partner, not two landing pages."],
+        ["Geography as trust", "The Belarus map and healthcare stats show where the system is dense — regions, doctors, institutions — instead of a vague 'we work nationwide'."],
+        ["Knowledge before the request", "Articles and FAQ on IOLs, phacoemulsification and RFA educate the buyer and warm the contact form."],
+        ["Request instead of a catalog cart", "Clinics do not add devices to a basket. The site captures a named request: name, email, message — then a manager continues the cycle."],
+      ],
+      showcase: { tag: "Design", title: "Homepage, coverage map, clinical pages, knowledge base and request" },
+      result: {
+        title: "A medical importer with a public face in Belarus",
+        body: "Partners see directions, coverage and expertise, then send a request from one bilingual corporate site — live at ossnovagroup.com.",
+      },
+    },
+    ru: {
+      pageTitle: "OSSNOVA — медицинские технологии для Беларуси",
+      lead: "OSSNOVA выводит международную медицинскую технику и изделия на рынок Беларуси: офтальмология и кардиология, полное сопровождение от регистрации и маркет-анализа до продвижения и пострегистрационного отчёта.",
+      task: "Импортёру медтехники нужен был корпоративный сайт, который продаёт доверие клиникам и партнёрам: два клинических направления, покрытие по Беларуси, экспертиза и понятный путь заявки — не типовой буклет.",
+      solution: "Собрали клинический корпоративный сайт: главная про медтех, интерактивная география Беларуси, доказательная «О компании», сценарии кардиологии и офтальмологии, база знаний с FAQ и форма заявки на фоне операционной.",
+      niche: "Импорт медтехники и доступ на рынок",
+      duration: "3 месяца",
+      decisions: [
+        ["Два направления — один бренд", "Офтальмология (ИОЛ) и кардиология (РЧА, навигация) живут в одной системе, чтобы компания читалась как партнёр полного цикла, а не два лендинга."],
+        ["География как доверие", "Карта Беларуси и цифры здравоохранения показывают плотность системы — регионы, врачи, учреждения — вместо абстрактного «работаем по стране»."],
+        ["Знания до заявки", "Статьи и FAQ про ИОЛ, факоэмульсификацию и РЧА обучают покупателя и прогревают форму."],
+        ["Заявка вместо корзины", "Клиника не кладёт аппарат в корзину. Сайт собирает обращение: имя, email, сообщение — дальше цикл ведёт менеджер."],
+      ],
+      showcase: { tag: "Дизайн", title: "Главная, карта покрытия, клинические страницы, база знаний и заявка" },
+      result: {
+        title: "Импортёр медтехники с публичным лицом в Беларуси",
+        body: "Партнёр видит направления, покрытие и экспертизу и отправляет заявку с одного двуязычного корпоративного сайта — ossnovagroup.com.",
+      },
+    },
   },
 };
 
@@ -138,265 +864,118 @@ const translations = {
     title: "LocalMind Studio - AI, .NET, MVP, SEO and product development",
     description:
       "We build AI assistants, chatbots, .NET/C# backends, Node.js integrations, React Native apps, MVPs, UX/UI, SEO and launch support.",
-    nav: ["Services", "Cases", "AI", "Process", "Contact"],
+    nav: ["Cases", "Competencies", "Contact"],
     navCall: "Request a call",
-    heroPrefix: "We build",
-    heroSuffix: "for business.",
-    rotatingWords: ["AI assistants", ".NET backends", "MVPs", "mobile apps", "UX/UI design", "SEO and AI SEO", "chatbots", "Node.js integrations"],
-    heroEyebrow: "AI assistants, .NET, design, SEO and product development",
-    heroLead:
-      "We help teams plan, design, build, launch and support software: backends, mobile apps, integrations, chatbots, SEO and private AI assistants.",
+    navTelegram: "@jackkorlive",
+    navEmail: "localmindstudio@gmail.com",
+    heroEyebrow: "Product studio",
+    heroTitle: "We build products for business.",
+    heroLead: "Development, design, SEO and AI — from idea to launch and support.",
     heroActions: ["Request a call", "View cases"],
-    stack: ["AI assistants", "Chatbots", "Product design", "UX/UI", "SEO", "AI SEO", "Marketing launch", "QA", ".NET/C#", "Node.js", "React Native", "MVP development", "Admin panels", "Integrations", "Support", "Quality control"],
-    delivery: {
-      title: "Build plan",
-      status: "Request received",
-      sprint: "MVP / automation sprint",
-      time: "2-6 weeks",
-      text: "Strategy, UX, backend, interface, QA, SEO and release.",
-      ai: "AI audit",
-      question: "Where does the team lose time every week?",
-      answer: "We find the repeated steps first. Then we automate the part that is worth automating.",
-    },
+    marquee: ["Mobile development", "Websites", "Design"],
     proof: [
       ["MVP", "from idea to first working release"],
       ["Design + SEO", "UX/UI, landing pages and AI search visibility"],
       ["Engineering", ".NET, Node.js, mobile apps and integrations"],
       ["QA + support", "testing, launch support and maintenance"],
     ],
-    why: {
-      eyebrow: "Why us",
-      title: "We cover the path from idea to launch.",
-      body:
-        "Before writing code, we ask simple questions: what is broken now, who uses the product, what should be shown to clients and what systems already exist. After that we choose a scope that can be designed, built, tested, launched and supported.",
-      quote:
-        "You see what is being built, how quality is checked and what the next step is.",
-    },
-    servicesIntro: {
-      eyebrow: "Services",
-      title: "Clear services for real product work.",
-      body: "Bring an idea, a brief, an old codebase or a manual process. We can help with product design, development, SEO, launch marketing, QA and support.",
-    },
-    services: [
-      ["MVP and web apps", "First releases, client portals and internal tools with backend, admin area and launch plan.", ["MVP", "Web", "Launch"]],
-      ["Product design and UX/UI", "User flows, prototypes, interface design, landing pages and design systems for product launches.", ["UX/UI", "Design", "Figma"]],
-      [".NET / C# development", "APIs, internal platforms, permissions, reports, SQL databases and business workflows.", ["C#", ".NET", "SQL"]],
-      ["Node.js APIs and integrations", "APIs, payments, CRM sync, realtime features and data exchange between services.", ["Node.js", "API", "CRM"]],
-      ["Mobile applications", "React Native apps for iOS and Android: auth, files, camera, offline mode and store release.", ["iOS", "Android", "RN"]],
-      ["AI assistants and chatbots", "Support bots, document assistants and lead bots connected to your workflow.", ["AI", "Chat", "RAG"]],
-      ["SEO, AI SEO and marketing", "Search-friendly structure, service pages, launch copy, analytics and AI-readable content for modern search.", ["SEO", "AI SEO", "Analytics"]],
-      ["QA, support and quality", "Testing, monitoring, bug fixes, documentation, release support and a clear warranty period for agreed fixes.", ["QA", "Support", "Warranty"]],
-    ],
-    serviceTabs: ["MVP", ".NET", "AI", "Mobile"],
-    servicePanels: {
-      mvp: ["For a first release", "Ship a working version, not just a mockup.", "We agree on the goal, core flows, backend/API, interface, release checklist and demo rhythm.", ["2-6 weeks for a first release", "Direct communication with engineers", "Good for SaaS, marketplaces and internal tools"]],
-      dotnet: ["For backend-heavy work", "Build or improve .NET systems.", "C# APIs, roles, reports, SQL databases, admin tools, integrations and careful work with existing code.", [".NET / C# backend architecture", "Legacy support and refactoring", "Document, approval and reporting workflows"]],
-      ai: ["For automation", "Use AI where it removes routine work.", "Support chat, knowledge assistant, document parser, lead qualification and CRM sync with clear human handoff.", ["RAG over company documents", "Web, Telegram or internal chat", "Logs, handoff and privacy rules"]],
-      mobile: ["For mobile products", "Build iOS and Android apps with React Native.", "API integration, auth, files, camera/media, offline mode, store release and support.", ["New apps and existing app support", "Store release help", "Experience in finance, HR, auto, enterprise and nutrition"]],
-    },
-    serviceMap: {
-      eyebrow: "Service map",
-      title: "A connected delivery stack.",
-      body: "Strategy, design, engineering, AI, launch and support are planned as one product system.",
-      nodes: [
-        ["Strategy", "Scope and product path", "Goals, users, risks and a first release plan before development starts."],
-        ["UX/UI", "Design that can ship", "Flows, prototypes, screens and landing pages prepared for real implementation."],
-        [".NET", "Reliable backend", "C# APIs, roles, reports, SQL data and business workflows for serious products."],
-        ["Node.js", "APIs and integrations", "Payments, CRM sync, realtime features and data exchange between services."],
-        ["Mobile", "React Native apps", "iOS and Android apps with auth, files, camera, offline states and store release."],
-        ["AI", "Assistants and bots", "Support chat, RAG, document helpers and lead bots connected to your workflow."],
-        ["SEO", "Search and launch", "Service pages, launch copy, analytics and AI-readable content for modern search."],
-        ["QA", "Quality and support", "Testing, monitoring, release support and a clear warranty period for agreed fixes."],
-      ],
-    },
-    fitIntro: {
-      eyebrow: "Best fit",
-      title: "Useful when the task is clear, but the product path is not.",
-      body: "We work well with founders, small teams and companies that need senior implementation without a heavy agency process.",
-    },
-    fit: [
-      ["Founders with MVP ideas", "Need a first version fast enough to test demand, pitch, sell or show to early users."],
-      ["Teams buried in manual work", "CRM updates, documents, reports, support chats and repeated tasks slow the team down."],
-      ["Agencies without backend depth", "White-label development for design, marketing or no-code teams that need reliable engineering."],
-      ["Product teams that need capacity", "Support, optimization and feature delivery across .NET, mobile apps and internal workflows."],
-    ],
+    casesProjectLabel: "Project",
+    casesYears: ["2026", "2026", "2026", "2025", "2024", "2024", "2024", "2024", "2024", "2024", "2023", "2023", "2023", "2023", "2023"],
     casesIntro: {
       eyebrow: "Cases",
-      title: "Cases from mobile apps, websites, enterprise tools and operations.",
-      body: "These projects show mobile delivery, e-commerce and service websites, document-heavy enterprise work, admin flows, integrations and product UX.",
+      title: "Our projects",
+      body: "Regardless of cost and complexity, every completed project becomes part of the web studio portfolio.",
+    },
+    casesAllLink: "All cases →",
+    competencies: {
+      title: "Our competencies",
+      more: "Learn more",
+      items: [
+        ["Mobile development", "We build iOS and Android apps on React Native — from the first flow to store release."],
+        ["SEO and AI search", "We help pages reach the top and bring traffic that converts — for people and AI search."],
+        ["Product design", "We design exact flows and interfaces that make the product clear to use."],
+        ["Engineering and analytics", "We integrate, build backends, program AI assistants and ship working products."],
+      ],
     },
     cases: [
-      ["Finance mobile app", "YPA Finance", "Dashboard, AI money coach, budget, debt payoff, alerts and credit insights.", ["React Native", "AI coach", "Fintech"]],
-      ["Document workflows", "Rutilus / Norilsk Nickel", "Enterprise app work: PIN access, assignments, search, deadlines and large document volumes.", ["Enterprise", "Documents", "Performance"]],
+      ["Premium HoReCa supplies", "Genlix", "B2B website for premium meat, poultry, beer and water delivered directly to Belarus.", ["B2B", "Catalog", "Web"]],
+      ["Medical technologies for Belarus", "OSSNOVA", "Corporate site for medical equipment import: ophthalmology, cardiology, coverage map and request.", ["Healthcare", "UX/UI", "Web"]],
+      ["Wedding invitation app", "VOWS", "Constructor for the bride, guest RSVP journey, dress code, location, timeline and reminders.", ["React Native", "UX/UI", "Events"]],
+      ["Finance mobile app", "YPA Finance", "AI assistants, profile, credit score, debt calculator, feedback and budget.", ["React Native", "AI coach", "Fintech"]],
+      ["Quiz nights in Moscow bars", "IQ Battle", "Bar quiz schedule, corporate events, birthday quiz, rules and team rating.", ["Events", "UX/UI", "Web"]],
       ["Agribusiness sales", "Demetra", "Mobile catalog, sales flow and order screens for a B2B product.", ["B2B", "Catalog", "Admin"]],
-      ["Employee onboarding", "Empiflow", "Onboarding tracks, learning states, dashboard, document library and progress screens.", ["Workflow", "HR", "Files"]],
       ["Camera and 360 media", "Auto Dealers Media App", "Cross-platform app for photos, video, upload queues, listing details and Theta 360 media.", ["Camera", "Media", "Device"]],
       ["Nutrition tracking", "SmartEat", "Food search, meal flows, validation, diary, profile and API-driven mobile screens.", ["Forms", "API", "Mobile"]],
-      ["Resort and hotel website", "Altai Restart", "Premium resort website with room booking, category cards, gallery and booking CTA.", ["UX/UI", "Hospitality", "Web"]],
       ["Mining equipment store", "ASGARD", "E-commerce for ASIC miners with catalog, product specs, leasing blocks and service pages.", ["E-commerce", "Catalog", "Web"]],
+      ["Premium chauffeur marketplace", "Ultra Drivers", "Clients rent a business-class car with a driver; chauffeurs register, upload documents and publish their cars.", ["Marketplace", "Fleet", "Web"]],
+      ["Document workflows", "Rutilus / Norilsk Nickel", "Enterprise app work: PIN access, assignments, search, deadlines and large document volumes.", ["Enterprise", "Documents", "Performance"]],
+      ["Employee onboarding", "Empiflow", "Onboarding tracks, learning states, dashboard, document library and progress screens.", ["Workflow", "HR", "Files"]],
+      ["Resort and hotel website", "Altai Restart", "Premium resort website with room booking, category cards, gallery and booking CTA.", ["UX/UI", "Hospitality", "Web"]],
       ["House construction website", "Invest Stroy", "Construction company site with project catalog, house details, specs, pricing and calculator.", ["Real estate", "Catalog", "Web"]],
-      ["Premium car rental", "Ultra Drivers", "Business and premium class car rental with a driver.", ["E-commerce", "Fleet", "Web"]],
       ["Metal products store", "V-METAL", "Industrial e-commerce with catalog, product configurator, cart and order process pages.", ["E-commerce", "B2B", "Web"]],
     ],
-    aiIntro: {
-      eyebrow: "AI assistants and chatbots",
-      title: "AI is useful when the workflow is clear.",
-      body: "We define what the assistant should do, what data it can use, when it hands off to a person and how the result is logged.",
-    },
-    aiCards: [
-      ["Support chatbot", "Answers common questions, collects context, creates a ticket and hands complex cases to a person."],
-      ["Knowledge assistant", "Searches company documents, policies and CRM notes with source-backed answers."],
-      ["Document parser", "Extracts fields from invoices, contracts, statements and forms."],
-      ["Lead bot", "Qualifies a prospect, updates CRM and prepares the next step."],
-    ],
-    aiConsole: {
-      label: "Example",
-      buttons: ["Support", "Documents", "Sales"],
-      handoff: "Human handoff available",
-      scenarios: {
-        support: ["A client wrote to support. What should happen next?", "Collect contacts, project type, timeline and integration needs. Create a CRM draft and offer a call time.", "CRM draft ready"],
-        docs: ["Find the rule for contract approval limits.", "The finance policy says approvals above 10k require CFO review and legal confirmation.", "Sources attached"],
-        sales: ["What should we ask before estimating?", "Clarify the current process, integrations, deadline, decision maker and expected result.", "Questions prepared"],
-      },
-    },
-    expertiseIntro: {
-      eyebrow: "Capabilities",
-      title: "A team for product, engineering, launch and support.",
-      body: "We combine design, development, automation, SEO, analytics, QA and maintenance in one delivery track.",
-    },
-    expertise: [
-      ["Product and design", "UX/UI, prototypes, design systems, landing pages, conversion copy and launch materials."],
-      ["Engineering", "C# / .NET, Node.js, React, React Native, databases, integrations, admin panels and APIs."],
-      ["AI, SEO and analytics", "AI assistants, chatbots, RAG, technical SEO, AI SEO, structured data, analytics and CRM sync."],
-      ["QA and support", "Testing, code review, deployment, monitoring, maintenance and warranty fixes for agreed scope."],
-    ],
-    processIntro: {
-      eyebrow: "Development process",
-      title: "A simple process from idea to support.",
-      body: "Every stage ends with something concrete: scope, prototype, working build, launch checklist, SEO setup or support plan.",
-    },
-    process: [
-      ["Understand the task", "Goal, users, business rules, audience, data, constraints and existing systems."],
-      ["Design the solution", "UX/UI, prototype, content structure, SEO basics, architecture, milestones and estimate."],
-      ["Build and check", "Backend, frontend, mobile, AI, integrations, admin tools, QA and regular demos."],
-      ["Launch and support", "Deployment, analytics, SEO/AI SEO checks, documentation, monitoring and support."],
-    ],
-    comparison: [
-      ["Project format", "Studio", "Freelancer", "Large agency"],
-      ["Design, development, SEO and support in one track", "Yes", "Partial", "Often split"],
-      ["Fast MVP without a heavy process", "Yes", "Depends", "Usually slower"],
-      ["Backend, AI and integration depth", ".NET + Node + AI", "Varies", "Yes"],
-      ["QA, release support and warranty fixes", "Yes", "Varies", "Often extra"],
-    ],
-    packagesIntro: {
-      eyebrow: "Starting points",
-      title: "Pick the closest starting point.",
-      body: "After a short brief, we will scope the next useful step.",
-    },
-    packages: [
-      ["MVP", "First working release", "Prototype, backend, interface, integrations and launch checklist.", "Build a brief"],
-      [".NET backend", "C# systems and integrations", "API, SQL, auth, reports, admin tools and existing codebase support.", "Describe backend"],
-      ["AI assistant", "Automation for one clear workflow", "Chat, RAG, document parsing, CRM sync, logs and human handoff.", "Describe AI workflow"],
-      ["Design + SEO launch", "Product packaging and visibility", "UX/UI, landing copy, service pages, SEO, AI SEO, analytics and launch materials.", "Plan launch"],
-      ["Mobile app", "React Native for iOS and Android", "App delivery, release support, performance and maintenance.", "Start mobile brief"],
-    ],
-    brief: {
-      eyebrow: "Project brief",
-      title: "Create a short project note.",
-      body: "Choose a few options and send a useful first message.",
-      steps: ["What do you need?", "What is the stage?", "Timeline"],
-      choices: {
-        type: ["MVP", ".NET backend", "AI assistant", "Design + SEO", "Mobile app"],
-        stage: ["Idea", "Design ready", "Existing codebase"],
-        timeline: ["2-4 weeks", "1-2 months", "Flexible"],
-      },
-      draft: "Message draft",
-      placeholder: "Project type, stage and timeline will appear here.",
-      mail: "Add to contact form",
-      inserted: "Brief added to the form. Add your contacts and send the request.",
-      subject: "New project",
-      bodyTemplate: (type, stage, timeline) =>
-        `Project: ${type}. Stage: ${stage}. Timeline: ${timeline}. I want to understand the scope, risks and next step.`,
-    },
-    faqIntro: {
-      eyebrow: "FAQ",
-      title: "Questions clients usually ask before the first call.",
-    },
-    faq: [
-      ["How do we choose the right service?", "We start with the goal and current process. Then we suggest the closest scope: MVP, backend, mobile app, AI automation or support."],
-      ["Do you have experience in my industry?", "The portfolio includes finance, enterprise workflows, agribusiness, HR, automotive media and nutrition. For a new niche, we first map the process."],
-      ["Can you build a product end to end?", "Yes. We can cover brief, UX/UI logic, backend, mobile or web interface, integrations, testing, release and support."],
-      ["Can you build an AI assistant or chatbot for a website?", "Yes. We can build support chatbots, lead bots, document assistants and private AI assistants connected to CRM, Telegram or an internal system."],
-      ["Can you improve an existing .NET or Node.js project?", "Yes. We can review the codebase, stabilize the backend, add integrations, improve performance and ship new features in stages."],
-      ["Can you help with design, marketing and SEO?", "Yes. We can prepare UX/UI, landing pages, launch copy, analytics, technical SEO, structured data and AI-readable content."],
-      ["Do you provide QA, support and warranty?", "Yes. We test core scenarios, support the release, monitor issues and fix agreed bugs during the warranty period."],
-      ["How does estimation work?", "We split the project into stages and estimate the nearest delivery step first. The roadmap expands after the first scope is clear."],
-    ],
-    cta: {
-      eyebrow: "Contact",
-      title: "Tell us what you want to build.",
-      body: "Send your contacts and a short task description. We can discuss development, design, SEO, AI automation, QA or long-term support.",
-      actions: ["Telegram", "Email"],
-      detailLabels: ["Telegram", "Email"],
-    },
-    callForm: {
-      eyebrow: "Request a call",
-      title: "Leave your contacts and project details.",
-      body: "A short request is enough. We will reply with questions or a call time.",
+    contactForm: {
+      title: "Do you have a project?",
+      body: "Great! We are ready to discuss the most unusual tasks and find a solution.",
       labels: {
-        name: "Name",
-        contact: "Phone, Telegram or email",
-        project: "Project type",
-        timeline: "Timeline",
-        budget: "Budget guide",
-        channel: "Preferred contact",
-        details: "Task details",
-        file: "File or brief",
+        name: "Full name*",
+        email: "Email address*",
+        website: "Website link",
+        message: "How can we help you*",
       },
-      placeholders: {
-        name: "Your name",
-        contact: "+375..., @telegram or email",
-        details: "A few words about the product, stage, current problem or links.",
-      },
-      projectOptions: ["Choose one", "MVP / first release", ".NET / backend", "AI assistant", "Mobile app", "Design / SEO / marketing", "Support / QA"],
-      timelineOptions: ["Not sure yet", "As soon as possible", "Within a month", "This quarter", "Flexible"],
-      budgetOptions: ["Need an estimate", "Up to $2,000", "$2,000-10,000", "$10,000-50,000", "$50,000+"],
-      channelOptions: ["Phone", "Telegram", "Email"],
-      consent: "I agree to be contacted about this request.",
-      submit: "Send request",
-      fileButton: "Attach file",
-      noFile: "No file selected",
-      fileSelected: (count) => (count === 1 ? "1 file selected" : `${count} files selected`),
-      subject: "Call request",
-      sending: "Sending request...",
-      success: "Request sent. We will reply soon.",
-      error: "Could not send the request. Please try again or write to Telegram.",
-      emailLabels: {
-        name: "Name",
-        contact: "Contact",
-        project: "Project type",
-        timeline: "Timeline",
-        budget: "Budget",
-        channel: "Preferred contact",
-        details: "Details",
-        files: "Files",
-      },
+      topLabel: "Back to top",
+      submit: "Send",
+      subject: "New project inquiry",
+      sending: "Sending...",
+      success: "Message sent. We will reply soon.",
+      error: "Could not send the message. Please try again or write to Telegram.",
     },
     footer: "LocalMind Studio - AI assistants, chatbots, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, integrations and product support.",
     footerPartners: "Partners",
     galleryUi: ["Gallery", "App screens", "Screens for the selected case.", "Close"],
+    palette: {
+      toggle: "Palette",
+      close: "Close palettes",
+      title: "Color palettes",
+      lead: "From quiet neutrals to loud, high-contrast looks.",
+      options: [
+        ["Pebble", "Calm stone and charcoal"],
+        ["Sage", "Current olive studio"],
+        ["Harbor", "Soft coastal blue"],
+        ["Clay", "Warm terracotta"],
+        ["Tide", "Bright teal"],
+        ["Pulse", "Electric lime and violet"],
+      ],
+    },
     galleryCases: {
-      ypa: ["YPA Finance - mobile finance app", "Dashboard, AI coach, budget, debt payoff, alerts, credit insights and auth screens."],
+      ypa: ["YPA Finance - mobile finance app", "AI assistants, profile, credit score, debt calculator, feedback and budget screens."],
       smarteat: ["SmartEat - nutrition app", "Food search, meal tracking, profile, diary and health data screens."],
       demetra: ["Demetra - mobile app screens", "Mobile catalog and sales screens for an agribusiness product."],
       empiflow: ["Empiflow - onboarding app", "Employee tracks, activities, learning content and document library screens."],
       rutilus: ["Rutilus / Norilsk Nickel - enterprise app", "Login, PIN access, document details, assignments, deadlines and workflow screens."],
       auto: ["Auto dealers media app", "Camera capture, photo/video gallery, Theta 360 preview, upload queue and listing details."],
       altay: ["Altai Restart - resort website", "Homepage, room booking, special offers and aqua-thermal complex."],
-      asgard: ["ASGARD - mining equipment store", "E-commerce pages for ASIC miners with catalog, specs, leasing and service blocks."],
+      asgard: ["ASGARD - mining equipment store", "Homepage, manufacturer catalog, product page, cart checkout and media."],
       ekbdoma: ["Invest Stroy - house construction website", "Homepage, project detail, construction calculator, houses with plots and news."],
-      ultra: ["Ultra Drivers - premium car rental", "Homepage, fleet catalog, forums and car detail pages."],
+      ultra: ["Ultra Drivers - chauffeur marketplace", "Homepage, fleet catalog, car listing, driver signup and cabinet with moderation."],
       vmetal: ["V-METAL - metal products store", "Homepage, catalog, product configurator and shopping cart."],
+      vows: ["VOWS - wedding invitation constructor", "Guest journey, RSVP, dress code, location, timeline and bride constructor."],
+      genlix: ["Genlix - premium HoReCa supply website", "Homepage, Primebeef catalog, product page, partner map and industry blog."],
+      ossnova: ["OSSNOVA - medical technologies for Belarus", "Homepage, coverage map, about, cardiology, knowledge base and contact form."],
+      iqbattle: ["IQ Battle - quiz nights in Moscow bars", "Homepage, corporate quiz, birthday quiz, games schedule, rules and team rating."],
+    },
+    caseStudyUi: {
+      home: "Home",
+      cases: "Cases",
+      studio: "LocalMind Studio",
+      task: "Task",
+      solution: "Solution",
+      niche: "Niche",
+      duration: "Duration",
+      decisions: "Key product decisions",
+      result: "Result",
+      prev: "Previous screen",
+      next: "Next screen",
     },
   },
   ru: {
@@ -404,278 +983,135 @@ const translations = {
     title: "LocalMind Studio - AI, .NET, MVP, SEO и продуктовая разработка",
     description:
       "Делаем AI-ассистентов, чат-ботов, .NET/C# бэкенды, Node.js интеграции, React Native приложения, MVP, UX/UI, SEO и поддержку запуска.",
-    nav: ["Услуги", "Кейсы", "AI", "Процесс", "Контакт"],
+    nav: ["Кейсы", "Компетенции", "Контакт"],
     navCall: "Заказать звонок",
-    heroPrefix: "Делаем",
-    heroSuffix: "для бизнеса.",
-    rotatingWords: ["AI-ассистентов", ".NET-бэкенды", "MVP", "мобильные приложения", "UX/UI дизайн", "SEO и AI SEO", "чат-ботов", "Node.js интеграции"],
-    heroEyebrow: "AI-ассистенты, .NET, дизайн, SEO и продуктовая разработка",
-    heroLead:
-      "Помогаем командам спланировать, спроектировать, разработать, запустить и поддерживать продукт: бэкенд, мобильные приложения, интеграции, чат-боты, SEO и приватные AI-ассистенты.",
+    navTelegram: "@jackkorlive",
+    navEmail: "localmindstudio@gmail.com",
+    heroEyebrow: "Продуктовая студия",
+    heroTitle: "Делаем продукты для бизнеса.",
+    heroLead: "Разработка, дизайн, SEO и AI — от идеи до запуска и поддержки.",
     heroActions: ["Заказать звонок", "Посмотреть кейсы"],
-    stack: ["AI-ассистенты", "Чат-боты", "Продуктовый дизайн", "UX/UI", "SEO", "AI SEO", "Маркетинг запуска", "QA", ".NET/C#", "Node.js", "React Native", "MVP-разработка", "Админ-панели", "Интеграции", "Поддержка", "Контроль качества"],
-    delivery: {
-      title: "План разработки",
-      status: "Заявка получена",
-      sprint: "MVP / автоматизация",
-      time: "2-6 недель",
-      text: "Стратегия, UX, бэкенд, интерфейс, QA, SEO и релиз.",
-      ai: "AI-аудит",
-      question: "Где команда теряет время каждую неделю?",
-      answer: "Сначала находим повторяющиеся шаги. Потом автоматизируем то, что действительно стоит автоматизировать.",
-    },
+    marquee: ["мобильная разработка", "сайты", "дизайн"],
     proof: [
       ["MVP", "от идеи до первого рабочего релиза"],
       ["Дизайн + SEO", "UX/UI, лендинги и видимость в AI-поиске"],
       ["Разработка", ".NET, Node.js, мобильные приложения и интеграции"],
       ["QA + поддержка", "тестирование, запуск и сопровождение"],
     ],
-    why: {
-      eyebrow: "Почему мы",
-      title: "Закрываем путь от идеи до запуска.",
-      body:
-        "До разработки задаем простые вопросы: что сейчас не работает, кто пользуется продуктом, что нужно показать клиентам и какие системы уже есть. После этого выбираем объем, который можно спроектировать, разработать, проверить, запустить и поддерживать.",
-      quote:
-        "Ты видишь, что делается, как проверяется качество и какой следующий шаг.",
-    },
-    servicesIntro: {
-      eyebrow: "Услуги",
-      title: "Понятные услуги для реальных задач.",
-      body: "Можно прийти с идеей, брифом, старым кодом или ручным процессом. Поможем с продуктовым дизайном, разработкой, SEO, маркетингом запуска, QA и поддержкой.",
-    },
-    services: [
-      ["MVP и веб-приложения", "Первые релизы, клиентские порталы и внутренние инструменты с бэкендом, админкой и планом запуска.", ["MVP", "Web", "Запуск"]],
-      ["Продуктовый дизайн и UX/UI", "Пользовательские сценарии, прототипы, интерфейс, лендинги и дизайн-системы для запуска продукта.", ["UX/UI", "Дизайн", "Figma"]],
-      [".NET / C# разработка", "API, внутренние платформы, права доступа, отчеты, SQL-базы и бизнес-процессы.", ["C#", ".NET", "SQL"]],
-      ["Node.js API и интеграции", "API, платежи, синхронизация с CRM, realtime-функции и обмен данными между сервисами.", ["Node.js", "API", "CRM"]],
-      ["Мобильные приложения", "React Native приложения для iOS и Android: авторизация, файлы, камера, офлайн-режим и релиз в сторах.", ["iOS", "Android", "RN"]],
-      ["AI-ассистенты и чат-боты", "Боты поддержки, ассистенты по документам и лид-боты, подключенные к вашему процессу.", ["AI", "Чат", "RAG"]],
-      ["SEO, AI SEO и маркетинг", "Структура под поиск, сервисные страницы, тексты запуска, аналитика и AI-readable контент для современных поисковых систем.", ["SEO", "AI SEO", "Аналитика"]],
-      ["QA, поддержка и качество", "Тестирование, мониторинг, исправление багов, документация, поддержка релиза и гарантийный период на согласованные исправления.", ["QA", "Поддержка", "Гарантия"]],
-    ],
-    serviceTabs: ["MVP", ".NET", "AI", "Мобильное"],
-    servicePanels: {
-      mvp: ["Для первого релиза", "Собираем рабочую версию, а не просто макет.", "Фиксируем цель, основные сценарии, API/бэкенд, интерфейс, чеклист релиза и ритм демо.", ["2-6 недель на первый релиз", "Прямое общение с инженерами", "Подходит для SaaS, маркетплейсов и внутренних продуктов"]],
-      dotnet: ["Для задач с сильным бэкендом", "Строим и улучшаем .NET-системы.", "C# API, роли, отчеты, SQL-базы, админ-инструменты, интеграции и аккуратная работа с существующим кодом.", ["Архитектура бэкенда на .NET / C#", "Поддержка старого кода и рефакторинг", "Документы, согласования и отчетность"]],
-      ai: ["Для автоматизации", "Добавляем AI там, где он убирает рутину.", "Чат поддержки, ассистент по документам, парсер, квалификация лидов и связь с CRM с понятной передачей человеку.", ["RAG по документам компании", "Чат на сайте, в Telegram или внутри системы", "Логи, передача оператору и правила privacy"]],
-      mobile: ["Для мобильных продуктов", "Делаем iOS- и Android-приложения на React Native.", "API, авторизация, файлы, камера/медиа, офлайн-режим, релиз в сторах и поддержка.", ["Новые приложения и поддержка существующих", "Помощь с релизом в сторах", "Опыт в финансах, HR, авто, enterprise и питании"]],
-    },
-    serviceMap: {
-      eyebrow: "Карта услуг",
-      title: "Связанная система разработки.",
-      body: "Стратегия, дизайн, разработка, AI, запуск и поддержка собираются в один понятный продуктовый маршрут.",
-      nodes: [
-        ["Стратегия", "Объем и путь продукта", "Цели, пользователи, риски и план первого релиза до начала разработки."],
-        ["UX/UI", "Дизайн, который можно собрать", "Сценарии, прототипы, экраны и лендинги, подготовленные к реальной разработке."],
-        [".NET", "Надежный бэкенд", "C# API, роли, отчеты, SQL-данные и бизнес-процессы для серьезных продуктов."],
-        ["Node.js", "API и интеграции", "Платежи, CRM, realtime-функции и обмен данными между сервисами."],
-        ["Mobile", "React Native приложения", "iOS и Android с авторизацией, файлами, камерой, офлайном и релизом в сторах."],
-        ["AI", "Ассистенты и боты", "Чат поддержки, RAG, помощники по документам и лид-боты внутри процесса."],
-        ["SEO", "Поиск и запуск", "Сервисные страницы, тексты запуска, аналитика и AI-readable контент."],
-        ["QA", "Качество и поддержка", "Тестирование, мониторинг, поддержка релиза и гарантия на согласованные исправления."],
-      ],
-    },
-    fitIntro: {
-      eyebrow: "Кому подходит",
-      title: "Когда задача понятна, но путь к продукту еще нет.",
-      body: "Хорошо подходим основателям, небольшим командам и компаниям, которым нужна сильная разработка без тяжелого агентского процесса.",
-    },
-    fit: [
-      ["Основателям с идеей MVP", "Нужна первая версия, чтобы проверить спрос, показать инвесторам, продать или дать ранним пользователям."],
-      ["Командам с ручной работой", "CRM, документы, отчеты, поддержка, чаты и повторяющиеся задачи тормозят работу."],
-      ["Агентствам без сильного бэкенда", "White-label разработка для дизайн-, маркетинг- и no-code-команд, которым нужна надежная инженерия."],
-      ["Продуктовым командам", "Поддержка, оптимизация и разработка фич в .NET, мобильных приложениях и внутренних системах."],
-    ],
+    casesProjectLabel: "Проект №",
+    casesYears: ["2026", "2026", "2026", "2025", "2024", "2024", "2024", "2024", "2024", "2024", "2023", "2023", "2023", "2023", "2023"],
     casesIntro: {
       eyebrow: "Кейсы",
-      title: "Кейсы в мобильной разработке, веб-сайтах, enterprise и операционных продуктах.",
-      body: "Здесь видно мобильную поставку, e-commerce и сервисные сайты, документооборот, админ-сценарии, интеграции и продуктовый UX.",
+      title: "Наши проекты",
+      body: "Независимо от стоимости и сложности, выполненный проект всегда становится частью портфолио веб-студии",
+    },
+    casesAllLink: "Все кейсы →",
+    competencies: {
+      title: "Наши компетенции",
+      more: "Подробнее",
+      items: [
+        ["Мобильная разработка", "Собираем iOS и Android приложения на React Native — от первого сценария до релиза в сторах."],
+        ["SEO и AI-поиск", "Помогаем достичь топа и привлечь конверсионный трафик — и для людей, и для нейросетей."],
+        ["Дизайн продукта", "Проектируем точные сценарии и интерфейсы, чтобы продуктом было понятно пользоваться."],
+        ["Разработка и аналитика", "Интегрируем, разрабатываем бэкенд, программируем AI-ассистентов и запускаем продукт."],
+      ],
     },
     cases: [
-      ["Финансовое мобильное приложение", "YPA Finance", "Дашборд, AI-коуч, бюджет, план погашения долгов, оповещения и кредитные инсайты.", ["React Native", "AI-коуч", "Финтех"]],
-      ["Документооборот", "Rutilus / Norilsk Nickel", "Корпоративное приложение: PIN-доступ, поручения, поиск, дедлайны и большие объемы документов.", ["Корпорации", "Документы", "Скорость"]],
+      ["Премиальные поставки для HoReCa", "Genlix", "B2B-сайт премиального мяса, птицы, пива и воды с прямой поставкой в Беларусь.", ["B2B", "Каталог", "Веб"]],
+      ["Медицинские технологии для Беларуси", "OSSNOVA", "Корпоративный сайт импорта медтехники: офтальмология, кардиология, карта покрытия и заявка.", ["Медицина", "UX/UI", "Веб"]],
+      ["Конструктор свадебных приглашений", "VOWS", "Конструктор для невесты, сценарий гостя: RSVP, дресс-код, локация, тайминг и напоминания.", ["React Native", "UX/UI", "События"]],
+      ["Финансовое мобильное приложение", "YPA Finance", "AI-ассистенты, профиль, кредитный рейтинг, калькулятор, обратная связь и бюджет.", ["React Native", "AI-коуч", "Финтех"]],
+      ["Квизы в барах Москвы", "IQ Battle", "Расписание игр в баре, корпоратив, квиз на день рождения, правила и рейтинг команд.", ["События", "UX/UI", "Веб"]],
       ["Агробизнес и продажи", "Demetra", "Мобильный каталог, сценарий продаж и экраны заказов для B2B-продукта.", ["B2B", "Каталог", "Админка"]],
-      ["Адаптация сотрудников", "Empiflow", "Треки онбординга, учебные состояния, дашборд, библиотека документов и экраны прогресса.", ["Процессы", "HR", "Файлы"]],
       ["Камера и 360-медиа", "Auto Dealers Media App", "Кросс-платформенное приложение для фото, видео, очереди загрузки, деталей объявления и Theta 360.", ["Камера", "Медиа", "Устройства"]],
       ["Питание и дневник еды", "SmartEat", "Поиск продуктов, сценарии питания, формы, валидация, дневник, профиль и мобильные экраны через API.", ["Формы", "API", "Мобильное"]],
-      ["Сайт отеля и курорта", "Алтай Рестарт", "Премиальный сайт курорта с бронированием номеров, карточками категорий и галереей.", ["UX/UI", "Отели", "Веб"]],
       ["Магазин майнинг-оборудования", "ASGARD", "E-commerce для ASIC-майнеров: каталог, характеристики, лизинг и сервисные блоки.", ["E-commerce", "Каталог", "Веб"]],
+      ["Площадка водителей премиум-класса", "Ultra Drivers", "Клиенты арендуют авто с водителем; водители регистрируются, загружают документы и публикуют машины.", ["Маркетплейс", "Автопарк", "Веб"]],
+      ["Документооборот", "Rutilus / Norilsk Nickel", "Корпоративное приложение: PIN-доступ, поручения, поиск, дедлайны и большие объемы документов.", ["Корпорации", "Документы", "Скорость"]],
+      ["Адаптация сотрудников", "Empiflow", "Треки онбординга, учебные состояния, дашборд, библиотека документов и экраны прогресса.", ["Процессы", "HR", "Файлы"]],
+      ["Сайт отеля и курорта", "Алтай Рестарт", "Премиальный сайт курорта с бронированием номеров, карточками категорий и галереей.", ["UX/UI", "Отели", "Веб"]],
       ["Сайт строительной компании", "Инвест Строй", "Сайт застройщика: каталог проектов, карточки домов, характеристики, цены и калькулятор.", ["Недвижимость", "Каталог", "Веб"]],
-      ["Аренда авто премиум-класса", "Ultra Drivers", "Аренда автомобиля бизнес и премиум класса с водителем.", ["E-commerce", "Автопарк", "Веб"]],
       ["Магазин металлопродукции", "V-METAL", "Промышленный e-commerce: каталог, конфигуратор товара, корзина и сценарий заказа.", ["E-commerce", "B2B", "Веб"]],
     ],
-    aiIntro: {
-      eyebrow: "AI-ассистенты и чат-боты",
-      title: "AI полезен там, где понятен процесс.",
-      body: "Определяем, что ассистент должен делать, какие данные он видит, когда передает задачу человеку и как сохраняется результат.",
-    },
-    aiCards: [
-      ["Чат-бот поддержки", "Отвечает на типовые вопросы, собирает контекст, заводит заявку и передает сложные случаи оператору."],
-      ["Ассистент по базе знаний", "Ищет по документам, правилам и заметкам CRM, отвечая со ссылкой на источники."],
-      ["Парсер документов", "Достает нужные поля из счетов, договоров, выписок и форм."],
-      ["Бот для лидов", "Квалифицирует клиента, обновляет CRM и готовит следующий шаг."],
-    ],
-    aiConsole: {
-      label: "Пример",
-      buttons: ["Поддержка", "Документы", "Продажи"],
-      handoff: "Можно передать человеку",
-      scenarios: {
-        support: ["Клиент написал в поддержку. Что делаем дальше?", "Соберу контакты, тип задачи, срок и нужные интеграции. Создам черновик в CRM и предложу время для созвона.", "Черновик в CRM готов"],
-        docs: ["Найди правило по лимитам согласования договоров.", "В финансовом регламенте указано: договоры выше 10 тыс. требуют проверки CFO и подтверждения юриста.", "Источники прикреплены"],
-        sales: ["Какие вопросы задать перед оценкой?", "Уточнить текущий процесс, интеграции, срок, лицо принятия решения и ожидаемый результат.", "Список вопросов готов"],
-      },
-    },
-    expertiseIntro: {
-      eyebrow: "Возможности",
-      title: "Команда для продукта, разработки, запуска и поддержки.",
-      body: "Соединяем дизайн, разработку, автоматизацию, SEO, аналитику, QA и сопровождение в одном треке.",
-    },
-    expertise: [
-      ["Продукт и дизайн", "UX/UI, прототипы, дизайн-системы, лендинги, продающие тексты и материалы для запуска."],
-      ["Разработка", "C# / .NET, Node.js, React, React Native, базы данных, интеграции, админ-панели и API."],
-      ["AI, SEO и аналитика", "AI-ассистенты, чат-боты, RAG, техническое SEO, AI SEO, structured data, аналитика и CRM."],
-      ["QA и поддержка", "Тестирование, ревью кода, деплой, мониторинг, сопровождение и гарантийные исправления в согласованном объеме."],
-    ],
-    processIntro: {
-      eyebrow: "Процесс разработки",
-      title: "Простой процесс от идеи до поддержки.",
-      body: "Каждый этап заканчивается конкретным результатом: объемом работ, прототипом, рабочей сборкой, чеклистом запуска, SEO-настройкой или планом поддержки.",
-    },
-    process: [
-      ["Разобраться в задаче", "Цель, пользователи, бизнес-правила, аудитория, данные, ограничения и существующие системы."],
-      ["Спроектировать решение", "UX/UI, прототип, структура контента, базовое SEO, архитектура, этапы и оценка."],
-      ["Разработать и проверить", "Бэкенд, фронтенд, мобильная часть, AI, интеграции, админ-инструменты, QA и регулярные демо."],
-      ["Запустить и поддерживать", "Деплой, аналитика, SEO/AI SEO проверки, документация, мониторинг и поддержка."],
-    ],
-    comparison: [
-      ["Формат проекта", "Студия", "Фрилансер", "Крупное агентство"],
-      ["Дизайн, разработка, SEO и поддержка в одном треке", "Да", "Частично", "Часто разделено"],
-      ["Быстрый MVP без тяжелого процесса", "Да", "Зависит", "Обычно дольше"],
-      ["Глубина в бэкенде, AI и интеграциях", ".NET + Node + AI", "По-разному", "Да"],
-      ["QA, поддержка релиза и гарантийные исправления", "Да", "По-разному", "Часто отдельно"],
-    ],
-    packagesIntro: {
-      eyebrow: "С чего начать",
-      title: "Выбери ближайший стартовый формат.",
-      body: "После короткого брифа определим следующий полезный шаг.",
-    },
-    packages: [
-      ["MVP", "Первый рабочий релиз", "Прототип, бэкенд, интерфейс, интеграции и чеклист запуска.", "Собрать бриф"],
-      [".NET-бэкенд", "C#-системы и интеграции", "API, SQL, авторизация, отчеты, админ-инструменты и поддержка существующего кода.", "Описать бэкенд"],
-      ["AI-ассистент", "Автоматизация одного понятного процесса", "Чат, RAG, парсинг документов, синхронизация с CRM, логи и передача человеку.", "Описать AI-процесс"],
-      ["Дизайн + SEO запуск", "Упаковка продукта и видимость", "UX/UI, тексты лендинга, сервисные страницы, SEO, AI SEO, аналитика и материалы запуска.", "Спланировать запуск"],
-      ["Мобильное приложение", "React Native для iOS и Android", "Разработка приложения, релизная поддержка, производительность и сопровождение.", "Начать бриф"],
-    ],
-    brief: {
-      eyebrow: "Бриф",
-      title: "Собери короткое описание проекта.",
-      body: "Выбери несколько вариантов и получи нормальный текст для первого сообщения.",
-      steps: ["Что нужно?", "На какой стадии?", "Сроки"],
-      choices: {
-        type: ["MVP", ".NET-бэкенд", "AI-ассистент", "Дизайн + SEO", "Мобильное приложение"],
-        stage: ["Идея", "Дизайн готов", "Есть кодовая база"],
-        timeline: ["2-4 недели", "1-2 месяца", "Гибко"],
-      },
-      draft: "Черновик сообщения",
-      placeholder: "Тип проекта, стадия и сроки появятся здесь.",
-      mail: "Добавить в форму",
-      inserted: "Бриф добавлен в форму. Оставь контакты и отправь заявку.",
-      subject: "Новый проект",
-      bodyTemplate: (type, stage, timeline) =>
-        `Нужно обсудить: ${type}. Стадия: ${stage}. Срок: ${timeline}. Хочу понять объем работ, риски и следующий шаг.`,
-    },
-    faqIntro: {
-      eyebrow: "Вопросы",
-      title: "Что обычно спрашивают до первого звонка.",
-    },
-    faq: [
-      ["Как понять, какие услуги нужны?", "Начинаем с цели и текущего процесса. После этого предлагаем ближайший объем: MVP, бэкенд, мобильное приложение, AI-автоматизация или поддержка."],
-      ["Есть ли опыт в моей нише?", "В портфолио есть финансы, корпоративные процессы, агробизнес, HR, автомобильные медиа и питание. Для новой ниши сначала разбираем процесс."],
-      ["Можете сделать продукт под ключ?", "Да. Можем закрыть бриф, UX/UI-логику, бэкенд, мобильный или веб-интерфейс, интеграции, тестирование, релиз и поддержку."],
-      ["Можете сделать AI-ассистента или чат-бота для сайта?", "Да. Делаем чат-ботов поддержки, лид-ботов, ассистентов по документам и приватных AI-ассистентов с подключением к CRM, Telegram или внутренней системе."],
-      ["Можете доработать существующий .NET или Node.js проект?", "Да. Можем посмотреть кодовую базу, стабилизировать бэкенд, добавить интеграции, улучшить производительность и выпускать фичи этапами."],
-      ["Можете помочь с дизайном, маркетингом и SEO?", "Да. Можем подготовить UX/UI, лендинги, тексты запуска, аналитику, техническое SEO, structured data и AI-readable контент."],
-      ["Есть QA, поддержка и гарантия?", "Да. Проверяем ключевые сценарии, поддерживаем релиз, мониторим проблемы и исправляем согласованные баги в гарантийный период."],
-      ["Как проходит оценка?", "Делим проект на этапы и сначала оцениваем ближайший шаг. Дорожную карту расширяем после понятного первого объема."],
-    ],
-    cta: {
-      eyebrow: "Контакт",
-      title: "Расскажи, что хочешь сделать.",
-      body: "Пришли контакты и короткое описание задачи. Можем обсудить разработку, дизайн, SEO, AI-автоматизацию, QA или долгосрочную поддержку.",
-      actions: ["Telegram", "Email"],
-      detailLabels: ["Telegram", "Email"],
-    },
-    callForm: {
-      eyebrow: "Заказать звонок",
-      title: "Оставь контакты и детали проекта.",
-      body: "Короткой заявки достаточно. Ответим вопросами или предложим время для звонка.",
+    contactForm: {
+      title: "У вас есть проект?",
+      body: "Прекрасно! Мы готовы обсудить самые необычные задачи и найти решение.",
       labels: {
-        name: "Имя",
-        contact: "Телефон, Telegram или email",
-        project: "Тип проекта",
-        timeline: "Сроки",
-        budget: "Ориентир по бюджету",
-        channel: "Удобный способ связи",
-        details: "Описание задачи",
-        file: "Файл или бриф",
+        name: "Полное имя*",
+        email: "Адрес электронной почты*",
+        website: "Ссылка на веб-сайт",
+        message: "Чем мы можем вам помочь*",
       },
-      placeholders: {
-        name: "Как к тебе обращаться",
-        contact: "+375..., @telegram или email",
-        details: "Пара слов о продукте, стадии, текущей проблеме или ссылки.",
-      },
-      projectOptions: ["Выбери вариант", "MVP / первый релиз", ".NET / бэкенд", "AI-ассистент", "Мобильное приложение", "Дизайн / SEO / маркетинг", "Поддержка / QA"],
-      timelineOptions: ["Пока не уверен", "Как можно быстрее", "В течение месяца", "В этом квартале", "Гибко"],
-      budgetOptions: ["Нужна оценка", "До $2,000", "$2,000-10,000", "$10,000-50,000", "$50,000+"],
-      channelOptions: ["Телефон", "Telegram", "Email"],
-      consent: "Согласен, чтобы со мной связались по этой заявке.",
-      submit: "Отправить заявку",
-      fileButton: "Прикрепить файл",
-      noFile: "Файл не выбран",
-      fileSelected: (count) => (count === 1 ? "Выбран 1 файл" : `Выбрано файлов: ${count}`),
-      subject: "Заявка на звонок",
-      sending: "Отправляем заявку...",
-      success: "Заявка отправлена. Скоро ответим.",
-      error: "Не получилось отправить заявку. Попробуй еще раз или напиши в Telegram.",
-      emailLabels: {
-        name: "Имя",
-        contact: "Контакт",
-        project: "Тип проекта",
-        timeline: "Сроки",
-        budget: "Бюджет",
-        channel: "Удобный способ связи",
-        details: "Описание",
-        files: "Файлы",
-      },
+      topLabel: "Наверх",
+      submit: "Отправить",
+      subject: "Новый проект",
+      sending: "Отправляем...",
+      success: "Сообщение отправлено. Скоро ответим.",
+      error: "Не получилось отправить сообщение. Попробуй еще раз или напиши в Telegram.",
     },
     footer: "LocalMind Studio - AI-ассистенты, чат-боты, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, интеграции и поддержка продуктов.",
     footerPartners: "Партнерам",
     galleryUi: ["Галерея", "Экраны приложения", "Экраны выбранного кейса.", "Закрыть"],
+    palette: {
+      toggle: "Палитра",
+      close: "Закрыть палитры",
+      title: "Цветовые палитры",
+      lead: "От нейтральных и спокойных до ярких и броских.",
+      options: [
+        ["Галька", "Спокойный камень и уголь"],
+        ["Шалфей", "Текущий оливковый"],
+        ["Гавань", "Мягкий прибрежный синий"],
+        ["Глина", "Тёплая терракота"],
+        ["Прилив", "Насыщенная бирюза"],
+        ["Импульс", "Электрический лайм и фиолет"],
+      ],
+    },
     galleryCases: {
-      ypa: ["YPA Finance - приложение с финансовым AI-коучем", "Экраны финансового продукта: дашборд, AI-коуч, бюджет, погашение долгов, алерты, кредитные инсайты и авторизация."],
+      ypa: ["YPA Finance - приложение с финансовым AI-коучем", "Экраны продукта: AI-ассистенты, профиль, кредитный рейтинг, кредитный калькулятор, обратная связь и бюджет."],
       smarteat: ["SmartEat - приложение для питания", "Экраны продукта по питанию: поиск еды, учет приемов пищи, профиль, дневник и данные здоровья."],
       demetra: ["Demetra - мобильные экраны", "Мобильный каталог и экраны продаж для продукта в агробизнесе."],
       empiflow: ["Empiflow - приложение для онбординга", "Экраны онбординга: треки сотрудников, активности, учебный контент и библиотека документов."],
       rutilus: ["Rutilus / Norilsk Nickel - корпоративное приложение", "Корпоративные экраны: вход, PIN-доступ, документы, поручения, дедлайны и рабочие процессы."],
       auto: ["Auto Dealers Media App", "Медиа-сценарии для автодилеров: съемка, галерея, превью Theta 360, очередь загрузки и детали объявления."],
       altay: ["Алтай Рестарт - сайт курорта", "Главная, бронирование номеров, спецпредложения и аква-термальный комплекс."],
-      asgard: ["ASGARD - магазин майнинг-оборудования", "E-commerce для ASIC-майнеров: каталог, характеристики, лизинг и сервисные блоки."],
+      asgard: ["ASGARD - магазин майнинг-оборудования", "Главная, каталог производителей, карточка товара, корзина и медиа."],
       ekbdoma: ["Инвест Строй - сайт строительной компании", "Главная, карточка дома, калькулятор строительства, дома с участками и новости."],
-      ultra: ["Ultra Drivers - аренда авто премиум-класса", "Главная, каталог автопарка, форумы и карточка автомобиля."],
+      ultra: ["Ultra Drivers - площадка водителей", "Главная, автопарк, карточка авто, регистрация водителя и кабинет с модерацией."],
       vmetal: ["V-METAL - магазин металлопродукции", "Главная, каталог, карточка товара и корзина."],
+      vows: ["VOWS - конструктор свадебных приглашений", "Сценарий гостя, RSVP, дресс-код, локация, тайминг и конструктор невесты."],
+      genlix: ["Genlix - премиальные поставки для HoReCa", "Главная, каталог Primebeef, карточка товара, карта партнёров и отраслевой блог."],
+      ossnova: ["OSSNOVA - медицинские технологии для Беларуси", "Главная, карта покрытия, о компании, кардиология, материалы и заявка."],
+      iqbattle: ["IQ Battle - квизы в барах Москвы", "Главная, корпоратив, квиз на день рождения, расписание, правила и рейтинг команд."],
     },
     galleryScreens: {
-      ypa: ["Финансовый дашборд", "AI-коуч по деньгам", "Планировщик бюджета", "План погашения долга", "Оповещения о тратах", "Кредитные инсайты", "Валидация регистрации", "Регистрация"],
-      smarteat: ["Авторизация", "Главный экран", "Поиск ингредиентов", "Учет приемов пищи", "Выбор блюда в корзине", "Экран меню", "Добавление своего блюда", "Дневник здоровья", "Профиль", "Анкета аллергенов"],
-      demetra: ["Стартовый экран", "Каталог продуктов", "Список товаров категории"],
+      ypa: ["AI-ассистенты", "Профиль", "Кредитный рейтинг", "Кредитный калькулятор", "Обратная связь", "Бюджет"],
+      smarteat: ["Главная, вход и меню", "Поиск ингредиентов", "Учёт приёмов пищи", "Корзина и своё блюдо", "Дневник здоровья", "Профиль и аллергены"],
+      demetra: ["Главная и каталог", "История заказов", "Календарь продаж", "Оформление заказа", "Админ-панель"],
       empiflow: ["Дашборд и треки", "Завершенный трек адаптации", "Детали учебной активности", "Библиотека и документы"],
-      rutilus: ["Вход", "PIN-код", "Детали документа и исполнители", "Форма поручения", "Календарь дедлайнов", "PIN в темной теме"],
+      rutilus: ["Вход и обзор", "PIN-код", "Детали документа и исполнители", "Форма поручения", "Календарь дедлайнов", "Тёмная тема"],
       auto: ["Съемка автомобиля", "Медиагалерея", "Превью Theta 360", "Очередь загрузки", "Детали объявления"],
       altay: ["Главная курорта", "Категории номеров и бронирование", "Спецпредложения", "Аква-термальный комплекс"],
-      asgard: ["Главная и каталог", "Каталог производителей", "Карточка товара", "Медиа и блог"],
+      asgard: ["Главная и каталог", "Каталог производителей", "Карточка товара", "Корзина и заказ", "Медиа и блог"],
       ekbdoma: ["Главная и проекты", "Карточка дома", "Калькулятор строительства", "Дома с участками", "Новости"],
-      ultra: ["Главная", "Автопарк", "Форумы", "Mercedes S-Class"],
+      ultra: ["Главная", "Автопарк с фильтрами", "Карточка Mercedes S-Class", "Регистрация и вход водителя", "Кабинет и форма авто"],
       vmetal: ["Главная", "Каталог металлочерепицы", "Карточка товара", "Корзина"],
+      vows: ["Приветствие, вход и RSVP", "Дресс-код, локация и тайминг", "Спасибо и напоминание", "Конструктор и список гостей", "RSVP-дашборд и приглашение"],
+      genlix: ["Главная и ассортимент", "Каталог Primebeef и карта отрубов", "Карточка товара", "Рестораны на карте", "Блог для профессионалов"],
+      ossnova: ["Главная", "География Беларуси", "О компании", "Кардиология", "Материалы и FAQ", "Контакты"],
+      iqbattle: ["Главная и ближайшие игры", "Корпоративный квиз", "Квиз на день рождения", "Расписание игр", "Правила квиза", "Рейтинг команд"],
+    },
+    caseStudyUi: {
+      home: "Главная",
+      cases: "Кейсы",
+      studio: "LocalMind Studio",
+      task: "Задача",
+      solution: "Решение",
+      niche: "Ниша",
+      duration: "Продолжительность",
+      decisions: "Ключевые решения продукта",
+      result: "Результат",
+      prev: "Предыдущий экран",
+      next: "Следующий экран",
     },
   },
 };
@@ -683,9 +1119,6 @@ const translations = {
 let currentLanguage = localStorage.getItem("studioLanguage") || (navigator.language?.startsWith("ru") ? "ru" : "en");
 
 document.documentElement.classList.add("studio-js");
-
-let rotatingIndex = 0;
-let currentAiScenario = "support";
 
 function setText(selector, value, root = document) {
   const element = root.querySelector(selector);
@@ -730,37 +1163,18 @@ function setFormOptions(selector, values) {
   });
 }
 
-function updateFileName() {
-  const fileInput = document.querySelector('[name="attachments"]');
-  const fileName = document.querySelector("[data-file-name]");
-  const t = translations[currentLanguage].callForm;
-  if (!fileInput || !fileName || !t) return;
-  fileName.textContent = fileInput.files.length ? t.fileSelected(fileInput.files.length) : t.noFile;
-}
-
-function applyCallFormLanguage(content) {
+function applyContactFormLanguage(content) {
   if (!content) return;
-  setText("[data-form-eyebrow]", content.eyebrow);
-  setText("[data-form-title]", content.title);
-  setText("[data-form-body]", content.body);
+  setText("[data-contact-title]", content.title);
+  setText("[data-contact-body]", content.body);
 
   Object.entries(content.labels).forEach(([key, value]) => {
     setText(`[data-form-label="${key}"]`, value);
   });
 
-  Object.entries(content.placeholders).forEach(([key, value]) => {
-    document.querySelector(`[data-form-placeholder="${key}"]`)?.setAttribute("placeholder", value);
-  });
-
-  setFormOptions("[data-form-project-option]", content.projectOptions);
-  setFormOptions("[data-form-timeline-option]", content.timelineOptions);
-  setFormOptions("[data-form-budget-option]", content.budgetOptions);
-  setTexts("[data-form-channel-label]", content.channelOptions);
-  setText("[data-form-consent]", content.consent);
   setText("[data-form-submit]", content.submit);
-  setText("[data-form-file-button]", content.fileButton);
+  document.querySelector("[data-contact-top]")?.setAttribute("aria-label", content.topLabel);
   setText("[data-form-status]", "");
-  updateFileName();
 }
 
 function applyLanguage(language) {
@@ -783,160 +1197,376 @@ function applyLanguage(language) {
     button.setAttribute("aria-pressed", String(active));
   });
 
-  setText("[data-brand-name]", t.brandName);
-  setTexts(".nav-links a", t.nav);
+  if (!document.body.classList.contains("case-page")) {
+    setTexts(".nav-links a", t.nav);
+  }
   setText("[data-nav-call]", t.navCall);
+  setText("[data-nav-telegram]", t.navTelegram);
+  setText("[data-nav-email]", t.navEmail);
+  if (document.body.classList.contains("case-page")) {
+    document.querySelectorAll("[data-case-home]").forEach((node) => {
+      node.textContent = t.caseStudyUi.home;
+    });
+    document.querySelectorAll("[data-case-list]").forEach((node) => {
+      node.textContent = t.caseStudyUi.cases;
+    });
+    const caseNavLinks = document.querySelectorAll(".case-nav .nav-links a:not([data-case-home]):not([data-case-list])");
+    if (caseNavLinks[0]) caseNavLinks[0].textContent = t.nav[1];
+    if (caseNavLinks[1]) caseNavLinks[1].textContent = t.nav[2];
+    setText(".case-nav .nav-call", t.navCall);
+  }
   setText(".hero-copy .eyebrow", t.heroEyebrow);
-  setText("[data-hero-prefix]", t.heroPrefix);
-  setText("[data-hero-suffix]", t.heroSuffix);
-  const rotatingWord = document.querySelector("[data-rotating-word]");
-  if (rotatingWord) rotatingWord.textContent = t.rotatingWords[rotatingIndex % t.rotatingWords.length];
-  setText(".lead", t.heroLead);
-  setTexts(".hero-actions a", t.heroActions, document.querySelector(".hero-copy"));
-  document.querySelectorAll(".stack-track span").forEach((item, index) => {
-    item.textContent = t.stack[index % t.stack.length];
-  });
+  setText("[data-hero-title]", t.heroTitle);
+  setText(".hero-copy .lead", t.heroLead);
+  setText("[data-hero-action-primary]", t.heroActions[0]);
+  setText("[data-hero-action-secondary]", t.heroActions[1]);
+  applyPaletteCopy();
 
-  setText(".panel-top strong", t.delivery.title);
-  setText(".panel-top span", t.delivery.status);
-  setText(".sprint-card span", t.delivery.sprint);
-  setText(".sprint-card strong", t.delivery.time);
-  setText(".sprint-card p", t.delivery.text);
-  setText(".chat-card span", t.delivery.ai);
-  setText(".chat-card p", t.delivery.question);
-  setText(".chat-card strong", t.delivery.answer);
+  document.querySelectorAll("[data-marquee-phrase]").forEach((item) => {
+    const index = Number(item.dataset.marqueePhrase);
+    if (t.marquee[index] !== undefined) item.textContent = t.marquee[index];
+  });
+  syncStudioMarquee();
 
   document.querySelectorAll(".proof-strip > div").forEach((item, index) => {
     const proof = t.proof[index];
     if (!proof) return;
     setText("strong", proof[0], item);
-    setText("span", proof[1], item);
-  });
-
-  applyHeading(".split", t.why);
-  setText(".split blockquote", t.why.quote);
-  applyHeading("#services", t.servicesIntro);
-  document.querySelectorAll(".service-card").forEach((card, index) => {
-    const service = t.services[index];
-    if (!service) return;
-    setText("h3", service[0], card);
-    setText("p", service[1], card);
-    setTags(card, service[2]);
-  });
-
-  setTexts("[data-service-tab]", t.serviceTabs);
-  document.querySelectorAll("[data-service-panel]").forEach((panel) => {
-    const content = t.servicePanels[panel.dataset.servicePanel];
-    if (!content) return;
-    setText("span", content[0], panel);
-    setText("h3", content[1], panel);
-    setText("p", content[2], panel);
-    setListItems(panel, content[3]);
-  });
-  setText("[data-constellation-eyebrow]", t.serviceMap?.eyebrow);
-  setText("[data-constellation-title]", t.serviceMap?.title);
-  setText("[data-constellation-body]", t.serviceMap?.body);
-  window.refreshServiceConstellation?.();
-
-  applyHeading("#fit", t.fitIntro);
-  document.querySelectorAll(".fit-grid article").forEach((card, index) => {
-    const item = t.fit[index];
-    if (!item) return;
-    setText("h3", item[0], card);
-    setText("p", item[1], card);
+    setText("span:not(.icon-box)", proof[1], item);
   });
 
   applyHeading("#cases", t.casesIntro);
-  document.querySelectorAll(".case-story").forEach((card, index) => {
+  setText("[data-cases-all]", t.casesAllLink);
+  setText("[data-competencies-title]", t.competencies?.title);
+  document.querySelectorAll(".competency-card").forEach((card, index) => {
+    const item = t.competencies?.items?.[index];
+    if (!item) return;
+    setText("h3", item[0], card);
+    setText("p", item[1], card);
+    const more = card.querySelector(".competency-card__more");
+    if (more && t.competencies.more) {
+      more.innerHTML = `<span class="competency-card__more-label">${t.competencies.more}</span> <span aria-hidden="true">↗</span>`;
+    }
+  });
+  document.querySelectorAll(".case-row").forEach((row, index) => {
     const item = t.cases[index];
     if (!item) return;
-    setText(".case-meta", item[0], card);
-    setText("h3", item[1], card);
-    setText("p", item[2], card);
-    setTags(card, item[3]);
-  });
-
-  applyHeading("#ai", t.aiIntro);
-  document.querySelectorAll(".ai-grid article").forEach((card, index) => {
-    const item = t.aiCards[index];
-    if (!item) return;
-    setText("h3", item[0], card);
-    setText("p", item[1], card);
-  });
-
-  setText(".console-sidebar > span", t.aiConsole.label);
-  setTexts("[data-ai-scenario]", t.aiConsole.buttons);
-  setText(".console-status span:last-child", t.aiConsole.handoff);
-  updateAiScenario(currentAiScenario, false);
-
-  applyHeading("#expertise", t.expertiseIntro);
-  document.querySelectorAll(".expertise-grid article").forEach((card, index) => {
-    const item = t.expertise[index];
-    if (!item) return;
-    setText("h3", item[0], card);
-    setText("p", item[1], card);
-  });
-
-  applyHeading("#process", t.processIntro);
-  document.querySelectorAll(".process-grid article").forEach((card, index) => {
-    const item = t.process[index];
-    if (!item) return;
-    setText("h3", item[0], card);
-    setText("p", item[1], card);
-  });
-
-  document.querySelectorAll(".comparison-row").forEach((row, rowIndex) => {
-    row.querySelectorAll("span, strong").forEach((cell, cellIndex) => {
-      const value = t.comparison[rowIndex]?.[cellIndex];
-      if (value !== undefined) cell.textContent = value;
+    const projectNumber = String(index + 1).padStart(2, "0");
+    setText(".case-index", `${t.casesProjectLabel} ${projectNumber}`, row);
+    row.querySelectorAll(".case-year").forEach((node) => {
+      node.textContent = t.casesYears?.[index] || "2024";
     });
-  });
-
-  applyHeading("#packages", t.packagesIntro);
-  document.querySelectorAll(".package-grid article").forEach((card, index) => {
-    const item = t.packages[index];
-    if (!item) return;
-    setText("span", item[0], card);
-    setText("h3", item[1], card);
-    setText("p", item[2], card);
-    setText("a", item[3], card);
-  });
-
-  applyHeading("#brief", t.brief);
-  document.querySelectorAll(".brief-step").forEach((step, index) => {
-    const label = t.brief.steps[index];
-    if (label) setText("h3", label, step);
-  });
-  document.querySelectorAll("[data-brief-group]").forEach((group) => {
-    const choices = t.brief.choices[group.dataset.briefGroup] || [];
-    group.querySelectorAll("[data-brief-choice]").forEach((button, index) => {
-      if (choices[index] === undefined) return;
-      button.textContent = choices[index];
-      button.dataset.briefChoice = choices[index];
+    setText(".case-meta", item[0], row);
+    row.querySelectorAll("h3").forEach((node) => {
+      node.textContent = item[1];
     });
-  });
-  setText(".brief-result > span", t.brief.draft);
-  setText("[data-brief-mail]", t.brief.mail);
-  setText("[data-brief-status]", "");
-  window.updateBrief?.();
-
-  applyHeading("#faq", t.faqIntro);
-  document.querySelectorAll(".faq-list details").forEach((item, index) => {
-    const faq = t.faq[index];
-    if (!faq) return;
-    setText("summary", faq[0], item);
-    setText("p", faq[1], item);
+    setText(".case-item--note p", item[2], row);
   });
 
-  setText("[data-contact-eyebrow]", t.cta.eyebrow);
-  setText("[data-contact-title]", t.cta.title);
-  setText("[data-contact-body]", t.cta.body);
-  setTexts("[data-contact-action]", t.cta.actions);
-  setTexts("[data-contact-detail-label]", t.cta.detailLabels);
-  applyCallFormLanguage(t.callForm);
+  applyContactFormLanguage(t.contactForm);
   setText(".footer p", t.footer);
   setText("[data-footer-partners]", t.footerPartners);
   setTexts(".gallery-header .eyebrow, #gallery-title, #gallery-note, [data-gallery-close]", t.galleryUi);
+  applyCasePage(currentLanguage);
+}
+
+function caseAssetPath(path) {
+  if (!path) return "";
+  if (path.startsWith("http") || path.startsWith("../")) return path;
+  return document.body.classList.contains("case-page") ? `../${path}` : `./${path}`;
+}
+
+function getCaseSlug() {
+  return document.body.dataset.caseSlug || "";
+}
+
+function applyCasePage(language) {
+  const root = document.querySelector(".case-detail");
+  if (!root) return;
+
+  const slug = getCaseSlug();
+  const study = caseStudies[slug];
+  if (!study) return;
+
+  const lang = translations[language] ? language : "en";
+  const copy = study[lang] || study.en;
+  const ui = translations[lang].caseStudyUi;
+  if (!copy || !ui) return;
+
+  document.title = `${copy.pageTitle} — LocalMind Studio`;
+  setMetaContent("meta[name='description']", copy.lead);
+  setMetaContent("meta[property='og:title']", `${copy.pageTitle} — LocalMind Studio`);
+  setMetaContent("meta[property='og:description']", copy.lead);
+  setMetaContent("meta[name='twitter:title']", `${copy.pageTitle} — LocalMind Studio`);
+  setMetaContent("meta[name='twitter:description']", copy.lead);
+
+  setText("[data-case-home]", ui.home);
+  setText("[data-case-list]", ui.cases);
+  setText("[data-case-breadcrumb-current]", copy.pageTitle);
+  setText("[data-case-title]", copy.pageTitle);
+  setText("[data-case-lead]", copy.lead);
+  setText("[data-case-label-task]", ui.task);
+  setText("[data-case-label-solution]", ui.solution);
+  setText("[data-case-label-niche]", ui.niche);
+  setText("[data-case-label-duration]", ui.duration);
+  setText("[data-case-task]", copy.task);
+  setText("[data-case-solution]", copy.solution);
+  setText("[data-case-niche]", copy.niche);
+  setText("[data-case-duration]", copy.duration);
+  setText("[data-case-label-decisions]", ui.decisions);
+  setText("[data-case-label-result]", ui.result);
+  setText("[data-case-showcase-tag]", copy.showcase.tag);
+  setText("[data-case-showcase-title]", copy.showcase.title);
+  setText("[data-case-result-title]", copy.result.title);
+  setText("[data-case-result-body]", copy.result.body);
+  setText("[data-case-studio]", ui.studio);
+  setText("[data-case-year]", study.year);
+
+  const tagsRoot = root.querySelector("[data-case-tags]");
+  if (tagsRoot) {
+    tagsRoot.innerHTML = study.studioTags
+      .map((tag) => `<span class="case-hero-card__tag">[ ${tag} ]</span>`)
+      .join("");
+  }
+
+  const heroImage = root.querySelector("[data-case-hero-img]");
+  if (heroImage) {
+    heroImage.src = caseAssetPath(study.preview);
+    heroImage.alt = copy.pageTitle;
+  }
+
+  const decisionsRoot = root.querySelector("[data-case-decisions]");
+  if (decisionsRoot) {
+    decisionsRoot.innerHTML = copy.decisions
+      .map(
+        ([title, body]) => `
+          <article class="case-decision-card">
+            <h3>${title}</h3>
+            <p>${body}</p>
+          </article>
+        `,
+      )
+      .join("");
+  }
+
+  const gallery = galleries[study.galleryKey];
+  const translatedScreens = translations[lang].galleryScreens?.[study.galleryKey] || [];
+  const track = root.querySelector("[data-case-slider-track]");
+  if (track && gallery) {
+    const hasFullSlides = gallery.screens.some(([, , variant]) => variant === "full");
+    track.closest(".case-slider__viewport")?.classList.toggle("case-slider__viewport--full", hasFullSlides);
+    track.classList.toggle("case-slider__track--full", hasFullSlides);
+    track.innerHTML = gallery.screens
+      .map(([src, label, variant], index) => {
+        const isWide = variant === "wide";
+        const isFull = variant === "full";
+        const screenLabel = translatedScreens[index] || label;
+        const asset = caseAssetPath(src.replace(/^\.\//, ""));
+        return `
+          <figure class="case-slider__slide${isWide ? " case-slider__slide--wide" : ""}${isFull ? " case-slider__slide--full" : ""}">
+            <img src="${asset}" alt="${screenLabel}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async" />
+          </figure>
+        `;
+      })
+      .join("");
+    setupCaseSlider(root, ui);
+  }
+
+  setText(".footer p", translations[lang].footer);
+  setText("[data-footer-partners]", translations[lang].footerPartners);
+}
+
+function setupStudioMarquee() {
+  const marquee = document.querySelector(".studio-marquee");
+  const track = document.querySelector(".studio-marquee__track");
+  const source = track?.querySelector(".studio-marquee__group:not(.is-clone)");
+  if (!marquee || !track || !source) return;
+
+  function rebuildMarqueeSets() {
+    track.querySelectorAll(".studio-marquee__group.is-clone").forEach((node) => node.remove());
+
+    const setWidth = source.getBoundingClientRect().width;
+    if (!setWidth) return;
+
+    const viewportWidth = marquee.clientWidth;
+    const minSets = Math.max(2, Math.ceil((viewportWidth + setWidth) / setWidth));
+
+    for (let index = 1; index < minSets; index += 1) {
+      const clone = source.cloneNode(true);
+      clone.classList.add("is-clone");
+      clone.setAttribute("aria-hidden", "true");
+      clone.querySelectorAll("[data-marquee-phrase]").forEach((item) => {
+        item.removeAttribute("data-marquee-phrase");
+      });
+      track.appendChild(clone);
+    }
+
+    track.style.setProperty("--marquee-shift", `${-setWidth}px`);
+    track.style.setProperty("--marquee-duration", `${setWidth / 72}s`);
+  }
+
+  setupStudioMarquee.rebuild = rebuildMarqueeSets;
+
+  setupStudioMarquee._observer?.disconnect();
+  setupStudioMarquee._observer = new ResizeObserver(() => {
+    window.requestAnimationFrame(rebuildMarqueeSets);
+  });
+  setupStudioMarquee._observer.observe(marquee);
+  setupStudioMarquee._observer.observe(source);
+
+  rebuildMarqueeSets();
+}
+
+function syncStudioMarquee() {
+  setupStudioMarquee.rebuild?.();
+}
+
+const PALETTE_STORAGE_KEY = "studioPalette";
+const PALETTE_IDS = ["pebble", "sage", "harbor", "clay", "tide", "pulse"];
+const PALETTE_SWATCHES = {
+  pebble: ["#f5f3ef", "#2c2925", "#cbbba3", "#1c1a17"],
+  sage: ["#f4f6f1", "#b3d945", "#276f51", "#152019"],
+  harbor: ["#f3f6f8", "#8eb8c9", "#3d6b86", "#17202a"],
+  clay: ["#f7f1ea", "#d4784a", "#9a5a3c", "#241c18"],
+  tide: ["#eef6f7", "#14b8c8", "#0f7a86", "#0f2430"],
+  pulse: ["#f4f0fb", "#d6ff2f", "#6d3dff", "#1a1230"],
+};
+const PALETTE_THEME_COLORS = {
+  pebble: "#141210",
+  sage: "#0d1512",
+  harbor: "#101820",
+  clay: "#17110e",
+  tide: "#081820",
+  pulse: "#0e081c",
+};
+
+function currentPalette() {
+  const value = document.documentElement.dataset.palette || localStorage.getItem(PALETTE_STORAGE_KEY) || "sage";
+  return PALETTE_IDS.includes(value) ? value : "sage";
+}
+
+function paletteLanguage() {
+  if (document.querySelector(".site-hero")) return currentLanguage;
+  return document.documentElement.lang?.startsWith("ru") ? "ru" : "en";
+}
+
+function applyPaletteCopy() {
+  const t = translations[paletteLanguage()]?.palette;
+  if (!t) return;
+  const open = document.documentElement.classList.contains("palette-open");
+  setText("[data-palette-toggle]", t.toggle);
+  setText("[data-palette-title]", t.title);
+  setText("[data-palette-lead]", t.lead);
+  const toggle = document.querySelector("[data-palette-toggle-button]");
+  toggle?.setAttribute("aria-label", open ? t.close : t.toggle);
+  document.querySelectorAll("[data-palette-option]").forEach((button, index) => {
+    const copy = t.options[index];
+    if (!copy) return;
+    setText("strong", copy[0], button);
+    setText(".palette-option__copy span", copy[1], button);
+  });
+}
+
+function applyPalette(id, persist = true) {
+  const palette = PALETTE_IDS.includes(id) ? id : "sage";
+  document.documentElement.dataset.palette = palette;
+  if (persist) localStorage.setItem(PALETTE_STORAGE_KEY, palette);
+  setMetaContent("meta[name='theme-color']", PALETTE_THEME_COLORS[palette]);
+  document.querySelectorAll("[data-palette-option]").forEach((button) => {
+    const active = button.dataset.paletteOption === palette;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  const dots = document.querySelector("[data-palette-dots]");
+  if (dots) {
+    const swatches = PALETTE_SWATCHES[palette];
+    dots.querySelectorAll("span").forEach((dot, index) => {
+      if (swatches[index]) dot.style.background = swatches[index];
+    });
+  }
+}
+
+function setPaletteOpen(open) {
+  document.documentElement.classList.toggle("palette-open", open);
+  document.querySelector("[data-palette-toggle-button]")?.setAttribute("aria-expanded", String(open));
+  applyPaletteCopy();
+}
+
+function setupPalette() {
+  if (document.querySelector(".palette-drawer")) {
+    applyPalette(currentPalette());
+    applyPaletteCopy();
+    return;
+  }
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "palette-backdrop";
+  backdrop.setAttribute("data-palette-close", "");
+
+  const drawer = document.createElement("aside");
+  drawer.className = "palette-drawer";
+  drawer.id = "palette-drawer";
+  drawer.setAttribute("aria-labelledby", "palette-title");
+  drawer.innerHTML = `
+    <div class="palette-drawer__header">
+      <h2 id="palette-title" data-palette-title>Color palettes</h2>
+      <p data-palette-lead>From quiet neutrals to loud, high-contrast looks.</p>
+    </div>
+    <ul class="palette-list">
+      ${PALETTE_IDS.map((id) => {
+        const swatches = PALETTE_SWATCHES[id]
+          .map((color) => `<span style="background:${color}"></span>`)
+          .join("");
+        return `<li>
+          <button class="palette-option" type="button" data-palette-option="${id}" aria-pressed="false">
+            <span class="palette-option__swatches">${swatches}</span>
+            <span class="palette-option__copy">
+              <strong></strong>
+              <span></span>
+            </span>
+          </button>
+        </li>`;
+      }).join("")}
+    </ul>
+  `;
+
+  const toggle = document.createElement("button");
+  toggle.className = "palette-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("data-palette-toggle-button", "");
+  toggle.setAttribute("aria-controls", "palette-drawer");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.innerHTML = `
+    <span class="palette-toggle__dots" data-palette-dots aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </span>
+    <span class="palette-toggle__label" data-palette-toggle>Palette</span>
+  `;
+
+  document.body.append(backdrop, drawer, toggle);
+
+  toggle.addEventListener("click", () => {
+    setPaletteOpen(!document.documentElement.classList.contains("palette-open"));
+  });
+  backdrop.addEventListener("click", () => setPaletteOpen(false));
+  drawer.addEventListener("click", (event) => {
+    const option = event.target.closest("[data-palette-option]");
+    if (!option) return;
+    applyPalette(option.dataset.paletteOption);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setPaletteOpen(false);
+  });
+
+  applyPalette(
+    PALETTE_IDS.includes(new URLSearchParams(location.search).get("palette"))
+      ? new URLSearchParams(location.search).get("palette")
+      : currentPalette(),
+  );
+  applyPaletteCopy();
+  if (new URLSearchParams(location.search).get("palettes") === "open") {
+    setPaletteOpen(true);
+  }
 }
 
 function setupLanguageSwitch() {
@@ -961,7 +1591,7 @@ function setupStickyNavigation() {
 
   if (!("IntersectionObserver" in window) || !sections.length) return;
 
-  const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
     (entries) => {
       const visible = entries
         .filter((entry) => entry.isIntersecting)
@@ -976,902 +1606,6 @@ function setupStickyNavigation() {
   );
 
   sections.forEach((section) => observer.observe(section));
-}
-
-function setupRotatingWord() {
-  const target = document.querySelector("[data-rotating-word]");
-  if (!target || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  window.setInterval(() => {
-    const words = translations[currentLanguage].rotatingWords;
-    rotatingIndex = (rotatingIndex + 1) % words.length;
-    target.classList.add("is-changing");
-    window.setTimeout(() => {
-      target.textContent = words[rotatingIndex];
-      target.classList.remove("is-changing");
-    }, 190);
-  }, 2200);
-}
-
-function setupHeroBubbles() {
-  const hero = document.querySelector(".site-hero");
-  const canvas = document.querySelector("[data-hero-bubbles]");
-  const context = canvas?.getContext("2d");
-  if (!hero || !canvas || !context) return;
-
-  const orbImage = new Image();
-  const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const pointer = { x: 0, y: 0, moveX: 0, moveY: 0, active: false, lastSeen: 0 };
-  let bubbles = [];
-  let width = 0;
-  let height = 0;
-  let dpr = 1;
-  let frameId = 0;
-  let lastTime = performance.now();
-  let lastFrameTime = 0;
-  let isVisible = false;
-  let isRunning = false;
-  let orbReady = false;
-
-  function randomBetween(min, max) {
-    return min + Math.random() * (max - min);
-  }
-
-  function getFrameInterval() {
-    return window.innerWidth < 820 ? 1000 / 24 : 1000 / 30;
-  }
-
-  function makeBubble() {
-    const depth = randomBetween(0.7, 1.55);
-    const size = randomBetween(96, 286) * depth;
-    const margin = size * 0.34;
-    const startX = randomBetween(margin, Math.max(margin, width - margin));
-    const startY = randomBetween(margin, Math.max(margin, height - margin));
-    const angle = randomBetween(0, Math.PI * 2);
-    const speed = randomBetween(0.46, 0.92) * depth;
-    return {
-      x: startX,
-      y: startY,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      size,
-      depth,
-      phase: randomBetween(0, Math.PI * 2),
-      rotation: randomBetween(-0.32, 0.32),
-      spin: randomBetween(-0.0046, 0.0046),
-      opacity: randomBetween(0.28, 0.62),
-      glow: randomBetween(0.02, 0.08),
-    };
-  }
-
-  function resizeCanvas() {
-    const rect = hero.getBoundingClientRect();
-    width = Math.max(1, rect.width);
-    height = Math.max(1, rect.height);
-    dpr = Math.min(window.devicePixelRatio || 1, window.innerWidth < 820 ? 1.25 : 1.5);
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
-    context.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    const densityCount = Math.round((width * height) / 170000);
-    const targetCount = reduceMotionQuery.matches
-      ? Math.min(5, densityCount)
-      : Math.min(window.innerWidth < 820 ? 8 : 11, Math.max(window.innerWidth < 820 ? 5 : 7, densityCount));
-    bubbles = Array.from({ length: targetCount }, (_, index) => bubbles[index] || makeBubble());
-    bubbles.forEach((bubble) => {
-      const margin = bubble.size * 0.34;
-      bubble.x = Math.min(Math.max(bubble.x, margin * 0.45), width - margin * 0.45);
-      bubble.y = Math.min(Math.max(bubble.y, margin * 0.45), height - margin * 0.45);
-      if (!Number.isFinite(bubble.vx) || !Number.isFinite(bubble.vy)) {
-        const angle = randomBetween(0, Math.PI * 2);
-        const speed = randomBetween(0.46, 0.92) * bubble.depth;
-        bubble.vx = Math.cos(angle) * speed;
-        bubble.vy = Math.sin(angle) * speed;
-      }
-    });
-    drawBubbles(performance.now());
-  }
-
-  function drawBubbles(timestamp) {
-    context.clearRect(0, 0, width, height);
-
-    bubbles.forEach((bubble) => {
-      const wobble = Math.sin(timestamp * 0.0008 + bubble.phase) * bubble.size * 0.035;
-      const x = bubble.x + wobble;
-      const y = bubble.y + Math.cos(timestamp * 0.0007 + bubble.phase) * bubble.size * 0.04;
-      const drawSize = bubble.size * (1 + Math.sin(timestamp * 0.00055 + bubble.phase) * 0.025);
-      const ratio = orbImage.naturalHeight && orbImage.naturalWidth ? orbImage.naturalHeight / orbImage.naturalWidth : 1;
-
-      context.save();
-      const glow = context.createRadialGradient(x, y, drawSize * 0.12, x, y, drawSize * 0.58);
-      glow.addColorStop(0, `rgba(255, 255, 255, ${bubble.glow})`);
-      glow.addColorStop(0.5, `rgba(155, 208, 183, ${bubble.glow * 0.42})`);
-      glow.addColorStop(1, "rgba(255, 255, 255, 0)");
-      context.fillStyle = glow;
-      context.beginPath();
-      context.arc(x, y, drawSize * 0.58, 0, Math.PI * 2);
-      context.fill();
-
-      if (orbReady) {
-        context.translate(x, y);
-        context.rotate(bubble.rotation + Math.sin(timestamp * 0.00032 + bubble.phase) * 0.08);
-        context.globalAlpha = bubble.opacity;
-        context.drawImage(orbImage, -drawSize / 2, -(drawSize * ratio) / 2, drawSize, drawSize * ratio);
-      } else {
-        const fallback = context.createRadialGradient(x - drawSize * 0.18, y - drawSize * 0.22, 0, x, y, drawSize * 0.52);
-        fallback.addColorStop(0, "rgba(255, 255, 255, 0.34)");
-        fallback.addColorStop(0.52, "rgba(205, 226, 219, 0.16)");
-        fallback.addColorStop(1, "rgba(255, 255, 255, 0.03)");
-        context.globalAlpha = bubble.opacity;
-        context.fillStyle = fallback;
-        context.beginPath();
-        context.arc(x, y, drawSize * 0.5, 0, Math.PI * 2);
-        context.fill();
-      }
-      context.restore();
-    });
-  }
-
-  function moveBubbles(timestamp) {
-    if (!isRunning) return;
-    frameId = window.requestAnimationFrame(moveBubbles);
-    if (timestamp - lastFrameTime < getFrameInterval()) return;
-    lastFrameTime = timestamp;
-
-    const delta = Math.min(32, timestamp - lastTime) / 16.67;
-    lastTime = timestamp;
-
-    if (timestamp - pointer.lastSeen > 900) pointer.active = false;
-
-    bubbles.forEach((bubble) => {
-      bubble.vx += Math.cos(timestamp * 0.00036 + bubble.phase) * 0.012 * bubble.depth * delta;
-      bubble.vy += Math.sin(timestamp * 0.0004 + bubble.phase) * 0.011 * bubble.depth * delta;
-      bubble.rotation += bubble.spin * delta;
-
-      if (pointer.active) {
-        const dx = bubble.x - pointer.x;
-        const dy = bubble.y - pointer.y;
-        const distance = Math.max(1, Math.hypot(dx, dy));
-        const repelRadius = bubble.size * 0.58 + 210;
-        if (distance < repelRadius) {
-          const force = (1 - distance / repelRadius) ** 1.8;
-          bubble.vx += (dx / distance) * force * 1.35;
-          bubble.vy += (dy / distance) * force * 1.35;
-          bubble.vx += pointer.moveX * force * 0.018;
-          bubble.vy += pointer.moveY * force * 0.018;
-        }
-      }
-
-      bubble.vx *= 0.992;
-      bubble.vy *= 0.992;
-
-      const speed = Math.hypot(bubble.vx, bubble.vy);
-      const minSpeed = 0.42 + bubble.depth * 0.12;
-      const maxSpeed = 3.9;
-      if (speed > maxSpeed) {
-        bubble.vx = (bubble.vx / speed) * maxSpeed;
-        bubble.vy = (bubble.vy / speed) * maxSpeed;
-      } else if (speed < minSpeed) {
-        const angle = speed > 0.001 ? Math.atan2(bubble.vy, bubble.vx) : bubble.phase;
-        bubble.vx = Math.cos(angle) * minSpeed;
-        bubble.vy = Math.sin(angle) * minSpeed;
-      }
-
-      bubble.x += bubble.vx * delta;
-      bubble.y += bubble.vy * delta;
-
-      const edge = bubble.size * 0.28;
-      const minX = edge;
-      const maxX = width - edge;
-      const minY = edge;
-      const maxY = height - edge;
-
-      if (bubble.x < minX) {
-        bubble.x = minX;
-        bubble.vx = Math.abs(bubble.vx) * 0.82;
-      } else if (bubble.x > maxX) {
-        bubble.x = maxX;
-        bubble.vx = -Math.abs(bubble.vx) * 0.82;
-      }
-
-      if (bubble.y < minY) {
-        bubble.y = minY;
-        bubble.vy = Math.abs(bubble.vy) * 0.82;
-      } else if (bubble.y > maxY) {
-        bubble.y = maxY;
-        bubble.vy = -Math.abs(bubble.vy) * 0.82;
-      }
-    });
-
-    pointer.moveX *= 0.88;
-    pointer.moveY *= 0.88;
-    drawBubbles(timestamp);
-  }
-
-  function updatePointer(event) {
-    const rect = canvas.getBoundingClientRect();
-    const nextX = event.clientX - rect.left;
-    const nextY = event.clientY - rect.top;
-    pointer.moveX = pointer.active ? nextX - pointer.x : 0;
-    pointer.moveY = pointer.active ? nextY - pointer.y : 0;
-    pointer.x = nextX;
-    pointer.y = nextY;
-    pointer.active = true;
-    pointer.lastSeen = performance.now();
-  }
-
-  function startAnimation() {
-    if (reduceMotionQuery.matches || isRunning || document.hidden || !isVisible) return;
-    isRunning = true;
-    lastTime = performance.now();
-    lastFrameTime = 0;
-    frameId = window.requestAnimationFrame(moveBubbles);
-  }
-
-  function stopAnimation() {
-    if (!isRunning && !frameId) return;
-    isRunning = false;
-    window.cancelAnimationFrame(frameId);
-    frameId = 0;
-  }
-
-  orbImage.onload = () => {
-    orbReady = true;
-    drawBubbles(performance.now());
-  };
-  orbImage.src = "./assets/localmind-dark-bubble.webp";
-
-  resizeCanvas();
-
-  hero.addEventListener("pointermove", updatePointer, { passive: true });
-  hero.addEventListener("pointerenter", updatePointer, { passive: true });
-  hero.addEventListener("pointerleave", () => {
-    pointer.active = false;
-  });
-
-  window.addEventListener("resize", resizeCanvas, { passive: true });
-  reduceMotionQuery.addEventListener?.("change", () => {
-    stopAnimation();
-    resizeCanvas();
-    startAnimation();
-  });
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      stopAnimation();
-    } else {
-      startAnimation();
-    }
-  });
-
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        isVisible = Boolean(entry?.isIntersecting);
-        if (isVisible) {
-          startAnimation();
-        } else {
-          stopAnimation();
-        }
-      },
-      { rootMargin: "96px 0px", threshold: 0 },
-    );
-    observer.observe(hero);
-  } else {
-    isVisible = true;
-    startAnimation();
-  }
-}
-
-function setupRevealAnimations() {
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const selectors = [
-    ".proof-strip > div",
-    ".section-heading",
-    "blockquote",
-    ".service-card",
-    ".service-constellation",
-    ".service-lab",
-    ".fit-grid article",
-    ".case-story",
-    ".ai-grid article",
-    ".ai-console",
-    ".expertise-grid article",
-    ".process-grid article",
-    ".comparison",
-    ".package-grid article",
-    ".brief-builder",
-    ".faq-list details",
-    ".contact-copy",
-    ".call-form",
-  ];
-  const targets = selectors.flatMap((selector) => [...document.querySelectorAll(selector)]);
-
-  targets.forEach((element, index) => {
-    element.classList.add("reveal");
-    element.style.setProperty("--delay", `${Math.min((index % 6) * 65, 260)}ms`);
-  });
-
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-    targets.forEach((element) => element.classList.add("is-visible"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
-  );
-
-  targets.forEach((element) => observer.observe(element));
-}
-
-function setupServiceTabs() {
-  const tabs = [...document.querySelectorAll("[data-service-tab]")];
-  const panels = [...document.querySelectorAll("[data-service-panel]")];
-  if (!tabs.length || !panels.length) return;
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const key = tab.dataset.serviceTab;
-      tabs.forEach((item) => {
-        const active = item === tab;
-        item.classList.toggle("is-active", active);
-        item.setAttribute("aria-selected", String(active));
-      });
-      panels.forEach((panel) => {
-        const active = panel.dataset.servicePanel === key;
-        panel.hidden = !active;
-        panel.classList.toggle("is-active", active);
-      });
-    });
-  });
-}
-
-function setupServiceConstellation() {
-  const root = document.querySelector("[data-service-constellation]");
-  const stage = root?.querySelector(".service-constellation-stage");
-  const canvas = root?.querySelector("[data-constellation-canvas]");
-  const tooltip = root?.querySelector("[data-constellation-tooltip]");
-  const tooltipKicker = root?.querySelector("[data-constellation-tooltip-kicker]");
-  const tooltipTitle = root?.querySelector("[data-constellation-tooltip-title]");
-  const tooltipBody = root?.querySelector("[data-constellation-tooltip-body]");
-  if (!root || !stage || !canvas) return;
-
-  const context = canvas.getContext("2d");
-  if (!context) return;
-
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const palette = ["155, 208, 183", "96, 177, 205", "231, 214, 170", "219, 132, 107"];
-  const particlePalette = ["155, 208, 183", "96, 177, 205", "231, 214, 170", "255, 255, 255"];
-  const layout = [
-    [0.2, 0.3, -0.18],
-    [0.34, 0.62, 0.18],
-    [0.48, 0.3, 0.3],
-    [0.62, 0.5, -0.12],
-    [0.8, 0.34, 0.22],
-    [0.72, 0.72, -0.28],
-    [0.44, 0.78, 0.08],
-    [0.22, 0.74, 0.26],
-  ];
-  const serviceEdges = [
-    [0, 1],
-    [1, 2],
-    [2, 3],
-    [3, 4],
-    [3, 5],
-    [5, 6],
-    [6, 7],
-    [7, 1],
-    [2, 5],
-    [0, 7],
-  ];
-  const state = {
-    width: 0,
-    height: 0,
-    dpr: 1,
-    nodes: [],
-    particles: [],
-    pointer: {
-      x: 0,
-      y: 0,
-      active: false,
-      holding: false,
-      force: 0,
-      lastX: 0,
-      lastY: 0,
-    },
-    rotationX: 0.22,
-    rotationY: -0.18,
-    spinX: 0,
-    spinY: 0,
-    dragX: 0,
-    dragY: 0,
-    activeIndex: 0,
-    frame: 0,
-    lastFrameTime: 0,
-    running: false,
-    visible: false,
-  };
-
-  function clamp(value, min, max) {
-    return Math.min(Math.max(value, min), max);
-  }
-
-  function randomFor(seed) {
-    return Math.sin(seed * 4128.73) * 0.5 + 0.5;
-  }
-
-  function getFrameInterval() {
-    return window.innerWidth < 820 ? 1000 / 24 : 1000 / 30;
-  }
-
-  function getServiceMap() {
-    return translations[currentLanguage]?.serviceMap || translations.en.serviceMap;
-  }
-
-  function buildNodes() {
-    const items = getServiceMap().nodes || [];
-    state.nodes = items.map(([kicker, title, body], index) => {
-      const position = layout[index % layout.length];
-      const depth = Math.min(state.width, state.height) * position[2];
-      return {
-        index,
-        kind: "service",
-        kicker,
-        title,
-        body,
-        x: position[0] * state.width,
-        y: position[1] * state.height,
-        baseX: position[0] * state.width,
-        baseY: position[1] * state.height,
-        baseZ: depth,
-        depthAlpha: 1,
-        depthScale: 1,
-        size: 7.1 + randomFor(index + 1) * 3.8,
-        color: palette[index % palette.length],
-        phase: randomFor(index * 2.1 + 3) * Math.PI * 2,
-      };
-    });
-  }
-
-  function buildParticles() {
-    const previousParticles = state.particles;
-    const area = state.width * state.height;
-    const count = reduceMotion ? 48 : Math.min(120, Math.max(68, Math.floor(area / 2600)));
-    const centerX = state.width / 2;
-    const centerY = state.height / 2;
-    const padding = state.width < 430 ? 16 : 22;
-
-    state.particles = Array.from({ length: count }, (_, index) => {
-      const ratio = index / Math.max(1, count - 1);
-      const seed = index + 1;
-      const angle = index * 2.3999632297 + (randomFor(seed * 1.7) - 0.5) * 0.95;
-      const radius = Math.sqrt(ratio) * (0.86 + randomFor(seed * 2.3) * 0.24);
-      const fieldX = state.width * (0.45 + randomFor(seed * 3.1) * 0.12);
-      const fieldY = state.height * (0.36 + randomFor(seed * 4.7) * 0.16);
-      const jitterX = (randomFor(seed * 6.3) - 0.5) * state.width * 0.22;
-      const jitterY = (randomFor(seed * 8.9) - 0.5) * state.height * 0.2;
-      const baseX = clamp(centerX + Math.cos(angle) * radius * fieldX + jitterX, padding, state.width - padding);
-      const baseY = clamp(centerY + Math.sin(angle) * radius * fieldY + jitterY, padding, state.height - padding);
-      const baseZ = (randomFor(seed * 10.7) - 0.5) * Math.min(state.width, state.height) * 0.86;
-      const previous = previousParticles[index];
-
-      return {
-        index,
-        kind: "particle",
-        x: previous ? previous.x : baseX,
-        y: previous ? previous.y : baseY,
-        baseX,
-        baseY,
-        baseZ,
-        depthAlpha: previous ? previous.depthAlpha : 1,
-        depthScale: previous ? previous.depthScale : 1,
-        size: 1.05 + randomFor(seed * 4.3) * 2.9,
-        alpha: 0.26 + randomFor(seed * 4.9 + 8) * 0.42,
-        color: particlePalette[index % particlePalette.length],
-        phase: randomFor(seed * 8.1) * Math.PI * 2,
-        speed: 0.34 + randomFor(seed * 5.9) * 0.72,
-      };
-    });
-  }
-
-  function resizeConstellation() {
-    const rect = stage.getBoundingClientRect();
-    state.width = Math.max(1, rect.width);
-    state.height = Math.max(1, rect.height);
-    state.dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.round(state.width * state.dpr);
-    canvas.height = Math.round(state.height * state.dpr);
-    canvas.style.width = `${state.width}px`;
-    canvas.style.height = `${state.height}px`;
-    context.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
-    buildNodes();
-    buildParticles();
-  }
-
-  function setPointer(event) {
-    const rect = canvas.getBoundingClientRect();
-    state.pointer.x = event.clientX - rect.left;
-    state.pointer.y = event.clientY - rect.top;
-  }
-
-  function updateTooltip(node) {
-    if (!tooltip || !node) return;
-
-    const width = tooltip.offsetWidth || 250;
-    const height = tooltip.offsetHeight || 94;
-    const margin = 14;
-    const preferredX = node.x + width + 24 < state.width ? node.x + 18 : node.x - width - 18;
-    const preferredY = node.y - height / 2;
-    tooltip.style.setProperty("--constellation-tooltip-x", `${Math.round(clamp(preferredX, margin, state.width - width - margin))}px`);
-    tooltip.style.setProperty("--constellation-tooltip-y", `${Math.round(clamp(preferredY, margin, state.height - height - margin))}px`);
-
-    if (tooltipKicker) tooltipKicker.textContent = node.kicker;
-    if (tooltipTitle) tooltipTitle.textContent = node.title;
-    if (tooltipBody) tooltipBody.textContent = node.body;
-    tooltip.classList.add("is-visible");
-    tooltip.setAttribute("aria-hidden", "false");
-  }
-
-  function hideTooltip() {
-    tooltip?.classList.remove("is-visible");
-    tooltip?.setAttribute("aria-hidden", "true");
-  }
-
-  function selectNearest(force = false) {
-    let nearest = null;
-    let nearestDistance = Infinity;
-
-    state.nodes.forEach((node) => {
-      const distance = Math.hypot(state.pointer.x - node.x, state.pointer.y - node.y);
-      if (distance < nearestDistance) {
-        nearestDistance = distance;
-        nearest = node;
-      }
-    });
-
-    const threshold = force ? 72 : 46;
-    if (nearest && nearestDistance <= threshold) {
-      state.activeIndex = nearest.index;
-      updateTooltip(nearest);
-      return;
-    }
-
-    if (!force) hideTooltip();
-  }
-
-  function draw(time = 0) {
-    if (!reduceMotion && state.running) {
-      state.frame = requestAnimationFrame(draw);
-      if (time - state.lastFrameTime < getFrameInterval()) return;
-      state.lastFrameTime = time;
-    }
-
-    const seconds = time * 0.001;
-    const centerX = state.width / 2;
-    const centerY = state.height / 2;
-    const minDimension = Math.min(state.width, state.height);
-    const targetForce = state.pointer.active ? 1 : 0;
-    state.pointer.force += (targetForce - state.pointer.force) * (reduceMotion ? 1 : 0.08);
-
-    if (!reduceMotion) {
-      const targetSpinY = state.pointer.holding ? 0.014 : 0.0014;
-      const targetSpinX = state.pointer.holding ? 0.0048 : 0.00035;
-      state.spinY += (targetSpinY - state.spinY) * 0.045;
-      state.spinX += (targetSpinX - state.spinX) * 0.045;
-      state.rotationY += state.spinY + state.dragY;
-      state.rotationX += state.spinX + state.dragX;
-      state.dragY *= 0.91;
-      state.dragX *= 0.9;
-      state.rotationX = clamp(state.rotationX, -0.92, 0.92);
-    }
-
-    context.clearRect(0, 0, state.width, state.height);
-
-    function projectItem(item, driftScale = 1) {
-      const expansion = 1 + state.pointer.force * 0.18;
-      const baseDx = (item.baseX - centerX) * expansion;
-      const baseDy = (item.baseY - centerY) * expansion;
-      const baseDz = item.baseZ * (0.88 + state.pointer.force * 0.44);
-      const tiltXCos = Math.cos(state.rotationX);
-      const tiltXSin = Math.sin(state.rotationX);
-      const tiltYCos = Math.cos(state.rotationY);
-      const tiltYSin = Math.sin(state.rotationY);
-      const tiltedY = baseDy * tiltXCos - baseDz * tiltXSin;
-      const tiltedZ = baseDy * tiltXSin + baseDz * tiltXCos;
-      const rotatedX = baseDx * tiltYCos + tiltedZ * tiltYSin;
-      const rotatedZ = -baseDx * tiltYSin + tiltedZ * tiltYCos;
-      const perspectiveDistance = minDimension * 1.55;
-      const perspective = clamp(perspectiveDistance / (perspectiveDistance + rotatedZ), 0.66, 1.36);
-      const projectionScale = 1 + (perspective - 1) * 0.84;
-      const driftX = reduceMotion ? 0 : Math.cos(seconds * (item.speed || 0.48) + item.phase) * 7 * driftScale;
-      const driftY = reduceMotion ? 0 : Math.sin(seconds * ((item.speed || 0.48) + 0.16) + item.phase) * 6 * driftScale;
-      const targetX = centerX + rotatedX * projectionScale + driftX;
-      const targetY = centerY + tiltedY * projectionScale + driftY;
-      const ease = reduceMotion ? 1 : item.kind === "service" ? 0.07 : 0.055;
-
-      item.x += (targetX - item.x) * ease;
-      item.y += (targetY - item.y) * ease;
-      item.depthScale = projectionScale;
-      item.depthAlpha = clamp(0.46 + (projectionScale - 0.66) * 1.02, 0.36, 1);
-    }
-
-    state.particles.forEach((particle) => projectItem(particle, 1));
-    state.nodes.forEach((node) => projectItem(node, 0.45));
-
-    const connectionItems = [...state.particles.filter((_, index) => index % 2 === 0), ...state.nodes];
-    const particleMaxDistance = Math.min(165, Math.max(108, minDimension * (state.pointer.force > 0.1 ? 0.45 : 0.37)));
-    for (let i = 0; i < connectionItems.length; i += 1) {
-      for (let j = i + 1; j < connectionItems.length; j += 1) {
-        const first = connectionItems[i];
-        const second = connectionItems[j];
-        const distance = Math.hypot(first.x - second.x, first.y - second.y);
-        if (distance > particleMaxDistance) continue;
-
-        const serviceBoost = first.kind === "service" || second.kind === "service" ? 1.28 : 1;
-        const alpha = (1 - distance / particleMaxDistance) * 0.105 * serviceBoost * Math.min(first.depthAlpha, second.depthAlpha);
-        context.strokeStyle = `rgba(190, 233, 211, ${alpha})`;
-        context.lineWidth = first.kind === "service" || second.kind === "service" ? 1 : 0.7;
-        context.beginPath();
-        context.moveTo(first.x, first.y);
-        context.lineTo(second.x, second.y);
-        context.stroke();
-      }
-    }
-
-    const sortedParticles = [...state.particles].sort((first, second) => (first.depthScale || 1) - (second.depthScale || 1));
-    sortedParticles.forEach((particle) => {
-      const twinkle = reduceMotion ? 1 : 0.74 + Math.sin(seconds * 1.2 + particle.phase) * 0.26;
-      const radius = particle.size * twinkle * (particle.depthScale || 1);
-      context.fillStyle = `rgba(${particle.color}, ${particle.alpha * twinkle * particle.depthAlpha})`;
-      context.beginPath();
-      context.arc(particle.x, particle.y, radius, 0, Math.PI * 2);
-      context.fill();
-    });
-
-    serviceEdges.forEach(([from, to], index) => {
-      const first = state.nodes[from];
-      const second = state.nodes[to];
-      if (!first || !second) return;
-
-      const active = first.index === state.activeIndex || second.index === state.activeIndex;
-      const depthAlpha = Math.min(first.depthAlpha, second.depthAlpha);
-      context.save();
-      context.shadowBlur = active ? 16 : 8;
-      context.shadowColor = active ? "rgba(231, 214, 170, 0.48)" : "rgba(155, 208, 183, 0.24)";
-      context.strokeStyle = active ? `rgba(231, 214, 170, ${0.54 * depthAlpha})` : `rgba(155, 208, 183, ${0.22 * depthAlpha})`;
-      context.lineWidth = active ? 1.9 : 1.1;
-      context.beginPath();
-      context.moveTo(first.x, first.y);
-      const bow = Math.sin(seconds * 0.65 + index) * 8 * ((first.depthScale + second.depthScale) * 0.5);
-      context.quadraticCurveTo((first.x + second.x) / 2, (first.y + second.y) / 2 + bow, second.x, second.y);
-      context.stroke();
-      context.restore();
-    });
-
-    function drawStarNode(node) {
-      const isActive = node.index === state.activeIndex;
-      const pulse = reduceMotion ? 1 : 1 + Math.sin(seconds * 2.4 + node.phase) * 0.12;
-      const depthScale = node.depthScale || 1;
-      const depthAlpha = node.depthAlpha || 1;
-      const radius = node.size * pulse * depthScale * (isActive ? 1.2 : 1);
-      const haloRadius = radius + (isActive ? 18 : 12) * depthScale;
-      const rayCount = 8;
-
-      context.save();
-      context.globalCompositeOperation = "lighter";
-      const halo = context.createRadialGradient(node.x, node.y, 0, node.x, node.y, haloRadius);
-      halo.addColorStop(0, `rgba(${node.color}, ${isActive ? 0.3 : 0.18})`);
-      halo.addColorStop(0.42, `rgba(${node.color}, ${isActive ? 0.13 : 0.08})`);
-      halo.addColorStop(1, `rgba(${node.color}, 0)`);
-      context.fillStyle = halo;
-      context.beginPath();
-      context.arc(node.x, node.y, haloRadius, 0, Math.PI * 2);
-      context.fill();
-
-      context.lineCap = "round";
-      context.lineWidth = isActive ? 1.7 : 1.05;
-      context.shadowBlur = isActive ? 13 : 7;
-      context.shadowColor = `rgba(${node.color}, ${isActive ? 0.62 : 0.36})`;
-      for (let ray = 0; ray < rayCount; ray += 1) {
-        const angle = (Math.PI * 2 * ray) / rayCount + seconds * (isActive ? 0.08 : 0.035);
-        const longRay = ray % 2 === 0;
-        const start = radius * (longRay ? 0.28 : 0.5);
-        const end = radius + (longRay ? 12 : 7) * depthScale;
-        context.strokeStyle = longRay ? `rgba(255, 255, 255, ${0.48 * depthAlpha})` : `rgba(${node.color}, ${0.52 * depthAlpha})`;
-        context.beginPath();
-        context.moveTo(node.x + Math.cos(angle) * start, node.y + Math.sin(angle) * start);
-        context.lineTo(node.x + Math.cos(angle) * end, node.y + Math.sin(angle) * end);
-        context.stroke();
-      }
-
-      context.shadowBlur = isActive ? 17 : 9;
-      context.fillStyle = `rgba(${node.color}, ${isActive ? 0.9 : 0.74})`;
-      context.beginPath();
-      context.arc(node.x, node.y, radius, 0, Math.PI * 2);
-      context.fill();
-
-      context.globalCompositeOperation = "source-over";
-      context.fillStyle = `rgba(255, 255, 255, ${isActive ? 0.78 : 0.54})`;
-      context.beginPath();
-      context.arc(node.x, node.y, Math.max(2.4, radius * 0.32), 0, Math.PI * 2);
-      context.fill();
-
-      context.lineWidth = isActive ? 2 : 1.3;
-      context.strokeStyle = isActive ? `rgba(255, 255, 255, ${0.68 * depthAlpha})` : `rgba(231, 214, 170, ${0.36 * depthAlpha})`;
-      context.beginPath();
-      context.arc(node.x, node.y, radius + (isActive ? 9 : 6) * depthScale, 0, Math.PI * 2);
-      context.stroke();
-      context.restore();
-    }
-
-    [...state.nodes].sort((first, second) => (first.depthScale || 1) - (second.depthScale || 1)).forEach(drawStarNode);
-
-    const activeNode = state.nodes[state.activeIndex];
-    if (tooltip?.classList.contains("is-visible") && activeNode) updateTooltip(activeNode);
-
-  }
-
-  function startConstellation() {
-    if (reduceMotion || state.running || document.hidden || !state.visible) return;
-    state.running = true;
-    state.lastFrameTime = 0;
-    state.frame = requestAnimationFrame(draw);
-  }
-
-  function stopConstellation() {
-    if (!state.running && !state.frame) return;
-    state.running = false;
-    cancelAnimationFrame(state.frame);
-    state.frame = 0;
-  }
-
-  window.refreshServiceConstellation = () => {
-    buildNodes();
-    const activeNode = state.nodes[state.activeIndex] || state.nodes[0];
-    if (tooltip?.classList.contains("is-visible") && activeNode) updateTooltip(activeNode);
-    if (reduceMotion) draw();
-  };
-
-  function activate(event) {
-    if (event && typeof event.clientX === "number") {
-      setPointer(event);
-      state.pointer.lastX = event.clientX;
-      state.pointer.lastY = event.clientY;
-    }
-    state.pointer.active = true;
-  }
-
-  function release(event) {
-    state.pointer.holding = false;
-    state.pointer.active = false;
-    stage.classList.remove("is-dragging");
-    if (event?.pointerId && stage.releasePointerCapture) {
-      try {
-        stage.releasePointerCapture(event.pointerId);
-      } catch (error) {
-        // Pointer capture can already be released by the browser.
-      }
-    }
-  }
-
-  stage.addEventListener("pointermove", (event) => {
-    setPointer(event);
-    if (state.pointer.holding && !reduceMotion) {
-      const dx = event.clientX - state.pointer.lastX;
-      const dy = event.clientY - state.pointer.lastY;
-      state.dragY += dx * 0.00048;
-      state.dragX -= dy * 0.00036;
-      state.pointer.lastX = event.clientX;
-      state.pointer.lastY = event.clientY;
-    }
-    selectNearest(false);
-    if (reduceMotion) draw();
-  });
-  stage.addEventListener("pointerdown", (event) => {
-    event.preventDefault();
-    setPointer(event);
-    activate(event);
-    state.pointer.holding = true;
-    stage.classList.add("is-dragging");
-    if (stage.setPointerCapture) {
-      try {
-        stage.setPointerCapture(event.pointerId);
-      } catch (error) {
-        // Pointer capture is optional for this interaction.
-      }
-    }
-    selectNearest(true);
-    if (reduceMotion) draw();
-  });
-  stage.addEventListener("pointerenter", activate);
-  stage.addEventListener("pointerup", release);
-  stage.addEventListener("pointercancel", release);
-  stage.addEventListener("pointerleave", (event) => {
-    if (!state.pointer.holding) {
-      release(event);
-      hideTooltip();
-    }
-  });
-
-  resizeConstellation();
-  draw();
-  if ("IntersectionObserver" in window && !reduceMotion) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        state.visible = Boolean(entry?.isIntersecting);
-        if (state.visible) {
-          startConstellation();
-        } else {
-          stopConstellation();
-        }
-      },
-      { rootMargin: "140px 0px", threshold: 0 },
-    );
-    observer.observe(root);
-  } else {
-    state.visible = true;
-    startConstellation();
-  }
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      stopConstellation();
-    } else {
-      startConstellation();
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    stopConstellation();
-    resizeConstellation();
-    draw();
-    startConstellation();
-  });
-}
-
-function updateAiScenario(key, animate = true) {
-  const scenario = translations[currentLanguage].aiConsole.scenarios[key];
-  const user = document.querySelector("[data-ai-user]");
-  const answer = document.querySelector("[data-ai-answer]");
-  const status = document.querySelector("[data-ai-status]");
-  if (!scenario || !user || !answer || !status) return;
-
-  currentAiScenario = key;
-  document.querySelectorAll("[data-ai-scenario]").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.aiScenario === key);
-  });
-
-  if (animate) answer.classList.add("is-switching");
-  window.setTimeout(
-    () => {
-      user.textContent = scenario[0];
-      answer.textContent = scenario[1];
-      status.textContent = scenario[2];
-      answer.classList.remove("is-switching");
-    },
-    animate ? 140 : 0,
-  );
-}
-
-function setupAiConsole() {
-  const buttons = [...document.querySelectorAll("[data-ai-scenario]")];
-  if (!buttons.length) return;
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      updateAiScenario(button.dataset.aiScenario);
-    });
-  });
 }
 
 async function submitFormspree(formData) {
@@ -1944,98 +1678,22 @@ function appendLeadAttribution(formData) {
   });
 }
 
-function setupBriefBuilder() {
-  const groups = [...document.querySelectorAll("[data-brief-group]")];
-  const output = document.querySelector("[data-brief-output]");
-  const briefButton = document.querySelector("[data-brief-mail]");
-  const briefStatus = document.querySelector("[data-brief-status]");
-  const detailsField = document.querySelector('[name="details"]');
-  if (!groups.length || !output || !briefButton) return;
-
-  let currentBriefText = "";
-
-  function updateBrief() {
-    const t = translations[currentLanguage].brief;
-    const getActiveChoice = (key) => {
-      const active = document.querySelector(`[data-brief-group="${key}"] .is-active`);
-      return active?.dataset.briefChoice || t.choices[key]?.[0] || "";
-    };
-    const text = t.bodyTemplate(getActiveChoice("type"), getActiveChoice("stage"), getActiveChoice("timeline"));
-    currentBriefText = text;
-    output.textContent = text;
-  }
-
-  window.updateBrief = updateBrief;
-
-  groups.forEach((group) => {
-    const buttons = [...group.querySelectorAll("[data-brief-choice]")];
-    const first = buttons[0];
-    if (first) {
-      first.classList.add("is-active");
-    }
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        buttons.forEach((item) => item.classList.toggle("is-active", item === button));
-        updateBrief();
-      });
-    });
-  });
-
-  briefButton.addEventListener("click", () => {
-    const t = translations[currentLanguage].brief;
-    if (detailsField) {
-      detailsField.value = currentBriefText;
-      detailsField.dispatchEvent(new Event("input", { bubbles: true }));
-    }
-    if (briefStatus) briefStatus.textContent = t.inserted;
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.setTimeout(() => detailsField?.focus({ preventScroll: true }), 420);
-  });
-
-  updateBrief();
-}
-
-function setupCallForm() {
-  const form = document.querySelector("[data-call-form]");
-  const fileInput = form?.querySelector('[name="attachments"]');
+function setupContactForm() {
+  const form = document.querySelector("[data-contact-form]");
   const status = form?.querySelector("[data-form-status]");
   const submitButton = form?.querySelector("[data-form-submit]");
   if (!form || !status || !submitButton) return;
-
-  fileInput?.addEventListener("change", updateFileName);
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
 
-    const t = translations[currentLanguage].callForm;
+    const t = translations[currentLanguage].contactForm;
     const formData = new FormData(form);
-    const getValue = (name) => String(formData.get(name) || "").trim() || "-";
-    const getSelectText = (name) => {
-      const field = form.elements[name];
-      return field?.selectedOptions?.[0]?.textContent?.trim() || getValue(name);
-    };
-    const channel = form.querySelector('[name="channel"]:checked')?.closest("label")?.textContent?.trim() || "-";
-    const files = Array.from(fileInput?.files || []).map((file) => file.name).join(", ") || t.noFile;
-    const contact = getValue("contact");
-    const details = getValue("details");
-    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
 
-    formData.set("project", getSelectText("project"));
-    formData.set("timeline", getSelectText("timeline"));
-    formData.set("budget", getSelectText("budget"));
-    formData.set("channel", channel);
-    formData.set("files", files);
-    formData.set("message", details);
     formData.set("subject", t.subject);
     appendLeadAttribution(formData);
     formData.set("language", currentLanguage);
-    if (isEmail) {
-      formData.set("email", contact);
-    } else {
-      formData.set("phone", contact);
-    }
 
     submitButton.disabled = true;
     status.textContent = t.sending;
@@ -2044,24 +1702,11 @@ function setupCallForm() {
       await submitFormspree(formData);
       status.textContent = t.success;
       form.reset();
-      updateFileName();
     } catch (error) {
       status.textContent = t.error;
     } finally {
       submitButton.disabled = false;
     }
-  });
-}
-
-function setupFaq() {
-  const items = [...document.querySelectorAll(".faq-list details")];
-  items.forEach((item) => {
-    item.addEventListener("toggle", () => {
-      if (!item.open) return;
-      items.forEach((other) => {
-        if (other !== item) other.removeAttribute("open");
-      });
-    });
   });
 }
 
@@ -2104,6 +1749,85 @@ function loadSwiperAssets() {
 
   swiperAssetsPromise = Promise.all([cssPromise, scriptPromise]).then(([, SwiperClass]) => SwiperClass);
   return swiperAssetsPromise;
+}
+
+function setupCaseSlider(root, ui) {
+  const viewport = root.querySelector(".case-slider__viewport");
+  const track = root.querySelector("[data-case-slider-track]");
+  const counter = root.querySelector("[data-case-slider-counter]");
+  const prevButton = root.querySelector("[data-case-slider-prev]");
+  const nextButton = root.querySelector("[data-case-slider-next]");
+  if (!viewport || !track || !counter || !prevButton || !nextButton) return;
+
+  if (root._caseSliderAbort) root._caseSliderAbort.abort();
+  const controller = new AbortController();
+  root._caseSliderAbort = controller;
+  const signal = controller.signal;
+
+  const slides = [...track.querySelectorAll(".case-slider__slide")];
+  if (!slides.length) return;
+
+  const isFull = slides.some((slide) => slide.classList.contains("case-slider__slide--full"));
+  let activeIndex = 0;
+
+  function syncFullSlideWidths() {
+    if (!isFull) return;
+    const width = viewport.clientWidth;
+    slides.forEach((slide) => {
+      slide.style.flex = `0 0 ${width}px`;
+      slide.style.width = `${width}px`;
+    });
+  }
+
+  function renderSlider() {
+    syncFullSlideWidths();
+    const slide = slides[activeIndex];
+    const offset = isFull ? activeIndex * viewport.clientWidth : slide.offsetLeft - (viewport.clientWidth - slide.clientWidth) / 2;
+    track.style.transform = `translateX(${-offset}px)`;
+    counter.textContent = `${activeIndex + 1} / ${slides.length}`;
+    prevButton.disabled = activeIndex === 0;
+    nextButton.disabled = activeIndex === slides.length - 1;
+    prevButton.setAttribute("aria-label", ui.prev);
+    nextButton.setAttribute("aria-label", ui.next);
+  }
+
+  prevButton.addEventListener(
+    "click",
+    () => {
+      activeIndex = Math.max(0, activeIndex - 1);
+      renderSlider();
+    },
+    { signal },
+  );
+
+  nextButton.addEventListener(
+    "click",
+    () => {
+      activeIndex = Math.min(slides.length - 1, activeIndex + 1);
+      renderSlider();
+    },
+    { signal },
+  );
+
+  window.addEventListener(
+    "resize",
+    () => {
+      window.requestAnimationFrame(renderSlider);
+    },
+    { passive: true, signal },
+  );
+
+  renderSlider();
+}
+
+function setupCasePage() {
+  const nav = document.querySelector(".case-nav");
+  function updateNavState() {
+    nav?.classList.toggle("is-scrolled", window.scrollY > 24);
+  }
+
+  updateNavState();
+  window.addEventListener("scroll", updateNavState, { passive: true });
 }
 
 function setupGallery() {
@@ -2195,9 +1919,17 @@ function setupGallery() {
     document.body.classList.remove("no-scroll");
   }
 
-  document.querySelector(".case-list")?.addEventListener("click", (event) => {
+  document.querySelector(".case-showcase")?.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-gallery]");
     if (!trigger) return;
+    openGallery(trigger.dataset.gallery);
+  });
+
+  document.querySelector(".case-showcase")?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const trigger = event.target.closest("[data-gallery]");
+    if (!trigger) return;
+    event.preventDefault();
     openGallery(trigger.dataset.gallery);
   });
 
@@ -2209,15 +1941,14 @@ function setupGallery() {
 }
 
 setupLanguageSwitch();
-applyLanguage(currentLanguage);
-setupStickyNavigation();
-setupRotatingWord();
-setupHeroBubbles();
-setupRevealAnimations();
-setupServiceTabs();
-setupServiceConstellation();
-setupAiConsole();
-setupBriefBuilder();
-setupCallForm();
-setupFaq();
-setupGallery();
+setupPalette();
+if (document.querySelector(".site-hero")) {
+  applyLanguage(currentLanguage);
+  setupStudioMarquee();
+  setupStickyNavigation();
+  setupContactForm();
+}
+if (document.body.classList.contains("case-page")) {
+  applyLanguage(currentLanguage);
+  setupCasePage();
+}

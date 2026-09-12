@@ -20,7 +20,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="LocalMind Studio" />
     <meta name="application-name" content="LocalMind Studio" />
-    <meta name="theme-color" content="#111815" />
+    <meta name="theme-color" content="#0d1512" />
     <link rel="canonical" href="https://localmindstudio.site/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://localmindstudio.site/" />
@@ -41,10 +41,21 @@
       content="AI assistants, chatbots, .NET/C# backends, Node.js integrations, React Native apps, UX/UI, SEO, AI SEO, QA and launch support."
     />
     <meta name="twitter:image" content="https://localmindstudio.site/assets/mobile-portfolio-hero.png" />
-    <link rel="icon" href="./assets/studio-favicon.svg?v=20260609-studio" type="image/svg+xml" />
+    <link rel="icon" href="./assets/studio-favicon.svg?v=20260910-unify" type="image/svg+xml" />
     <link rel="alternate" type="text/plain" href="./llms.txt" title="LocalMind Studio AI-readable summary" />
     <link rel="sitemap" type="application/xml" href="./sitemap.xml" />
-    <link rel="stylesheet" href="./studio.css?v=20260615-perf-pass" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var allowed = ["pebble", "sage", "harbor", "clay", "tide", "pulse"];
+        var value = localStorage.getItem("studioPalette") || "sage";
+        document.documentElement.dataset.palette = allowed.indexOf(value) >= 0 ? value : "sage";
+      })();
+    </script>
+    <link rel="stylesheet" href="./studio.css?v=20260912-cases" />
+    <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -261,44 +272,6 @@
                 }
               }
             ]
-          },
-          {
-            "@type": "FAQPage",
-            "@id": "https://localmindstudio.site/#faq-schema",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Can LocalMind Studio build a full product from idea to launch?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. LocalMind Studio can cover brief, UX/UI, backend, mobile or web interface, integrations, testing, release and support."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can LocalMind Studio build AI assistants or chatbots?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. The studio builds support chatbots, lead bots, document assistants, private AI assistants and RAG workflows connected to CRM, Telegram, websites or internal systems."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does LocalMind Studio work with existing .NET or Node.js projects?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. LocalMind Studio can review an existing codebase, stabilize backend services, add integrations, improve performance and deliver features in stages."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does LocalMind Studio provide SEO and AI SEO?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. The studio can prepare service pages, launch copy, technical SEO, structured data, analytics and AI-readable content such as llms.txt."
-                }
-              }
-            ]
           }
         ]
       }
@@ -307,768 +280,593 @@
   <body>
     <nav class="nav" aria-label="Studio navigation">
       <a class="brand" href="#top" aria-label="LocalMind Studio">
-        <span class="brand-mark" aria-hidden="true">LM</span>
-        <span class="brand-name" data-brand-name>LocalMind Studio</span>
+        <img class="brand-logo" src="./assets/logo.png" alt="" width="217" height="73" />
       </a>
       <div class="nav-links">
-        <a href="#services">Services</a>
         <a href="#cases">Cases</a>
-        <a href="#ai">AI</a>
-        <a href="#process">Process</a>
+        <a href="#competencies">Competencies</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="nav-call" href="#contact" data-nav-call>Request a call</a>
-      <div class="language-switch" aria-label="Language switch">
-        <button type="button" data-lang-switch="en">EN</button>
-        <button type="button" data-lang-switch="ru">RU</button>
+      <div class="nav-aside">
+        <div class="nav-contacts" aria-label="Contacts">
+          <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer" data-nav-telegram>@jackkorlive</a>
+          <a href="mailto:localmindstudio@gmail.com" data-nav-email>localmindstudio@gmail.com</a>
+        </div>
+        <a class="nav-call" href="#contact" data-nav-call>Request a call</a>
+        <div class="language-switch" aria-label="Language switch">
+          <button type="button" data-lang-switch="en">EN</button>
+          <button type="button" data-lang-switch="ru">RU</button>
+        </div>
       </div>
     </nav>
 
     <header class="site-hero" id="top">
-      <canvas class="hero-bubbles" data-hero-bubbles aria-hidden="true"></canvas>
-
-      <section class="hero-copy" aria-label="Studio introduction">
-        <p class="eyebrow">AI assistants, .NET, design, SEO and product development</p>
-        <h1><span data-hero-prefix>We build</span> <span class="rotating-word" data-rotating-word>AI assistants</span> <span data-hero-suffix>for business.</span></h1>
-        <p class="lead">
-          We help teams plan, design, build, launch and support software: backends, mobile apps, integrations, chatbots, SEO and private AI assistants.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#contact">Request a call</a>
-          <a class="button secondary" href="#cases">View cases</a>
-        </div>
-        <div class="stack-marquee" aria-label="Core technologies">
-          <div class="stack-track">
-            <span>AI assistants</span>
-            <span>Chatbots</span>
-            <span>Product design</span>
-            <span>UX/UI</span>
-            <span>SEO</span>
-            <span>AI SEO</span>
-            <span>Marketing launch</span>
-            <span>QA</span>
-            <span>.NET/C#</span>
-            <span>Node.js</span>
-            <span>React Native</span>
-            <span>MVP development</span>
-            <span>Admin panels</span>
-            <span>Integrations</span>
-            <span>Support</span>
-            <span>Quality control</span>
-            <span>AI assistants</span>
-            <span>Chatbots</span>
-            <span>Product design</span>
-            <span>UX/UI</span>
-            <span>SEO</span>
-            <span>AI SEO</span>
-            <span>Marketing launch</span>
-            <span>QA</span>
-            <span>.NET/C#</span>
-            <span>Node.js</span>
-            <span>React Native</span>
-            <span>MVP development</span>
-            <span>Admin panels</span>
-            <span>Integrations</span>
-            <span>Support</span>
-            <span>Quality control</span>
+      <div class="hero-shell">
+        <section class="hero-copy" aria-label="Studio introduction">
+          <p class="eyebrow">Product studio</p>
+          <h1 data-hero-title>We build products for business.</h1>
+          <p class="lead">
+            Development, design, SEO and AI — from idea to launch and support.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">
+              <span data-hero-action-primary>Request a call</span>
+              <span class="hero-button-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button secondary" href="#cases" data-hero-action-secondary>View cases</a>
           </div>
+        </section>
+        <div class="hero-visual" aria-hidden="true">
+          <img
+            src="./assets/hero/hero-visual.png"
+            alt=""
+            width="760"
+            height="760"
+            loading="eager"
+            decoding="async"
+          />
         </div>
-      </section>
-
-      <aside class="delivery-panel" aria-label="Build plan preview">
-        <div class="panel-top">
-          <strong>Build plan</strong>
-          <span>Request received</span>
-        </div>
-        <div class="panel-grid">
-          <div class="sprint-card">
-            <span>MVP / automation sprint</span>
-            <strong>2-6 weeks</strong>
-            <p>Strategy, UX, backend, interface, QA, SEO and release.</p>
-          </div>
-          <div class="chat-card">
-            <span>AI audit</span>
-            <p>Where does the team lose time every week?</p>
-            <strong>Repeated steps found. Automate only what is worth automating.</strong>
-          </div>
-        </div>
-      </aside>
+      </div>
     </header>
 
     <main>
       <section class="proof-strip" aria-label="Studio proof">
         <div>
+          <span class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/>
+              <path d="m4.5 7.5 7.5 4 7.5-4"/>
+              <path d="M12 21v-9.5"/>
+            </svg>
+          </span>
           <strong>MVP</strong>
           <span>from idea to first working release</span>
         </div>
         <div>
+          <span class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 7-5 5 5 5"/>
+              <path d="m16 7 5 5-5 5"/>
+              <path d="m14 4-4 16"/>
+            </svg>
+          </span>
           <strong>Design + SEO</strong>
           <span>UX/UI, landing pages and AI search visibility</span>
         </div>
         <div>
+          <span class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="13" rx="2"/>
+              <path d="M8 21h8"/>
+              <path d="M12 17v4"/>
+            </svg>
+          </span>
           <strong>Engineering</strong>
           <span>.NET, Node.js, mobile apps and integrations</span>
         </div>
         <div>
+          <span class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="7" r="3.5"/>
+              <path d="M5 21c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"/>
+            </svg>
+          </span>
           <strong>QA + support</strong>
           <span>testing, launch support and maintenance</span>
         </div>
       </section>
 
-      <section class="band service-map-band" aria-label="Service map">
-        <div class="service-constellation" data-service-constellation>
-          <div class="service-constellation-copy">
-            <p class="eyebrow" data-constellation-eyebrow>Service map</p>
-            <h3 data-constellation-title>A connected delivery stack.</h3>
-            <p data-constellation-body>
-              Strategy, design, engineering, AI, launch and support are planned as one product system.
-            </p>
-          </div>
-          <div class="service-constellation-stage">
-            <canvas data-constellation-canvas aria-hidden="true"></canvas>
-            <span class="service-constellation-tooltip" data-constellation-tooltip aria-hidden="true">
-              <span data-constellation-tooltip-kicker></span>
-              <strong data-constellation-tooltip-title></strong>
-              <span data-constellation-tooltip-body></span>
+      <div class="studio-marquee" aria-hidden="true">
+        <div class="studio-marquee__track">
+          <div class="studio-marquee__group">
+            <span class="studio-marquee__phrase" data-marquee-phrase="0">мобильная разработка</span>
+            <span class="studio-marquee__star" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 0v24M0 12h24M3.8 3.8l16.4 16.4M20.2 3.8 3.8 20.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              </svg>
+            </span>
+            <span class="studio-marquee__phrase" data-marquee-phrase="1">сайты</span>
+            <span class="studio-marquee__star" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 0v24M0 12h24M3.8 3.8l16.4 16.4M20.2 3.8 3.8 20.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              </svg>
+            </span>
+            <span class="studio-marquee__phrase" data-marquee-phrase="2">дизайн</span>
+            <span class="studio-marquee__star" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 0v24M0 12h24M3.8 3.8l16.4 16.4M20.2 3.8 3.8 20.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              </svg>
             </span>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="band white">
-        <div class="split">
-          <div class="section-heading">
-            <p class="eyebrow">Why us</p>
-            <h2>We cover the path from idea to launch.</h2>
+      <section class="band white case-showcase-band" id="cases">
+        <div class="cases-header">
+          <div class="cases-header__top">
+            <p class="eyebrow">Cases</p>
+            <a class="cases-header__link" href="#cases" data-cases-all>All cases →</a>
+          </div>
+          <div class="section-heading wide-heading">
+            <h2>Our projects</h2>
             <p>
-              Before writing code, we ask simple questions: what is broken now, who uses the product, what should be shown to clients
-              and what systems already exist. After that we choose a scope that can be designed, built, tested, launched and supported.
+              Regardless of cost and complexity, every completed project becomes part of the web studio portfolio.
             </p>
           </div>
-          <blockquote>
-            You see what is being built, how quality is checked and what the next step is.
-          </blockquote>
-        </div>
-      </section>
-
-      <section class="band" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h2>Clear services for real product work.</h2>
-          <p>
-            Bring an idea, a brief, an old codebase or a manual process. We can help with product design, development, SEO, launch
-            marketing, QA and support.
-          </p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card accent-green">
-            <span>01</span>
-            <h3>MVP and web apps</h3>
-            <p>First releases, client portals and internal tools with backend, admin area and launch plan.</p>
-            <div class="tags"><span>MVP</span><span>Product</span><span>Launch</span></div>
-          </article>
-          <article class="service-card accent-blue">
-            <span>02</span>
-            <h3>Product design and UX/UI</h3>
-            <p>User flows, prototypes, interface design, landing pages and design systems for product launches.</p>
-            <div class="tags"><span>UX/UI</span><span>Design</span><span>Figma</span></div>
-          </article>
-          <article class="service-card accent-coral">
-            <span>03</span>
-            <h3>.NET / C# development</h3>
-            <p>APIs, internal platforms, permissions, reports, SQL databases and business workflows.</p>
-            <div class="tags"><span>C#</span><span>.NET</span><span>SQL</span></div>
-          </article>
-          <article class="service-card accent-gold">
-            <span>04</span>
-            <h3>Node.js APIs & integrations</h3>
-            <p>APIs, payments, CRM sync, realtime features and data exchange between services.</p>
-            <div class="tags"><span>Node.js</span><span>API</span><span>CRM</span></div>
-          </article>
-          <article class="service-card accent-green">
-            <span>05</span>
-            <h3>React Native mobile apps</h3>
-            <p>Production iOS/Android apps with auth, offline states, camera/files, store releases, performance and real product UX.</p>
-            <div class="tags"><span>iOS</span><span>Android</span><span>RN</span></div>
-          </article>
-          <article class="service-card accent-blue">
-            <span>06</span>
-            <h3>AI assistants and chatbots</h3>
-            <p>Support bots, document assistants and lead bots connected to your workflow.</p>
-            <div class="tags"><span>AI</span><span>Chat</span><span>RAG</span></div>
-          </article>
-          <article class="service-card accent-coral">
-            <span>07</span>
-            <h3>SEO, AI SEO and marketing</h3>
-            <p>Search-friendly structure, service pages, launch copy, analytics and AI-readable content for modern search.</p>
-            <div class="tags"><span>SEO</span><span>AI SEO</span><span>Analytics</span></div>
-          </article>
-          <article class="service-card accent-gold">
-            <span>08</span>
-            <h3>QA, support and quality</h3>
-            <p>Testing, monitoring, bug fixes, documentation, release support and a clear warranty period for agreed fixes.</p>
-            <div class="tags"><span>QA</span><span>Support</span><span>Warranty</span></div>
-          </article>
         </div>
 
-        <div class="service-lab" aria-label="Service details">
-          <div class="service-tabs" role="tablist" aria-label="Service tracks">
-            <button class="is-active" type="button" role="tab" aria-selected="true" data-service-tab="mvp">MVP</button>
-            <button type="button" role="tab" aria-selected="false" data-service-tab="dotnet">.NET</button>
-            <button type="button" role="tab" aria-selected="false" data-service-tab="ai">AI</button>
-            <button type="button" role="tab" aria-selected="false" data-service-tab="mobile">Mobile</button>
-          </div>
-          <div class="service-panel is-active" role="tabpanel" data-service-panel="mvp">
-            <div>
-              <span>For a first release</span>
-              <h3>Ship a working version, not just a mockup.</h3>
-              <p>We agree on the goal, core flows, backend/API, interface, release checklist and demo rhythm.</p>
+        <div class="case-showcase">
+          <a class="case-row" href="./cases/genlix.html">
+            <div class="case-card case-card--tone-1">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 01</span>
+                  <span class="case-year">2026</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/genlix-real/genlix_hero.jpg" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Premium HoReCa supplies</span>
+                  <h3>Genlix</h3>
+                </div>
+              </div>
             </div>
-            <ul>
-              <li>2-6 weeks for a first release</li>
-              <li>Direct communication with engineers</li>
-              <li>Good for SaaS, marketplaces and internal tools</li>
-            </ul>
-          </div>
-          <div class="service-panel" role="tabpanel" data-service-panel="dotnet" hidden>
-            <div>
-              <span>For backend-heavy work</span>
-              <h3>Build or improve .NET systems.</h3>
-              <p>C# APIs, permissions, reporting, SQL databases, admin tools, integrations and support for existing codebases.</p>
+            <div class="case-item case-item--note">
+              <span class="case-year">2026</span>
+              <h3>Genlix</h3>
+              <p>B2B website for premium meat, poultry, beer and water delivered directly to Belarus.</p>
             </div>
-            <ul>
-              <li>.NET / C# backend architecture</li>
-              <li>Legacy support, refactoring and feature delivery</li>
-              <li>Document, approval and reporting workflows</li>
-            </ul>
-          </div>
-          <div class="service-panel" role="tabpanel" data-service-panel="ai" hidden>
-            <div>
-              <span>For automation</span>
-              <h3>Use AI where it removes routine work.</h3>
-              <p>Support chat, internal knowledge assistant, document parser, lead qualification bot and CRM/workflow sync.</p>
+          </a>
+
+          <a class="case-row case-row--reverse" href="./cases/ossnova.html">
+            <div class="case-card case-card--tone-2">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 02</span>
+                  <span class="case-year">2026</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/ossnova-real/ossnova_hero.jpg?v=20260912-ossnova" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Medical technologies for Belarus</span>
+                  <h3>OSSNOVA</h3>
+                </div>
+              </div>
             </div>
-            <ul>
-              <li>RAG over company documents and SOPs</li>
-              <li>Telegram/web chat interfaces</li>
-              <li>Logs, handoff and privacy rules</li>
-            </ul>
-          </div>
-          <div class="service-panel" role="tabpanel" data-service-panel="mobile" hidden>
-            <div>
-              <span>For mobile products</span>
-              <h3>Ship production iOS and Android apps.</h3>
-              <p>React Native apps with API integration, auth, files, camera/media, offline states, store releases and support.</p>
+            <div class="case-item case-item--note">
+              <span class="case-year">2026</span>
+              <h3>OSSNOVA</h3>
+              <p>Corporate site for medical equipment import: ophthalmology, cardiology, coverage map and request.</p>
             </div>
-            <ul>
-              <li>Greenfield apps and existing app support</li>
-              <li>App Store and Google Play delivery</li>
-              <li>Real cases in finance, enterprise, HR, automotive and nutrition</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+          </a>
 
-      <section class="band dark-band" id="fit">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">Best fit</p>
-          <h2>Useful when the business task is clear, but the product path is not.</h2>
-          <p>
-            We work well with founders, small teams and companies that need senior implementation without a heavy agency process.
-          </p>
-        </div>
-        <div class="fit-grid">
-          <article><span>01</span><h3>Founders with MVP ideas</h3><p>Need a first version fast enough to test demand, pitch, sell or show to early users.</p></article>
-          <article><span>02</span><h3>Teams buried in manual work</h3><p>CRM updates, documents, reports, support chats and repeated tasks slow the team down.</p></article>
-          <article><span>03</span><h3>Agencies without backend depth</h3><p>White-label development for design, marketing or no-code teams that need reliable engineering behind them.</p></article>
-          <article><span>04</span><h3>Product teams that need capacity</h3><p>Support, optimization and feature delivery across .NET, mobile apps and internal workflows.</p></article>
-        </div>
-      </section>
+          <a class="case-row" href="./cases/vows.html">
+            <div class="case-card case-card--tone-3">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 02</span>
+                  <span class="case-year">2026</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/vows-real/vows_hero.jpg" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Wedding invitation app</span>
+                  <h3>VOWS</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2026</span>
+              <h3>VOWS</h3>
+              <p>Constructor for the bride, guest RSVP journey, dress code, location, timeline and reminders.</p>
+            </div>
+          </a>
 
-      <section class="band white" id="cases">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">Cases</p>
-          <h2>Cases from mobile apps, websites, enterprise tools and operations.</h2>
-          <p>
-            These projects show mobile delivery, e-commerce and service websites, document-heavy enterprise work, admin flows, integrations and product UX.
-          </p>
-        </div>
-
-        <div class="case-list">
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="ypa" aria-label="Open YPA Finance screens">
-              <img src="./assets/ypa-product/ypa-dashboard.svg" alt="YPA Finance dashboard preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Finance mobile app</span>
+          <a class="case-row case-row--reverse" href="./cases/ypa.html">
+            <div class="case-card case-card--tone-4">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 03</span>
+                  <span class="case-year">2025</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/ypa-real/ypa_hero.jpg?v=20260912-gen" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Finance mobile app</span>
+                  <h3>YPA Finance</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2025</span>
               <h3>YPA Finance</h3>
-              <p>
-                Dashboard, AI money coach, budget, debt payoff, alerts and credit insights.
-              </p>
+              <p>AI assistants, profile, credit score, debt calculator, feedback and budget.</p>
             </div>
-            <div class="tags"><span>React Native</span><span>AI coach</span><span>Fintech</span></div>
-          </article>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="rutilus" aria-label="Open Rutilus screens">
-              <img src="./assets/rutilus-real/rutilus-02.jpg" alt="Rutilus document workflow preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Enterprise document workflows</span>
-              <h3>Rutilus / Norilsk Nickel</h3>
-              <p>
-                Enterprise app work: PIN access, assignments, search, deadlines and large document volumes.
-              </p>
+          <a class="case-row" href="./cases/iqbattle.html">
+            <div class="case-card case-card--tone-1">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 04</span>
+                  <span class="case-year">2024</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/iqbattle-real/iqbattle_hero.jpg" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Quiz nights in Moscow bars</span>
+                  <h3>IQ Battle</h3>
+                </div>
+              </div>
             </div>
-            <div class="tags"><span>Enterprise</span><span>Documents</span><span>Performance</span></div>
-          </article>
+            <div class="case-item case-item--note">
+              <span class="case-year">2024</span>
+              <h3>IQ Battle</h3>
+              <p>Bar quiz schedule, corporate events, birthday quiz, rules and team rating.</p>
+            </div>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="demetra" aria-label="Open Demetra screens">
-              <img src="./assets/demetra-real/demetra-preview.png" alt="Demetra mobile app preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Agribusiness / sales operations</span>
+          <a class="case-row case-row--reverse" href="./cases/demetra.html">
+            <div class="case-card case-card--tone-2">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 04</span>
+                  <span class="case-year">2024</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/demetra-real/demetra_hero.webp" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Agribusiness / sales operations</span>
+                  <h3>Demetra</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2024</span>
               <h3>Demetra</h3>
-              <p>
-                Mobile catalog, sales flow and order screens for a B2B product.
-              </p>
+              <p>Mobile catalog, sales flow and order screens for a B2B product.</p>
             </div>
-            <div class="tags"><span>B2B</span><span>Catalog</span><span>Admin</span></div>
-          </article>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="empiflow" aria-label="Open Empiflow screens">
-              <img src="./assets/empiflow-real/empiflow-preview.png" alt="Empiflow onboarding app preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Employee onboarding platform</span>
-              <h3>Empiflow</h3>
-              <p>
-                Onboarding tracks, learning states, dashboard, document library and progress screens.
-              </p>
+          <a class="case-row" href="./cases/auto.html">
+            <div class="case-card case-card--tone-3">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 05</span>
+                  <span class="case-year">2024</span>
+                </div>
+                <div class="case-card__media">
+                  <img src="./assets/auto-real/auto-01.svg" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Camera, upload and 360 media</span>
+                  <h3>Auto Dealers Media App</h3>
+                </div>
+              </div>
             </div>
-            <div class="tags"><span>Workflow</span><span>HR tech</span><span>Files</span></div>
-          </article>
-
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="auto" aria-label="Open Auto Dealers screens">
-              <img src="./assets/auto-real/auto-01.svg" alt="Auto dealers media app preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Camera, upload and 360 media</span>
+            <div class="case-item case-item--note">
+              <span class="case-year">2024</span>
               <h3>Auto Dealers Media App</h3>
-              <p>
-                Cross-platform app for photos, video, upload queues, listing details and Theta 360 media.
-              </p>
+              <p>Cross-platform app for photos, video, upload queues, listing details and Theta 360 media.</p>
             </div>
-            <div class="tags"><span>Camera</span><span>Media</span><span>Device</span></div>
-          </article>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="smarteat" aria-label="Open SmartEat screens">
-              <img src="./assets/smarteat-real/smarteat-02.png" alt="SmartEat mobile app preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Nutrition and meal tracking</span>
+          <a class="case-row case-row--reverse" href="./cases/smarteat.html">
+            <div class="case-card case-card--tone-4">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 06</span>
+                  <span class="case-year">2024</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/smarteat-real/smarteat_hero.jpg?v=20260912-smarteat" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Nutrition and meal tracking</span>
+                  <h3>SmartEat</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2024</span>
               <h3>SmartEat</h3>
               <p>Meal flows, food search, forms, validation, diary, profile and API-driven mobile product screens.</p>
             </div>
-            <div class="tags"><span>Forms</span><span>API</span><span>Mobile</span></div>
-          </article>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="altay" aria-label="Open Altai Restart screens">
-              <img src="./assets/altay-real/altay-preview.png" alt="Altai Restart resort website preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Resort and hotel website</span>
-              <h3>Altai Restart</h3>
-              <p>Premium resort website with room booking, category cards, gallery and booking CTA.</p>
+          <a class="case-row" href="./cases/asgard.html">
+            <div class="case-card case-card--tone-1">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 07</span>
+                  <span class="case-year">2024</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/asgard-real/asgard_hero.jpg?v=20260912-asgard" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Mining equipment store</span>
+                  <h3>ASGARD</h3>
+                </div>
+              </div>
             </div>
-            <div class="tags"><span>UX/UI</span><span>Hospitality</span><span>Web</span></div>
-          </article>
-
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="asgard" aria-label="Open ASGARD screens">
-              <img src="./assets/asgard-real/asgard-preview.png" alt="ASGARD mining equipment store preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Mining equipment store</span>
+            <div class="case-item case-item--note">
+              <span class="case-year">2024</span>
               <h3>ASGARD</h3>
               <p>E-commerce for ASIC miners with catalog, product specs, leasing blocks and service pages.</p>
             </div>
-            <div class="tags"><span>E-commerce</span><span>Catalog</span><span>Web</span></div>
-          </article>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="ekbdoma" aria-label="Open Invest Stroy screens">
-              <img src="./assets/ekbdoma-real/ekbdoma-preview.png" alt="Invest Stroy construction website preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">House construction website</span>
+          <a class="case-row case-row--reverse" href="./cases/ultra.html">
+            <div class="case-card case-card--tone-2">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 08</span>
+                  <span class="case-year">2024</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/ultra-real/ultra_hero.jpg?v=20260912-photo" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Premium chauffeur marketplace</span>
+                  <h3>Ultra Drivers</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2024</span>
+              <h3>Ultra Drivers</h3>
+              <p>Clients rent a business-class car with a driver; chauffeurs register, upload documents and publish their cars.</p>
+            </div>
+          </a>
+
+          <a class="case-row" href="./cases/rutilus.html">
+            <div class="case-card case-card--tone-3">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 09</span>
+                  <span class="case-year">2023</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/rutilus-real/rutilus_hero.jpg?v=20260912-rutilus" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Enterprise document workflows</span>
+                  <h3>Rutilus / Norilsk Nickel</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2023</span>
+              <h3>Rutilus / Norilsk Nickel</h3>
+              <p>Enterprise app work: PIN access, assignments, search, deadlines and large document volumes.</p>
+            </div>
+          </a>
+
+          <a class="case-row case-row--reverse" href="./cases/empiflow.html">
+            <div class="case-card case-card--tone-4">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 10</span>
+                  <span class="case-year">2023</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/empiflow-real/empiflow-preview.png" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Employee onboarding platform</span>
+                  <h3>Empiflow</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2023</span>
+              <h3>Empiflow</h3>
+              <p>Onboarding tracks, learning states, dashboard, document library and progress screens.</p>
+            </div>
+          </a>
+
+          <a class="case-row" href="./cases/altay.html">
+            <div class="case-card case-card--tone-1">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 11</span>
+                  <span class="case-year">2023</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/altay-real/altay-preview.png" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Resort and hotel website</span>
+                  <h3>Altai Restart</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2023</span>
+              <h3>Altai Restart</h3>
+              <p>Premium resort website with room booking, category cards, gallery and booking CTA.</p>
+            </div>
+          </a>
+
+          <a class="case-row case-row--reverse" href="./cases/ekbdoma.html">
+            <div class="case-card case-card--tone-2">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 12</span>
+                  <span class="case-year">2023</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/ekbdoma-real/ekbdoma_hero.jpg?v=20260912-ekbdoma" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">House construction website</span>
+                  <h3>Invest Stroy</h3>
+                </div>
+              </div>
+            </div>
+            <div class="case-item case-item--note">
+              <span class="case-year">2023</span>
               <h3>Invest Stroy</h3>
               <p>Construction company site with project catalog, house details, specs, pricing and calculator.</p>
             </div>
-            <div class="tags"><span>Real estate</span><span>Catalog</span><span>Web</span></div>
-          </article>
+          </a>
 
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="ultra" aria-label="Open Ultra Drivers screens">
-              <img src="./assets/ultra-real/ultra-preview.png" alt="Ultra Drivers car rental website preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Premium car rental</span>
-              <h3>Ultra Drivers</h3>
-              <p>Business and premium class car rental with a driver.</p>
+          <a class="case-row" href="./cases/vmetal.html">
+            <div class="case-card case-card--tone-3">
+              <div class="case-card__base">
+                <div class="case-card__top">
+                  <span class="case-index">Project 13</span>
+                  <span class="case-year">2023</span>
+                </div>
+                <div class="case-card__media case-card__media--wide">
+                  <img src="./assets/vmetal-real/vmetal_hero.jpg?v=20260912-vmetal" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="case-card__bottom">
+                  <span class="case-meta">Metal products store</span>
+                  <h3>V-METAL</h3>
+                </div>
+              </div>
             </div>
-            <div class="tags"><span>E-commerce</span><span>Fleet</span><span>Web</span></div>
-          </article>
-
-          <article class="case-story">
-            <button class="case-visual" type="button" data-gallery="vmetal" aria-label="Open V-METAL screens">
-              <img src="./assets/vmetal-real/vmetal-preview.png" alt="V-METAL metal products store preview" loading="lazy" decoding="async" />
-            </button>
-            <div>
-              <span class="case-meta">Metal products store</span>
+            <div class="case-item case-item--note">
+              <span class="case-year">2023</span>
               <h3>V-METAL</h3>
               <p>Industrial e-commerce with catalog, product configurator, cart and order process pages.</p>
             </div>
-            <div class="tags"><span>E-commerce</span><span>B2B</span><span>Web</span></div>
-          </article>
+          </a>
+
         </div>
       </section>
 
-      <section class="band" id="ai">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">AI assistants and chatbots</p>
-          <h2>AI is useful when the workflow is clear.</h2>
-          <p>
-            We define what the assistant should do, what data it can use, when it hands off to a person and how the result is logged.
-          </p>
-        </div>
-        <div class="ai-grid">
-          <article>
-            <span>01</span>
-            <h3>Support chatbot</h3>
-            <p>Answers client questions, triages requests, creates tickets and hands off to humans with context.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Knowledge assistant</h3>
-            <p>Searches company docs, policies, CRM notes and SOPs with source-backed answers.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Document parser</h3>
-            <p>Extracts data from invoices, contracts, statements and forms; turns documents into actions.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Sales lead bot</h3>
-            <p>Qualifies leads, asks the right questions, updates CRM and prepares the next step.</p>
-          </article>
-        </div>
-        <div class="ai-console" aria-label="AI assistant demo">
-          <div class="console-sidebar">
-            <span>Live scenario</span>
-            <button class="is-active" type="button" data-ai-scenario="support">Support</button>
-            <button type="button" data-ai-scenario="docs">Documents</button>
-            <button type="button" data-ai-scenario="sales">Sales</button>
-          </div>
-          <div class="console-chat">
-            <div class="console-message user" data-ai-user>Can you qualify this lead and update CRM?</div>
-            <div class="console-message assistant" data-ai-answer>
-              Lead looks qualified. Budget range, timeline and integration needs are detected. Next step: schedule a discovery call.
-            </div>
-            <div class="console-status">
-              <span data-ai-status>CRM draft created</span>
-              <span>Human handoff ready</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band white" id="expertise">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">Capabilities</p>
-          <h2>A team for product, engineering, launch and support.</h2>
-          <p>
-            We combine design, development, automation, SEO, analytics, QA and maintenance in one delivery track.
-          </p>
-        </div>
-        <div class="expertise-grid">
-          <article><h3>Product and design</h3><p>UX/UI, prototypes, design systems, landing pages, conversion copy and launch materials.</p></article>
-          <article><h3>Engineering</h3><p>C# / .NET, Node.js, React, React Native, databases, integrations, admin panels and APIs.</p></article>
-          <article><h3>AI, SEO and analytics</h3><p>AI assistants, chatbots, RAG, technical SEO, AI SEO, structured data, analytics and CRM sync.</p></article>
-          <article><h3>QA and support</h3><p>Testing, code review, deployment, monitoring, maintenance and warranty fixes for agreed scope.</p></article>
-        </div>
-      </section>
-
-      <section class="band" id="process">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">Development process</p>
-          <h2>A simple process from idea to support.</h2>
-          <p>
-            Every stage ends with something concrete: scope, prototype, working build, launch checklist, SEO setup or support plan.
-          </p>
-        </div>
-        <div class="process-grid">
-          <article><span>01</span><h3>Understand the task</h3><p>Goal, users, business rules, audience, data, constraints and existing systems.</p></article>
-          <article><span>02</span><h3>Design the solution</h3><p>UX/UI, prototype, content structure, SEO basics, architecture, milestones and estimate.</p></article>
-          <article><span>03</span><h3>Build and check</h3><p>Backend, frontend, mobile, AI, integrations, admin tools, QA and regular demos.</p></article>
-          <article><span>04</span><h3>Launch and support</h3><p>Deployment, analytics, SEO/AI SEO checks, documentation, monitoring and support.</p></article>
-        </div>
-        <div class="comparison" aria-label="Studio comparison">
-          <div class="comparison-row comparison-head">
-            <span>Project format</span>
-            <span>Studio</span>
-            <span>Freelancer</span>
-            <span>Big agency</span>
-          </div>
-          <div class="comparison-row"><span>Design, development, SEO and support in one track</span><strong>Yes</strong><span>Partial</span><span>Often split</span></div>
-          <div class="comparison-row"><span>Fast MVP without heavy process</span><strong>Yes</strong><span>Depends</span><span>Usually slow</span></div>
-          <div class="comparison-row"><span>Backend, AI and integration depth</span><strong>.NET + Node + AI</strong><span>Varies</span><span>Yes</span></div>
-          <div class="comparison-row"><span>QA, release support and warranty fixes</span><strong>Yes</strong><span>Varies</span><span>Often extra</span></div>
-        </div>
-      </section>
-
-      <section class="band white" id="packages">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">Starting points</p>
-          <h2>Pick the closest starting point.</h2>
-          <p>
-            After a short brief, we will scope the next useful step.
-          </p>
-        </div>
-        <div class="package-grid">
-          <article>
-            <span>MVP</span>
-            <h3>First working release</h3>
-            <p>Scope, prototype, backend, app/web interface and launch checklist.</p>
-            <a href="#brief">Build a brief</a>
-          </article>
-          <article>
-            <span>.NET backend</span>
-            <h3>C# systems and integrations</h3>
-            <p>APIs, SQL, auth, reporting, admin tools and existing codebase support.</p>
-            <a href="#brief">Describe backend</a>
-          </article>
-          <article>
-            <span>AI assistant</span>
-            <h3>Automation for one clear workflow</h3>
-            <p>Chat, RAG, document parsing, CRM sync and human handoff.</p>
-            <a href="#brief">Describe AI workflow</a>
-          </article>
-          <article>
-            <span>Design + SEO launch</span>
-            <h3>Product packaging and visibility</h3>
-            <p>UX/UI, landing copy, service pages, SEO, AI SEO, analytics and launch materials.</p>
-            <a href="#brief">Plan launch</a>
-          </article>
-          <article>
-            <span>Mobile app</span>
-            <h3>React Native production app</h3>
-            <p>iOS/Android app delivery, release support, performance and maintenance.</p>
-            <a href="#brief">Start mobile scope</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="band" id="brief">
-        <div class="brief-builder">
-          <div class="section-heading">
-            <p class="eyebrow">Project brief</p>
-            <h2>Create a short project note.</h2>
-            <p>
-              Choose a few options and send a useful first message.
-            </p>
-          </div>
-          <div class="brief-card">
-            <div class="brief-step">
-              <span>01</span>
-              <h3>What do you need?</h3>
-              <div class="choice-row" data-brief-group="type">
-                <button type="button" data-brief-choice="MVP">MVP</button>
-                <button type="button" data-brief-choice=".NET backend">.NET backend</button>
-                <button type="button" data-brief-choice="AI assistant">AI assistant</button>
-                <button type="button" data-brief-choice="Design + SEO">Design + SEO</button>
-                <button type="button" data-brief-choice="Mobile app">Mobile app</button>
-              </div>
-            </div>
-            <div class="brief-step">
-              <span>02</span>
-              <h3>What is the stage?</h3>
-              <div class="choice-row" data-brief-group="stage">
-                <button type="button" data-brief-choice="Idea">Idea</button>
-                <button type="button" data-brief-choice="Design ready">Design ready</button>
-                <button type="button" data-brief-choice="Existing codebase">Existing codebase</button>
-              </div>
-            </div>
-            <div class="brief-step">
-              <span>03</span>
-              <h3>Timeline</h3>
-              <div class="choice-row" data-brief-group="timeline">
-                <button type="button" data-brief-choice="2-4 weeks">2-4 weeks</button>
-                <button type="button" data-brief-choice="1-2 months">1-2 months</button>
-                <button type="button" data-brief-choice="Flexible">Flexible</button>
-              </div>
-            </div>
-            <div class="brief-result">
-              <span>Your draft</span>
-              <p data-brief-output>Project type, stage and timeline will appear here.</p>
-              <button class="button primary" type="button" data-brief-mail>Add to contact form</button>
-              <p class="brief-status" data-brief-status aria-live="polite"></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band white" id="faq">
-        <div class="section-heading wide-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>Questions clients usually ask before the first call.</h2>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>How do we choose the right service?</summary>
-            <p>We start with the goal and current process. Then we suggest the closest scope: MVP, backend, mobile app, AI automation or support.</p>
-          </details>
-          <details>
-            <summary>Do you have experience in my industry?</summary>
-            <p>The portfolio includes finance, enterprise workflows, agribusiness, HR, automotive media and nutrition. For a new niche, we first map the process.</p>
-          </details>
-          <details>
-            <summary>Can you build a product end to end?</summary>
-            <p>Yes. We can cover brief, UX/UI logic, backend, mobile or web interface, integrations, testing, release and support.</p>
-          </details>
-          <details>
-            <summary>Can you build an AI assistant or chatbot for a website?</summary>
-            <p>Yes. We can build support chatbots, lead bots, document assistants and private AI assistants connected to CRM, Telegram or an internal system.</p>
-          </details>
-          <details>
-            <summary>Can you improve an existing .NET or Node.js project?</summary>
-            <p>Yes. We can review the codebase, stabilize the backend, add integrations, improve performance and ship new features in stages.</p>
-          </details>
-          <details>
-            <summary>Can you help with design, marketing and SEO?</summary>
-            <p>Yes. We can prepare UX/UI, landing pages, launch copy, analytics, technical SEO, structured data and AI-readable content.</p>
-          </details>
-          <details>
-            <summary>Do you provide QA, support and warranty?</summary>
-            <p>Yes. We test core scenarios, support the release, monitor issues and fix agreed bugs during the warranty period.</p>
-          </details>
-          <details>
-            <summary>How does estimation work?</summary>
-            <p>We split the project into stages and estimate the nearest delivery step first. The roadmap expands after the first scope is clear.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="cta contact-section" id="contact">
-        <div class="contact-wrap">
-          <div class="contact-copy">
-            <p class="eyebrow" data-contact-eyebrow>Contact</p>
-            <h2 data-contact-title>Tell us what you want to build.</h2>
-            <p data-contact-body>
-              Send your contacts and a short task description. We can discuss development, design, SEO, AI automation, QA or long-term support.
-            </p>
-            <div class="contact-links">
-              <a class="button secondary" href="https://t.me/jackkorlive" target="_blank" rel="noreferrer" data-contact-action>Telegram</a>
-              <a class="button secondary" href="mailto:localmindstudio@gmail.com" data-contact-action>Email</a>
-            </div>
-            <div class="contact-details">
-              <div>
-                <span data-contact-detail-label>Telegram</span>
-                <strong>@jackkorlive</strong>
-              </div>
-              <div>
-                <span data-contact-detail-label>Email</span>
-                <strong>localmindstudio@gmail.com</strong>
-              </div>
-            </div>
-          </div>
-
-          <form class="call-form" action="https://formspree.io/f/xykawple" method="POST" enctype="multipart/form-data" data-call-form>
-            <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <div class="form-head">
-              <p class="eyebrow" data-form-eyebrow>Request a call</p>
-              <h3 data-form-title>Leave your contacts and project details.</h3>
-              <p data-form-body>A short request is enough. We will reply with questions or a call time.</p>
-            </div>
-
-            <div class="form-grid">
-              <label class="field">
-                <span data-form-label="name">Name</span>
-                <input name="name" type="text" autocomplete="name" placeholder="Your name" data-form-placeholder="name" required />
-              </label>
-              <label class="field">
-                <span data-form-label="contact">Phone, Telegram or email</span>
-                <input name="contact" type="text" autocomplete="email" placeholder="+375..., @telegram or email" data-form-placeholder="contact" required />
-              </label>
-              <label class="field">
-                <span data-form-label="project">Project type</span>
-                <select name="project" data-form-project required>
-                  <option value="" data-form-project-option>Choose one</option>
-                  <option value="mvp" data-form-project-option>MVP / first release</option>
-                  <option value="dotnet" data-form-project-option>.NET / backend</option>
-                  <option value="ai" data-form-project-option>AI assistant</option>
-                  <option value="mobile" data-form-project-option>Mobile app</option>
-                  <option value="design-seo" data-form-project-option>Design / SEO / marketing</option>
-                  <option value="support" data-form-project-option>Support / QA</option>
-                </select>
-              </label>
-              <label class="field">
-                <span data-form-label="timeline">Timeline</span>
-                <select name="timeline" data-form-timeline>
-                  <option value="" data-form-timeline-option>Not sure yet</option>
-                  <option value="soon" data-form-timeline-option>As soon as possible</option>
-                  <option value="month" data-form-timeline-option>Within a month</option>
-                  <option value="quarter" data-form-timeline-option>This quarter</option>
-                  <option value="flexible" data-form-timeline-option>Flexible</option>
-                </select>
-              </label>
-              <label class="field">
-                <span data-form-label="budget">Budget guide</span>
-                <select name="budget" data-form-budget>
-                  <option value="" data-form-budget-option>Need an estimate</option>
-                  <option value="under-2k" data-form-budget-option>Up to $2,000</option>
-                  <option value="2k-10k" data-form-budget-option>$2,000-10,000</option>
-                  <option value="10k-50k" data-form-budget-option>$10,000-50,000</option>
-                  <option value="50k-plus" data-form-budget-option>$50,000+</option>
-                </select>
-              </label>
-              <div class="field contact-method-field">
-                <span data-form-label="channel">Preferred contact</span>
-                <div class="contact-methods">
-                  <label><input type="radio" name="channel" value="phone" checked /><span data-form-channel-label>Phone</span></label>
-                  <label><input type="radio" name="channel" value="telegram" /><span data-form-channel-label>Telegram</span></label>
-                  <label><input type="radio" name="channel" value="email" /><span data-form-channel-label>Email</span></label>
-                </div>
-              </div>
-              <label class="field full">
-                <span data-form-label="details">Task details</span>
-                <textarea name="details" rows="5" placeholder="A few words about the product, users, current stage or links." data-form-placeholder="details"></textarea>
-              </label>
-              <label class="field full file-field">
-                <span data-form-label="file">File or brief</span>
-                <span class="file-picker">
-                  <input name="attachments" type="file" multiple />
-                  <span data-form-file-button>Attach file</span>
+      <section class="band white competencies-band" id="competencies" aria-label="Studio competencies">
+        <div class="competencies">
+          <h2 class="competencies__title" data-competencies-title>Our competencies</h2>
+          <div class="competencies__stack">
+            <div class="competencies-row">
+              <article class="competency-card">
+                <span class="competency-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="48" height="48">
+                    <circle cx="24" cy="11" r="7.5" fill="currentColor" />
+                    <circle cx="24" cy="37" r="7.5" fill="currentColor" />
+                    <circle cx="11" cy="24" r="7.5" fill="currentColor" />
+                    <circle cx="37" cy="24" r="7.5" fill="currentColor" />
+                  </svg>
                 </span>
-                <em data-file-name>No file selected</em>
-              </label>
-              <label class="consent full">
-                <input name="consent" type="checkbox" required />
-                <span data-form-consent>I agree to be contacted about this request.</span>
-              </label>
+                <h3>Mobile development</h3>
+                <p>We build iOS and Android apps on React Native — from the first flow to store release.</p>
+                <a class="competency-card__more" href="#contact"><span class="competency-card__more-label">Learn more</span> <span aria-hidden="true">↗</span></a>
+              </article>
+              <article class="competency-card">
+                <span class="competency-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="currentColor" d="M10 8h16c7.2 0 13 5.8 13 13s-5.8 13-13 13H18v6H10V8Zm16 8H18v10h8c3.3 0 6-2.7 6-6s-2.7-6-6-6Z" />
+                  </svg>
+                </span>
+                <h3>SEO and AI search</h3>
+                <p>We help pages reach the top and bring traffic that converts — for people and AI search.</p>
+                <a class="competency-card__more" href="#contact"><span class="competency-card__more-label">Learn more</span> <span aria-hidden="true">↗</span></a>
+              </article>
+            </div>
+            <div class="competencies-row">
+              <article class="competency-card">
+                <span class="competency-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="48" height="48">
+                    <rect x="7" y="7" width="20" height="20" rx="4" fill="currentColor" />
+                    <circle cx="33" cy="33" r="11" fill="currentColor" />
+                  </svg>
+                </span>
+                <h3>Product design</h3>
+                <p>We design exact flows and interfaces that make the product clear to use.</p>
+                <a class="competency-card__more" href="#contact"><span class="competency-card__more-label">Learn more</span> <span aria-hidden="true">↗</span></a>
+              </article>
+              <article class="competency-card">
+                <span class="competency-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="currentColor" d="M24 4 8 20h10v24h12V20h10L24 4Z" />
+                  </svg>
+                </span>
+                <h3>Engineering and analytics</h3>
+                <p>We integrate, build backends, program AI assistants and ship working products.</p>
+                <a class="competency-card__more" href="#contact"><span class="competency-card__more-label">Learn more</span> <span aria-hidden="true">↗</span></a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-contact" id="contact">
+        <div class="project-contact__shell">
+          <div class="project-contact__pattern" aria-hidden="true"></div>
+          <div class="project-contact__panel">
+            <div class="project-contact__intro">
+              <h2 data-contact-title>Do you have a project?</h2>
+              <p data-contact-body>
+                Great! We are ready to discuss the most unusual tasks and find a solution.
+              </p>
             </div>
 
-            <div class="form-actions">
-              <button class="button primary" type="submit" data-form-submit>Send request</button>
-              <p class="form-status" data-form-status aria-live="polite"></p>
-            </div>
-          </form>
+            <form
+              class="project-contact__form"
+              action="https://formspree.io/f/xykawple"
+              method="POST"
+              data-contact-form
+            >
+              <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="project-contact__fields">
+                <label class="project-field">
+                  <span data-form-label="name">Full name*</span>
+                  <input name="name" type="text" autocomplete="name" required />
+                </label>
+                <label class="project-field">
+                  <span data-form-label="email">Email address*</span>
+                  <input name="email" type="email" autocomplete="email" required />
+                </label>
+                <label class="project-field project-field--full">
+                  <span data-form-label="website">Website link</span>
+                  <input name="website" type="url" autocomplete="url" inputmode="url" />
+                </label>
+                <label class="project-field project-field--full">
+                  <span data-form-label="message">How can we help you*</span>
+                  <textarea name="message" rows="4" required></textarea>
+                </label>
+              </div>
+
+              <div class="project-contact__actions">
+                <button class="project-contact__submit" type="submit" data-form-submit>Send</button>
+                <p class="project-contact__status" data-form-status aria-live="polite"></p>
+                <a class="project-contact__top" href="#top" data-contact-top aria-label="Back to top">
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -1082,25 +880,6 @@
         <a class="footer-subtle-link" href="./partners.html" data-footer-partners>Партнерам</a>
       </div>
     </footer>
-
-    <dialog class="gallery-modal" id="screen-gallery" aria-labelledby="gallery-title">
-      <div class="gallery-shell">
-        <div class="gallery-header">
-          <div>
-            <p class="eyebrow">Gallery</p>
-            <h2 id="gallery-title">App screens</h2>
-            <p id="gallery-note">Screens for the selected case.</p>
-          </div>
-          <button class="gallery-close" type="button" data-gallery-close aria-label="Close gallery">Close</button>
-        </div>
-        <div class="swiper gallery-swiper">
-          <div class="swiper-wrapper" id="gallery-wrapper"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-    </dialog>
-    <script src="./studio.js?v=20260615-perf-pass"></script>
+    <script src="./studio.js?v=20260912-ossnova"></script>
   </body>
 </html>

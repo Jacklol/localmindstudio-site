@@ -45,16 +45,20 @@ LocalMind Studio has a partner page for designers, marketers, no-code studios, W
 
 ## Cases
 
-- YPA Finance: React Native finance app with dashboard, AI money coach, budget planning, debt payoff, alerts and credit insights.
-- Rutilus / Norilsk Nickel: enterprise document workflow app with PIN access, assignments, search, deadlines and large document volumes.
+- Genlix: B2B website for premium meat, poultry, beer and water supplies delivered directly to Belarus for HoReCa and retail.
+- OSSNOVA: corporate website for medical equipment import to Belarus — ophthalmology, cardiology, coverage map, knowledge base and request form (https://ossnovagroup.com/).
+- VOWS: mobile wedding invitation constructor with a bride builder, guest RSVP journey, dress code, location, timeline and reminders.
+- YPA Finance: React Native finance app with AI assistants, profile, credit score, debt calculator, feedback and budget.
+- IQ Battle: quiz website for bar games in Moscow — schedule and sign-up, corporate quizzes, birthday events, rules and team rating.
 - Demetra: mobile catalog and B2B sales/order flows for agribusiness.
-- Empiflow: employee onboarding app with learning tracks, dashboard, document library and progress states.
 - Auto Dealers Media App: cross-platform app for photos, video, upload queues, listing details and Theta 360 media.
 - SmartEat: nutrition app with food search, meal flows, validation, diary, profile and API-driven mobile screens.
-- Altai Restart: premium resort and hotel website with room booking, category cards and gallery.
 - ASGARD: e-commerce website for ASIC mining equipment with catalog, product specs and leasing.
+- Ultra Drivers: chauffeur marketplace where clients rent a premium car with a driver, and drivers register, upload documents and publish cars after moderation.
+- Rutilus / Norilsk Nickel: enterprise document workflow app with PIN access, assignments, search, deadlines and large document volumes.
+- Empiflow: employee onboarding app with learning tracks, dashboard, document library and progress states.
+- Altai Restart: premium resort and hotel website with room booking, category cards and gallery.
 - Invest Stroy: construction company website with house project catalog, specs, pricing and calculator.
-- Ultra Drivers: premium and business car rental website with fleet catalog, filters and booking flow.
 - V-METAL: industrial e-commerce for metal products with catalog, product configurator and order flow.
 
 ## Technology
