@@ -1425,7 +1425,7 @@ function applyCasePage(language) {
         const asset = caseAssetPath(src.replace(/^\.\//, ""));
         return `
           <figure class="case-slider__slide${isWide ? " case-slider__slide--wide" : ""}${isFull ? " case-slider__slide--full" : ""}">
-            <img src="${asset}" alt="${screenLabel}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async" />
+            <img src="${asset}" alt="${screenLabel}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async" draggable="false" />
           </figure>
         `;
       })
@@ -2019,6 +2019,13 @@ function setupCaseSlider(root, ui) {
   const isFull = slides.some((slide) => slide.classList.contains("case-slider__slide--full"));
   let activeIndex = 0;
 
+  function offsetForIndex(index) {
+    const slide = slides[index];
+    if (!slide) return 0;
+    if (isFull) return index * viewport.clientWidth;
+    return slide.offsetLeft - (viewport.clientWidth - slide.clientWidth) / 2;
+  }
+
   function syncFullSlideWidths() {
     if (!isFull) return;
     const width = viewport.clientWidth;
@@ -2030,9 +2037,7 @@ function setupCaseSlider(root, ui) {
 
   function renderSlider() {
     syncFullSlideWidths();
-    const slide = slides[activeIndex];
-    const offset = isFull ? activeIndex * viewport.clientWidth : slide.offsetLeft - (viewport.clientWidth - slide.clientWidth) / 2;
-    track.style.transform = `translateX(${-offset}px)`;
+    track.style.transform = `translateX(${-offsetForIndex(activeIndex)}px)`;
     counter.textContent = `${activeIndex + 1} / ${slides.length}`;
     prevButton.disabled = activeIndex === 0;
     nextButton.disabled = activeIndex === slides.length - 1;
@@ -2057,6 +2062,88 @@ function setupCaseSlider(root, ui) {
     },
     { signal },
   );
+
+  if (slides.length > 1) {
+    let pointerId = null;
+    let startX = 0;
+    let startY = 0;
+    let startOffset = 0;
+    let dragging = false;
+    let axis = null;
+
+    function stopDrag(event) {
+      if (pointerId !== event.pointerId) return;
+      const dx = event.clientX - startX;
+      pointerId = null;
+      viewport.classList.remove("is-dragging");
+      if (!dragging) {
+        axis = null;
+        return;
+      }
+      dragging = false;
+      axis = null;
+
+      const visual = startOffset - dx;
+      let nearest = activeIndex;
+      let best = Infinity;
+      slides.forEach((_, index) => {
+        const distance = Math.abs(offsetForIndex(index) - visual);
+        if (distance < best) {
+          best = distance;
+          nearest = index;
+        }
+      });
+      if (nearest === activeIndex && Math.abs(dx) > 56) {
+        nearest = dx < 0 ? Math.min(slides.length - 1, activeIndex + 1) : Math.max(0, activeIndex - 1);
+      }
+      activeIndex = nearest;
+      renderSlider();
+    }
+
+    viewport.addEventListener(
+      "pointerdown",
+      (event) => {
+        if (event.pointerType === "mouse" && event.button !== 0) return;
+        pointerId = event.pointerId;
+        startX = event.clientX;
+        startY = event.clientY;
+        startOffset = offsetForIndex(activeIndex);
+        dragging = false;
+        axis = null;
+        viewport.setPointerCapture(event.pointerId);
+      },
+      { signal },
+    );
+
+    viewport.addEventListener(
+      "pointermove",
+      (event) => {
+        if (pointerId !== event.pointerId) return;
+        const dx = event.clientX - startX;
+        const dy = event.clientY - startY;
+        if (!axis) {
+          if (Math.hypot(dx, dy) < 8) return;
+          axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+          if (axis === "x") {
+            dragging = true;
+            viewport.classList.add("is-dragging");
+          }
+        }
+        if (axis !== "x") return;
+        const first = offsetForIndex(0);
+        const last = offsetForIndex(slides.length - 1);
+        let next = startOffset - dx;
+        if (next < first) next = first - (first - next) * 0.28;
+        if (next > last) next = last + (next - last) * 0.28;
+        track.style.transform = `translateX(${-next}px)`;
+      },
+      { signal },
+    );
+
+    viewport.addEventListener("pointerup", stopDrag, { signal });
+    viewport.addEventListener("pointercancel", stopDrag, { signal });
+    viewport.addEventListener("dragstart", (event) => event.preventDefault(), { signal });
+  }
 
   window.addEventListener(
     "resize",

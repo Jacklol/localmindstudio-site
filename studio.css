@@ -2704,6 +2704,17 @@ html:has(.case-page) {
   border-radius: 28px;
   background: var(--white);
   border: 1px solid var(--line);
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.case-slider__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.case-slider__viewport.is-dragging .case-slider__track {
+  transition: none;
 }
 
 .case-slider__viewport--full {
@@ -2749,6 +2760,8 @@ html:has(.case-page) {
   object-fit: contain;
   object-position: center;
   background: #fff;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .case-slider__slide--wide img {
