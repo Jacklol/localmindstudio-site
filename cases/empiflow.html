@@ -25,7 +25,7 @@
         document.documentElement.dataset.palette = allowed.indexOf(value) >= 0 ? value : "sage";
       })();
     </script>
-    <link rel="stylesheet" href="../studio.css?v=20260912-light" />
+    <link rel="stylesheet" href="../studio.css?v=20260912-logo" />
   </head>
   <body class="case-page" data-case-slug="empiflow">
     <nav class="nav is-scrolled case-nav" aria-label="Case navigation">
@@ -43,7 +43,7 @@
           <button type="button" data-lang-switch="en">EN</button>
           <button type="button" data-lang-switch="ru">RU</button>
         </div>
-        <a class="nav-call" href="../index.html#contact">Request a call</a>
+        <a class="nav-call" href="../index.html#contact" data-open-contact>Request a call</a>
       </div>
     </nav>
 
@@ -126,15 +126,23 @@
     </main>
 
     <footer class="footer">
-      <p>LocalMind Studio - AI assistants, chatbots, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, integrations and product support.</p>
-      <div>
-        <a href="mailto:localmindstudio@gmail.com">localmindstudio@gmail.com</a>
-        <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer">@jackkorlive</a>
-        <a href="https://www.linkedin.com/in/evgenii-korzhan-442500195/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="footer-subtle-link" href="../partners.html" data-footer-partners>Partners</a>
+      <div class="footer__main">
+        <div class="footer__brand">
+          <p class="footer__title" data-footer-brand>LocalMind Studio</p>
+          <p class="footer__text" data-footer-copy>
+            We love what we do. What matters to us is that collaboration is useful and pleasant for both sides.
+          </p>
+        </div>
+        <div class="footer__contacts">
+          <p class="footer__title" data-footer-contacts>Contacts</p>
+          <a href="mailto:localmindstudio@gmail.com">localmindstudio@gmail.com</a>
+          <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer">@jackkorlive</a>
+          <a href="../partners.html" data-footer-partners>Partners</a>
+        </div>
       </div>
+      <p class="footer__legal" data-footer-legal>Copyright © 2026 LocalMind Studio</p>
     </footer>
 
-    <script src="../studio.js?v=20260912-cases"></script>
+    <script src="../studio.js?v=20260912-footer"></script>
   </body>
 </html>

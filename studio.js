@@ -923,6 +923,7 @@ const translations = {
         website: "Website link",
         message: "How can we help you*",
       },
+      close: "Close",
       topLabel: "Back to top",
       submit: "Send",
       subject: "New project inquiry",
@@ -930,8 +931,14 @@ const translations = {
       success: "Message sent. We will reply soon.",
       error: "Could not send the message. Please try again or write to Telegram.",
     },
-    footer: "LocalMind Studio - AI assistants, chatbots, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, integrations and product support.",
-    footerPartners: "Partners",
+    footer: {
+      brand: "LocalMind Studio",
+      body: "We love what we do. What matters to us is that collaboration is useful and pleasant for both sides.",
+      contacts: "Contacts",
+      partners: "Partners",
+      home: "Main site",
+      legal: "Copyright © 2026 LocalMind Studio",
+    },
     galleryUi: ["Gallery", "App screens", "Screens for the selected case.", "Close"],
     palette: {
       toggle: "Palette",
@@ -1042,6 +1049,7 @@ const translations = {
         website: "Ссылка на веб-сайт",
         message: "Чем мы можем вам помочь*",
       },
+      close: "Закрыть",
       topLabel: "Наверх",
       submit: "Отправить",
       subject: "Новый проект",
@@ -1049,8 +1057,14 @@ const translations = {
       success: "Сообщение отправлено. Скоро ответим.",
       error: "Не получилось отправить сообщение. Попробуй еще раз или напиши в Telegram.",
     },
-    footer: "LocalMind Studio - AI-ассистенты, чат-боты, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, интеграции и поддержка продуктов.",
-    footerPartners: "Партнерам",
+    footer: {
+      brand: "LocalMind Studio",
+      body: "Мы любим то, что делаем. Для нас важно, чтобы сотрудничество было полезным и приятным обеим сторонам.",
+      contacts: "Контакты",
+      partners: "Партнерам",
+      home: "Основной сайт",
+      legal: "Copyright © 2026 LocalMind Studio",
+    },
     galleryUi: ["Галерея", "Экраны приложения", "Экраны выбранного кейса.", "Закрыть"],
     palette: {
       toggle: "Палитра",
@@ -1120,6 +1134,24 @@ let currentLanguage = localStorage.getItem("studioLanguage") || (navigator.langu
 
 document.documentElement.classList.add("studio-js");
 
+function scrollbarGutter() {
+  return Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+}
+
+function lockScroll() {
+  const root = document.documentElement;
+  if (root.classList.contains("scroll-locked")) return;
+  root.style.setProperty("--scrollbar-gutter", `${scrollbarGutter()}px`);
+  root.classList.add("scroll-locked");
+  document.body.classList.add("no-scroll");
+}
+
+function unlockScroll() {
+  document.documentElement.classList.remove("scroll-locked");
+  document.body.classList.remove("no-scroll");
+  document.documentElement.style.removeProperty("--scrollbar-gutter");
+}
+
 function setText(selector, value, root = document) {
   const element = root.querySelector(selector);
   if (element && value !== undefined) element.textContent = value;
@@ -1165,16 +1197,40 @@ function setFormOptions(selector, values) {
 
 function applyContactFormLanguage(content) {
   if (!content) return;
-  setText("[data-contact-title]", content.title);
-  setText("[data-contact-body]", content.body);
-
-  Object.entries(content.labels).forEach(([key, value]) => {
-    setText(`[data-form-label="${key}"]`, value);
+  document.querySelectorAll("[data-contact-title]").forEach((node) => {
+    node.textContent = content.title;
+  });
+  document.querySelectorAll("[data-contact-body]").forEach((node) => {
+    node.textContent = content.body;
   });
 
-  setText("[data-form-submit]", content.submit);
+  Object.entries(content.labels).forEach(([key, value]) => {
+    document.querySelectorAll(`[data-form-label="${key}"]`).forEach((node) => {
+      node.textContent = value;
+    });
+  });
+
+  document.querySelectorAll("[data-form-submit]").forEach((node) => {
+    node.textContent = content.submit;
+  });
   document.querySelector("[data-contact-top]")?.setAttribute("aria-label", content.topLabel);
-  setText("[data-form-status]", "");
+  document.querySelectorAll("[data-close-contact]").forEach((node) => {
+    node.setAttribute("aria-label", content.close || "Close");
+  });
+  document.querySelectorAll("[data-form-status]").forEach((node) => {
+    node.textContent = "";
+  });
+}
+
+function applyFooterLanguage(content) {
+  const footer = content?.footer;
+  if (!footer || typeof footer === "string") return;
+  setText("[data-footer-brand]", footer.brand);
+  setText("[data-footer-copy]", footer.body);
+  setText("[data-footer-contacts]", footer.contacts);
+  setText("[data-footer-partners]", footer.partners);
+  setText("[data-footer-home]", footer.home);
+  setText("[data-footer-legal]", footer.legal);
 }
 
 function applyLanguage(language) {
@@ -1264,8 +1320,7 @@ function applyLanguage(language) {
   });
 
   applyContactFormLanguage(t.contactForm);
-  setText(".footer p", t.footer);
-  setText("[data-footer-partners]", t.footerPartners);
+  applyFooterLanguage(t);
   setTexts(".gallery-header .eyebrow, #gallery-title, #gallery-note, [data-gallery-close]", t.galleryUi);
   applyCasePage(currentLanguage);
 }
@@ -1372,8 +1427,7 @@ function applyCasePage(language) {
     setupCaseSlider(root, ui);
   }
 
-  setText(".footer p", translations[lang].footer);
-  setText("[data-footer-partners]", translations[lang].footerPartners);
+  applyFooterLanguage(translations[lang]);
 }
 
 function setupStudioMarquee() {
@@ -1487,9 +1541,11 @@ function applyPalette(id, persist = true) {
 }
 
 function setPaletteOpen(open) {
+  if (open) lockScroll();
   document.documentElement.classList.toggle("palette-open", open);
   document.querySelector("[data-palette-toggle-button]")?.setAttribute("aria-expanded", String(open));
   applyPaletteCopy();
+  if (!open) unlockScroll();
 }
 
 function setupPalette() {
@@ -1679,34 +1735,131 @@ function appendLeadAttribution(formData) {
 }
 
 function setupContactForm() {
-  const form = document.querySelector("[data-contact-form]");
-  const status = form?.querySelector("[data-form-status]");
-  const submitButton = form?.querySelector("[data-form-submit]");
-  if (!form || !status || !submitButton) return;
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    if (form.dataset.bound === "true") return;
+    const status = form.querySelector("[data-form-status]");
+    const submitButton = form.querySelector("[data-form-submit]");
+    if (!status || !submitButton) return;
+    form.dataset.bound = "true";
 
-  form.addEventListener("submit", async (event) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const t = translations[currentLanguage].contactForm;
+      const formData = new FormData(form);
+
+      formData.set("subject", t.subject);
+      appendLeadAttribution(formData);
+      formData.set("language", currentLanguage);
+
+      submitButton.disabled = true;
+      status.textContent = t.sending;
+
+      try {
+        await submitFormspree(formData);
+        status.textContent = t.success;
+        form.reset();
+      } catch (error) {
+        status.textContent = t.error;
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  });
+}
+
+function contactModalMarkup() {
+  return `
+      <div class="contact-modal__panel">
+        <button class="contact-modal__close" type="button" data-close-contact aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="project-contact__intro">
+          <h2 id="contact-modal-title" data-contact-title>Do you have a project?</h2>
+          <p data-contact-body>
+            Great! We are ready to discuss the most unusual tasks and find a solution.
+          </p>
+        </div>
+        <form
+          class="project-contact__form"
+          action="https://formspree.io/f/xykawple"
+          method="POST"
+          data-contact-form
+        >
+          <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="project-contact__fields">
+            <label class="project-field">
+              <span data-form-label="name">Full name*</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label class="project-field">
+              <span data-form-label="email">Email address*</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label class="project-field project-field--full">
+              <span data-form-label="website">Website link</span>
+              <input name="website" type="url" autocomplete="url" inputmode="url" />
+            </label>
+            <label class="project-field project-field--full">
+              <span data-form-label="message">How can we help you*</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+          <div class="project-contact__actions">
+            <button class="project-contact__submit" type="submit" data-form-submit>Send</button>
+            <p class="project-contact__status" data-form-status aria-live="polite"></p>
+          </div>
+        </form>
+      </div>`;
+}
+
+function ensureContactModal() {
+  if (document.querySelector("#contact-modal")) return;
+  const dialog = document.createElement("dialog");
+  dialog.id = "contact-modal";
+  dialog.className = "contact-modal";
+  dialog.setAttribute("aria-labelledby", "contact-modal-title");
+  dialog.innerHTML = contactModalMarkup();
+  document.body.appendChild(dialog);
+}
+
+function setupContactModal() {
+  const modal = document.querySelector("#contact-modal");
+  if (!modal) return;
+
+  function openModal(event) {
     event.preventDefault();
-    if (!form.reportValidity()) return;
-
-    const t = translations[currentLanguage].contactForm;
-    const formData = new FormData(form);
-
-    formData.set("subject", t.subject);
-    appendLeadAttribution(formData);
-    formData.set("language", currentLanguage);
-
-    submitButton.disabled = true;
-    status.textContent = t.sending;
-
-    try {
-      await submitFormspree(formData);
-      status.textContent = t.success;
-      form.reset();
-    } catch (error) {
-      status.textContent = t.error;
-    } finally {
-      submitButton.disabled = false;
+    lockScroll();
+    if (typeof modal.showModal === "function") {
+      if (!modal.open) modal.showModal();
+    } else {
+      modal.setAttribute("open", "");
     }
+    window.setTimeout(() => {
+      modal.querySelector("input:not(.hp-field)")?.focus();
+    }, 40);
+  }
+
+  function closeModal() {
+    if (typeof modal.close === "function" && modal.open) {
+      modal.close();
+      return;
+    }
+    modal.removeAttribute("open");
+    unlockScroll();
+  }
+
+  document.querySelectorAll("[data-open-contact]").forEach((trigger) => {
+    if (trigger.dataset.bound === "true") return;
+    trigger.dataset.bound = "true";
+    trigger.addEventListener("click", openModal);
+  });
+
+  modal.querySelector("[data-close-contact]")?.addEventListener("click", closeModal);
+  modal.addEventListener("close", unlockScroll);
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
   });
 }
 
@@ -1873,12 +2026,12 @@ function setupGallery() {
       })
       .join("");
 
+    lockScroll();
     if (typeof modal.showModal === "function") {
       modal.showModal();
     } else {
       modal.setAttribute("open", "");
     }
-    document.body.classList.add("no-scroll");
 
     const SwiperClass = await loadSwiperAssets().catch(() => null);
     if (SwiperClass) {
@@ -1916,7 +2069,7 @@ function setupGallery() {
     }
     modal.close?.();
     modal.removeAttribute("open");
-    document.body.classList.remove("no-scroll");
+    unlockScroll();
   }
 
   document.querySelector(".case-showcase")?.addEventListener("click", (event) => {
@@ -1934,7 +2087,7 @@ function setupGallery() {
   });
 
   closeButton.addEventListener("click", closeGallery);
-  modal.addEventListener("close", () => document.body.classList.remove("no-scroll"));
+  modal.addEventListener("close", unlockScroll);
   modal.addEventListener("click", (event) => {
     if (event.target === modal) closeGallery();
   });
@@ -1947,8 +2100,12 @@ if (document.querySelector(".site-hero")) {
   setupStudioMarquee();
   setupStickyNavigation();
   setupContactForm();
+  setupContactModal();
 }
 if (document.body.classList.contains("case-page")) {
+  ensureContactModal();
   applyLanguage(currentLanguage);
   setupCasePage();
+  setupContactForm();
+  setupContactModal();
 }

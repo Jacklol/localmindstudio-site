@@ -54,7 +54,7 @@
         document.documentElement.dataset.palette = allowed.indexOf(value) >= 0 ? value : "sage";
       })();
     </script>
-    <link rel="stylesheet" href="./studio.css?v=20260912-covers" />
+    <link rel="stylesheet" href="./studio.css?v=20260912-logo" />
     <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css" />
     <script type="application/ld+json">
       {
@@ -292,7 +292,7 @@
           <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer" data-nav-telegram>@jackkorlive</a>
           <a href="mailto:localmindstudio@gmail.com" data-nav-email>localmindstudio@gmail.com</a>
         </div>
-        <a class="nav-call" href="#contact" data-nav-call>Request a call</a>
+        <a class="nav-call" href="#contact" data-nav-call data-open-contact>Request a call</a>
         <div class="language-switch" aria-label="Language switch">
           <button type="button" data-lang-switch="en">EN</button>
           <button type="button" data-lang-switch="ru">RU</button>
@@ -309,7 +309,7 @@
             Development, design, SEO and AI — from idea to launch and support.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">
+            <a class="button primary" href="#contact" data-open-contact>
               <span data-hero-action-primary>Request a call</span>
               <span class="hero-button-arrow" aria-hidden="true">→</span>
             </a>
@@ -872,14 +872,65 @@
     </main>
 
     <footer class="footer">
-      <p>LocalMind Studio - AI assistants, chatbots, .NET/C#, Node.js, React Native, UX/UI, SEO, AI SEO, QA, integrations and product support.</p>
-      <div>
-        <a href="mailto:localmindstudio@gmail.com">localmindstudio@gmail.com</a>
-        <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer">@jackkorlive</a>
-        <a href="https://www.linkedin.com/in/evgenii-korzhan-442500195/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="footer-subtle-link" href="./partners.html" data-footer-partners>Партнерам</a>
+      <div class="footer__main">
+        <div class="footer__brand">
+          <p class="footer__title" data-footer-brand>LocalMind Studio</p>
+          <p class="footer__text" data-footer-copy>
+            We love what we do. What matters to us is that collaboration is useful and pleasant for both sides.
+          </p>
+        </div>
+        <div class="footer__contacts">
+          <p class="footer__title" data-footer-contacts>Contacts</p>
+          <a href="mailto:localmindstudio@gmail.com">localmindstudio@gmail.com</a>
+          <a href="https://t.me/jackkorlive" target="_blank" rel="noreferrer">@jackkorlive</a>
+          <a href="./partners.html" data-footer-partners>Partners</a>
+        </div>
       </div>
+      <p class="footer__legal" data-footer-legal>Copyright © 2026 LocalMind Studio</p>
     </footer>
-    <script src="./studio.js?v=20260912-ossnova"></script>
+    <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-modal-title">
+      <div class="contact-modal__panel">
+        <button class="contact-modal__close" type="button" data-close-contact aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="project-contact__intro">
+          <h2 id="contact-modal-title" data-contact-title>Do you have a project?</h2>
+          <p data-contact-body>
+            Great! We are ready to discuss the most unusual tasks and find a solution.
+          </p>
+        </div>
+        <form
+          class="project-contact__form"
+          action="https://formspree.io/f/xykawple"
+          method="POST"
+          data-contact-form
+        >
+          <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="project-contact__fields">
+            <label class="project-field">
+              <span data-form-label="name">Full name*</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label class="project-field">
+              <span data-form-label="email">Email address*</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label class="project-field project-field--full">
+              <span data-form-label="website">Website link</span>
+              <input name="website" type="url" autocomplete="url" inputmode="url" />
+            </label>
+            <label class="project-field project-field--full">
+              <span data-form-label="message">How can we help you*</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+          </div>
+          <div class="project-contact__actions">
+            <button class="project-contact__submit" type="submit" data-form-submit>Send</button>
+            <p class="project-contact__status" data-form-status aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </dialog>
+    <script src="./studio.js?v=20260912-footer"></script>
   </body>
 </html>
