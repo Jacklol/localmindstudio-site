@@ -2505,6 +2505,15 @@ html.scroll-locked .talk-orb {
     padding-bottom: 36px;
   }
 
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-hero .button {
+    width: 100%;
+  }
+
   .proof-strip {
     grid-template-columns: 1fr;
     margin-top: -24px;

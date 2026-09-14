@@ -178,9 +178,9 @@ const caseStudies = {
     preview: "assets/ypa-real/ypa_hero.jpg?v=20260912-gen",
     galleryKey: "ypa",
     en: {
-      pageTitle: "YPA Finance — mobile finance app",
-      lead: "YPA Finance is a personal finance product with an AI money coach, budget planning, debt payoff tools and credit insights — built as a cross-platform mobile app.",
-      task: "Design and build a mobile finance app with an AI coach, budget tools, debt payoff planning, alerts and credit insights — from onboarding to daily use.",
+      pageTitle: "YPA Finance – mobile finance app",
+      lead: "YPA Finance is a personal finance product with an AI money coach, budget planning, debt payoff tools and credit insights – built as a cross-platform mobile app.",
+      task: "Design and build a mobile finance app with an AI coach, budget tools, debt payoff planning, alerts and credit insights – from onboarding to daily use.",
       solution: "We shipped a React Native app with a modular screen system, AI coach flows, budget and debt modules, alerts, credit insights and a validated registration journey.",
       niche: "Personal finance and AI coaching",
       duration: "5 months",
@@ -197,9 +197,9 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "YPA Finance — финансовое мобильное приложение",
-      lead: "YPA Finance — продукт для личных финансов с AI-коучем, планированием бюджета, инструментами погашения долгов и кредитными инсайтами в одном мобильном приложении.",
-      task: "Спроектировать и собрать мобильное финансовое приложение с AI-коучем, бюджетом, планом погашения долгов, оповещениями и кредитными инсайтами — от онбординга до ежедневного использования.",
+      pageTitle: "YPA Finance – финансовое мобильное приложение",
+      lead: "YPA Finance – продукт для личных финансов с AI-коучем, планированием бюджета, инструментами погашения долгов и кредитными инсайтами в одном мобильном приложении.",
+      task: "Спроектировать и собрать мобильное финансовое приложение с AI-коучем, бюджетом, планом погашения долгов, оповещениями и кредитными инсайтами – от онбординга до ежедневного использования.",
       solution: "Сделали React Native приложение с модульной системой экранов, сценариями AI-коуча, блоками бюджета и долгов, алертами, кредитными инсайтами и валидируемой регистрацией.",
       niche: "Личные финансы и AI-коучинг",
       duration: "5 месяцев",
@@ -223,7 +223,7 @@ const caseStudies = {
     preview: "assets/rutilus-real/rutilus_hero.jpg?v=20260912-rutilus",
     galleryKey: "rutilus",
     en: {
-      pageTitle: "Rutilus — enterprise document workflows",
+      pageTitle: "Rutilus – enterprise document workflows",
       lead: "Rutilus is an enterprise mobile product for Norilsk Nickel teams working with assignments, documents, deadlines and secure access in high-load conditions.",
       task: "Build a secure enterprise app for document workflows: PIN access, assignments, search, deadlines and handling large document volumes on mobile.",
       solution: "We designed role-based flows for login and PIN, document details, assignment forms, deadline calendar and dark-theme access patterns for field use.",
@@ -242,8 +242,8 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "Rutilus — корпоративный документооборот",
-      lead: "Rutilus — корпоративный мобильный продукт для команд Norilsk Nickel: поручения, документы, дедлайны и защищённый доступ в условиях высокой нагрузки.",
+      pageTitle: "Rutilus – корпоративный документооборот",
+      lead: "Rutilus – корпоративный мобильный продукт для команд Norilsk Nickel: поручения, документы, дедлайны и защищённый доступ в условиях высокой нагрузки.",
       task: "Собрать защищённое enterprise-приложение для документооборота: PIN-доступ, поручения, поиск, дедлайны и работа с большими объёмами документов.",
       solution: "Спроектировали ролевые сценарии входа и PIN, детали документов, формы поручений, календарь дедлайнов и тёмную тему для полевой работы.",
       niche: "Корпоративный документооборот",
@@ -283,26 +283,26 @@ const caseStudies = {
       showcase: { tag: "Design", title: "Unified visual language and component system for app and admin panel" },
       result: {
         title: "All key processes in one system",
-        body: "Sales reps work from a live catalog and order flow in the field, while managers update data and monitor the plan from the admin panel — connected through 1C sync.",
+        body: "Sales reps work from a live catalog and order flow in the field, while managers update data and monitor the plan from the admin panel – connected through 1C sync.",
       },
     },
     ru: {
       pageTitle: "Мобильное приложение для агрокомпании",
-      lead: "«Деметра» — агро компания, которая обеспечивает доступ к самому необходимому — к здоровой еде. Компания выращивает натуральные и стабильные по качеству продукты и выполняет поставки без перебоев.",
+      lead: "«Деметра» – агрокомпания со стабильным качеством и бесперебойными поставками. Для полевых команд нужен был мобильный инструмент продаж и админка для каталога и показателей.",
       task: "Автоматизировать продажи агрокомпании: создать мобильное приложение для торговых представителей с актуальным каталогом, остатками и ценами из 1С и админ-панель для контроля процессов продаж.",
       solution: "Разработали экосистему: мобильное приложение с ролевым доступом, каталогом и заказами; админ-панель для обновления данных и аналитики; интеграцию с 1С для синхронизации остатков и цен; работу приложения при слабом интернете.",
       niche: "Автоматизация продаж агрокомпании",
       duration: "4 месяца",
       decisions: [
         ["Актуальный каталог с данными из 1С", "Цены и остатки подтягиваются из 1С, чтобы представители продавали по реальным данным, а не устаревшим таблицам."],
-        ["Единая дизайн-система", "Мобильное приложение и админ-панель используют общие компоненты и визуальный язык — продукт воспринимается как одна система."],
+        ["Единая дизайн-система", "Мобильное приложение и админ-панель используют общие компоненты и визуальный язык – продукт воспринимается как одна система."],
         ["Работа при нестабильном интернете", "Кэширование и аккуратная синхронизация сохраняют каталог и заказы доступными там, где связь нестабильна."],
         ["Контроль заказов и плана продаж", "Руководители видят заказы, прогресс плана и работу команды в админ-панели без ручных отчётов."],
       ],
       showcase: { tag: "Дизайн", title: "Единый визуальный язык и компонентная система для приложения и админ-панели" },
       result: {
-        title: "Все ключевые процессы — в одной системе",
-        body: "Торговые представители работают с актуальным каталогом и заказами в поле, а руководители обновляют данные и контролируют план продаж в админ-панели — через синхронизацию с 1С.",
+        title: "Все ключевые процессы – в одной системе",
+        body: "Торговые представители работают с актуальным каталогом и заказами в поле, а руководители обновляют данные и контролируют план продаж в админ-панели – через синхронизацию с 1С.",
       },
     },
   },
@@ -313,7 +313,7 @@ const caseStudies = {
     preview: "assets/empiflow-real/empiflow-preview.png",
     galleryKey: "empiflow",
     en: {
-      pageTitle: "Empiflow — employee onboarding platform",
+      pageTitle: "Empiflow – employee onboarding platform",
       lead: "Empiflow helps companies onboard new employees through structured tracks, learning activities, progress dashboards and a document library.",
       task: "Design a mobile onboarding product with employee tracks, learning states, dashboard, document library and progress visibility for HR and employees.",
       solution: "We built track-based onboarding flows, activity detail screens, completion states, a document library and a dashboard that shows progress at a glance.",
@@ -332,7 +332,7 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "Empiflow — платформа адаптации сотрудников",
+      pageTitle: "Empiflow – платформа адаптации сотрудников",
       lead: "Empiflow помогает компаниям адаптировать новых сотрудников через структурированные треки, учебные активности, дашборд прогресса и библиотеку документов.",
       task: "Спроектировать мобильный продукт адаптации с треками сотрудников, учебными состояниями, дашбордом, библиотекой документов и видимостью прогресса для HR и сотрудников.",
       solution: "Собрали трековый онбординг, экраны деталей активностей, состояния завершения, библиотеку документов и дашборд с прогрессом на одном экране.",
@@ -403,7 +403,7 @@ const caseStudies = {
     preview: "assets/smarteat-real/smarteat_hero.jpg?v=20260912-smarteat",
     galleryKey: "smarteat",
     en: {
-      pageTitle: "SmartEat — nutrition and meal tracking app",
+      pageTitle: "SmartEat – nutrition and meal tracking app",
       lead: "SmartEat helps users search food, track meals, manage profiles and keep a health diary through API-driven mobile screens.",
       task: "Design and build nutrition flows: food search, meal tracking, forms, validation, diary, profile and allergen onboarding.",
       solution: "We shipped auth, home, ingredient search, meal tracking, menu, custom dishes, health diary, profile and allergen questionnaire screens.",
@@ -422,7 +422,7 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "SmartEat — приложение для питания и дневника еды",
+      pageTitle: "SmartEat – приложение для питания и дневника еды",
       lead: "SmartEat помогает искать продукты, учитывать приёмы пищи, вести профиль и дневник здоровья через мобильные экраны, связанные с API.",
       task: "Спроектировать и собрать сценарии питания: поиск продуктов, учёт приёмов пищи, формы, валидацию, дневник, профиль и анкету аллергенов.",
       solution: "Сделали экраны авторизации, главную, поиск ингредиентов, учёт питания, меню, свои блюда, дневник здоровья, профиль и анкету аллергенов.",
@@ -448,7 +448,7 @@ const caseStudies = {
     preview: "assets/altay-real/altay-preview.png",
     galleryKey: "altay",
     en: {
-      pageTitle: "Altai Restart — resort and hotel website",
+      pageTitle: "Altai Restart – resort and hotel website",
       lead: "Altai Restart is a premium resort website with room booking, category cards, special offers and spa complex pages.",
       task: "Design a hospitality website that sells the resort experience: homepage, room categories, booking bar, offers and aqua-thermal complex.",
       solution: "We created a premium visual system with hero-led pages, booking-focused room cards, promotions and dedicated spa content blocks.",
@@ -467,15 +467,15 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "Алтай Рестарт — сайт курорта и отеля",
-      lead: "Алтай Рестарт — премиальный сайт курорта с бронированием номеров, карточками категорий, спецпредложениями и страницей аква-термального комплекса.",
-      task: "Спроектировать hospitality-сайт, который продаёт опыт курорта: главная, категории номеров, booking bar, акции и аква-термальный комплекс.",
-      solution: "Сделали премиальную визуальную систему с hero-страницами, карточками номеров с фокусом на бронирование, промо-блоками и отдельным SPA-контентом.",
+      pageTitle: "Алтай Рестарт – сайт курорта и отеля",
+      lead: "Алтай Рестарт – премиальный сайт курорта с бронированием номеров, карточками категорий, спецпредложениями и страницей аква-термального комплекса.",
+      task: "Спроектировать сайт курорта, который продаёт отдых: главная, категории номеров, панель бронирования, акции и аква-термальный комплекс.",
+      solution: "Сделали премиальную визуальную систему с крупными первыми экранами, карточками номеров с фокусом на бронирование, промо-блоками и отдельным SPA-контентом.",
       niche: "Цифровое присутствие курорта и отеля",
       duration: "3 месяца",
       decisions: [
-        ["Карточки номеров с фокусом на бронирование", "Категории номеров показывают доступность и понятный CTA бронирования выше сгиба."],
-        ["Премиальная hospitality-эстетика", "Фото-ориентированные макеты передают уровень курорта без перегруза."],
+        ["Карточки номеров с фокусом на бронирование", "Категории номеров показывают доступность и понятный CTA бронирования в верхней части экрана."],
+        ["Премиальная эстетика отеля", "Фото-ориентированные макеты передают уровень курорта без перегруза."],
         ["Акции как путь к конверсии", "Спецпредложения получают отдельные блоки с возвратом в сценарий бронирования."],
         ["SPA как отдельная история", "Страница аква-термального комплекса раскрывает услуги отдельным сюжетом."],
       ],
@@ -493,7 +493,7 @@ const caseStudies = {
     preview: "assets/asgard-real/asgard_hero.jpg?v=20260912-asgard",
     galleryKey: "asgard",
     en: {
-      pageTitle: "ASGARD — mining equipment store",
+      pageTitle: "ASGARD – mining equipment store",
       lead: "ASGARD is an e-commerce website for ASIC miners with catalog, product specs, leasing, a fast cart checkout and service pages.",
       task: "Design an industrial e-commerce site for mining hardware: homepage, manufacturer catalog, product specs, leasing, cart and service content.",
       solution: "We built catalog-first pages with filters, detailed product specs, leasing blocks, a compact order modal and service sections tuned for B2B buyers.",
@@ -513,10 +513,10 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "ASGARD — магазин майнинг-оборудования",
-      lead: "ASGARD — e-commerce сайт для ASIC-майнеров с каталогом, характеристиками, лизингом, быстрым оформлением заказа и сервисными страницами.",
-      task: "Спроектировать industrial e-commerce для майнинг-оборудования: главная, каталог производителей, характеристики, лизинг, корзина и сервисный контент.",
-      solution: "Сделали catalog-first страницы с фильтрами, детальными характеристиками, блоками лизинга, компактной корзиной и сервисными секциями под B2B-покупателей.",
+      pageTitle: "ASGARD – магазин майнинг-оборудования",
+      lead: "ASGARD – e-commerce сайт для ASIC-майнеров с каталогом, характеристиками, лизингом, быстрым оформлением заказа и сервисными страницами.",
+      task: "Спроектировать промышленный интернет-магазин майнинг-оборудования: главная, каталог производителей, характеристики, лизинг, корзина и сервисный контент.",
+      solution: "Сделали страницы вокруг каталога: фильтры, детальные характеристики, блоки лизинга, компактная корзина и сервисные секции под B2B-покупателей.",
       niche: "E-commerce майнинг-оборудования",
       duration: "4 месяца",
       decisions: [
@@ -540,7 +540,7 @@ const caseStudies = {
     preview: "assets/ekbdoma-real/ekbdoma_hero.jpg?v=20260912-ekbdoma",
     galleryKey: "ekbdoma",
     en: {
-      pageTitle: "Invest Stroy — house construction website",
+      pageTitle: "Invest Stroy – house construction website",
       lead: "Invest Stroy is a construction company website with a project catalog, house detail pages, specs, pricing and a construction calculator.",
       task: "Design a real-estate construction site with project catalog, house cards, specs, pricing tables and an interactive calculator.",
       solution: "We created homepage project grids, detailed house pages, calculator flows, plots catalog and news blocks for ongoing sales.",
@@ -559,8 +559,8 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "Инвест Строй — сайт строительной компании",
-      lead: "Инвест Строй — сайт застройщика с каталогом проектов, карточками домов, характеристиками, ценами и калькулятором строительства.",
+      pageTitle: "Инвест Строй – сайт строительной компании",
+      lead: "Инвест Строй – сайт застройщика с каталогом проектов, карточками домов, характеристиками, ценами и калькулятором строительства.",
       task: "Спроектировать сайт строительной компании с каталогом проектов, карточками домов, характеристиками, ценами и интерактивным калькулятором.",
       solution: "Сделали сетку проектов на главной, детальные страницы домов, сценарии калькулятора, каталог домов с участками и новости для продаж.",
       niche: "Строительство домов и маркетинг застройщика",
@@ -585,9 +585,9 @@ const caseStudies = {
     preview: "assets/ultra-real/ultra_hero.jpg?v=20260912-photo",
     galleryKey: "ultra",
     en: {
-      pageTitle: "Ultra Drivers — chauffeur marketplace",
+      pageTitle: "Ultra Drivers – chauffeur marketplace",
       lead: "Ultra Drivers is more than business-class taxi: a platform where clients rent a premium car with a chauffeur, and drivers register, upload documents and publish their own cars.",
-      task: "A brochure site was not enough. The fleet is not a static catalog — professional drivers join the service, upload a licence and vehicle papers, wait for moderation and only then appear in the public fleet. We needed one product for clients in Ekaterinburg and for drivers who list cars.",
+      task: "A brochure site was not enough. The fleet is not a static catalog – professional drivers join the service, upload a licence and vehicle papers, wait for moderation and only then appear in the public fleet. We needed one product for clients in Ekaterinburg and for drivers who list cars.",
       solution: "We built a dark premium marketplace: homepage and city fleet with filters, car pages with hourly rates, a driver cabinet with statuses Active / On moderation / Rejected, and a listing form with photo rules and document upload.",
       niche: "Premium chauffeur marketplace",
       duration: "4 months",
@@ -600,26 +600,26 @@ const caseStudies = {
       showcase: { tag: "Design", title: "Client fleet, driver signup, moderation and car listings" },
       result: {
         title: "A live premium fleet, not a static catalog",
-        body: "Clients browse S-Class and BMW listings in Ekaterinburg. Drivers register, upload documents and publish cars — the public site shows only moderated, active vehicles.",
+        body: "Clients browse S-Class and BMW listings in Ekaterinburg. Drivers register, upload documents and publish cars – the public site shows only moderated, active vehicles.",
       },
     },
     ru: {
-      pageTitle: "Ultra Drivers — площадка водителей премиум-класса",
-      lead: "Ultra Drivers — больше, чем бизнес-такси: клиенты арендуют автомобиль бизнес и премиум класса с водителем, а водители регистрируются, загружают документы и публикуют свои машины.",
+      pageTitle: "Ultra Drivers – площадка водителей премиум-класса",
+      lead: "Ultra Drivers – больше, чем бизнес-такси: клиенты арендуют автомобиль бизнес и премиум класса с водителем, а водители регистрируются, загружают документы и публикуют свои машины.",
       task: "Лендинга было мало. Автопарк живой: профессиональные водители входят в сервис, загружают права и документы на авто, проходят модерацию и только потом появляются в публичном каталоге. Нужен был один продукт для клиентов в Екатеринбурге и для водителей, которые размещают машины.",
       solution: "Собрали тёмную премиальную площадку: главная и автопарк с фильтрами по городу и марке, карточки с ценой за час, кабинет водителя со статусами Активна / На модерации / Отклонена и форма размещения с правилами фото и загрузкой документов.",
       niche: "Маркетплейс аренды авто с водителем",
       duration: "4 месяца",
       decisions: [
         ["Две роли в одном бренде", "Клиент заказывает авто с водителем. Водитель становится партнёром, проходит модерацию и публикует объявления без отдельной админки."],
-        ["Документы до публикации", "Права и документы на машину обязательны. Отклонённые карточки остаются в кабинете с причиной — в автопарке только проверенный премиум."],
+        ["Документы до публикации", "Права и документы на машину обязательны. Отклонённые карточки остаются в кабинете с причиной – в автопарке только проверенный премиум."],
         ["Автопарк как живой каталог", "Фильтры по марке, цвету и городу плюс цена за час превращают объявления водителей в рабочий маркетплейс, а не в фотогалерею."],
         ["Заявка вместо корзины", "Заказ идёт звонком или заявкой. Сайт продаёт доверие и наличие, поездку закрывает менеджер или водитель."],
       ],
       showcase: { tag: "Дизайн", title: "Автопарк клиента, регистрация водителя, модерация и объявления" },
       result: {
         title: "Живой премиальный автопарк, а не статичный каталог",
-        body: "Клиенты смотрят S-Class и BMW в Екатеринбурге. Водители регистрируются, загружают документы и публикуют авто — на сайте только промодерированные активные машины.",
+        body: "Клиенты смотрят S-Class и BMW в Екатеринбурге. Водители регистрируются, загружают документы и публикуют авто – на сайте только промодерированные активные машины.",
       },
     },
   },
@@ -630,7 +630,7 @@ const caseStudies = {
     preview: "assets/vmetal-real/vmetal_hero.jpg?v=20260912-vmetal",
     galleryKey: "vmetal",
     en: {
-      pageTitle: "V-METAL — metal products store",
+      pageTitle: "V-METAL – metal products store",
       lead: "V-METAL is an industrial e-commerce website with catalog, product configurator, cart and order process pages.",
       task: "Design a B2B metal products store with catalog navigation, configurator flows, cart and checkout-oriented pages.",
       solution: "We built homepage funnels into catalog, configurator-driven product pages and a cart flow tuned for industrial orders.",
@@ -649,21 +649,21 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "V-METAL — магазин металлопродукции",
-      lead: "V-METAL — промышленный e-commerce сайт с каталогом, конфигуратором товара, корзиной и страницами оформления заказа.",
-      task: "Спроектировать B2B-магазин металлопродукции с навигацией по каталогу, конфигуратором, корзиной и checkout-страницами.",
-      solution: "Сделали воронку с главной в каталог, карточки с конфигуратором и сценарий корзины под industrial-заказы.",
+      pageTitle: "V-METAL – магазин металлопродукции",
+      lead: "V-METAL – промышленный e-commerce сайт с каталогом, конфигуратором товара, корзиной и страницами оформления заказа.",
+      task: "Спроектировать B2B-магазин металлопродукции с навигацией по каталогу, конфигуратором, корзиной и оформлением заказа.",
+      solution: "Сделали воронку с главной в каталог, карточки с конфигуратором и сценарий корзины под промышленные заказы.",
       niche: "E-commerce промышленной металлопродукции",
       duration: "4 месяца",
       decisions: [
         ["Конфигуратор на карточке товара", "Покупатель настраивает параметры и опции до добавления в корзину."],
-        ["Каталог под B2B-поиск", "Категории показывают фильтры и характеристики, которые ждут industrial-покупатели."],
-        ["Корзина для сложных заказов", "Корзина и checkout поддерживают многострочные industrial-покупки."],
+        ["Каталог под B2B-поиск", "Категории показывают фильтры и характеристики, которые ждут оптовые покупатели."],
+        ["Корзина для сложных заказов", "Корзина и оформление заказа поддерживают многострочные промышленные покупки."],
         ["Блоки доверия на главной", "Секции главной объясняют доставку, качество и сопровождение заказа."],
       ],
-      showcase: { tag: "Design", title: "Каталог, конфигуратор и корзина для industrial-покупателей" },
+      showcase: { tag: "Дизайн", title: "Каталог, конфигуратор и корзина для промышленных покупателей" },
       result: {
-        title: "Industrial-заказы через один магазин",
+        title: "Промышленные заказы через один магазин",
         body: "Покупатели настраивают товар, управляют строками корзины и двигаются к оформлению заказа внутри опыта V-METAL.",
       },
     },
@@ -675,7 +675,7 @@ const caseStudies = {
     preview: "assets/vows-real/vows_hero.jpg",
     galleryKey: "vows",
     en: {
-      pageTitle: "VOWS — wedding invitation constructor",
+      pageTitle: "VOWS – wedding invitation constructor",
       lead: "VOWS is a mobile constructor for digital wedding invitations. The bride assembles the guest journey from blocks; guests open a personal invite, confirm attendance and get the dress code, venue and timeline.",
       task: "Build a two-role mobile product: a constructor for the bride (blocks, texts, colors, guest list, RSVP notifications) and a guest flow from welcome to questionnaire, dress code, location, timeline and a reminder.",
       solution: "We designed a modular invitation. The bride chooses blocks and their order, fills the guest list and sets where RSVP answers arrive. Guests pick themselves from the list, fill the questionnaire, see dress code and venue, and can request a reminder.",
@@ -683,7 +683,7 @@ const caseStudies = {
       duration: "3 months",
       decisions: [
         ["Blocks instead of a fixed landing", "The bride turns sections on and off and reorders welcome, RSVP, dress code, location, timeline and thank-you."],
-        ["Guest list as entry", "Guests identify themselves from the couple’s list — no extra login, and RSVP is tied to a real name."],
+        ["Guest list as entry", "Guests identify themselves from the couple’s list – no extra login, and RSVP is tied to a real name."],
         ["RSVP with preferences", "Attendance and drink choices go to the bride in Telegram, email or WhatsApp."],
         ["Reminder before the day", "After thank-you, the guest can ask for a reminder one day, three days or a week ahead."],
       ],
@@ -694,15 +694,15 @@ const caseStudies = {
       },
     },
     ru: {
-      pageTitle: "VOWS — конструктор свадебных приглашений",
-      lead: "VOWS — мобильный конструктор цифровых свадебных приглашений. Невеста собирает сценарий для гостя из блоков; гости открывают личное приглашение, подтверждают присутствие и видят дресс-код, локацию и тайминг.",
+      pageTitle: "VOWS – конструктор свадебных приглашений",
+      lead: "VOWS – мобильный конструктор цифровых свадебных приглашений. Невеста собирает сценарий для гостя из блоков; гости открывают личное приглашение, подтверждают присутствие и видят дресс-код, локацию и тайминг.",
       task: "Собрать мобильный продукт с двумя ролями: конструктор для невесты (блоки, тексты, цвета, список гостей, уведомления о RSVP) и сценарий гостя от приветствия до анкеты, дресс-кода, локации, программы и напоминания.",
       solution: "Спроектировали модульное приглашение. Невеста выбирает блоки и их порядок, заполняет список гостей и указывает, куда приходят ответы RSVP. Гость выбирает себя из списка, заполняет анкету, видит дресс-код и площадку и может запросить напоминание.",
       niche: "Цифровые свадебные приглашения",
       duration: "3 месяца",
       decisions: [
         ["Блоки вместо фиксированного лендинга", "Невеста включает и выключает секции и меняет порядок: приветствие, RSVP, дресс-код, локация, тайминг и «спасибо»."],
-        ["Список гостей как вход", "Гость выбирает себя из списка пары — без отдельной регистрации, RSVP привязан к реальному имени."],
+        ["Список гостей как вход", "Гость выбирает себя из списка пары – без отдельной регистрации, RSVP привязан к реальному имени."],
         ["RSVP с предпочтениями", "Присутствие и выбор напитков уходят невесте в Telegram, email или WhatsApp."],
         ["Напоминание до дня свадьбы", "После экрана «спасибо» гость может запросить напоминание за день, три дня или неделю."],
       ],
@@ -720,41 +720,41 @@ const caseStudies = {
     preview: "assets/iqbattle-real/iqbattle_hero.jpg",
     galleryKey: "iqbattle",
     en: {
-      pageTitle: "IQ Battle — quiz nights in Moscow bars",
+      pageTitle: "IQ Battle – quiz nights in Moscow bars",
       lead: "IQ Battle is a quiz show in Moscow bars since 2017: weekly games with friends, a team rating, corporate quizzes and birthday events in the city centre.",
       task: "Players found games through chats and a messy schedule. Corporate clients had no clear offer. The site had to sell the next quiz night and the corporate or birthday format from one place.",
       solution: "We built a loud quiz-brand website: upcoming games on the homepage, a filterable schedule with sign-up, team rating, quiz rules, and separate funnels for corporates and birthdays.",
       niche: "Entertainment and quiz events",
       duration: "2 months",
       decisions: [
-        ["Schedule as the main CTA", "The homepage and schedule show the next bar games with time, price and a sign-up button — not a long story first."],
+        ["Schedule as the main CTA", "The homepage and schedule show the next bar games with time, price and a sign-up button – not a long story first."],
         ["Corporate and birthday as separate offers", "Team building and a birthday in a bar are different jobs. Each gets its own page, photos and request."],
-        ["Team rating to bring regulars back", "Search by team name, season vs all-time, games and points — a reason to return after the night."],
-        ["Rules in 30 seconds", "2.5 hours, 2 rounds, 50 questions, points and bans — so a new team understands the format before they book."],
+        ["Team rating to bring regulars back", "Search by team name, season vs all-time, games and points – a reason to return after the night."],
+        ["Rules in 30 seconds", "2.5 hours, 2 rounds, 50 questions, points and bans – so a new team understands the format before they book."],
       ],
       showcase: { tag: "Design", title: "Bar schedule, corporates, birthday quiz, rules and team rating" },
       result: {
         title: "From a chat invite to a working quiz site",
-        body: "A team picks a night, signs up and sees the rating. A company books a branded quiz with a scenario, prizes and a location — without writing to a manager first.",
+        body: "A team picks a night, signs up and sees the rating. A company books a branded quiz with a scenario, prizes and a location – without writing to a manager first.",
       },
     },
     ru: {
-      pageTitle: "IQ Battle — квизы в барах Москвы",
-      lead: "IQ Battle — квиз-шоу в барах Москвы с 2017 года: еженедельные игры с друзьями, рейтинг команд, корпоративы и дни рождения в центре города.",
+      pageTitle: "IQ Battle – квизы в барах Москвы",
+      lead: "IQ Battle – квиз-шоу в барах Москвы с 2017 года: еженедельные игры с друзьями, рейтинг команд, корпоративы и дни рождения в центре города.",
       task: "Игроки находили игры через чаты и рваное расписание. Для корпоратива не было понятного оффера. Сайт должен продавать ближайший квиз в баре и отдельные форматы для компаний и дней рождения.",
       solution: "Собрали яркий сайт квиз-шоу: ближайшие игры на главной, расписание с фильтрами и записью, рейтинг команд, правила квиза и отдельные воронки для корпоратива и дня рождения.",
       niche: "Развлечения и квиз-события",
       duration: "2 месяца",
       decisions: [
-        ["Расписание как главный CTA", "Главная и афиша показывают ближайшие игры в баре: время, цена и кнопка «Записаться» — без длинной истории в начале."],
-        ["Корпоратив и ДР как отдельные офферы", "Тимбилдинг и день рождения в баре — разные задачи. У каждой свой экран, фото и заявка."],
-        ["Рейтинг, чтобы возвращать команды", "Поиск по названию, сезон и всё время, игры и баллы — повод прийти снова после вечера."],
-        ["Правила за 30 секунд", "2,5 часа, 2 раунда, 50 вопросов, баллы и запреты — новая команда понимает формат до записи."],
+        ["Расписание как главный CTA", "Главная и афиша показывают ближайшие игры в баре: время, цена и кнопка «Записаться» – без длинной истории в начале."],
+        ["Корпоратив и ДР как отдельные офферы", "Тимбилдинг и день рождения в баре – разные задачи. У каждой свой экран, фото и заявка."],
+        ["Рейтинг, чтобы возвращать команды", "Поиск по названию, сезон и всё время, игры и баллы – повод прийти снова после вечера."],
+        ["Правила за 30 секунд", "2,5 часа, 2 раунда, 50 вопросов, баллы и запреты – новая команда понимает формат до записи."],
       ],
       showcase: { tag: "Дизайн", title: "Афиша бара, корпоратив, квиз на ДР, правила и рейтинг команд" },
       result: {
         title: "От приглашения в чате к рабочему сайту квиза",
-        body: "Команда выбирает вечер, записывается и видит рейтинг. Компания заказывает брендированный квиз со сценарием, призами и площадкой — без переписки с менеджером в мессенджере.",
+        body: "Команда выбирает вечер, записывается и видит рейтинг. Компания заказывает брендированный квиз со сценарием, призами и площадкой – без переписки с менеджером в мессенджере.",
       },
     },
   },
@@ -765,8 +765,8 @@ const caseStudies = {
     preview: "assets/genlix-real/genlix_hero.jpg",
     galleryKey: "genlix",
     en: {
-      pageTitle: "Genlix — premium supplies for HoReCa and retail",
-      lead: "Genlix is a B2B supplier of premium meat, poultry, beer and water from verified producers — delivered directly to Belarus for restaurants, hotels and retail.",
+      pageTitle: "Genlix – premium supplies for HoReCa and retail",
+      lead: "Genlix is a B2B supplier of premium meat, poultry, beer and water from verified producers – delivered directly to Belarus for restaurants, hotels and retail.",
       task: "Premium HoReCa and retail buyers in Belarus sourced products through chats, PDFs and a manager. There was no self-serve catalog, no way to choose a cut, and no public proof of who already works with the supplier. We needed a website that sells trust and shortens the path to a partnership request.",
       solution: "We built a B2B showcase of direct import: certified assortment, an interactive Primebeef cut map, product cards, a map of partner restaurants in Belarus, a professional blog and a partnership request form instead of a retail cart.",
       niche: "B2B food supplies for HoReCa and retail",
@@ -780,12 +780,12 @@ const caseStudies = {
       showcase: { tag: "Design", title: "B2B catalog, cut map, partner geography and request flow" },
       result: {
         title: "From PDF and chat to a working B2B storefront",
-        body: "Buyers see certified import assortment, choose a cut, check who already works with Genlix and send a partnership request — without waiting for a price list in a messenger.",
+        body: "Buyers see certified import assortment, choose a cut, check who already works with Genlix and send a partnership request – without waiting for a price list in a messenger.",
       },
     },
     ru: {
-      pageTitle: "Genlix — премиальные поставки для HoReCa и ритейла",
-      lead: "Genlix — B2B-поставщик премиального мяса, птицы, пива и воды от проверенных производителей. Продукты идут напрямую в Беларусь для ресторанов, отелей и розницы.",
+      pageTitle: "Genlix – премиальные поставки для HoReCa и ритейла",
+      lead: "Genlix – B2B-поставщик премиального мяса, птицы, пива и воды от проверенных производителей. Продукты идут напрямую в Беларусь для ресторанов, отелей и розницы.",
       task: "Шефы и закупщики в Беларуси брали премиальное сырьё через чаты, PDF и менеджера. Не было витрины с отрубами, не было доказательства, кто уже работает с поставщиком. Нужен был сайт, который продаёт доверие и сокращает путь до заявки на партнёрство.",
       solution: "Собрали B2B-витрину прямого импорта: сертифицированный ассортимент, интерактивная карта отрубов Primebeef, карточки товара, карта ресторанов-партнёров в Беларуси, блог для профессионалов и форма заявки вместо розничной корзины.",
       niche: "B2B-поставки для HoReCa и ритейла",
@@ -793,13 +793,13 @@ const caseStudies = {
       decisions: [
         ["Каталог как рабочий инструмент шефа", "Интерактивная карта отрубов помогает выбрать позицию под блюдо, а не по артикулу из таблицы."],
         ["Доверие через карту партнёров", "Рестораны и магазины на карте Беларуси показывают живую сеть поставок, а не обещание лендинга."],
-        ["Заявка вместо корзины", "HoReCa покупает объёмами и условиями. Сайт собирает бриф для категорийного менеджера, а не розничный checkout."],
+        ["Заявка вместо корзины", "HoReCa покупает объёмами и условиями. Сайт собирает бриф для категорийного менеджера, а не розничную корзину."],
         ["Блог для профессионалов", "Материалы про отруба, меню и стабильные поставки возвращают шефов на сайт и прогревают форму заявки."],
       ],
       showcase: { tag: "Дизайн", title: "B2B-каталог, карта отрубов, география партнёров и заявка" },
       result: {
         title: "От PDF и чата к рабочей B2B-витрине",
-        body: "Закупщик видит сертифицированный импорт, выбирает отруб, проверяет, кто уже работает с Genlix, и отправляет заявку на партнёрство — без ожидания прайса в мессенджере.",
+        body: "Закупщик видит сертифицированный импорт, выбирает отруб, проверяет, кто уже работает с Genlix, и отправляет заявку на партнёрство – без ожидания прайса в мессенджере.",
       },
     },
   },
@@ -810,41 +810,41 @@ const caseStudies = {
     preview: "assets/ossnova-real/ossnova_hero.jpg?v=20260912-ossnova",
     galleryKey: "ossnova",
     en: {
-      pageTitle: "OSSNOVA — medical technologies for Belarus",
+      pageTitle: "OSSNOVA – medical technologies for Belarus",
       lead: "OSSNOVA brings international medical equipment and devices to Belarus: ophthalmology and cardiology, with full support from registration and market analysis to promotion and post-registration reporting.",
-      task: "A medical importer needed a corporate site that sells trust to clinics and partners — two clinical directions, coverage across Belarus, proof of expertise and a clear request path — not a generic brochure.",
+      task: "A medical importer needed a corporate site that sells trust to clinics and partners – two clinical directions, coverage across Belarus, proof of expertise and a clear request path – not a generic brochure.",
       solution: "We designed a clinical corporate website: a medical-tech homepage, interactive geography of Belarus, about-the-company proof, cardiology and ophthalmology stories, a knowledge base with FAQ, and a contact form over an operating-room visual.",
       niche: "Medical equipment import and market access",
       duration: "3 months",
       decisions: [
         ["Two clinical directions, one brand", "Ophthalmology (IOLs) and cardiology (RFA, navigation) share one visual system so the company reads as a full-cycle partner, not two landing pages."],
-        ["Geography as trust", "The Belarus map and healthcare stats show where the system is dense — regions, doctors, institutions — instead of a vague 'we work nationwide'."],
+        ["Geography as trust", "The Belarus map and healthcare stats show where the system is dense – regions, doctors, institutions – instead of a vague 'we work nationwide'."],
         ["Knowledge before the request", "Articles and FAQ on IOLs, phacoemulsification and RFA educate the buyer and warm the contact form."],
-        ["Request instead of a catalog cart", "Clinics do not add devices to a basket. The site captures a named request: name, email, message — then a manager continues the cycle."],
+        ["Request instead of a catalog cart", "Clinics do not add devices to a basket. The site captures a named request: name, email, message – then a manager continues the cycle."],
       ],
       showcase: { tag: "Design", title: "Homepage, coverage map, clinical pages, knowledge base and request" },
       result: {
         title: "A medical importer with a public face in Belarus",
-        body: "Partners see directions, coverage and expertise, then send a request from one bilingual corporate site — live at ossnovagroup.com.",
+        body: "Partners see directions, coverage and expertise, then send a request from one bilingual corporate site – live at ossnovagroup.com.",
       },
     },
     ru: {
-      pageTitle: "OSSNOVA — медицинские технологии для Беларуси",
+      pageTitle: "OSSNOVA – медицинские технологии для Беларуси",
       lead: "OSSNOVA выводит международную медицинскую технику и изделия на рынок Беларуси: офтальмология и кардиология, полное сопровождение от регистрации и маркет-анализа до продвижения и пострегистрационного отчёта.",
-      task: "Импортёру медтехники нужен был корпоративный сайт, который продаёт доверие клиникам и партнёрам: два клинических направления, покрытие по Беларуси, экспертиза и понятный путь заявки — не типовой буклет.",
+      task: "Импортёру медтехники нужен был корпоративный сайт, который продаёт доверие клиникам и партнёрам: два клинических направления, покрытие по Беларуси, экспертиза и понятный путь заявки – не типовой буклет.",
       solution: "Собрали клинический корпоративный сайт: главная про медтех, интерактивная география Беларуси, доказательная «О компании», сценарии кардиологии и офтальмологии, база знаний с FAQ и форма заявки на фоне операционной.",
       niche: "Импорт медтехники и доступ на рынок",
       duration: "3 месяца",
       decisions: [
-        ["Два направления — один бренд", "Офтальмология (ИОЛ) и кардиология (РЧА, навигация) живут в одной системе, чтобы компания читалась как партнёр полного цикла, а не два лендинга."],
-        ["География как доверие", "Карта Беларуси и цифры здравоохранения показывают плотность системы — регионы, врачи, учреждения — вместо абстрактного «работаем по стране»."],
+        ["Два направления – один бренд", "Офтальмология (ИОЛ) и кардиология (РЧА, навигация) живут в одной системе, чтобы компания читалась как партнёр полного цикла, а не два лендинга."],
+        ["География как доверие", "Карта Беларуси и цифры здравоохранения показывают плотность системы – регионы, врачи, учреждения – вместо абстрактного «работаем по стране»."],
         ["Знания до заявки", "Статьи и FAQ про ИОЛ, факоэмульсификацию и РЧА обучают покупателя и прогревают форму."],
-        ["Заявка вместо корзины", "Клиника не кладёт аппарат в корзину. Сайт собирает обращение: имя, email, сообщение — дальше цикл ведёт менеджер."],
+        ["Заявка вместо корзины", "Клиника не кладёт аппарат в корзину. Сайт собирает обращение: имя, email, сообщение – дальше цикл ведёт менеджер."],
       ],
       showcase: { tag: "Дизайн", title: "Главная, карта покрытия, клинические страницы, база знаний и заявка" },
       result: {
         title: "Импортёр медтехники с публичным лицом в Беларуси",
-        body: "Партнёр видит направления, покрытие и экспертизу и отправляет заявку с одного двуязычного корпоративного сайта — ossnovagroup.com.",
+        body: "Партнёр видит направления, покрытие и экспертизу и отправляет заявку с одного двуязычного корпоративного сайта – ossnovagroup.com.",
       },
     },
   },
@@ -870,9 +870,9 @@ const translations = {
     navTelegram: "@jackkorlive",
     navEmail: "localmindstudio@gmail.com",
     talkButton: "let's talk?",
-    heroEyebrow: "Product studio",
+    heroEyebrow: "Software studio",
     heroTitle: "We build products for\u00A0business.",
-    heroLead: "Development, design, SEO and AI — from idea to launch and support.",
+    heroLead: "Development, design, SEO and AI – from idea to launch and support.",
     heroActions: ["Request a call", "View cases"],
     marquee: ["Mobile development", "Websites", "Design"],
     proof: [
@@ -886,28 +886,28 @@ const translations = {
     casesIntro: {
       eyebrow: "Cases",
       title: "Our projects",
-      body: "Regardless of cost and complexity, every completed project becomes part of the web studio portfolio.",
+      body: "Websites, apps and internal tools – from MVPs to enterprise products.",
     },
     casesAllLink: "All cases →",
     competencies: {
       title: "Our competencies",
       more: "Learn more",
       items: [
-        ["Mobile development", "We build iOS and Android apps on React Native — from the first flow to store release."],
-        ["SEO and AI search", "We help pages reach the top and bring traffic that converts — for people and AI search."],
-        ["Product design", "We design exact flows and interfaces that make the product clear to use."],
-        ["Engineering and analytics", "We integrate, build backends, program AI assistants and ship working products."],
+        ["Mobile development", "We build iOS and Android apps on React Native – from the first flow to store release."],
+        ["SEO and AI search", "We help pages reach the top and bring traffic that converts – for people and AI search."],
+        ["Product design", "We design flows and interfaces that make the product easy to use."],
+        ["Engineering and analytics", "We build backends, integrations and AI assistants – and ship the product."],
       ],
     },
     cases: [
       ["Premium HoReCa supplies", "Genlix", "B2B website for premium meat, poultry, beer and water delivered directly to Belarus.", ["B2B", "Catalog", "Web"]],
       ["Medical technologies for Belarus", "OSSNOVA", "Corporate site for medical equipment import: ophthalmology, cardiology, coverage map and request.", ["Healthcare", "UX/UI", "Web"]],
       ["Wedding invitation app", "VOWS", "Constructor for the bride, guest RSVP journey, dress code, location, timeline and reminders.", ["React Native", "UX/UI", "Events"]],
-      ["Finance mobile app", "YPA Finance", "AI assistants, profile, credit score, debt calculator, feedback and budget.", ["React Native", "AI coach", "Fintech"]],
+      ["Finance mobile app", "YPA Finance", "A mobile finance app with an AI coach: budget, debt and credit score.", ["React Native", "AI coach", "Fintech"]],
       ["Quiz nights in Moscow bars", "IQ Battle", "Bar quiz schedule, corporate events, birthday quiz, rules and team rating.", ["Events", "UX/UI", "Web"]],
       ["Agribusiness sales", "Demetra", "Mobile catalog, sales flow and order screens for a B2B product.", ["B2B", "Catalog", "Admin"]],
-      ["Camera and 360 media", "Auto Dealers Media App", "Cross-platform app for photos, video, upload queues, listing details and Theta 360 media.", ["Camera", "Media", "Device"]],
-      ["Nutrition tracking", "SmartEat", "Food search, meal flows, validation, diary, profile and API-driven mobile screens.", ["Forms", "API", "Mobile"]],
+      ["Camera and 360 media", "Auto Dealers Media App", "A dealer app for photos, video, upload queues and Theta 360.", ["Camera", "Media", "360"]],
+      ["Nutrition tracking", "SmartEat", "Nutrition app: food search, meal tracking, diary and a health profile.", ["Forms", "API", "Mobile"]],
       ["Mining equipment store", "ASGARD", "E-commerce for ASIC miners with catalog, product specs, leasing blocks and service pages.", ["E-commerce", "Catalog", "Web"]],
       ["Premium chauffeur marketplace", "Ultra Drivers", "Clients rent a business-class car with a driver; chauffeurs register, upload documents and publish their cars.", ["Marketplace", "Fleet", "Web"]],
       ["Document workflows", "Rutilus / Norilsk\u00A0Nickel", "Enterprise app work: PIN access, assignments, search, deadlines and large document volumes.", ["Enterprise", "Documents", "Performance"]],
@@ -918,12 +918,12 @@ const translations = {
     ],
     contactForm: {
       title: "Do you have a project?",
-      body: "Great! We are ready to discuss the most unusual tasks and find a solution.",
+      body: "Tell us the brief. We’ll estimate scope and suggest a first step.",
       labels: {
-        name: "Full name*",
-        email: "Email address*",
-        website: "Website link",
-        message: "How can we help you*",
+        name: "Name*",
+        email: "Email*",
+        website: "Website",
+        message: "About the task*",
       },
       close: "Close",
       topLabel: "Back to top",
@@ -935,7 +935,7 @@ const translations = {
     },
     footer: {
       brand: "LocalMind Studio",
-      body: "We love what we do. What matters to us is that collaboration is useful and pleasant for both sides.",
+      body: "Development, design and SEO – from idea to launch.",
       contacts: "Contacts",
       partners: "Partners",
       home: "Main site",
@@ -992,15 +992,15 @@ const translations = {
     title: "LocalMind Studio - AI, .NET, MVP, SEO и продуктовая разработка",
     description:
       "Делаем AI-ассистентов, чат-ботов, .NET/C# бэкенды, Node.js интеграции, React Native приложения, MVP, UX/UI, SEO и поддержку запуска.",
-    nav: ["Кейсы", "Компетенции", "Контакт"],
+    nav: ["Кейсы", "Компетенции", "Контакты"],
     navCall: "Заказать звонок",
     menu: "Меню",
     navTelegram: "@jackkorlive",
     navEmail: "localmindstudio@gmail.com",
     talkButton: "обсудим?",
-    heroEyebrow: "Продуктовая студия",
+    heroEyebrow: "Студия разработки",
     heroTitle: "Делаем продукты для\u00A0бизнеса.",
-    heroLead: "Разработка, дизайн, SEO и AI — от идеи до запуска и поддержки.",
+    heroLead: "Разработка, дизайн, SEO и AI – от идеи до запуска и поддержки.",
     heroActions: ["Заказать звонок", "Посмотреть кейсы"],
     marquee: ["мобильная разработка", "сайты", "дизайн"],
     proof: [
@@ -1014,31 +1014,31 @@ const translations = {
     casesIntro: {
       eyebrow: "Кейсы",
       title: "Наши проекты",
-      body: "Независимо от стоимости и сложности, выполненный проект всегда становится частью портфолио веб-студии",
+      body: "Сайты, приложения и сервисы – от MVP до корпоративных продуктов.",
     },
     casesAllLink: "Все кейсы →",
     competencies: {
       title: "Наши компетенции",
       more: "Подробнее",
       items: [
-        ["Мобильная разработка", "Собираем iOS и Android приложения на React Native — от первого сценария до релиза в сторах."],
-        ["SEO и AI-поиск", "Помогаем достичь топа и привлечь конверсионный трафик — и для людей, и для нейросетей."],
-        ["Дизайн продукта", "Проектируем точные сценарии и интерфейсы, чтобы продуктом было понятно пользоваться."],
-        ["Разработка и аналитика", "Интегрируем, разрабатываем бэкенд, программируем AI-ассистентов и запускаем продукт."],
+        ["Мобильная разработка", "Собираем iOS и Android приложения на React Native – от первого сценария до релиза в сторах."],
+        ["SEO и AI-поиск", "Помогаем достичь топа и привлечь конверсионный трафик – и для людей, и для AI-поиска."],
+        ["Дизайн продукта", "Проектируем сценарии и интерфейсы, чтобы продуктом было понятно пользоваться."],
+        ["Разработка и аналитика", "Собираем бэкенд, интеграции и AI-ассистентов – и доводим продукт до запуска."],
       ],
     },
     cases: [
       ["Премиальные поставки для HoReCa", "Genlix", "B2B-сайт премиального мяса, птицы, пива и воды с прямой поставкой в Беларусь.", ["B2B", "Каталог", "Веб"]],
       ["Медицинские технологии для Беларуси", "OSSNOVA", "Корпоративный сайт импорта медтехники: офтальмология, кардиология, карта покрытия и заявка.", ["Медицина", "UX/UI", "Веб"]],
       ["Конструктор свадебных приглашений", "VOWS", "Конструктор для невесты, сценарий гостя: RSVP, дресс-код, локация, тайминг и напоминания.", ["React Native", "UX/UI", "События"]],
-      ["Финансовое мобильное приложение", "YPA Finance", "AI-ассистенты, профиль, кредитный рейтинг, калькулятор, обратная связь и бюджет.", ["React Native", "AI-коуч", "Финтех"]],
+      ["Финансовое мобильное приложение", "YPA Finance", "Мобильное приложение с AI-коучем: бюджет, долги и кредитный рейтинг.", ["React Native", "AI-коуч", "Финтех"]],
       ["Квизы в барах Москвы", "IQ Battle", "Расписание игр в баре, корпоратив, квиз на день рождения, правила и рейтинг команд.", ["События", "UX/UI", "Веб"]],
       ["Агробизнес и продажи", "Demetra", "Мобильный каталог, сценарий продаж и экраны заказов для B2B-продукта.", ["B2B", "Каталог", "Админка"]],
-      ["Камера и 360-медиа", "Auto Dealers Media App", "Кросс-платформенное приложение для фото, видео, очереди загрузки, деталей объявления и Theta 360.", ["Камера", "Медиа", "Устройства"]],
-      ["Питание и дневник еды", "SmartEat", "Поиск продуктов, сценарии питания, формы, валидация, дневник, профиль и мобильные экраны через API.", ["Формы", "API", "Мобильное"]],
+      ["Камера и 360-медиа", "Auto Dealers Media App", "Приложение для дилеров: фото, видео, очередь загрузки и Theta 360.", ["Камера", "Медиа", "360"]],
+      ["Питание и дневник еды", "SmartEat", "Приложение для питания: поиск продуктов, учёт приёмов пищи, дневник и профиль здоровья.", ["Формы", "API", "Мобильное"]],
       ["Магазин майнинг-оборудования", "ASGARD", "E-commerce для ASIC-майнеров: каталог, характеристики, лизинг и сервисные блоки.", ["E-commerce", "Каталог", "Веб"]],
       ["Площадка водителей премиум-класса", "Ultra Drivers", "Клиенты арендуют авто с водителем; водители регистрируются, загружают документы и публикуют машины.", ["Маркетплейс", "Автопарк", "Веб"]],
-      ["Документооборот", "Rutilus / Norilsk\u00A0Nickel", "Корпоративное приложение: PIN-доступ, поручения, поиск, дедлайны и большие объемы документов.", ["Корпорации", "Документы", "Скорость"]],
+      ["Документооборот", "Rutilus / Norilsk\u00A0Nickel", "Корпоративное приложение: PIN-доступ, поручения, поиск, дедлайны и большие объемы документов.", ["Корпорации", "Документы", "Нагрузка"]],
       ["Адаптация сотрудников", "Empiflow", "Треки онбординга, учебные состояния, дашборд, библиотека документов и экраны прогресса.", ["Процессы", "HR", "Файлы"]],
       ["Сайт отеля и курорта", "Алтай Рестарт", "Премиальный сайт курорта с бронированием номеров, карточками категорий и галереей.", ["UX/UI", "Отели", "Веб"]],
       ["Сайт строительной компании", "Инвест Строй", "Сайт застройщика: каталог проектов, карточки домов, характеристики, цены и калькулятор.", ["Недвижимость", "Каталог", "Веб"]],
@@ -1046,12 +1046,12 @@ const translations = {
     ],
     contactForm: {
       title: "У вас есть проект?",
-      body: "Прекрасно! Мы готовы обсудить самые необычные задачи и найти решение.",
+      body: "Расскажите задачу – оценим объём и предложим первый этап.",
       labels: {
-        name: "Полное имя*",
-        email: "Адрес электронной почты*",
-        website: "Ссылка на веб-сайт",
-        message: "Чем мы можем вам помочь*",
+        name: "Имя*",
+        email: "Email*",
+        website: "Сайт",
+        message: "О задаче*",
       },
       close: "Закрыть",
       topLabel: "Наверх",
@@ -1059,11 +1059,11 @@ const translations = {
       subject: "Новый проект",
       sending: "Отправляем...",
       success: "Сообщение отправлено. Скоро ответим.",
-      error: "Не получилось отправить сообщение. Попробуй еще раз или напиши в Telegram.",
+      error: "Не получилось отправить. Попробуйте ещё раз или напишите в Telegram.",
     },
     footer: {
       brand: "LocalMind Studio",
-      body: "Мы любим то, что делаем. Для нас важно, чтобы сотрудничество было полезным и приятным обеим сторонам.",
+      body: "Разработка, дизайн и SEO – от идеи до запуска.",
       contacts: "Контакты",
       partners: "Партнерам",
       home: "Основной сайт",
@@ -1125,7 +1125,7 @@ const translations = {
       task: "Задача",
       solution: "Решение",
       niche: "Ниша",
-      duration: "Продолжительность",
+      duration: "Срок",
       decisions: "Ключевые решения продукта",
       result: "Результат",
       prev: "Предыдущий экран",
@@ -1361,11 +1361,11 @@ function applyCasePage(language) {
   const ui = translations[lang].caseStudyUi;
   if (!copy || !ui) return;
 
-  document.title = `${copy.pageTitle} — LocalMind Studio`;
+  document.title = `${copy.pageTitle} – LocalMind Studio`;
   setMetaContent("meta[name='description']", copy.lead);
-  setMetaContent("meta[property='og:title']", `${copy.pageTitle} — LocalMind Studio`);
+  setMetaContent("meta[property='og:title']", `${copy.pageTitle} – LocalMind Studio`);
   setMetaContent("meta[property='og:description']", copy.lead);
-  setMetaContent("meta[name='twitter:title']", `${copy.pageTitle} — LocalMind Studio`);
+  setMetaContent("meta[name='twitter:title']", `${copy.pageTitle} – LocalMind Studio`);
   setMetaContent("meta[name='twitter:description']", copy.lead);
 
   setText("[data-case-home]", ui.home);
@@ -1836,7 +1836,7 @@ function contactModalMarkup() {
         <div class="project-contact__intro">
           <h2 id="contact-modal-title" data-contact-title>Do you have a project?</h2>
           <p data-contact-body>
-            Great! We are ready to discuss the most unusual tasks and find a solution.
+            Tell us the brief. We’ll estimate scope and suggest a first step.
           </p>
         </div>
         <form
@@ -1848,19 +1848,19 @@ function contactModalMarkup() {
           <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="project-contact__fields">
             <label class="project-field">
-              <span data-form-label="name">Full name*</span>
+              <span data-form-label="name">Name*</span>
               <input name="name" type="text" autocomplete="name" required />
             </label>
             <label class="project-field">
-              <span data-form-label="email">Email address*</span>
+              <span data-form-label="email">Email*</span>
               <input name="email" type="email" autocomplete="email" required />
             </label>
             <label class="project-field project-field--full">
-              <span data-form-label="website">Website link</span>
+              <span data-form-label="website">Website</span>
               <input name="website" type="url" autocomplete="url" inputmode="url" />
             </label>
             <label class="project-field project-field--full">
-              <span data-form-label="message">How can we help you*</span>
+              <span data-form-label="message">About the task*</span>
               <textarea name="message" rows="4" required></textarea>
             </label>
           </div>
@@ -1913,6 +1913,7 @@ function setupTalkButton() {
 
 function setupTalkButtonVisibility(button) {
   const hero = document.querySelector(".site-hero") || document.querySelector(".case-hero-card");
+  const contact = document.querySelector("section.project-contact");
 
   function setVisible(visible) {
     button.classList.toggle("is-visible", visible);
@@ -1921,26 +1922,29 @@ function setupTalkButtonVisibility(button) {
     else button.setAttribute("aria-hidden", "true");
   }
 
-  if (!hero) {
-    setVisible(true);
-    return;
+  function contactReached() {
+    if (!contact) return false;
+    return contact.getBoundingClientRect().top < window.innerHeight;
   }
 
-  function heroIsFullyGone() {
-    return hero.getBoundingClientRect().bottom <= 0;
+  function shouldShow() {
+    if (hero && hero.getBoundingClientRect().bottom > 0) return false;
+    if (contactReached()) return false;
+    return Boolean(hero || contact);
   }
 
-  setVisible(heroIsFullyGone());
+  setVisible(shouldShow());
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(() => {
-      setVisible(heroIsFullyGone());
+      setVisible(shouldShow());
     }, { threshold: [0, 0.01] });
-    observer.observe(hero);
+    if (hero) observer.observe(hero);
+    if (contact) observer.observe(contact);
     return;
   }
 
-  window.addEventListener("scroll", () => setVisible(heroIsFullyGone()), { passive: true });
+  window.addEventListener("scroll", () => setVisible(shouldShow()), { passive: true });
 }
 
 function setupTalkButtonMagnet(button) {
