@@ -1979,6 +1979,14 @@ html.scroll-locked .talk-orb {
   }
 }
 
+@media
+  (min-width: 821px) and (max-width: 960px),
+  (min-width: 1040px) and (max-width: 1200px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 @media (max-width: 820px) {
   :root {
     --layout-gutter: 20px;
