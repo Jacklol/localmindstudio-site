@@ -942,20 +942,6 @@ const translations = {
       legal: "Copyright © 2026 LocalMind Studio",
     },
     galleryUi: ["Gallery", "App screens", "Screens for the selected case.", "Close"],
-    palette: {
-      toggle: "Palette",
-      close: "Close palettes",
-      title: "Color palettes",
-      lead: "From quiet neutrals to loud, high-contrast looks.",
-      options: [
-        ["Pebble", "Calm stone and charcoal"],
-        ["Sage", "Current olive studio"],
-        ["Harbor", "Soft coastal blue"],
-        ["Clay", "Warm terracotta"],
-        ["Tide", "Bright teal"],
-        ["Pulse", "Electric lime and violet"],
-      ],
-    },
     galleryCases: {
       ypa: ["YPA Finance - mobile finance app", "AI assistants, profile, credit score, debt calculator, feedback and budget screens."],
       smarteat: ["SmartEat - nutrition app", "Food search, meal tracking, profile, diary and health data screens."],
@@ -1070,20 +1056,6 @@ const translations = {
       legal: "Copyright © 2026 LocalMind Studio",
     },
     galleryUi: ["Галерея", "Экраны приложения", "Экраны выбранного кейса.", "Закрыть"],
-    palette: {
-      toggle: "Палитра",
-      close: "Закрыть палитры",
-      title: "Цветовые палитры",
-      lead: "От нейтральных и спокойных до ярких и броских.",
-      options: [
-        ["Галька", "Спокойный камень и уголь"],
-        ["Шалфей", "Текущий оливковый"],
-        ["Гавань", "Мягкий прибрежный синий"],
-        ["Глина", "Тёплая терракота"],
-        ["Прилив", "Насыщенная бирюза"],
-        ["Импульс", "Электрический лайм и фиолет"],
-      ],
-    },
     galleryCases: {
       ypa: ["YPA Finance - приложение с финансовым AI-коучем", "Экраны продукта: AI-ассистенты, профиль, кредитный рейтинг, кредитный калькулятор, обратная связь и бюджет."],
       smarteat: ["SmartEat - приложение для питания", "Экраны продукта по питанию: поиск еды, учет приемов пищи, профиль, дневник и данные здоровья."],
@@ -1289,7 +1261,6 @@ function applyLanguage(language) {
     node.textContent = t.talkButton;
   });
   document.querySelector("[data-talk-button]")?.setAttribute("aria-label", t.talkButton);
-  applyPaletteCopy();
 
   document.querySelectorAll("[data-marquee-phrase]").forEach((item) => {
     const index = Number(item.dataset.marqueePhrase);
@@ -1488,82 +1459,6 @@ function syncStudioMarquee() {
   setupStudioMarquee.rebuild?.();
 }
 
-const PALETTE_STORAGE_KEY = "studioPalette";
-const PALETTE_IDS = ["pebble", "sage", "harbor", "clay", "tide", "pulse"];
-const PALETTE_SWATCHES = {
-  pebble: ["#f5f3ef", "#2c2925", "#cbbba3", "#1c1a17"],
-  sage: ["#f4f6f1", "#b3d945", "#276f51", "#152019"],
-  harbor: ["#f3f6f8", "#8eb8c9", "#3d6b86", "#17202a"],
-  clay: ["#f7f1ea", "#d4784a", "#9a5a3c", "#241c18"],
-  tide: ["#eef6f7", "#14b8c8", "#0f7a86", "#0f2430"],
-  pulse: ["#f4f0fb", "#d6ff2f", "#6d3dff", "#1a1230"],
-};
-const PALETTE_THEME_COLORS = {
-  pebble: "#141210",
-  sage: "#0d1512",
-  harbor: "#101820",
-  clay: "#17110e",
-  tide: "#081820",
-  pulse: "#0e081c",
-};
-
-function currentPalette() {
-  const value = document.documentElement.dataset.palette || localStorage.getItem(PALETTE_STORAGE_KEY) || "sage";
-  return PALETTE_IDS.includes(value) ? value : "sage";
-}
-
-function paletteLanguage() {
-  if (document.querySelector(".site-hero")) return currentLanguage;
-  return document.documentElement.lang?.startsWith("ru") ? "ru" : "en";
-}
-
-function applyPaletteCopy() {
-  const t = translations[paletteLanguage()]?.palette;
-  if (!t) return;
-  const open = document.documentElement.classList.contains("palette-open");
-  setText("[data-palette-toggle]", t.toggle);
-  setText("[data-palette-title]", t.title);
-  setText("[data-palette-lead]", t.lead);
-  const toggle = document.querySelector("[data-palette-toggle-button]");
-  toggle?.setAttribute("aria-label", open ? t.close : t.toggle);
-  document.querySelectorAll("[data-palette-option]").forEach((button, index) => {
-    const copy = t.options[index];
-    if (!copy) return;
-    setText("strong", copy[0], button);
-    setText(".palette-option__copy span", copy[1], button);
-  });
-}
-
-function applyPalette(id, persist = true) {
-  const palette = PALETTE_IDS.includes(id) ? id : "sage";
-  document.documentElement.dataset.palette = palette;
-  if (persist) localStorage.setItem(PALETTE_STORAGE_KEY, palette);
-  setMetaContent("meta[name='theme-color']", PALETTE_THEME_COLORS[palette]);
-  document.querySelectorAll("[data-palette-option]").forEach((button) => {
-    const active = button.dataset.paletteOption === palette;
-    button.classList.toggle("is-active", active);
-    button.setAttribute("aria-pressed", String(active));
-  });
-  const dots = document.querySelector("[data-palette-dots]");
-  if (dots) {
-    const swatches = PALETTE_SWATCHES[palette];
-    dots.querySelectorAll("span").forEach((dot, index) => {
-      if (swatches[index]) dot.style.background = swatches[index];
-    });
-  }
-}
-
-function setPaletteOpen(open) {
-  const root = document.documentElement;
-  if (open) lockScroll();
-  root.classList.toggle("palette-open", open);
-  document.querySelector("[data-palette-toggle-button]")?.setAttribute("aria-expanded", String(open));
-  applyPaletteCopy();
-  if (!open && !root.classList.contains("menu-open") && !document.querySelector("dialog[open]")) {
-    unlockScroll();
-  }
-}
-
 function setMenuOpen(open, keepScrollLock = false) {
   const root = document.documentElement;
   if (open) lockScroll();
@@ -1571,7 +1466,7 @@ function setMenuOpen(open, keepScrollLock = false) {
   document.querySelectorAll("[data-nav-menu-toggle]").forEach((button) => {
     button.setAttribute("aria-expanded", String(open));
   });
-  if (!open && !keepScrollLock && !root.classList.contains("palette-open") && !document.querySelector("dialog[open]")) {
+  if (!open && !keepScrollLock && !document.querySelector("dialog[open]")) {
     unlockScroll();
   }
 }
@@ -1603,83 +1498,6 @@ function setupMobileNav() {
 
   if (new URLSearchParams(location.search).get("menu") === "open") {
     setMenuOpen(true);
-  }
-}
-
-function setupPalette() {
-  if (document.querySelector(".palette-drawer")) {
-    applyPalette(currentPalette());
-    applyPaletteCopy();
-    return;
-  }
-
-  const backdrop = document.createElement("div");
-  backdrop.className = "palette-backdrop";
-  backdrop.setAttribute("data-palette-close", "");
-
-  const drawer = document.createElement("aside");
-  drawer.className = "palette-drawer";
-  drawer.id = "palette-drawer";
-  drawer.setAttribute("aria-labelledby", "palette-title");
-  drawer.innerHTML = `
-    <div class="palette-drawer__header">
-      <h2 id="palette-title" data-palette-title>Color palettes</h2>
-      <p data-palette-lead>From quiet neutrals to loud, high-contrast looks.</p>
-    </div>
-    <ul class="palette-list">
-      ${PALETTE_IDS.map((id) => {
-        const swatches = PALETTE_SWATCHES[id]
-          .map((color) => `<span style="background:${color}"></span>`)
-          .join("");
-        return `<li>
-          <button class="palette-option" type="button" data-palette-option="${id}" aria-pressed="false">
-            <span class="palette-option__swatches">${swatches}</span>
-            <span class="palette-option__copy">
-              <strong></strong>
-              <span></span>
-            </span>
-          </button>
-        </li>`;
-      }).join("")}
-    </ul>
-  `;
-
-  const toggle = document.createElement("button");
-  toggle.className = "palette-toggle";
-  toggle.type = "button";
-  toggle.setAttribute("data-palette-toggle-button", "");
-  toggle.setAttribute("aria-controls", "palette-drawer");
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.innerHTML = `
-    <span class="palette-toggle__dots" data-palette-dots aria-hidden="true">
-      <span></span><span></span><span></span><span></span>
-    </span>
-    <span class="palette-toggle__label" data-palette-toggle>Palette</span>
-  `;
-
-  document.body.append(backdrop, drawer, toggle);
-
-  toggle.addEventListener("click", () => {
-    setPaletteOpen(!document.documentElement.classList.contains("palette-open"));
-  });
-  backdrop.addEventListener("click", () => setPaletteOpen(false));
-  drawer.addEventListener("click", (event) => {
-    const option = event.target.closest("[data-palette-option]");
-    if (!option) return;
-    applyPalette(option.dataset.paletteOption);
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setPaletteOpen(false);
-  });
-
-  applyPalette(
-    PALETTE_IDS.includes(new URLSearchParams(location.search).get("palette"))
-      ? new URLSearchParams(location.search).get("palette")
-      : currentPalette(),
-  );
-  applyPaletteCopy();
-  if (new URLSearchParams(location.search).get("palettes") === "open") {
-    setPaletteOpen(true);
   }
 }
 
@@ -2335,7 +2153,6 @@ function setupGallery() {
 }
 
 setupLanguageSwitch();
-setupPalette();
 setupMobileNav();
 if (document.querySelector(".site-hero")) {
   ensureTalkButton();

@@ -18,14 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <script>
-      (function () {
-        var allowed = ["pebble", "sage", "harbor", "clay", "tide", "pulse"];
-        var value = localStorage.getItem("studioPalette") || "sage";
-        document.documentElement.dataset.palette = allowed.indexOf(value) >= 0 ? value : "sage";
-      })();
-    </script>
-    <link rel="stylesheet" href="../studio.css?v=20260914-btns" />
+    <link rel="stylesheet" href="../studio.css?v=20260914-nopalette" />
   </head>
   <body class="case-page" data-case-slug="auto">
     <nav class="nav is-scrolled case-nav" aria-label="Case navigation">
@@ -164,6 +157,6 @@
       <p class="footer__legal" data-footer-legal>Copyright © 2026 LocalMind Studio</p>
     </footer>
 
-    <script src="../studio.js?v=20260914-talkhide"></script>
+    <script src="../studio.js?v=20260914-nopalette"></script>
   </body>
 </html>
