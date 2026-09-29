@@ -918,12 +918,12 @@ const translations = {
     ],
     contactForm: {
       title: "Do you have a project?",
+      stripTitle: "Let's discuss your project",
       body: "Tell us the brief. We’ll estimate scope and suggest a first step.",
       labels: {
         name: "Name*",
-        email: "Email*",
-        website: "Website",
-        message: "About the task*",
+        phone: "Phone*",
+        message: "About the task",
       },
       close: "Close",
       topLabel: "Back to top",
@@ -1032,12 +1032,12 @@ const translations = {
     ],
     contactForm: {
       title: "У вас есть проект?",
+      stripTitle: "Обсудим ваш проект",
       body: "Расскажите задачу – оценим объём и предложим первый этап.",
       labels: {
         name: "Имя*",
-        email: "Email*",
-        website: "Сайт",
-        message: "О задаче*",
+        phone: "Телефон*",
+        message: "О задаче",
       },
       close: "Закрыть",
       topLabel: "Наверх",
@@ -1178,6 +1178,9 @@ function applyContactFormLanguage(content) {
   });
   document.querySelectorAll("[data-contact-body]").forEach((node) => {
     node.textContent = content.body;
+  });
+  document.querySelectorAll("[data-contact-strip-title]").forEach((node) => {
+    if (content.stripTitle) node.textContent = content.stripTitle;
   });
 
   Object.entries(content.labels).forEach(([key, value]) => {
@@ -1670,16 +1673,12 @@ function contactModalMarkup() {
               <input name="name" type="text" autocomplete="name" required />
             </label>
             <label class="project-field">
-              <span data-form-label="email">Email*</span>
-              <input name="email" type="email" autocomplete="email" required />
+              <span data-form-label="phone">Phone*</span>
+              <input name="phone" type="tel" autocomplete="tel" required />
             </label>
             <label class="project-field project-field--full">
-              <span data-form-label="website">Website</span>
-              <input name="website" type="url" autocomplete="url" inputmode="url" />
-            </label>
-            <label class="project-field project-field--full">
-              <span data-form-label="message">About the task*</span>
-              <textarea name="message" rows="4" required></textarea>
+              <span data-form-label="message">About the task</span>
+              <textarea name="message" rows="4"></textarea>
             </label>
           </div>
           <div class="project-contact__actions">

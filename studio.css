@@ -336,6 +336,7 @@ p {
 .hero-shell,
 .proof-strip,
 .band > *,
+.contact-strip__inner,
 .footer {
   width: min(var(--layout-max), calc(100% - var(--layout-gutter) * 2));
   margin-right: auto;
@@ -345,6 +346,7 @@ p {
 .hero-shell,
 .proof-strip,
 .band > *,
+.contact-strip__inner,
 .footer {
   padding-right: var(--layout-inset-right);
   padding-left: var(--layout-inset-left);
@@ -1056,6 +1058,76 @@ h3 {
   color: var(--green);
 }
 
+.contact-strip {
+  margin-top: 80px;
+  width: 100%;
+  padding: clamp(22px, 3.5vw, 36px) 0;
+  background: var(--hero-olive);
+  color: var(--hero-olive-text);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 120px;
+}
+
+.contact-strip__form {
+  min-width: 0;
+}
+
+.contact-strip__row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: clamp(12px, 2vw, 20px);
+}
+
+.contact-strip__row .project-field {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.contact-strip__row .project-field > span {
+  font-size: 12px;
+}
+
+.contact-strip__row .project-field input {
+  padding: 8px 0 10px;
+}
+
+.contact-strip__submit {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  min-width: 132px;
+  min-height: 44px;
+  padding: 0 22px;
+  font-size: 14px;
+}
+
+.contact-strip__status {
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .contact-strip__row {
+    gap: 8px;
+  }
+
+  .contact-strip__row .project-field > span {
+    font-size: 11px;
+  }
+
+  .contact-strip__row .project-field input {
+    padding: 6px 0 8px;
+    font-size: 14px;
+  }
+
+  .contact-strip__submit {
+    min-width: 0;
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+}
+
 .project-contact {
   width: 100%;
   background: var(--white);
@@ -1108,6 +1180,13 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(22px, 3vw, 34px) clamp(18px, 3vw, 42px);
+}
+
+.contact-strip__row.project-contact__fields {
+  display: flex;
+  flex-wrap: nowrap;
+  grid-template-columns: unset;
+  gap: clamp(12px, 2vw, 20px);
 }
 
 .project-field {

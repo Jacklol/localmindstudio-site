@@ -427,6 +427,31 @@
         </div>
       </div>
 
+      <section class="contact-strip" aria-label="Quick contact">
+        <div class="contact-strip__inner">
+          <form
+            class="contact-strip__form project-contact__form"
+            action="https://formspree.io/f/xykawple"
+            method="POST"
+            data-contact-form
+          >
+            <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="contact-strip__row project-contact__fields">
+              <label class="project-field">
+                <span data-form-label="name">Name*</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label class="project-field">
+                <span data-form-label="phone">Phone*</span>
+                <input name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <button class="project-contact__submit contact-strip__submit" type="submit" data-form-submit>Send</button>
+            </div>
+            <p class="project-contact__status contact-strip__status" data-form-status aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
       <section class="band white case-showcase-band" id="cases">
         <div class="cases-header">
           <div class="cases-header__top">
@@ -870,16 +895,12 @@
                   <input name="name" type="text" autocomplete="name" required />
                 </label>
                 <label class="project-field">
-                  <span data-form-label="email">Email*</span>
-                  <input name="email" type="email" autocomplete="email" required />
+                  <span data-form-label="phone">Phone*</span>
+                  <input name="phone" type="tel" autocomplete="tel" required />
                 </label>
                 <label class="project-field project-field--full">
-                  <span data-form-label="website">Website</span>
-                  <input name="website" type="url" autocomplete="url" inputmode="url" />
-                </label>
-                <label class="project-field project-field--full">
-                  <span data-form-label="message">About the task*</span>
-                  <textarea name="message" rows="4" required></textarea>
+                  <span data-form-label="message">About the task</span>
+                  <textarea name="message" rows="4"></textarea>
                 </label>
               </div>
 
@@ -943,16 +964,12 @@
               <input name="name" type="text" autocomplete="name" required />
             </label>
             <label class="project-field">
-              <span data-form-label="email">Email*</span>
-              <input name="email" type="email" autocomplete="email" required />
+              <span data-form-label="phone">Phone*</span>
+              <input name="phone" type="tel" autocomplete="tel" required />
             </label>
             <label class="project-field project-field--full">
-              <span data-form-label="website">Website</span>
-              <input name="website" type="url" autocomplete="url" inputmode="url" />
-            </label>
-            <label class="project-field project-field--full">
-              <span data-form-label="message">About the task*</span>
-              <textarea name="message" rows="4" required></textarea>
+              <span data-form-label="message">About the task</span>
+              <textarea name="message" rows="4"></textarea>
             </label>
           </div>
           <div class="project-contact__actions">
