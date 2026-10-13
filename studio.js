@@ -1474,6 +1474,58 @@ function setMenuOpen(open, keepScrollLock = false) {
   }
 }
 
+const NAV_SCROLL_GAP = 10;
+
+function updateNavScrollOffset() {
+  const nav = document.querySelector(".nav");
+  if (!nav) return;
+  const offset = Math.round(nav.getBoundingClientRect().height + NAV_SCROLL_GAP);
+  document.documentElement.style.setProperty("--nav-scroll-offset", `${offset}px`);
+}
+
+function scrollToSectionId(id, behavior = "smooth") {
+  const target = document.getElementById(id);
+  const nav = document.querySelector(".nav");
+  if (!target) return false;
+
+  updateNavScrollOffset();
+  const offset = nav ? nav.getBoundingClientRect().height + NAV_SCROLL_GAP : NAV_SCROLL_GAP;
+  const top = Math.max(0, window.scrollY + target.getBoundingClientRect().top - offset);
+  window.scrollTo({ top, behavior });
+  return true;
+}
+
+function setupInPageAnchorScroll() {
+  updateNavScrollOffset();
+  window.addEventListener("resize", updateNavScrollOffset, { passive: true });
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link || link.hasAttribute("data-open-contact")) return;
+
+    const href = link.getAttribute("href");
+    if (!href?.startsWith("#") || href.length < 2) return;
+
+    const id = decodeURIComponent(href.slice(1));
+    if (!document.getElementById(id)) return;
+
+    event.preventDefault();
+    scrollToSectionId(id, "smooth");
+    setMenuOpen(false);
+    history.pushState(null, "", `#${id}`);
+  });
+
+  if (!location.hash) return;
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!document.getElementById(id)) return;
+
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      scrollToSectionId(id, "auto");
+    });
+  });
+}
+
 function setupMobileNav() {
   const toggle = document.querySelector("[data-nav-menu-toggle]");
   if (!toggle) return;
@@ -2158,6 +2210,7 @@ if (document.querySelector(".site-hero")) {
   applyLanguage(currentLanguage);
   setupStudioMarquee();
   setupStickyNavigation();
+  setupInPageAnchorScroll();
   setupContactForm();
   setupContactModal();
   setupTalkButton();

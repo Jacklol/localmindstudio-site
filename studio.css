@@ -44,13 +44,14 @@
 }
 
 html {
-  scroll-padding-top: 112px;
+  --nav-scroll-offset: 112px;
+  scroll-padding-top: var(--nav-scroll-offset);
   scroll-behavior: smooth;
   background: var(--paper);
 }
 
 [id] {
-  scroll-margin-top: 112px;
+  scroll-margin-top: var(--nav-scroll-offset);
 }
 
 body {
@@ -2448,11 +2449,7 @@ html.scroll-locked .talk-orb {
   }
 
   html {
-    scroll-padding-top: 88px;
-  }
-
-  [id] {
-    scroll-margin-top: 88px;
+    --nav-scroll-offset: 88px;
   }
 
   .gallery-swiper .swiper-slide {
@@ -2466,11 +2463,7 @@ html.scroll-locked .talk-orb {
 
 @media (max-width: 460px) {
   html {
-    scroll-padding-top: 88px;
-  }
-
-  [id] {
-    scroll-margin-top: 88px;
+    --nav-scroll-offset: 88px;
   }
 
   .competencies-row {
