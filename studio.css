@@ -1431,9 +1431,14 @@ h3 {
 }
 
 .footer__brand {
-  flex: 1 1 16rem;
   min-width: 0;
   max-width: 34em;
+}
+
+@media (min-width: 821px) {
+  .footer__brand {
+    flex: 1 1 16rem;
+  }
 }
 
 .footer__title {
@@ -2616,8 +2621,8 @@ html:has(.case-page) {
   line-height: 1.55;
 }
 
-.case-section {
-  margin-bottom: 72px;
+.case-section + .case-section {
+  margin-top: 72px;
 }
 
 .case-section > h2 {
@@ -2839,6 +2844,7 @@ html:has(.case-page) {
 
   .case-detail {
     padding-top: 118px;
+    padding-bottom: 20px;
   }
 }
 
