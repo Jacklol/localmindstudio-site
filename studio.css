@@ -1107,24 +1107,39 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  .contact-strip__row {
-    gap: 8px;
+  .contact-strip {
+    padding: 24px 0;
+  }
+
+  .contact-strip__row,
+  .contact-strip__row.project-contact__fields {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .contact-strip__row .project-field {
+    flex: none;
+    width: 100%;
   }
 
   .contact-strip__row .project-field > span {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .contact-strip__row .project-field input {
-    padding: 6px 0 8px;
-    font-size: 14px;
+    padding: 8px 0 10px;
+    font-size: 16px;
   }
 
   .contact-strip__submit {
+    align-self: stretch;
+    width: 100%;
     min-width: 0;
-    min-height: 40px;
-    padding: 0 14px;
-    font-size: 13px;
+    min-height: 48px;
+    padding: 0 20px;
+    font-size: 15px;
   }
 }
 
