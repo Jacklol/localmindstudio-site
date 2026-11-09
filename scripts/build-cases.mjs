@@ -15,7 +15,7 @@ const { caseStudySlugs, caseStudies, galleries, translations } = vm.runInNewCont
   {},
   { timeout: 1000 },
 );
-const template = await readFile(new URL('scripts/case-template.html', root), 'utf8');
+const template = await readFile(new URL('scripts/case-template.html.template', root), 'utf8');
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 }[character]));

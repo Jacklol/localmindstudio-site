@@ -1,7 +1,7 @@
 # Static case pages
 
 Case copy and gallery data live in `studio.js`. The HTML shell lives in
-`scripts/case-template.html`. After editing either, regenerate the published pages:
+`scripts/case-template.html.template`. After editing either, regenerate the published pages:
 
 ```sh
 node scripts/build-cases.mjs
