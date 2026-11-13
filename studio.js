@@ -850,7 +850,7 @@ const caseStudies = {
   },
 };
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykawple";
+
 const ATTRIBUTION_STORAGE_KEY = "localmind_attribution";
 const ATTRIBUTION_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id", "gclid", "fbclid", "msclkid"];
 const SWIPER_CSS_HREF = "./vendor/swiper/swiper-bundle.min.css";
@@ -1595,20 +1595,6 @@ function setupStickyNavigation() {
   sections.forEach((section) => observer.observe(section));
 }
 
-async function submitFormspree(formData) {
-  const response = await fetch(FORMSPREE_ENDPOINT, {
-    method: "POST",
-    body: formData,
-    headers: { Accept: "application/json" },
-  });
-
-  if (response.ok) return;
-
-  const payload = await response.json().catch(() => ({}));
-  const message = payload.errors?.[0]?.message || payload.error || "Form submission failed.";
-  throw new Error(message);
-}
-
 function readStoredAttribution() {
   try {
     return JSON.parse(sessionStorage.getItem(ATTRIBUTION_STORAGE_KEY) || "{}");
@@ -1665,40 +1651,7 @@ function appendLeadAttribution(formData) {
   });
 }
 
-function setupContactForm() {
-  document.querySelectorAll("[data-contact-form]").forEach((form) => {
-    if (form.dataset.bound === "true") return;
-    const status = form.querySelector("[data-form-status]");
-    const submitButton = form.querySelector("[data-form-submit]");
-    if (!status || !submitButton) return;
-    form.dataset.bound = "true";
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-
-      const t = translations[currentLanguage].contactForm;
-      const formData = new FormData(form);
-
-      formData.set("subject", t.subject);
-      appendLeadAttribution(formData);
-      formData.set("language", currentLanguage);
-
-      submitButton.disabled = true;
-      status.textContent = t.sending;
-
-      try {
-        await submitFormspree(formData);
-        status.textContent = t.success;
-        form.reset();
-      } catch (error) {
-        status.textContent = t.error;
-      } finally {
-        submitButton.disabled = false;
-      }
-    });
-  });
-}
+function setupContactForm() { /* Handled by site-services.js for static and dynamic forms. */ }
 
 function contactModalMarkup() {
   return `
@@ -1714,7 +1667,7 @@ function contactModalMarkup() {
         </div>
         <form
           class="project-contact__form"
-          action="https://formspree.io/f/xykawple"
+          action="/api/v1/leads"
           method="POST"
           data-contact-form
         >
